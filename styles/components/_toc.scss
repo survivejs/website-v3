@@ -1,0 +1,38 @@
+.toc-nav__wrapper {
+  .toc-nav {
+    margin-bottom: 2em;
+    list-style: none;
+    margin-left: 0;
+  }
+
+  .toc-nav > li:before {
+    content: "";
+  }
+
+  .toc-nav--header {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .toc-nav__section {
+    margin-bottom: 2.5em;
+  }
+
+  .toc-nav__search,
+  .algolia-autocomplete {
+    width: 100%;
+  }
+
+  li.toc-part {
+    margin-top: 0.5em;
+  }
+
+  li.toc-chapter {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+
+  .chapter:first-child {
+    margin-left: inherit;
+  }
+}

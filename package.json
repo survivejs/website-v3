@@ -1,0 +1,22 @@
+{
+  "name": "survivejs-site",
+  "private": true,
+  "version": "3.0.0",
+  "description": "SurviveJS site",
+  "author": "Juho Vepsalainen <bebraw@gmail.com>",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/survivejs/site.git"
+  },
+  "homepage": "https://www.survivejs.com",
+  "bugs": {
+    "url": "https://github.com/survivejs/site/issues"
+  },
+  "keywords": ["website"],
+  "licenses": [{ "license": "MIT" }]
+}

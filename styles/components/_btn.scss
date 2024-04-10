@@ -1,0 +1,40 @@
+.btn {
+  font-family: $small-font;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: $fat;
+  -webkit-appearance: none;
+  -webkit-appearance: normal;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0.6em 1em;
+  border-radius: 2em;
+  font-size: $h4-size;
+  line-height: 1.4;
+  transition: background-color $transition-easing $transition-speed,
+    color $transition-easing $transition-speed;
+}
+
+.btn--normal {
+  border: $border-width $action-color solid;
+  color: darken($action-color, 30%);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background-color: rgba($action-color, 0.2);
+  }
+}
+
+.btn--inverted {
+  border: $border-width $background-color solid;
+  color: $background-color;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background-color: $background-color;
+    color: darken($action-color, 30%);
+  }
+}

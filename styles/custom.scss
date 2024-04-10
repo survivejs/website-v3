@@ -1,0 +1,232 @@
+@import "functions";
+@import "vars";
+@import "styles";
+
+.header-anchor {
+  display: block;
+  position: relative;
+  top: -10vh;
+}
+
+pre {
+  padding: 0.5em;
+  padding-left: 1em;
+}
+pre code {
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+q {
+  color: #09b5c4;
+}
+
+hr {
+  margin-top: $space-l;
+  margin-bottom: $space-l;
+  border-top: 0;
+  border-bottom: 1px solid $quiet-font-color;
+}
+
+.post {
+  margin: 0 auto;
+}
+
+.github-corner svg {
+  position: fixed !important;
+  z-index: 1000;
+}
+
+/* make sure post content isn't centered (probably should remove that default) */
+.post__content {
+  justify-content: initial;
+}
+
+.post__content img {
+  position: inherit;
+  max-width: 100%;
+  width: 100vw;
+}
+.post__content .center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: initial;
+  height: auto;
+}
+
+.post-list__demo {
+  margin-bottom: 1em;
+}
+
+.post__meta {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1150px) {
+  .post__content pre {
+    /* low resolutions need this */
+    word-break: break-all;
+  }
+}
+
+.post__dates {
+  margin-bottom: 1em;
+}
+.post__publish-date {
+  display: inline;
+}
+.post__update-date {
+  float: right;
+  display: inline;
+}
+.post__date-text {
+  margin-right: 0.25em;
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  color: #999;
+  font-size: 0.83333rem;
+  line-height: 1.8;
+}
+
+.header-anchor-select {
+  display: none;
+  margin-left: 0.25em;
+}
+
+.header:active .header-anchor-select,
+.header:hover .header-anchor-select {
+  display: inline;
+}
+
+@include media-query(portable) {
+  #disqus_thread {
+    margin: 1em;
+  }
+
+  .gitter-open-chat-button {
+    display: none;
+  }
+}
+
+.gitter-chat-embed-action-bar {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start !important;
+}
+
+table {
+  margin-bottom: 1em;
+
+  th {
+    text-align: left;
+
+    border-bottom: 0.01em solid #050505;
+  }
+
+  th,
+  td {
+    padding: 0.25em;
+  }
+
+  th,
+  td {
+    border-right: 0.01em solid #050505;
+  }
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+}
+
+.blog-index {
+  margin-top: 32px;
+}
+
+.blog-index h1 {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.blog-index ul {
+  margin: 0;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+}
+
+.author + figcaption {
+  display: none;
+}
+
+/* CarbonAds */
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}
+
+#carbonads {
+  display: flex;
+  max-width: 330px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+  margin-bottom: 32px;
+}
+
+#carbonads a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#carbonads a:hover {
+  color: inherit;
+}
+
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+#carbonads .carbon-wrap {
+  display: flex;
+}
+
+.carbon-img {
+  display: block;
+  margin: 0;
+  line-height: 1;
+}
+
+.carbon-img img {
+  display: block;
+}
+
+.carbon-text {
+  font-size: 13px;
+  padding: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.carbon-poweredby {
+  display: block;
+  padding: 8px 10px;
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      hsla(0, 0%, 0%, 0.025) 5px,
+      hsla(0, 0%, 0%, 0.025) 10px
+    )
+    hsla(203, 11%, 95%, 0.4);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 1;
+}

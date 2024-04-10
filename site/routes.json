@@ -1,0 +1,235 @@
+{
+  "/": {
+    "layout": "siteIndex",
+    "meta": {
+      "title": "SurviveJS",
+      "description": "Get started with JavaScript for free"
+    },
+    "dataSources": [
+      {
+        "operation": "processMarkdown",
+        "parameters": [{ "path": "./README.md" }, { "skipFirstLine": true }],
+        "name": "readme"
+      }
+    ],
+    "scripts": [{ "name": "hello" }]
+  },
+  "blog": {
+    "layout": "blogIndex",
+    "meta": {
+      "title": "Blog",
+      "description": "Read blog interviews to learn more about JavaScript and related technologies"
+    },
+    "dataSources": [
+      {
+        "operation": "indexBlog",
+        "parameters": ["./pages/blog"],
+        "name": "blogPosts"
+      }
+    ],
+    "expand": {
+      "matchBy": {
+        "indexer": {
+          "operation": "indexBlog",
+          "parameters": ["./pages/blog"]
+        },
+        "dataSources": [{
+          "operation": "processMarkdown",
+          "parameters": [
+            { "parseHeadmatter": true }
+          ],
+          "name": "document"
+        }],
+        "slug": "data.slug"
+      },
+      "layout": "documentationPage",
+      "meta": {
+        "title": {
+          "utility": "get",
+          "parameters": ["context", "document.data.title"]
+        },
+        "description": {
+          "utility": "get",
+          "parameters": ["context", "document.data.description"]
+        }
+      }
+    },
+    "routes": {
+      "topics": {
+        "layout": "topicIndex",
+        "meta": {
+          "title": "Topics",
+          "description": "Blog topics"
+        },
+        "dataSources": [
+          {
+            "operation": "indexTopics",
+            "parameters": ["./pages/blog"],
+            "name": "topics"
+          }
+        ],
+        "expand": {
+          "matchBy": {
+            "indexer": {
+              "operation": "indexTopics",
+              "parameters": ["./pages/blog"]
+            },
+            "dataSources": [{
+              "operation": "processTopic",
+              "name": "topic"
+            }],
+            "slug": "slug"
+          },
+          "layout": "topicPage",
+          "meta": {}
+        }
+      }
+    }
+  },
+  "books": {
+    "layout": "booksIndex",
+    "meta": {
+      "title": "TODO",
+      "description": "TODO"
+    },
+    "routes": {
+      "webpack": {
+        "layout": "blogIndex",
+        "meta": {
+          "title": "TODO",
+          "description": "TODO"
+        },
+        "dataSources": [
+          {
+            "operation": "indexBook",
+            "parameters": ["./books/webpack-book/manuscript"],
+            "name": "chapters"
+          }
+        ],
+        "expand": {
+          "matchBy": {
+            "indexer": {
+              "operation": "indexBook",
+              "parameters": ["./books/webpack-book/manuscript"]
+            },
+            "dataSources": [{
+              "operation": "processMarkdown",
+              "parameters": [
+                { "parseHeadmatter": false }
+              ],
+              "name": "document"
+            }],
+            "slug": "slug"
+          },
+          "layout": "documentationPage",
+          "meta": {
+            "title": {
+              "utility": "get",
+              "parameters": ["context", "document.title"]
+            },
+            "description": {
+              "utility": "get",
+              "parameters": ["context", "document.description"]
+            }
+          }
+        }
+      },
+      "react": {
+        "layout": "blogIndex",
+        "meta": {
+          "title": "TODO",
+          "description": "TODO"
+        },
+        "dataSources": [
+          {
+            "operation": "indexBook",
+            "parameters": ["./books/react-book/manuscript"],
+            "name": "chapters"
+          }
+        ],
+        "expand": {
+          "matchBy": {
+            "indexer": {
+              "operation": "indexBook",
+              "parameters": ["./books/react-book/manuscript"]
+            },
+            "dataSources": [{
+              "operation": "processMarkdown",
+              "parameters": [
+                { "parseHeadmatter": false }
+              ],
+              "name": "document"
+            }],
+            "slug": "slug"
+          },
+          "layout": "documentationPage",
+          "meta": {
+            "title": {
+              "utility": "get",
+              "parameters": ["context", "document.title"]
+            },
+            "description": {
+              "utility": "get",
+              "parameters": ["context", "document.description"]
+            }
+          }
+        }
+      },
+      "maintenance": {
+        "layout": "blogIndex",
+        "meta": {
+          "title": "TODO",
+          "description": "TODO"
+        },
+        "dataSources": [
+          {
+            "operation": "indexBook",
+            "parameters": ["./books/maintenance-book/manuscript"],
+            "name": "chapters"
+          }
+        ],
+        "expand": {
+          "matchBy": {
+            "indexer": {
+              "operation": "indexBook",
+              "parameters": ["./books/maintenance-book/manuscript"]
+            },
+            "dataSources": [{
+              "operation": "processMarkdown",
+              "parameters": [
+                { "parseHeadmatter": false }
+              ],
+              "name": "document"
+            }],
+            "slug": "slug"
+          },
+          "layout": "documentationPage",
+          "meta": {
+            "title": {
+              "utility": "get",
+              "parameters": ["context", "document.title"]
+            },
+            "description": {
+              "utility": "get",
+              "parameters": ["context", "document.description"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "research": {
+    "layout": "researchIndex",
+    "meta": {
+      "title": "TODO",
+      "description": "TODO"
+    }
+  },
+  "training": {
+    "layout": "trainingIndex",
+    "meta": {
+      "title": "TODO",
+      "description": "TODO"
+    }
+  }
+}
