@@ -3,33 +3,59 @@
 >
   <div class="flex flex-col container mx-auto gap-4">
     <section
-      class="md:mx-auto px-4 sm:px-0 grid grid-rows-3 md:grid-rows-none md:grid-cols-4 gap-4 md:gap-8 w-full md:max-w-3xl"
+      class="md:mx-auto px-4 sm:px-0 grid grid-rows-3 md:grid-rows-none md:grid-cols-5 gap-4 md:gap-8 w-full md:max-w-3xl"
     >
       <div class="flex flex-col">
-        <h2>About</h2>
-        <div class="font-thin">
-          TODO
-        </div>
-      </div>
-      <div class="flex flex-col">
         <h2>Navigation</h2>
-        <div class="flex flex-col gap-2 font-thin">
+        <div class="flex flex-col gap-2 font-thin text-sm">
           <Navigation />
         </div>
       </div>
       <div class="flex flex-col">
+        <h2>Books</h2>
+        <div class="flex flex-col gap-2 font-thin text-sm">
+          <SiteLink href="/books/webpack/"
+            >Survivejs – Webpack 5</SiteLink
+          >
+          <SiteLink href="/books/maintenance/"
+            >Survivejs – Maintenance</SiteLink
+          >
+          <SiteLink href="/books/react/"
+            >Survivejs – React</SiteLink
+          >
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <h2>Conferences</h2>
+        <div class="flex flex-col gap-2 font-thin text-sm">
+          <SiteLink href="https://futurefrontend.com/"
+            >Future Frontend</SiteLink
+          >
+          <SiteLink href="https://react-finland.fi/"
+            >React Finland</SiteLink
+          >
+        </div>
+      </div>
+      <div class="flex flex-col">
         <h2>Social</h2>
-        <div class="flex flex-col gap-2 font-thin">
-          <SiteLink href="https://buttondown.email/SurviveJS">Mailing list</SiteLink>
-          <SiteLink href="https://github.com/survivejs/">GitHub</SiteLink>
-          <SiteLink href="http://goo.gl/forms/OWdGIOdHm9">Contact</SiteLink>
+        <div class="flex flex-col gap-2 font-thin text-sm">
+          <SiteLink
+            href="https://buttondown.email/SurviveJS"
+            >Mailing list</SiteLink
+          >
+          <SiteLink href="https://github.com/survivejs/"
+            >GitHub</SiteLink
+          >
+          <SiteLink href="http://goo.gl/forms/OWdGIOdHm9"
+            >Contact</SiteLink
+          >
           <SiteLink href="atom.xml">RSS</SiteLink>
         </div>
       </div>
       <div class="flex flex-col">
-        <h2>Credits</h2>
-        <Markdown type="div" class="font-thin"
-          >SurviveJS is authored by [Juho
+        <h2>About</h2>
+        <Markdown as="div" class="font-thin text-sm"
+          >SurviveJS is maintained by [Juho
           Vepsäläinen](https://github.com/bebraw).
         </Markdown>
       </div>
