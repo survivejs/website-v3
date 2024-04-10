@@ -1,5 +1,10 @@
 {
   "language": "en",
   "siteName": "SurviveJS",
-  "url": "https://survivejs.com"
+  "url": "https://survivejs.com",
+  "colors": {
+    "primary": "#09b5c4",
+    "muted": "#346065",
+    "secondary": "#d3fffb"
+  }
 }
