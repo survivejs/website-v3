@@ -9,4 +9,6 @@ utils/site-config.js
 .eslintcache
 books/
 *.emotion.css
+.env
+.images.json
 .netlify

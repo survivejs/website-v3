@@ -10,6 +10,19 @@ First, clone this repository:
 git clone https://github.com/survivejs/website-v3
 ```
 
+Set up a `.env` file:
+
+```bash
+GET_IMAGES_ENDPOINT=TODO
+GET_IMAGES_TOKEN=TODO
+```
+
+Bootstrap the project:
+
+```bash
+deno task bootstrap
+```
+
 Start the development server:
 
 ```bash
