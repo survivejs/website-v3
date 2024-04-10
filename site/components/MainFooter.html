@@ -3,15 +3,15 @@
 >
   <div class="flex flex-col container mx-auto gap-4">
     <section
-      class="md:mx-auto px-4 sm:px-0 grid grid-rows-3 md:grid-rows-none md:grid-cols-5 gap-4 md:gap-8 w-full md:max-w-3xl"
+      class="md:mx-auto px-4 sm:px-0 flex flex-row w-full md:max-w-3xl gap-8"
     >
-      <div class="flex flex-col">
+      <div class="flex flex-col basis-1/6">
         <h2>Navigation</h2>
         <div class="flex flex-col gap-2 font-thin text-sm">
           <Navigation />
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col basis-1/6">
         <h2>Books</h2>
         <div class="flex flex-col gap-2 font-thin text-sm">
           <SiteLink href="/books/webpack/"
@@ -25,7 +25,7 @@
           >
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col basis-1/6">
         <h2>Conferences</h2>
         <div class="flex flex-col gap-2 font-thin text-sm">
           <SiteLink href="https://futurefrontend.com/"
@@ -36,12 +36,15 @@
           >
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col basis-1/6">
         <h2>Social</h2>
         <div class="flex flex-col gap-2 font-thin text-sm">
           <SiteLink
             href="https://buttondown.email/SurviveJS"
             >Mailing list</SiteLink
+          >
+          <SiteLink href="https://twitter.com/survivejs/"
+            >@survivejs</SiteLink
           >
           <SiteLink href="https://github.com/survivejs/"
             >GitHub</SiteLink
@@ -52,7 +55,7 @@
           <SiteLink href="atom.xml">RSS</SiteLink>
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col basis-2/6">
         <h2>About</h2>
         <Markdown as="div" class="font-thin text-sm"
           >SurviveJS is maintained by [Juho
