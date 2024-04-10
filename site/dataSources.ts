@@ -52,10 +52,11 @@ function init({ load }: { load: LoadApi }) {
     const blogFiles =
       (await indexMarkdown(directory, { parseHeadmatter: true })).map((p) => ({
         ...p,
+        // @ts-expect-error This is fine for now (inaccurate type)
         data: resolveBlogPost(p.path, p),
       }));
 
-    blogFiles.sort((a, b) => getIndex(a.name) - getIndex(b.name));
+    blogFiles.sort((a, b) => getIndex(b.name) - getIndex(a.name));
 
     return generateAdjacent(blogFiles);
   }
