@@ -1,21 +1,26 @@
 <BaseLayout>
   <slot name="content">
     <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
+      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose flex flex-col gap-4"
     >
       <Heading
         class="text-4xl"
         level="1"
         &children="(get context topic.title)"
       ></Heading>
-      <ul &foreach="(get context topic.posts)">
-        <li>
-          <SiteLink
-            &children="(get props data.title)"
-            &href="(urlJoin ../.. (get props data.slug) /)"
-          />
-        </li>
-      </ul>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
+        &foreach="(get context topic.posts)"
+      >
+        <ProjectCard>
+          <slot name="title">
+            <SiteLink
+              &href="(urlJoin ../.. (get props data.slug) /)"
+              &children="(get props data.title)"
+            ></SiteLink>
+          </slot>
+        </ProjectCard>
+      </div>
       <SiteLink href="../">Back to topics</SiteLink>
     </div>
   </slot>
