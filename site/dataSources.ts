@@ -83,7 +83,9 @@ function init({ load }: { load: LoadApi }) {
 
     return keywordsArray.map((topic) => ({
       title: resolveKeywordToTitle(topic),
-      posts: keywords[topic],
+      posts: keywords[topic].toSorted((a, b) =>
+        b.data.date.getTime() - a.data.date.getTime()
+      ),
       slug: cleanSlug(topic),
     }));
   }
