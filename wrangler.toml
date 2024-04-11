@@ -1,4 +1,5 @@
 name = "survivejs-website-v3"
+pages_build_output_dir = "./build"
 compatibility_date = "2024-04-10"
 compatibility_flags = ["nodejs_compat"]
 
