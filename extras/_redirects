@@ -3,7 +3,8 @@
 /blog/mobservable-interview /blog/mobx-interview
 /blog/react-router5 /blog/react-router5-interview
 /blog/upcoming-events /blog/summer-2018-events
-/clinic /training
+/clinic /consulting
+/training /consulting
 /maintenance/code-quality/dependencies /books/maintenance/packaging/managing-dependencies
 /webpack_react/introduction /books/react/introduction
 /webpack_react/webpack /books/webpack/introduction

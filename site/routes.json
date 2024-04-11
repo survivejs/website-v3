@@ -218,6 +218,13 @@
       }
     }
   },
+  "open-source": {
+    "layout": "openSourceIndex",
+    "meta": {
+      "title": "TODO",
+      "description": "TODO"
+    }
+  },
   "research": {
     "layout": "researchIndex",
     "meta": {
@@ -225,8 +232,8 @@
       "description": "TODO"
     }
   },
-  "training": {
-    "layout": "trainingIndex",
+  "consulting": {
+    "layout": "consultingIndex",
     "meta": {
       "title": "TODO",
       "description": "TODO"
