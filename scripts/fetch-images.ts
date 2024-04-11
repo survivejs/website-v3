@@ -1,5 +1,6 @@
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 
+// TODO: Likely load() is checking env already so this code can be simplified
 const env = await load();
 
 const imagesEndpoint = env.GET_IMAGES_ENDPOINT ||
