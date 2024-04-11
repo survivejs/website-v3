@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+printenv
+
 set -e # Exit with nonzero exit code if anything fails
 
 curl -fsSL https://deno.land/x/install/install.sh | sh -s v1.42.1
