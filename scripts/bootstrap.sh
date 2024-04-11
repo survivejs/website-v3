@@ -4,8 +4,8 @@ set -e # Exit with nonzero exit code if anything fails
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "$CF_PAGES"
-echo "$GET_IMAGES_ENDPOINT"
+echo $CF_PAGES
+echo $GET_IMAGES_ENDPOINT
 
 # Fetch books repositories
 echo
