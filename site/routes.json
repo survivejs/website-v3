@@ -94,7 +94,7 @@
     },
     "routes": {
       "webpack": {
-        "layout": "blogIndex",
+        "layout": "bookPage",
         "meta": {
           "title": "TODO",
           "description": "TODO"
@@ -135,7 +135,7 @@
         }
       },
       "react": {
-        "layout": "blogIndex",
+        "layout": "bookPage",
         "meta": {
           "title": "TODO",
           "description": "TODO"
@@ -176,7 +176,7 @@
         }
       },
       "maintenance": {
-        "layout": "blogIndex",
+        "layout": "bookPage",
         "meta": {
           "title": "TODO",
           "description": "TODO"
