@@ -1,1 +1,25 @@
-TODO
+<BaseLayout>
+  <slot name="content">
+    <div
+      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
+    >
+      <Heading class="text-4xl" level="1">Books</Heading>
+      <Markdown as="div"
+        >Explain books a bit + add a grid of books below
+      </Markdown>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose"
+      >
+        <Card title="SurviveJS – Webpack 5">
+          <slot name="description">TODO</slot>
+        </Card>
+        <Card title="SurviveJS – Maintenance">
+          <slot name="description">TODO</slot>
+        </Card>
+        <Card title="SurviveJS – React">
+          <slot name="description">TODO</slot>
+        </Card>
+      </div>
+    </div>
+  </slot>
+</BaseLayout>
