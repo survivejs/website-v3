@@ -4,7 +4,10 @@
     level="2"
     &children="(get props title)"
   />
-  <Markdown &children="(get props description)" />
+  <Markdown
+    &visibleIf="(get props description)"
+    &children="(get props description)"
+  />
   <ul
     class="flex flex-row gap-2"
     &visibleIf="(or (get props website) (get props github))"

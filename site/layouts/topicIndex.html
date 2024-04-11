@@ -6,14 +6,19 @@
       <Heading class="text-4xl" level="1"
         >Blog topics</Heading
       >
-      <ul &foreach="(get context topics)">
-        <li>
-          <SiteLink
-            &children="(concat (get props title) ' ' '(' (length (get props posts)) ')')"
-            &href="(urlJoin (get props slug) /)"
-          />
-        </li>
-      </ul>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
+        &foreach="(get context topics)"
+      >
+        <ProjectCard>
+          <slot name="title">
+            <SiteLink
+              &href="(urlJoin blog (get props slug) /)"
+              &children="(concat (get props title) ' ' '(' (length (get props posts)) ')')"
+            ></SiteLink>
+          </slot>
+        </ProjectCard>
+      </div>
     </div>
   </slot>
 </BaseLayout>
