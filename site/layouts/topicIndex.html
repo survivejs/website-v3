@@ -10,14 +10,14 @@
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
         &foreach="(get context topics)"
       >
-        <ProjectCard>
+        <Card>
           <slot name="title">
             <SiteLink
               &href="(urlJoin (get props slug) /)"
               &children="(concat (get props title) ' ' '(' (length (get props posts)) ')')"
             ></SiteLink>
           </slot>
-        </ProjectCard>
+        </Card>
       </div>
     </div>
   </slot>

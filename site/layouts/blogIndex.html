@@ -15,16 +15,14 @@
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
         &foreach="(get context blogPosts)"
       >
-        <ProjectCard
-          &description="(get props data.preview)"
-        >
+        <Card &description="(get props data.preview)">
           <slot name="title">
             <SiteLink
               &href="(urlJoin blog (get props data.slug))"
               &children="(get props data.title)"
             ></SiteLink>
           </slot>
-        </ProjectCard>
+        </Card>
       </div>
     </div>
   </slot>
