@@ -221,22 +221,22 @@
   "open-source": {
     "layout": "openSourceIndex",
     "meta": {
-      "title": "TODO",
-      "description": "TODO"
+      "title": "Open source",
+      "description": "Through the years, I have contributed to open source in various ways."
     }
   },
   "research": {
     "layout": "researchIndex",
     "meta": {
-      "title": "TODO",
-      "description": "TODO"
+      "title": "Research",
+      "description": "As a part of my studies, I have performed some research related to computer science."
     }
   },
   "consulting": {
     "layout": "consultingIndex",
     "meta": {
-      "title": "TODO",
-      "description": "TODO"
+      "title": "Consulting",
+      "description": "I do occasional software consulting through my personal company."
     }
   }
 }

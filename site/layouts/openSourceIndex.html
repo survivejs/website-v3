@@ -1,12 +1,44 @@
 <BaseLayout>
   <slot name="content">
     <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl"
+      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
     >
       <Heading class="text-4xl" level="1"
         >Open source</Heading
       >
-      <div class="prose">TODO</div>
+      <Markdown as="div"
+        >I have been working with open source since 2004 as
+        I started contributing to
+        [Blender](https://www.blender.org/). Later on I was
+        a part of the group that established the core team
+        of [webpack](https://webpack.js.org/). Besides
+        working on well-known projects, I have developed
+        numerous small projects of my own. Given there are
+        too many to mention, I have highlighted several I
+        consider interesting on this page. You can [find
+        more behind my GitHub
+        profile](https://github.com/bebraw).
+      </Markdown>
+      <div class="grid grid-cols-2 gap-4 not-prose">
+        <ProjectCard
+          title="Reactabular (2014)"
+          website="https://reactabular.js.org/"
+          github="https://github.com/reactabular/reactabular"
+        >
+          <slot name="description"
+            >Reactabular was perhaps the first headless
+            table component built for React. It was built
+            during the time when headless didn't exist at a
+            time. Although the project started from my
+            personal interest, its development was later
+            funded by [Kenandy](https://www.kenandy.com/)
+            and [Kleiner
+            Perkins](https://www.kleinerperkins.com/). If
+            funding appeared, I would be happy to modernize
+            the library.</slot
+          >
+        </ProjectCard>
+      </div>
     </div>
   </slot>
 </BaseLayout>
