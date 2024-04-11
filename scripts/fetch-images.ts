@@ -2,13 +2,6 @@ import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 
 const env = await load();
 
-console.log("cf pages", Deno.env.get("CF_PAGES"));
-console.log(
-  "images endpoint",
-  env.GET_IMAGES_ENDPOINT,
-  Deno.env.get("GET_IMAGES_ENDPOINT"),
-);
-
 const imagesEndpoint = env.GET_IMAGES_ENDPOINT ||
   Deno.env.get("GET_IMAGES_ENDPOINT");
 
