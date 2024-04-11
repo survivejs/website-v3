@@ -6,19 +6,13 @@
   />
   <Markdown &children="(get props description)" />
   <ul class="flex flex-row gap-2">
-    <li>
-      <SiteLink
-        &visibleIf="(get props website)"
-        &href="(get props website)"
+    <li &visibleIf="(get props website)">
+      <SiteLink &href="(get props website)"
         >Website</SiteLink
       >
     </li>
-    <li>
-      <SiteLink
-        &visibleIf="(get props github)"
-        &href="(get props github)"
-        >GitHub</SiteLink
-      >
+    <li &visibleIf="(get props github)">
+      <SiteLink &href="(get props github)">GitHub</SiteLink>
     </li>
   </ul>
 </div>
