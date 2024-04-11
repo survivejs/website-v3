@@ -2,8 +2,6 @@
 
 set -e # Exit with nonzero exit code if anything fails
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 # Fetch books repositories
 echo
 echo "Fetching books repositories..."
