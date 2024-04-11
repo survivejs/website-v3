@@ -13,7 +13,7 @@
         <ProjectCard>
           <slot name="title">
             <SiteLink
-              &href="(urlJoin blog (get props slug) /)"
+              &href="(urlJoin (get props slug) /)"
               &children="(concat (get props title) ' ' '(' (length (get props posts)) ')')"
             ></SiteLink>
           </slot>
