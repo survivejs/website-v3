@@ -6,6 +6,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo $CF_PAGES
 echo $GET_IMAGES_ENDPOINT
+echo $CF_PAGES_COMMIT_SHA
 
 # Fetch books repositories
 echo
