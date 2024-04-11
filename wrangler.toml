@@ -1,6 +1,5 @@
 name = "survivejs-website-v3"
-pages_build_output_dir = "./build"
-compatibility_date = "2024-04-10"
+compatibility_date = "2024-03-04"
 compatibility_flags = ["nodejs_compat"]
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
