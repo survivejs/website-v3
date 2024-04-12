@@ -238,5 +238,19 @@
       "title": "Consulting",
       "description": "I do occasional software consulting through my personal company."
     }
+  },
+  "katas": {
+    "layout": "katasIndex",
+    "meta": {
+      "title": "Katas",
+      "description": "I have prepared a series of katas on different programming topics."
+    }
+  },
+  "presentations": {
+    "layout": "presentationsIndex",
+    "meta": {
+      "title": "Presentations",
+      "description": "I have compiled slides of several of my presentations on this page."
+    }
   }
 }
