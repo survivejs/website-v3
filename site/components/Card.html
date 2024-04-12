@@ -13,9 +13,10 @@
     &visibleIf="(or (get props website) (get props github))"
   >
     <li &visibleIf="(get props website)">
-      <SiteLink &href="(get props website)"
-        >Website</SiteLink
-      >
+      <SiteLink
+        &href="(get props website)"
+        &children="(get props websiteLabel 'Website')"
+      />
     </li>
     <li &visibleIf="(get props github)">
       <SiteLink &href="(get props github)">GitHub</SiteLink>
