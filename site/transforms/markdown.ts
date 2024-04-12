@@ -1,17 +1,17 @@
 import { install, tw } from "https://esm.sh/@twind/core@1.1.1";
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@9.1.5/lib/marked.esm.js";
 import highlight from "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/es/core.min.js";
-import highlightBash from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/bash";
-import highlightC from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/c";
-import highlightCSS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/css";
-import highlightHaskell from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/haskell";
-import highlightJS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/javascript";
-import highlightJSON from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/json";
-import highlightMarkdown from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/markdown";
-import highlightSQL from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/sql";
-import highlightTS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/typescript";
-import highlightXML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/xml";
-import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/yaml";
+import highlightBash from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/bash.js";
+import highlightC from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/c.js";
+import highlightCSS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/css.js";
+import highlightHaskell from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/haskell.js";
+import highlightJS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/javascript.js";
+import highlightJSON from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/json.js";
+import highlightMarkdown from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/markdown.js";
+import highlightSQL from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/sql.js";
+import highlightTS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/typescript.js";
+import highlightXML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/xml.js";
+import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/yaml.js";
 import type { LoadApi } from "https://deno.land/x/gustwind@v0.66.2/types.ts";
 import twindSetup from "../twindSetup.ts";
 
