@@ -28,13 +28,6 @@
       "path": "https://deno.land/x/gustwind@v${GUSTWIND_VERSION}/plugins/copy/mod.ts",
       "options": {
         "inputPath": "./assets",
-        "outputPath": "./assets"
-      }
-    },
-    {
-      "path": "https://deno.land/x/gustwind@v${GUSTWIND_VERSION}/plugins/copy/mod.ts",
-      "options": {
-        "inputPath": "./extras",
         "outputPath": "./"
       }
     },
