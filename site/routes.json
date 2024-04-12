@@ -253,6 +253,20 @@
       "description": "I have compiled slides of several of my presentations on this page."
     }
   },
+  "atom.xml": {
+    "layout": "rssPage",
+    "meta": {
+      "title": "SurviveJS",
+      "description": "SurviveJS blog"
+    },
+    "dataSources": [
+      {
+        "operation": "indexBlog",
+        "parameters": ["./pages/blog"],
+        "name": "blogPosts"
+      }
+    ]
+  },
   "404.html": {
     "layout": "404",
     "meta": {
