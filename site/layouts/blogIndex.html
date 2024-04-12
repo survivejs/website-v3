@@ -18,7 +18,7 @@
         <Card &description="(get props data.preview)">
           <slot name="title">
             <SiteLink
-              &href="(urlJoin blog (get props data.slug))"
+              &href="(get props data.slug)"
               &children="(get props data.title)"
             ></SiteLink>
           </slot>
