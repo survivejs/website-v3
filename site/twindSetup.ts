@@ -5,6 +5,11 @@ import meta from "./meta.json" with { type: "json" };
 
 export default {
   presets: [presetAutoprefix(), presetTailwind(), presetTypography()],
+  rules: [
+    // https://twind.style/rules#static-rules
+    ["mask-text-black", { color: "transparent", textShadow: "0 0 black" }],
+    ["mask-text-gray", { color: "transparent", textShadow: "0 0 gray" }],
+  ],
   theme: {
     extend: {
       colors: meta.colors,
