@@ -1,8 +1,11 @@
+// TODO: Figure out how to share the same anchor id across a heading and an anchor
+// Maybe there has to be some way to bind values to a scope (implicit earlier)
+// when noop is used. Potentially (get local id) specifically for noop.
 function init() {
   let foundIds: Record<string, number> = {};
   function getUniqueAnchorId(anchor: string) {
     // @ts-expect-error This is fine.
-    const { pathname } = this.context;
+    const { url } = this.context;
 
     if (!anchor || Array.isArray(anchor) || isObject(anchor)) {
       return;
@@ -11,7 +14,7 @@ function init() {
     let id = slugify(anchor);
 
     // Make sure ids are unique per page
-    const cacheId = `${pathname}-${id}`;
+    const cacheId = `${url}-${id}`;
 
     // Check for a duplicate id
     if (foundIds[cacheId]) {
