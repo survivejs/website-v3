@@ -1,6 +1,6 @@
 {
   "env": {
-    "GUSTWIND_VERSION": "0.66.7"
+    "GUSTWIND_VERSION": "0.67.0"
   },
   "plugins": [
     {

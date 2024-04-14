@@ -4,11 +4,11 @@
   &id="(getUniqueAnchorId (get props children))"
   &class="(get props class)"
 >
-  <span &children="(get props children)" />
+  <div class="inline" &children="(get props children)" />
   <a
-    &visibleIf="(invert (get props hideAnchor))"
+    &visibleIf="(get props showAnchor)"
     class="ml-2 no-underline text-md md:text-sm align-middle mask-text-gray hover:mask-text-black"
-    &href="(concat # (get props id))"
+    &href="(concat # (get local id))"
     >🔗</a
   >
 </noop>

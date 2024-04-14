@@ -1,6 +1,3 @@
-// TODO: Figure out how to share the same anchor id across a heading and an anchor
-// Maybe there has to be some way to bind values to a scope (implicit earlier)
-// when noop is used. Potentially (get local id) specifically for noop.
 function init() {
   let foundIds: Record<string, number> = {};
   function getUniqueAnchorId(anchor: string) {
@@ -28,16 +25,12 @@ function init() {
     return id;
   }
 
-  function invert(b: boolean) {
-    return !b;
-  }
-
   function _onRenderStart() {
     // To avoid having stale id cache, erase it when page rendering begins.
     foundIds = {};
   }
 
-  return { getUniqueAnchorId, invert, _onRenderStart };
+  return { getUniqueAnchorId, _onRenderStart };
 }
 
 function slugify(idBase: string) {
