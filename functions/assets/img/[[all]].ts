@@ -8,6 +8,10 @@ import { type Env } from "../../../types.ts";
 export function onRequest(
   context: ExecutionContext & { params: { all?: string[] }; env: Env },
 ) {
+  if (!context.env.IMAGES_API_URL) {
+    throw new Error("Missing images api url");
+  }
+
   const all = context.params.all;
 
   if (!all) {
@@ -15,6 +19,8 @@ export function onRequest(
   }
 
   const path = `img/${all.join("/")}`;
+
+  // @ts-expect-error This is fine because images is missing keys
   const imageId = images[path];
 
   if (!imageId) {

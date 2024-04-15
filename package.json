@@ -5,13 +5,13 @@
   "description": "SurviveJS site",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "scripts": {
-    "start": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-04-10"
+    "start": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.4",
-    "wrangler": "^3.31.0"
+    "typescript": "^5.4.5",
+    "wrangler": "^3.50.0"
   },
   "repository": {
     "type": "git",

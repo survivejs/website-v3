@@ -1,6 +1,7 @@
 .DS_Store
 .antwar/
 .gustwind/
+.wrangler
 build/
 node_modules/
 *.diff
@@ -9,6 +10,6 @@ utils/site-config.js
 .eslintcache
 books/
 *.emotion.css
-.env
+.dev.vars
 .images.json
 .netlify

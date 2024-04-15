@@ -10,7 +10,7 @@ First, clone this repository:
 git clone https://github.com/survivejs/website-v3
 ```
 
-Set up a `.env` file:
+Set up a `.dev.vars` file:
 
 ```bash
 GET_IMAGES_ENDPOINT=TODO
