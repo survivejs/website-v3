@@ -142,7 +142,7 @@ function getTransformMarkdown(load: LoadApi) {
           }
 
           return `<figure class="not-prose my-0 ${className}">
-            <img src="${href}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
+            <img class="border" src="${href}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
             <figcaption class="text-center text-sm">${alt}</figcaption>
           </figure>`;
         },
