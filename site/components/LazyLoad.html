@@ -1,0 +1,9 @@
+<div
+  x-state="{ src: '' }"
+  &x-intersect="(concat
+    '{ options: { once: true }, state: { src: &quot;'
+    (get props src)
+    '&quot; }}'
+  )"
+  &children="(get props children)"
+></div>
