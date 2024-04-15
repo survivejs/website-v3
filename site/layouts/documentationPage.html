@@ -42,7 +42,9 @@
             ></SiteLink>
           </div>
         </div>
-        <div>
+        <div
+          &visibleIf="(get context document.data.topics)"
+        >
           <Heading level="2" class="text-lg"
             >Topics</Heading
           >
