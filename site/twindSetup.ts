@@ -9,6 +9,12 @@ export default {
     // https://twind.style/rules#static-rules
     ["mask-text-black", { color: "transparent", textShadow: "0 0 black" }],
     ["mask-text-gray", { color: "transparent", textShadow: "0 0 gray" }],
+    ["author", {
+      float: "right",
+      width: "100px",
+      height: "100px",
+      marginLeft: "1em",
+    }],
   ],
   theme: {
     extend: {

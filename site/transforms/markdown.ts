@@ -124,9 +124,10 @@ function getTransformMarkdown(load: LoadApi) {
           const height = textParts[2] || "";
           const className = textParts[3] || "";
 
-          return `<img src="${href}" alt="${alt}" class="${
-            tw(className)
-          }" width="${width}" height="${height}" />`;
+          return `<figure class="not-prose my-0 ${className}">
+            <img src="${href}" alt="${alt}" title="${title}" width="${width}" height="${height}" />
+            <figcaption class="text-center text-sm">${alt}</figcaption>
+          </figure>`;
         },
         link(href: string, title: string, text: string) {
           if (href === null) {
