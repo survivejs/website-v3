@@ -34,7 +34,7 @@
           "parameters": ["./pages/blog"]
         },
         "dataSources": [{
-          "operation": "processMarkdown",
+          "operation": "processBlogPost",
           "parameters": [
             { "parseHeadmatter": true }
           ],

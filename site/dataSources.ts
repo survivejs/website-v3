@@ -29,7 +29,6 @@ type Topic = {
   slug: string;
 };
 
-// TODO: Check if resolveBlogPost needs to be applied for individual blog posts separately
 function init({ load }: { load: LoadApi }) {
   const markdown = getMarkdown(load);
 
@@ -131,6 +130,19 @@ function init({ load }: { load: LoadApi }) {
     });
   }
 
+  async function processBlogPost({ path, previous, next }: {
+    path: string;
+    previous: MarkdownWithFrontmatter;
+    next: MarkdownWithFrontmatter;
+  }, o?: { parseHeadmatter: boolean; skipFirstLine: boolean }) {
+    const d = await processMarkdown({ path, previous, next }, o);
+
+    return {
+      ...d,
+      data: resolveBlogPost(path, d),
+    };
+  }
+
   async function processMarkdown(
     { path, previous, next }: {
       path: string;
@@ -196,6 +208,7 @@ function init({ load }: { load: LoadApi }) {
     indexBook,
     indexMarkdown,
     indexTopics,
+    processBlogPost,
     processMarkdown,
     processTopic,
   };

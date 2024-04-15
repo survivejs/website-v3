@@ -24,10 +24,10 @@
             <div class="flex flex-row gap-2">
               <span>←</span><span>Previous post</span>
             </div>
-            <a
+            <SiteLink
               &href="(get context document.previous.data.slug)"
               &children="(get context document.previous.data.title)"
-            ></a>
+            ></SiteLink>
           </div>
           <div
             &visibleIf="(get context document.next)"
@@ -36,20 +36,31 @@
             <div class="flex flex-row gap-2">
               <span>Next post</span><span>→</span>
             </div>
-            <a
+            <SiteLink
               &href="(get context document.next.data.slug)"
               &children="(get context document.next.data.title)"
-            ></a>
+            ></SiteLink>
           </div>
         </div>
         <div>
-          <Heading level="2">Topics</Heading>
-          <div>
-            <div>TODO</div>
-            <div
-              &children="(get context document.topics)"
-            ></div>
-          </div>
+          <Heading level="2" class="text-lg"
+            >Topics</Heading
+          >
+          <ul
+            class="flex flex-row gap-4 text-sm"
+            &foreach="(get context document.data.topics)"
+          >
+            <li>
+              <Card>
+                <slot name="title">
+                  <SiteLink
+                    &children="(get props title)"
+                    &href="(concat topics / (get props slug))"
+                  />
+                </slot>
+              </Card>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
