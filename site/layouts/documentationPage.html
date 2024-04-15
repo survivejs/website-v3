@@ -12,9 +12,7 @@
           &children="(get context document.content)"
         ></div>
       </div>
-      <div
-        class="mx-auto md:mx-0 flex flex-col gap-4 max-w-65-ch"
-      >
+      <div class="mx-auto md:mx-0 flex flex-col gap-4">
         <div
           class="flex flex-row gap-4 justify-between text-sm"
         >
@@ -70,7 +68,7 @@
             >Topics</Heading
           >
           <ul
-            class="flex flex-row gap-4 text-sm"
+            class="flex flex-row gap-4 text-sm whitespace-nowrap"
             &foreach="(get context document.data.topics)"
           >
             <li>
