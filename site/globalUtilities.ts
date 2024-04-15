@@ -3,7 +3,12 @@ import type { Routes } from "https://deno.land/x/gustwind@v0.66.2/types.ts";
 
 function init({ routes }: { routes: Routes }) {
   function dateToString(date: string) {
-    return (new Date(date)).toISOString().split("T")[0];
+    try {
+      return (new Date(date)).toISOString().split("T")[0];
+    } catch (error) {
+      console.error("Failed to parse", date);
+      throw new Error(error);
+    }
   }
 
   function length(arr: unknown[]) {

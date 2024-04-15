@@ -54,7 +54,9 @@
               &href="(get context document.data.author.twitter)"
             ></SiteLink>
           </div>
-          <div>
+          <div
+            &visibleIf="(get context document.data.date)"
+          >
             Published:
             <span
               &children="(dateToString (get context document.data.date))"

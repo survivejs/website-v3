@@ -258,6 +258,11 @@ function resolveKeywordToTitle(keyword: string) {
 function resolveBlogPost(path: string, p: MarkdownWithFrontmatter) {
   const preview = generatePreview(p.content, 150);
 
+  if (!p.data.date) {
+    console.error(path);
+    throw new Error("Blog post is missing a date");
+  }
+
   return {
     ...p.data,
     description: p.data?.description || p.data?.preview || preview,
