@@ -25,7 +25,7 @@
               <span>←</span><span>Previous post</span>
             </div>
             <SiteLink
-              &href="(get context document.previous.data.slug)"
+              &href="(concat ../ (get context document.previous.data.slug))"
               &children="(get context document.previous.data.title)"
             ></SiteLink>
           </div>
@@ -37,7 +37,7 @@
               <span>Next post</span><span>→</span>
             </div>
             <SiteLink
-              &href="(get context document.next.data.slug)"
+              &href="(concat ../ (get context document.next.data.slug))"
               &children="(get context document.next.data.title)"
             ></SiteLink>
           </div>

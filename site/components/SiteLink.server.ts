@@ -6,7 +6,8 @@ function init({ routes }: { routes: Routes }) {
       return;
     }
 
-    return url;
+    // TODO: This might be too weak with anchors etc. so restore logic below
+    return url.endsWith("/") ? url : `${url}/`;
 
     // TODO: Restore url checks
     /*
