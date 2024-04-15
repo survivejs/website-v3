@@ -1,20 +1,23 @@
 <nav
   x-label="parent"
-  x-state="{ closest: {}, headings: Array.from(document.querySelectorAll('main h2, h3')) }"
+  x-state="{ closest: {} }"
   x-closest="{ state: { closest: document.querySelectorAll('main h2, h3') } }"
 >
-  <ul x-each="state.headings">
-    <li x-template>
+  <ul
+    &foreach="(get props toc)"
+    class="flex flex-col gap-2"
+  >
+    <li>
       <a
         x-attr
-        x="state.value.firstChild.textContent"
-        @href="state.value.querySelector('a')?.attributes.href?.value"
         &@class="(concat
-          '[state.value.textContent === parent.closest.textContent && `'
+          '[element.textContent === parent.closest.textContent && `'
           (tw underline)
           '`, state.tagName === `H3` && `'
           (tw ml-2)
           '`]')"
+        &href="(concat # (get props slug))"
+        &children="(get props text)"
       ></a>
     </li>
   </ul>

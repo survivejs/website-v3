@@ -10,8 +10,12 @@
     </div>
   </slot>
   <slot name="aside">
-    <div class="flex flex-col gap-4 w-48">
-      <TableOfContents />
+    <div
+      class="flex flex-col gap-4 w-48 bg-white p-2 rounded-md"
+    >
+      <TableOfContents
+        &toc="(get context document.tableOfContents)"
+      />
     </div>
   </slot>
 </BaseLayout>
