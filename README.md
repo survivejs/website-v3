@@ -15,6 +15,8 @@ Set up a `.dev.vars` file:
 ```bash
 GET_IMAGES_ENDPOINT=TODO
 GET_IMAGES_TOKEN=TODO
+IMAGES_API_URL=TODO
+IMAGES_ROOT=TODO
 ```
 
 Bootstrap the project:

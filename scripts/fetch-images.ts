@@ -1,7 +1,7 @@
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 
 // load() doesn't check env, just possible .dev.vars file
-const env = await load({ envPath: "./dev.vars" });
+const env = await load({ envPath: "./.dev.vars" });
 
 const imagesEndpoint = env.GET_IMAGES_ENDPOINT ||
   Deno.env.get("GET_IMAGES_ENDPOINT");

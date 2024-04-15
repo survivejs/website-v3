@@ -12,8 +12,13 @@ import highlightSQL from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/la
 import highlightTS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/typescript.js";
 import highlightXML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/xml.js";
 import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/yaml.js";
-import type { LoadApi } from "https://deno.land/x/gustwind@v0.66.2/types.ts";
+import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
+import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 import twindSetup from "../twindSetup.ts";
+import type { LoadApi } from "https://deno.land/x/gustwind@v0.66.2/types.ts";
+
+// load() doesn't check env, just possible .dev.vars file
+const env = await load({ envPath: "./.dev.vars" });
 
 highlight.registerLanguage("bash", highlightBash);
 highlight.registerLanguage("c", highlightC);
@@ -124,8 +129,20 @@ function getTransformMarkdown(load: LoadApi) {
           const height = textParts[2] || "";
           const className = textParts[3] || "";
 
+          // TODO: Rewrite book image urls
+          if (!href.startsWith("http")) {
+            // Rewrite blog urls to look from root
+            if (href.startsWith("assets/")) {
+              href = `/${href}`;
+            }
+
+            if (env.IMAGES_ROOT) {
+              href = urlJoin(env.IMAGES_ROOT, href);
+            }
+          }
+
           return `<figure class="not-prose my-0 ${className}">
-            <img src="${href}" alt="${alt}" title="${title}" width="${width}" height="${height}" />
+            <img src="${href}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
             <figcaption class="text-center text-sm">${alt}</figcaption>
           </figure>`;
         },
