@@ -132,20 +132,29 @@ function init({ load }: { load: LoadApi }) {
   }
 
   async function processMarkdown(
-    { path }: { path: string },
+    { path, previous, next }: {
+      path: string;
+      previous: MarkdownWithFrontmatter;
+      next: MarkdownWithFrontmatter;
+    },
     o?: { parseHeadmatter: boolean; skipFirstLine: boolean },
   ) {
     if (o?.parseHeadmatter) {
       const headmatter = await parseHeadmatter(path);
 
       return {
+        previous,
+        next,
         ...headmatter,
         ...(await parseMarkdown(headmatter.content)),
       };
     }
 
-    // Markdown also parses toc but it's not needed for now
-    return parseMarkdown(await load.textFile(path), o);
+    return {
+      previous,
+      next,
+      ...(await parseMarkdown(await load.textFile(path), o)),
+    };
   }
 
   async function parseHeadmatter(

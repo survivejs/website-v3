@@ -8,6 +8,42 @@
         &children="(get context document.data.title)"
       ></Heading>
       <div &children="(get context document.content)"></div>
+      <Heading level="2">Topics</Heading>
+      <div>
+        <div>TODO</div>
+        <div
+          &children="(get context document.topics)"
+        ></div>
+      </div>
+      <div
+        class="flex flex-row gap-4 justify-between text-sm"
+        &visibleIf="(or (get context document.previous) (get context document.next))"
+      >
+        <div
+          &visibleIf="(get context document.previous)"
+          class="flex flex-col gap-2"
+        >
+          <div class="flex flex-row gap-2">
+            <span>←</span><span>Previous post</span>
+          </div>
+          <a
+            &href="(get context document.previous.data.slug)"
+            &children="(get context document.previous.data.title)"
+          ></a>
+        </div>
+        <div
+          &visibleIf="(get context document.next)"
+          class="flex flex-col gap-2"
+        >
+          <div class="flex flex-row gap-2">
+            <span>Next post</span><span>→</span>
+          </div>
+          <a
+            &href="(get context document.next.data.slug)"
+            &children="(get context document.next.data.title)"
+          ></a>
+        </div>
+      </div>
     </div>
   </slot>
   <slot name="aside">
