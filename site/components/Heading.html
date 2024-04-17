@@ -1,7 +1,7 @@
 <noop
   &visibleIf="(get props children)"
   &type="(concat h (get props level))"
-  &id="(getUniqueAnchorId (get props children))"
+  &id="(or (get props anchor) (getUniqueAnchorId (get props children)))"
   &class="(get props class)"
 >
   <div class="inline" &children="(get props children)" />

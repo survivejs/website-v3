@@ -23,8 +23,8 @@
       "dependencies": [
         "npm:@cloudflare/workers-types@^4.20240405.0",
         "npm:prettier@^3.2.5",
-        "npm:typescript@^5.4.4",
-        "npm:wrangler@^3.31.0"
+        "npm:typescript@^5.4.5",
+        "npm:wrangler@^3.50.0"
       ]
     }
   }

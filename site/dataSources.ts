@@ -7,7 +7,7 @@ import removeMarkdown from "https://esm.sh/remove-markdown@0.3.0";
 import getMarkdown from "./transforms/markdown.ts";
 import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
 import trimStart from "https://deno.land/x/lodash@4.17.15-es/trimStart.js";
-import type { LoadApi } from "https://deno.land/x/gustwind@v0.66.3/types.ts";
+import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.68.0/types.ts";
 
 type MarkdownWithFrontmatter = {
   data: {
@@ -29,8 +29,8 @@ type Topic = {
   slug: string;
 };
 
-function init({ load }: { load: LoadApi }) {
-  const markdown = getMarkdown(load);
+function init({ load, render }: DataSourcesApi) {
+  const markdownToHtml = getMarkdown({ load, render });
 
   async function indexBook(directory: string) {
     const chapters =
@@ -200,7 +200,7 @@ function init({ load }: { load: LoadApi }) {
       ? lines.split("\n").slice(1).join("\n")
       : lines;
 
-    return memo(markdown, input);
+    return memo(markdownToHtml, input);
   }
 
   return {

@@ -1,5 +1,5 @@
 import { install, tw } from "https://esm.sh/@twind/core@1.1.1";
-import { marked } from "https://cdn.jsdelivr.net/npm/marked@9.1.5/lib/marked.esm.js";
+import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.1/lib/marked.esm.js";
 import highlight from "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/es/core.min.js";
 import highlightBash from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/bash.js";
 import highlightC from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/c.js";
@@ -15,7 +15,7 @@ import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/l
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 import twindSetup from "../twindSetup.ts";
-import type { LoadApi } from "https://deno.land/x/gustwind@v0.66.2/types.ts";
+import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.68.0/types.ts";
 
 // load() doesn't check env, just possible .dev.vars file
 const env = await load({ envPath: "./.dev.vars" });
@@ -56,8 +56,34 @@ marked.setOptions({
 
 install(twindSetup);
 
-function getTransformMarkdown(load: LoadApi) {
-  return function transformMarkdown(input: string) {
+function getTransformMarkdown({ load, render }: DataSourcesApi) {
+  // TODO: Render headings through the components
+  /*
+  marked.use({
+    async: true,
+    // TODO: Speed up post indexing (skip work when requesting a single blog page)
+    // @ts-ignore How to type this?
+    walkTokens: async (token) => {
+      if (token.type === "heading") {
+        console.log("got a heading", token);
+
+        const { raw, level } = token;
+        const slug = slugify(raw);
+
+        tableOfContents.push({ slug, level, text: token.text });
+
+        const text = await Promise.resolve("foobar"); /*await render({
+          htmlInput:
+            `<Heading anchor="${slug}" level="${level}" children="${token.text}" />`,
+        });
+
+        // token.tokens = [{ type: "text", text }];
+      }
+    },
+  });
+  */
+
+  return async function transformMarkdown(input: string) {
     if (typeof input !== "string") {
       console.error("input", input);
       throw new Error("transformMarkdown - passed wrong type of input");
