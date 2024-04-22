@@ -1,6 +1,4 @@
-import type { Routes } from "https://deno.land/x/gustwind@v0.66.2/types.ts";
-
-function init({ routes }: { routes: Routes }) {
+function init() {
   function validateUrl(url: string) {
     if (!url) {
       return;

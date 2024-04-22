@@ -5,13 +5,12 @@
       "title": "SurviveJS",
       "description": "Get started with JavaScript for free"
     },
-    "dataSources": [
-      {
+    "dataSources": {
+      "readme": {
         "operation": "processMarkdown",
-        "parameters": [{ "path": "./README.md" }, { "skipFirstLine": true }],
-        "name": "readme"
+        "parameters": [{ "path": "./README.md" }, { "skipFirstLine": true }]
       }
-    ],
+    },
     "scripts": [{ "name": "hello" }]
   },
   "blog": {
@@ -20,29 +19,29 @@
       "title": "Blog",
       "description": "Read blog interviews to learn more about JavaScript and related technologies"
     },
-    "dataSources": [
-      {
+    "dataSources": {
+      "blogPosts": {
         "operation": "indexBlog",
-        "parameters": ["./pages/blog"],
-        "name": "blogPosts"
+        "parameters": ["./pages/blog"]
       }
-    ],
+    },
     "expand": {
       "matchBy": {
         "indexer": {
           "operation": "indexBlog",
           "parameters": ["./pages/blog"]
         },
-        "dataSources": [{
-          "operation": "processBlogPost",
-          "parameters": [
-            { "parseHeadmatter": true }
-          ],
-          "name": "document"
-        }],
         "slug": "data.slug"
       },
       "layout": "documentationPage",
+      "dataSources": {
+        "document": {
+          "operation": "processBlogPost",
+          "parameters": [
+            { "parseHeadmatter": true }
+          ]
+        }
+      },
       "meta": {
         "title": {
           "utility": "get",
@@ -61,26 +60,26 @@
           "title": "Topics",
           "description": "Blog topics"
         },
-        "dataSources": [
-          {
+        "dataSources": {
+          "topics": {
             "operation": "indexTopics",
-            "parameters": ["./pages/blog"],
-            "name": "topics"
+            "parameters": ["./pages/blog"]
           }
-        ],
+        },
         "expand": {
           "matchBy": {
             "indexer": {
               "operation": "indexTopics",
               "parameters": ["./pages/blog"]
             },
-            "dataSources": [{
-              "operation": "processTopic",
-              "name": "topic"
-            }],
             "slug": "slug"
           },
           "layout": "topicPage",
+          "dataSources": {
+            "topic": {
+              "operation": "processTopic"
+            }
+          },
           "meta": {}
         }
       }
@@ -99,29 +98,27 @@
           "title": "TODO",
           "description": "TODO"
         },
-        "dataSources": [
-          {
+        "dataSources": {
+          "chapters": {
             "operation": "indexBook",
-            "parameters": ["./books/webpack-book/manuscript"],
-            "name": "chapters"
+            "parameters": ["./books/webpack-book/manuscript"]
           }
-        ],
+        },
         "expand": {
           "matchBy": {
             "indexer": {
               "operation": "indexBook",
               "parameters": ["./books/webpack-book/manuscript"]
             },
-            "dataSources": [{
-              "operation": "processMarkdown",
-              "parameters": [
-                { "parseHeadmatter": false }
-              ],
-              "name": "document"
-            }],
             "slug": "slug"
           },
           "layout": "documentationPage",
+          "dataSources": {
+            "document": {
+              "operation": "processMarkdown",
+              "parameters": [{ "parseHeadmatter": false }]
+            }
+          },
           "meta": {
             "title": {
               "utility": "get",
@@ -140,29 +137,29 @@
           "title": "TODO",
           "description": "TODO"
         },
-        "dataSources": [
-          {
+        "dataSources": {
+          "chapters": {
             "operation": "indexBook",
-            "parameters": ["./books/react-book/manuscript"],
-            "name": "chapters"
+            "parameters": ["./books/react-book/manuscript"]
           }
-        ],
+        },
         "expand": {
           "matchBy": {
             "indexer": {
               "operation": "indexBook",
               "parameters": ["./books/react-book/manuscript"]
             },
-            "dataSources": [{
-              "operation": "processMarkdown",
-              "parameters": [
-                { "parseHeadmatter": false }
-              ],
-              "name": "document"
-            }],
             "slug": "slug"
           },
           "layout": "documentationPage",
+          "dataSources": {
+            "document": {
+              "operation": "processMarkdown",
+              "parameters": [
+                { "parseHeadmatter": false }
+              ]
+            }
+          },
           "meta": {
             "title": {
               "utility": "get",
@@ -181,29 +178,29 @@
           "title": "TODO",
           "description": "TODO"
         },
-        "dataSources": [
-          {
+        "dataSources": {
+          "chapters": {
             "operation": "indexBook",
-            "parameters": ["./books/maintenance-book/manuscript"],
-            "name": "chapters"
+            "parameters": ["./books/maintenance-book/manuscript"]
           }
-        ],
+        },
         "expand": {
           "matchBy": {
             "indexer": {
               "operation": "indexBook",
               "parameters": ["./books/maintenance-book/manuscript"]
             },
-            "dataSources": [{
-              "operation": "processMarkdown",
-              "parameters": [
-                { "parseHeadmatter": false }
-              ],
-              "name": "document"
-            }],
             "slug": "slug"
           },
           "layout": "documentationPage",
+          "dataSources": {
+            "document": {
+              "operation": "processMarkdown",
+              "parameters": [
+                { "parseHeadmatter": false }
+              ]
+            }
+          },
           "meta": {
             "title": {
               "utility": "get",
@@ -259,13 +256,12 @@
       "title": "SurviveJS",
       "description": "SurviveJS blog"
     },
-    "dataSources": [
-      {
+    "dataSources": {
+      "blogPosts": {
         "operation": "indexBlog",
-        "parameters": ["./pages/blog"],
-        "name": "blogPosts"
+        "parameters": ["./pages/blog"]
       }
-    ]
+    }
   },
   "404.html": {
     "layout": "404",
