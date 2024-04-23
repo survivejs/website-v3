@@ -33,11 +33,13 @@ function init({ load, render }: DataSourcesApi) {
   const markdownToHtml = getMarkdown({ load, render });
 
   async function indexBook(directory: string) {
-    const chapters =
-      (await indexMarkdown(directory, { parseHeadmatter: false })).map((c) => ({
-        ...c,
-        slug: cleanChapterName(c.path),
-      }));
+    const chapters = (await indexMarkdown(directory, {
+      parseHeadmatter: false,
+      recursive: true,
+    })).map((c) => ({
+      ...c,
+      slug: cleanChapterName(c.name),
+    }));
 
     chapters.sort((a, b) => getIndex(a.name) - getIndex(b.name));
 
@@ -95,12 +97,13 @@ function init({ load, render }: DataSourcesApi) {
 
   async function indexMarkdown(
     directory: string,
-    o: { parseHeadmatter: boolean },
+    o: { parseHeadmatter: boolean; recursive?: boolean },
   ) {
     const files = await load.dir({
       path: directory,
       extension: ".md",
       type: "",
+      recursive: o.recursive,
     });
 
     return Promise.all(
@@ -328,7 +331,10 @@ function cleanChapterName(path: string) {
     .join("/")
     .toLowerCase()
     .replace(/ /g, "-")
-    .replace(/_/g, "-");
+    .replace(/_/g, "-")
+    .split(".")
+    .slice(0, -1)
+    .join(".");
 }
 
 export { init };
