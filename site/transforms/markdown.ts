@@ -1,5 +1,5 @@
 import { install, tw } from "https://esm.sh/@twind/core@1.1.1";
-import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.1/lib/marked.esm.js";
+import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
 import highlight from "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/es/core.min.js";
 import highlightBash from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/bash.js";
 import highlightC from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/c.js";
@@ -118,6 +118,7 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
               `<HeadingWithAnchor anchor="${slug}" level="${level}" children="${token.text}" />`,
           });
 
+          // TODO: Maybe this solution is missing something (fails at the build)
           token.tokens = [{ type: "text", text: html }];
 
           return token;

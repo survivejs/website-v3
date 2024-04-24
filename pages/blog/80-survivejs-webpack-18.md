@@ -19,7 +19,7 @@ The structure of the book evolved further and I took great care in figuring out 
 
 T> If you have found the content useful, this would be a good time to contribute a testimonial. A sentence or two would go a long way. Contact me the way you see the most fitting. You can find a couple of channels at the site footer.
 
-## Book Improvements - `1.8`
+## Book Improvements - 1.8
 
 I continued the habit of silent releases and did a couple before I realized the book has moved too far content-wise to warrant one. But I'll likely continue with this habit yet again.
 

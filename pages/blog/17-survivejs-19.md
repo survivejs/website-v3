@@ -7,7 +7,7 @@ keywords: ['release-notes', 'webpack', 'react']
 
 Compared to [1.8.0](./survivejs-18), `1.9.0` can be seen as a more conservative release. There are plenty of smaller fixes and even some new content too. I decided to fix the chapter structure to the current. I rather provide less but better content. This also helps to keep the cost of a paper version down.
 
-## Towards `2.0.0`
+## Towards 2.0.0
 
 Besides integrating changes (thanks Steve!) and ideas, I gave `2.0.0` some proper thought. With `2.0.0` I will finally try to get the book to Amazon while getting it printed through them. This means I'll need to get a proper ISBN for the book. Only smaller tweaks, such as grammar fixes, are allowed after this. That's a little problematic.
 
@@ -19,7 +19,7 @@ Getting the book printed is a huge step for me personally. It's great unknown bu
 
 Ideally the book will continue to provide some level of income as that enables me to keep developing the content and technology around it.
 
-## Book Improvements - `1.9.0`
+## Book Improvements - 1.9.0
 
 In total 134 commits went to `1.9.0`. To make it easier to follow what happened and where, I've split up the changes below.
 
