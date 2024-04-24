@@ -42,6 +42,9 @@ highlight.registerLanguage("ts", highlightTS);
 highlight.registerLanguage("xml", highlightXML);
 highlight.registerLanguage("yaml", highlightYAML);
 
+// TODO: Get this from marked types instead
+type Token = { text: string; type: "paragraph"; tokens: Token[] };
+
 marked.setOptions({
   gfm: true,
   breaks: false,
@@ -68,8 +71,7 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
   marked.use({
     async: true,
     // TODO: Speed up post indexing (skip work when requesting a single blog page)
-    // @ts-ignore How to type this?
-    walkTokens: async (token) => {
+    walkTokens: async (token: Token) => {
       if (token.type === "heading") {
         console.log("got a heading", token);
 
@@ -88,6 +90,18 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
     },
   });
   */
+
+  marked.use({
+    walkTokens: (token: Token) => {
+      if (token.type === "paragraph") {
+        return (
+          parseCustomQuote(token, "T>", "tip") ||
+          parseCustomQuote(token, "W>", "warning") ||
+          token
+        );
+      }
+    },
+  });
 
   return async function transformMarkdown(input: string) {
     if (typeof input !== "string") {
@@ -211,11 +225,38 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
             "</" +
             type + ">\n";
         },
+        paragraph(text: string) {
+          // Skip pagebreaks
+          if (text === "{pagebreak}") {
+            return "";
+          }
+
+          return `<p>${text}</p>\n`;
+        },
       },
     });
 
     return { content: marked(input), tableOfContents };
   };
+}
+
+function parseCustomQuote(
+  token: Token,
+  match: string,
+  className: string,
+) {
+  const text = token.text;
+
+  if (text.indexOf(match) === 0) {
+    const textIcon = className === "tip" ? "!" : "?";
+
+    token.tokens[0].text = token.tokens[0].text.replace(
+      match.replace(">", "&gt;"),
+      `<div class="inline-block rounded-full bg-muted text-white w-8 h-8 -ml-9 text-center">${textIcon}</div>`,
+    );
+
+    return token;
+  }
 }
 
 function slugify(idBase: string) {
