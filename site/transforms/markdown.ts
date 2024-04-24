@@ -18,7 +18,7 @@ import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/l
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 import twindSetup from "../twindSetup.ts";
-import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.68.0/types.ts";
+import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.70.3/types.ts";
 
 // load() doesn't check env, just possible .dev.vars file
 const env = await load({ envPath: "./.dev.vars" });
@@ -43,7 +43,13 @@ highlight.registerLanguage("xml", highlightXML);
 highlight.registerLanguage("yaml", highlightYAML);
 
 // TODO: Get this from marked types instead
-type Token = { text: string; type: "paragraph"; tokens: Token[] };
+type Token = {
+  depth?: number;
+  raw?: string;
+  text?: string;
+  type: "heading" | "paragraph" | "text";
+  tokens?: Token[];
+};
 
 marked.setOptions({
   gfm: true,
@@ -66,31 +72,6 @@ marked.setOptions({
 install(twindSetup);
 
 function getTransformMarkdown({ load, render }: DataSourcesApi) {
-  // TODO: Render headings through the components
-  /*
-  marked.use({
-    async: true,
-    // TODO: Speed up post indexing (skip work when requesting a single blog page)
-    walkTokens: async (token: Token) => {
-      if (token.type === "heading") {
-        console.log("got a heading", token);
-
-        const { raw, level } = token;
-        const slug = slugify(raw);
-
-        tableOfContents.push({ slug, level, text: token.text });
-
-        const text = await Promise.resolve("foobar"); /*await render({
-          htmlInput:
-            `<Heading anchor="${slug}" level="${level}" children="${token.text}" />`,
-        });
-
-        // token.tokens = [{ type: "text", text }];
-      }
-    },
-  });
-  */
-
   marked.use({
     walkTokens: (token: Token) => {
       if (token.type === "paragraph") {
@@ -111,6 +92,38 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
 
     // https://github.com/markedjs/marked/issues/545
     const tableOfContents: { slug: string; level: number; text: string }[] = [];
+
+    marked.use({
+      async: true,
+      walkTokens: async (token: Token) => {
+        if (token.type === "heading") {
+          const { text, depth: level } = token;
+          const slug = text ? slugify(text) : "";
+
+          // @ts-expect-error This is fine
+          tableOfContents.push({ slug, level, text: token.text });
+
+          const html = await render({
+            // TODO: Reduce this just to a Heading to eliminate the duplicate
+            // TODO: Figure out why componentName/props doesn't do the same as htmlInput
+            // Maybe component utilities don't get passed properly then.
+            /*componentName: "Heading",
+            props: {
+              showAnchor: true,
+              anchor: slug,
+              level,
+              children: token.text,
+            },*/
+            htmlInput:
+              `<HeadingWithAnchor anchor="${slug}" level="${level}" children="${token.text}" />`,
+          });
+
+          token.tokens = [{ type: "text", text: html }];
+
+          return token;
+        }
+      },
+    });
 
     // https://marked.js.org/using_pro#renderer
     // https://github.com/markedjs/marked/blob/master/src/Renderer.js
@@ -146,27 +159,7 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
             code +
             "</code></pre>\n";
         },
-        heading(
-          text: string,
-          level: number,
-          raw: string,
-        ) {
-          const slug = slugify(raw);
-
-          tableOfContents.push({ slug, level, text });
-
-          return '<a href="#' + slug + '"><h' +
-            level +
-            ' class="' + tw`inline` + '"' +
-            ' id="' +
-            slug +
-            '">' +
-            text +
-            "</h" +
-            level +
-            ">" +
-            "</a>\n";
-        },
+        heading: (text: string) => text,
         image(href: string, title: string, text: string) {
           const textParts = text ? text.split("|") : [];
           const alt = textParts[0] || "";
@@ -236,7 +229,7 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
       },
     });
 
-    return { content: marked(input), tableOfContents };
+    return { content: await marked(input), tableOfContents };
   };
 }
 
@@ -247,9 +240,10 @@ function parseCustomQuote(
 ) {
   const text = token.text;
 
-  if (text.indexOf(match) === 0) {
+  if (text?.indexOf(match) === 0) {
     const textIcon = className === "tip" ? "!" : "?";
 
+    // @ts-expect-error This is fine for now
     token.tokens[0].text = token.tokens[0].text.replace(
       match.replace(">", "&gt;"),
       `<div class="inline-block rounded-full bg-muted text-white w-8 h-8 -ml-9 text-center">${textIcon}</div>`,

@@ -11,7 +11,7 @@
       <a
         x-attr
         &@class="(concat
-          '[element.textContent === parent.closest.textContent && `'
+          '[element.firstChild.textContent === parent.closest.firstChild.textContent && `'
           (tw underline)
           '`, state.tagName === `H3` && `'
           (tw ml-2)
