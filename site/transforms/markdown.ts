@@ -18,7 +18,7 @@ import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/l
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 import twindSetup from "../twindSetup.ts";
-import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.70.3/types.ts";
+import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.71.0/types.ts";
 
 // load() doesn't check env, just possible .dev.vars file
 const env = await load({ envPath: "./.dev.vars" });
@@ -69,9 +69,10 @@ marked.setOptions({
   },
 });
 
+// @ts-expect-error This is fine
 install(twindSetup);
 
-function getTransformMarkdown({ load, render }: DataSourcesApi) {
+function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
   marked.use({
     walkTokens: (token: Token) => {
       if (token.type === "paragraph") {
@@ -84,47 +85,19 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
     },
   });
 
-  return async function transformMarkdown(input: string) {
+  return function transformMarkdown(input: string) {
     if (typeof input !== "string") {
       console.error("input", input);
       throw new Error("transformMarkdown - passed wrong type of input");
     }
 
     // https://github.com/markedjs/marked/issues/545
-    const tableOfContents: { slug: string; level: number; text: string }[] = [];
-
-    marked.use({
-      async: true,
-      walkTokens: async (token: Token) => {
-        if (token.type === "heading") {
-          const { text, depth: level } = token;
-          const slug = text ? slugify(text) : "";
-
-          // @ts-expect-error This is fine
-          tableOfContents.push({ slug, level, text: token.text });
-
-          const html = await render({
-            // TODO: Reduce this just to a Heading to eliminate the duplicate
-            // TODO: Figure out why componentName/props doesn't do the same as htmlInput
-            // Maybe component utilities don't get passed properly then.
-            /*componentName: "Heading",
-            props: {
-              showAnchor: true,
-              anchor: slug,
-              level,
-              children: token.text,
-            },*/
-            htmlInput:
-              `<HeadingWithAnchor anchor="${slug}" level="${level}" children="${token.text}" />`,
-          });
-
-          // TODO: Maybe this solution is missing something (fails at the build)
-          token.tokens = [{ type: "text", text: html }];
-
-          return token;
-        }
-      },
-    });
+    const tableOfContents: {
+      slug: string;
+      level: number;
+      text: string;
+      raw: string;
+    }[] = [];
 
     // https://marked.js.org/using_pro#renderer
     // https://github.com/markedjs/marked/blob/master/src/Renderer.js
@@ -160,7 +133,20 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
             code +
             "</code></pre>\n";
         },
-        heading: (text: string) => text,
+        heading(
+          text: string,
+          level: number,
+          raw: string,
+        ) {
+          const slug = slugify(raw);
+
+          tableOfContents.push({ slug, level, text, raw });
+
+          return renderSync({
+            htmlInput:
+              `<HeadingWithAnchor anchor="${slug}" level="${level}" children="${text}" />`,
+          });
+        },
         image(href: string, title: string, text: string) {
           const textParts = text ? text.split("|") : [];
           const alt = textParts[0] || "";
@@ -230,7 +216,7 @@ function getTransformMarkdown({ load, render }: DataSourcesApi) {
       },
     });
 
-    return { content: await marked(input), tableOfContents };
+    return { content: marked(input), tableOfContents };
   };
 }
 
