@@ -80,7 +80,7 @@
                 <slot name="title">
                   <SiteLink
                     &children="(get props title)"
-                    &href="(concat topics / (get props slug))"
+                    &href="(urlJoin / blog topics (get props slug) /)"
                   />
                 </slot>
               </Card>

@@ -1,4 +1,5 @@
 import { tw } from "https://esm.sh/@twind/core@1.1.1";
+import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 import type { GlobalUtilities } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
 
 const init: GlobalUtilities["init"] = function init(
@@ -42,7 +43,7 @@ const init: GlobalUtilities["init"] = function init(
     // Some links can have a relative form (i.e., ../foobar) so
     // they have to be resolved into something that can be matched
     // easily.
-    const resolvedUrl = urlResolve(currentUrl, urlRoot);
+    const resolvedUrl = resolveUrl(currentUrl, urlRoot);
 
     return `${resolvedUrl}${anchor ? "#" + anchor : ""}`;
 
@@ -64,13 +65,24 @@ const init: GlobalUtilities["init"] = function init(
   return { getLinkSuffix, validateUrl };
 };
 
-function urlResolve(root: string, fragment: string) {
-  if (fragment.startsWith("../")) {
-    return root.split("/").filter(Boolean).slice(0, -1).join("/") + "/" +
-      fragment.slice(3);
+function resolveUrl(root: string, fragment: string) {
+  if (fragment === "../") {
+    const parts = root.split("/").filter(Boolean).slice(0, -1);
+
+    return "/" + parts.join("/") + "/";
   }
 
-  return fragment;
+  if (fragment.startsWith("../")) {
+    const parts = root.split("/").filter(Boolean).slice(0, -1);
+
+    return "/" + parts.join("/") + "/" + fragment.slice(3);
+  }
+
+  if (fragment.startsWith("/")) {
+    return fragment;
+  }
+
+  return urlJoin(root, fragment, "/");
 }
 
 export { init };

@@ -13,7 +13,7 @@
         <Card>
           <slot name="title">
             <SiteLink
-              &href="(urlJoin (get props slug) /)"
+              &href="(get props slug)"
               &children="(concat (get props title) ' ' '(' (length (get props posts)) ')')"
             ></SiteLink>
           </slot>
