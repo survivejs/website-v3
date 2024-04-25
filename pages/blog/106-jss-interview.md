@@ -1,5 +1,5 @@
 ---
-title: 'JSS - Author CSS Using JavaScript as a Host Language - Interview with Oleg Slobodskoi'
+title: 'JSS - Author CSS Using JavaScript as a Host Language - Interview with Oleg Isonen'
 date: 2017-07-07
 headerImage: 'assets/img/clock.jpg'
 keywords: ['interview', 'react', 'styling', 'cssinjs']
@@ -12,10 +12,9 @@ To understand the topic better, I am interviewing [Oleg Slobodskoi](https://twit
 
 ## Can you tell a bit about yourself?
 
-<span class="author">
-  <img src="https://avatars1.githubusercontent.com/u/52824?v=3&s=200" alt="Oleg Slobodskoi" class="author" width="100" height="100" />
+![Oleg Isonen|100|100|author](https://avatars1.githubusercontent.com/u/52824?v=3&s=200)
 
-Working on web UIs for over a decade, I have realized there are two significant challenges in frontend engineering: understanding the state and styling its representation. Unidirectional data flow has made managing state much easier, but styling components is still painful. </span>
+Working on web UIs for over a decade, I have realized there are two significant challenges in frontend engineering: understanding the state and styling its representation. Unidirectional data flow has made managing state much easier, but styling components is still painful.
 
 To improve the situation, I started JSS back in 2014 and haven't stopped learning and developing the project since. Currently, I am working at [Chatgrape](https://www.chatgrape.com/) where we are building a sophisticated client using NLP and deep services integration. All CSS is managed using JSS. Also, I try to talk at conferences from time to time, even if I know I suck at this haha.
 
