@@ -26,7 +26,7 @@ const init: GlobalUtilities["init"] = function init(
     // easily.
     const resolvedUrl = urlResolve(currentUrl, urlRoot);
 
-    return `/${resolvedUrl}${anchor ? "#" + anchor : "/"}`;
+    return `${resolvedUrl}${anchor ? "#" + anchor : ""}`;
 
     // TODO: Find ways to speed this up as now it takes too much time
     // and effort to match.
@@ -52,7 +52,7 @@ function urlResolve(root: string, fragment: string) {
       fragment.slice(3);
   }
 
-  return root;
+  return fragment;
 }
 
 export { init };
