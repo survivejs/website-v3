@@ -1,9 +1,21 @@
+import { tw } from "https://esm.sh/@twind/core@1.1.1";
 import type { GlobalUtilities } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
 
 const init: GlobalUtilities["init"] = function init(
   { matchRoute, url: currentUrl },
 ) {
-  async function validateUrl(url: string) {
+  function getLinkSuffix(url: string, children: string) {
+    if (url.startsWith("http")) {
+      return children +
+        `<span class="${
+          tw("inline-block -mt-1 text-xs align-text-top")
+        }">↗</span>`;
+    }
+
+    return children;
+  }
+
+  function validateUrl(url: string) {
     if (!url) {
       return;
     }
@@ -43,7 +55,7 @@ const init: GlobalUtilities["init"] = function init(
     */
   }
 
-  return { validateUrl };
+  return { getLinkSuffix, validateUrl };
 };
 
 function urlResolve(root: string, fragment: string) {
