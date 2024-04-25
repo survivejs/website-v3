@@ -5,6 +5,10 @@ const init: GlobalUtilities["init"] = function init(
   { matchRoute, url: currentUrl },
 ) {
   function getLinkSuffix(url: string, children: string) {
+    if (!url) {
+      return;
+    }
+
     if (url.startsWith("http")) {
       return children +
         `<span class="${
@@ -17,6 +21,8 @@ const init: GlobalUtilities["init"] = function init(
 
   function validateUrl(url: string) {
     if (!url) {
+      // TODO: Figure out why these can exist (parsing problem?)
+      // console.warn(`${currentUrl} has a link without a target`);
       return;
     }
 
