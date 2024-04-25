@@ -15,6 +15,7 @@ export default {
       height: "100px",
       marginLeft: "1em",
     }],
+    ["text-1", { fontSize: "1px" }],
   ],
   theme: {
     extend: {
