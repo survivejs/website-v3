@@ -43,22 +43,26 @@
             <div class="flex flex-row gap-2">
               <span>←</span><span>Previous post</span>
             </div>
-            <SiteLink
-              &href="(concat ../ (get context document.previous.data.slug))"
-              &children="(get context document.previous.data.title)"
-            ></SiteLink>
+            <div>
+              <SiteLink
+                &href="(concat ../ (get context document.previous.data.slug))"
+                &children="(get context document.previous.data.title)"
+              ></SiteLink>
+            </div>
           </div>
           <div
             &visibleIf="(get context document.next)"
             class="flex flex-col gap-2"
           >
-            <div class="flex flex-row gap-2">
+            <div class="flex flex-row gap-2 ml-auto">
               <span>Next post</span><span>→</span>
             </div>
-            <SiteLink
-              &href="(concat ../ (get context document.next.data.slug))"
-              &children="(get context document.next.data.title)"
-            ></SiteLink>
+            <div class="text-right">
+              <SiteLink
+                &href="(concat ../ (get context document.next.data.slug))"
+                &children="(get context document.next.data.title)"
+              ></SiteLink>
+            </div>
           </div>
         </div>
         <div
