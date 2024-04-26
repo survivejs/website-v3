@@ -143,8 +143,9 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           tableOfContents.push({ slug, level, text, raw });
 
           return renderSync({
-            htmlInput:
-              `<HeadingWithAnchor anchor="${slug}" level="${level}" children="${text}" />`,
+            htmlInput: `<HeadingWithAnchor anchor="${slug}" level="${level}">
+              ${text}
+            </HeadingWithAnchor>`,
           });
         },
         image(href: string, title: string, text: string) {
