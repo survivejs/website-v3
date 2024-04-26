@@ -11,14 +11,9 @@ That's where solutions like Uppy by [Artur Paikin](https://twitter.com/arturi) a
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/c32ae87863e9a773986f65f5d369e551?s=200" alt="Artur Paikin" class="author" width="100" height="100" />
-</span>
+![Artur Paikin|100|100|author](https://www.gravatar.com/avatar/c32ae87863e9a773986f65f5d369e551?s=200)
 
 I am a software engineer and interface designer from Moscow, living in New York City for the past three years. I run a small dev and design studio “Baguette” and work together with [Transloadit](https://transloadit.com/) on [uppy.io](https://uppy.io), an open source JS file uploader.
-
-</p>
 
 I’m passionate about [DIY home automation](http://arturpaikin.com/en/home-automation-experiments/), traveling, [indie web](https://indieweb.org/) (RSS and standalone blogs forever!), alternative living spaces (camper vans, cabins, boats) and text adventure games ([80 Days](https://www.inklestudios.com/80days/), [Sorcery!](https://www.inklestudios.com/sorcery/) and [Secret of the Monkey Island](https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island) in particular).
 

@@ -11,14 +11,9 @@ One of the tricky things about writing React components meant for public consump
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/043c2f73dd7c170c8e616a8d87471b14?s=200" alt="Jan-Felix Schwarz" class="author" width="100" height="100" />
-</span>
+![Jan-Felix Schwarz|100|100|author](https://www.gravatar.com/avatar/043c2f73dd7c170c8e616a8d87471b14?s=200)
 
 I work as front-end tech lead at Signavio in Berlin. We are building products that help large businesses to understand and transform the ways they work. I've been doing JavaScript SPA development for the best part of the past decade, so I guess when React came out it was a defining moment in my professional life. :)
-
-</p>
 
 ## How would you describe _substyle_ to someone who has never heard of it?
 

@@ -11,13 +11,9 @@ Given I, [Juho Vepsäläinen](https://twitter.com/bebraw), am one of the organiz
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200" alt="Juho Vepsäläinen" class="author" width="100" height="100" />
-</span>
+![Juho Vepsäläinen|100|100|author](https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200)
 
 I maintain this site as my business. I consider myself as a consultant these days although I do development every once in a while. My perspective has changed completely over the past few years as I have had to move into business. It hasn't been easy, but on the plus side, this process has been changing my life in ways I couldn't have imagined before. And I have a feeling it continues to do so.
-</p>
 
 These days I consult companies ranging from small startups to big enterprises like eBay or Kapsch. I can provide perspective on how to improve their current workflow, especially on the technical side. I train people as needed. This process, in turn, helps me to develop the book offerings you can find on this site. The writing brings in the consulting clients and so far it has been working fine.
 

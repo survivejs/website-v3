@@ -9,13 +9,9 @@ Testing is a lasting topic in software development. There are lots of tools, esp
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
- <img src="https://www.gravatar.com/avatar/eb3e104452d654350a5d1a65caa2e49e?s=200" alt="Forbes Lindesay" class="author" width="100" height="100" />
-</span>
+![Forbes Lindesay|100|100|author](https://www.gravatar.com/avatar/eb3e104452d654350a5d1a65caa2e49e?s=200)
 
 I got interested in open source and JavaScript while I was at university. It was fascinating to see people using the software I built to build their things. I worked at Facebook as a front-end engineer for a couple of years and learned a lot about the challenges in scaling vast JavaScript applications.
-</p>
 
 Now I'm working on a startup called Changepage, which is a tool for sharing feature announcements and bug fixes. I'm also running training workshops on React and Node.
 

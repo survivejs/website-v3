@@ -11,14 +11,9 @@ To tell you more about the conference, I am interviewing [Mikhail Novikov](https
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/811bcaa26aa7e2af0587b9d170138ff0?s=200" alt="Mikhail Novikov" class="author" width="100" height="100" />
-</span>
+![Mikhail Novikov|100|100|author](https://www.gravatar.com/avatar/811bcaa26aa7e2af0587b9d170138ff0?s=200)
 
 Hi! I'm Mikhail Novikov, known in the internets as **freiksenet**. I'm a co-founder of Reindex, the first GraphQL startup in the world and have been doing GraphQL consulting, training and open source work for the last couple of years.
-
-</p>
 
 I've developed Apollo Launchpad, schema stitching in graphql-tools and worked with companies like Apollo and Expo. I'm also helping organize GraphQL Finland and React Finland here in Helsinki.
 

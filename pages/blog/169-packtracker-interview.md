@@ -11,14 +11,9 @@ In this interview with [Jonathan D. Johnson](https://twitter.com/jondavidjohn), 
 
 ## Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://www.gravatar.com/avatar/91f3c86d471f089ca2b3ec5093832ccb?s=200" alt="Jonathan D. Johnson" class="author" width="100" height="100" />
-  </span>
+![Jonathan D. Johnson|100|100|author](https://www.gravatar.com/avatar/91f3c86d471f089ca2b3ec5093832ccb?s=200)
 
 Loving my wife, my sons, and my work. Full stack developer building [CodeShip](https://codeship.com) by day and _packtracker.io_ by night, otherwise you can probably find me outside. 🧗🏻‍♂️🏕
-
-</p>
 
 ## How would you describe _packtracker.io_ to someone who has never heard of it?
 

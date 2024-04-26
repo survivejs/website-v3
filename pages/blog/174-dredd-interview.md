@@ -11,14 +11,9 @@ For this reason, I am interviewing [Honza Javorek](https://twitter.com/honzajavo
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/7b2e4bf7ecca28e530e1c421f0676c0b?s=200" alt="Honza Javorek" class="author" width="100" height="100" />
-</span>
+![Honza Javorek|100|100|author](https://www.gravatar.com/avatar/7b2e4bf7ecca28e530e1c421f0676c0b?s=200)
 
 I am a software engineer from Prague, a city in the Central Europe. I understand web APIs, love open source and documentation, and code in Python or JavaScript. You can check my articles or past conference appearances on [my personal website](http://honzajavorek.cz/).
-
-</p>
 
 Since 2011 I have been helping to drive the growth and success of the [Czech Python User Group](https://python.cz/en/). For years I have been participating in volunteer-driven meetups, courses, workshops, [conferences](https://cz.pycon.org/), nonprofit, and more.
 

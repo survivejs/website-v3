@@ -13,14 +13,9 @@ T> I interviewed Fahad earlier about [FrintJS](/blog/frint-interview), a framewo
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/19a3655e6ba9e5a496ee690ba03f2180?s=200" alt="Fahad Ibnay Heylaal" class="author" width="100" height="100" />
-</span>
+![Fahad Ibnay Heylaal|100|100|author](https://www.gravatar.com/avatar/19a3655e6ba9e5a496ee690ba03f2180?s=200)
 
 I am a software engineer, currently living and loving it in Amsterdam. For almost a decade I have been involved with open source activities, and passionate about developer tooling. Lately, I am focusing more on JavaScript both on the browser and the server-side.
-
-</p>
 
 ## How would you describe _Proppy_ to someone who has never heard of it?
 

@@ -14,14 +14,9 @@ T> I met Nikolay over the internet roughly a decade ago while I was writing my f
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/e950e05c2a6b18cf53ac12d8d2c73e7c?s=200" alt="Nikolay Nemshilov" class="author" width="100" height="100" />
-</span>
+![Nikolay Nemshilov|100|100|author](https://www.gravatar.com/avatar/e950e05c2a6b18cf53ac12d8d2c73e7c?s=200)
 
 Well, over the years of trying to answer this question, I narrowed it down to the following: Hi, I'm Nikolay, I'm here to help.
-
-</p>
 
 That's usually enough to start. But, I suppose you want something more tangible in this case. Well, I'm a software engineer, I think. And I've been doing this long enough to start feeling a bit awkward about it. I guess my "career" as a software engineer began when IE4 was the tip of the spear and I still had my hands on the keyboard every single day.
 

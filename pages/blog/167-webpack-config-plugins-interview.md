@@ -11,14 +11,9 @@ To address this problem, [Jan Nicklas](https://twitter.com/jantimon) has come up
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/bb6300b595a0853eaefeb5f9c78a4b31?s=200" alt="Jan Nicklas" class="author" width="100" height="100" />
-</span>
+![Jan Nicklas|100|100|author](https://www.gravatar.com/avatar/bb6300b595a0853eaefeb5f9c78a4b31?s=200)
 
 As a child, my dad showed QBasic to me, and I got fascinated by the fact that my computer would do everything I told it to - even task which I would not be able to do by myself.
-
-</p>
 
 This fascination has never stopped, drove me into studying CS and somehow turned a hobby into my job. By now I have worked for nine years in Germany, Austria, Switzerland, and the US.
 

@@ -11,14 +11,9 @@ To get a better idea of how this could work out, I am interviewing [Tomáš Konr
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/db0a1034827780a9e20cc4f50cb604a8?s=200" alt="Tomáš Konrády" class="author" width="100" height="100" />
-</span>
+![Tomáš Konrády|100|100|author](https://www.gravatar.com/avatar/db0a1034827780a9e20cc4f50cb604a8?s=200)
 
 I am frontend developer at [Lundegaard](https://lundegaard.eu) in Prague, living in Hradec Králové. Recently I have started to fell in love with open-source and the Ramda library. The result of that is a few projects.
-
-</p>
 
 First of them is the [ramda-extension](https://github.com/tommmyy/ramda-extesion) where our core team of Ramdists created point-free utility functions composed with only Ramda functions. Second open-source project is a [React Union](https://github.com/lundegaard/react-union), the topic of this interview.
 

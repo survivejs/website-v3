@@ -11,12 +11,9 @@ That said, npm isn't perfect. What if it goes offline for a while or you want to
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/fba48015a688c38cc84e5b55b07858c0?s=200" alt="Juan Picado" class="author" width="100" height="100" />
-</span>
+![Juan Picado|100|100|author](https://www.gravatar.com/avatar/fba48015a688c38cc84e5b55b07858c0?s=200)
+
 My name is Juan, and I’m super passionate about open source and always willing to contribute and to learn something new. I’ve worked with several languages on the client side, but my favorite by far is JavaScript. I started using Dojo Toolkit, and these days I code mostly using React, TypeScript, and Node.js.
-</p>
 
 Currently, I work in Austria as a Software Engineer at Mobfox. I love meetups, books, sports, software conferences and I travel a lot.
 

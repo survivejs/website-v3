@@ -11,14 +11,9 @@ Even though the web started from content, it has transformed into an application
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/26152f965d5974e7a30deaa5ab19641f?s=200&d=wavatar" alt="Maciej Caputa" class="author" width="100" height="100" />
-</span>
+![Maciej Caputa|100|100|author](https://www.gravatar.com/avatar/26152f965d5974e7a30deaa5ab19641f?s=200&d=wavatar)
 
 I’m a frontend developer at Netguru – a cool software consultancy that provides design and development services for companies from all over the world. I have four years of experience in web development in various technologies.
-
-</p>
 
 In Netguru, we change our main project every 6-9 months. This way of working gives me ample opportunities to gain experience quickly, code in different environments or tech stacks, and work with different users and clients’ needs.
 

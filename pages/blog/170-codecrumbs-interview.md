@@ -13,14 +13,9 @@ T> Bohdan is one of the speakers at [React Finland 2019](https://react-finland.f
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/804af8ce541ac3ed54876cef0de9c19a?s=200" alt="Bohdan Liashenko" class="author" width="100" height="100" />
-</span>
+![Bohdan Liashenko|100|100|author](https://www.gravatar.com/avatar/804af8ce541ac3ed54876cef0de9c19a?s=200)
 
 I am a frontend developer at 0+X, a consultancy firm based in Stockholm. I moved to Stockholm several years ago; originally I am from Kyiv, Ukraine. I created several well-accepted open source projects: [codecrumbs](https://github.com/Bogdan-Lyashenko/codecrumbs) (a tool for learning a codebase), [js2flowchart](https://github.com/Bogdan-Lyashenko/js-code-to-svg-flowchart) (a library to convert code into flowchart), [Under the hood ReactJS](https://github.com/Bogdan-Lyashenko/Under-the-hood-ReactJS) (a book which explains ins and outs of React).
-
-</p>
 
 Currently, I study a lot about technical constraints and human-factor when it comes to building software products. I am passionate about software delivery processes and believe there is still room for improvements.
 

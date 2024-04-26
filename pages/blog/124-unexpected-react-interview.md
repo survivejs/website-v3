@@ -13,13 +13,9 @@ T> [Read the interview with Sune Simonsen to understand the ideas behind Unexpec
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/4e1901d31a973187070a14522b55b47b?s=200" alt="Dave Brotherstone" class="author" width="100" height="100" />
-</span>
+![Dave Brotherstone|100|100|author](https://www.gravatar.com/avatar/4e1901d31a973187070a14522b55b47b?s=200)
 
 I'm originally from the UK, but I've lived in Germany for the last seven years or so with my girlfriend, Tina. We were originally planning to come for two or three years, but I love it so much we've no plans to return now. I work for SoundCloud in Berlin where I get to work on a bunch of interesting problems with some amazingly talented people.
-</p>
 
 ## How would you describe *unexpected-react* to someone who has never heard of it?
 

@@ -11,10 +11,8 @@ Tools like browserify and webpack popularized the idea of bundling. The idea is 
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/8aa7fdc0b430eeed5724622e86a40c12?s=200" alt="Oleksiy Golovko" class="author" width="100" height="100" />
-</span>
+![Oleksiy Golovko|100|100|author](https://www.gravatar.com/avatar/8aa7fdc0b430eeed5724622e86a40c12?s=200)
+
 I am a freelance Software Developer living in Prague, Czech Republic. I have been working with various web technologies as of 2004 (PHP at that time!). I love solving challenging problems and working on the development tools.</p>
 
 When not programming I read, play tennis/squash/badminton and spend time with my three kids and the beautiful wife. Also, I am passionate about tasting good beers – you cannot resist it here in the Czech Republic!

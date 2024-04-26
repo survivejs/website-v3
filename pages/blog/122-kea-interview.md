@@ -16,14 +16,9 @@ T> To learn more about Redux, [read the interview of Dan Abramov](/blog/redux-in
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/6b918f21a04da6c562766a3be2626ef7?s=200" alt="Marius Andra" class="author" width="100" height="100" />
-</span>
+![Marius Andra|100|100|author](https://www.gravatar.com/avatar/6b918f21a04da6c562766a3be2626ef7?s=200)
 
 Sure! I'm Marius. I was born in Estonia and now live in Belgium. I work as the CTO of [Apprentus](https://www.apprentus.com), a private lessons marketplace which I co-founded. I sometimes write about life on [my blog](https://mariusandra.com/blog/) and about coding on [Medium](https://medium.com/@mariusandra).
-
-</p>
 
 I started programming in QBASIC at the ripe old age of 8 and have been hooked ever since. From BASIC I moved to C and C++ (for [2D and 3D game development](https://web.archive.org/web/20110727142308/http://cone3d.gamedev.net:80/cgi-bin/index.pl)), Perl ([cgi-bin](http://amzn.to/2xlJzTS) web development) and Java (when I had to build a client-server chat applet). In high school, I wrote a lot of PHP, in university a lot of Java/JSP. Eventually, I moved to Ruby, and it was my language of choice... until ES6 came out.
 

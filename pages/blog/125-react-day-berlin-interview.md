@@ -13,13 +13,9 @@ T> [Read the interview about React Alicante](/blog/react-alicante-interview/) to
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/bad3e55f0b96b80bc4ffb40d1c1414dc?s=200" alt="Robert Haritonov" class="author" width="100" height="100" />
-</span>
+![Robert Haritonov|100|100|author](https://www.gravatar.com/avatar/bad3e55f0b96b80bc4ffb40d1c1414dc?s=200)
 
 Originally I'm from Riga, Latvia, and since around three years living in Amsterdam. Been doing JavaScript development since roughly 7-8 years, when jQuery was the (only) thing, and IE6 tricks been pleasing my first sleepless nights as a freelancer.
-</p>
 
 After going through few stages of being an active speaker in Russian speaking community, open source maintainer of [SourceJS](https://sourcejs.com), last years I've settled as a Tech Lead in Full-stack teams developing React and Node.js based applications.
 

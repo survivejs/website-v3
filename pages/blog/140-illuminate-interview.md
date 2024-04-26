@@ -9,10 +9,7 @@ One of the core features of this site is custom syntax highlighting. I had to fi
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://secure.gravatar.com/avatar/57d10b8c8d537e8517f6a3c324679da5?s=200" alt="Vivek Bansal" class="author" width="100" height="100" />
-</span>
+![Vivek Bansal|100|100|author](https://secure.gravatar.com/avatar/57d10b8c8d537e8517f6a3c324679da5?s=200)
 
 My name is Vivek Kumar Bansal, and I work as a UI Engineer at [Flipkart, India](https://flipkart.com). I started as a PHP developer and later switched to JavaScript/NodeJs full-time and I have nearly five years of professional experience. I firmly believe in open source philosophy and try to contribute to open source projects regularly.</p>
 

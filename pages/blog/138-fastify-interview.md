@@ -11,13 +11,9 @@ In this interview you'll learn about an alternative by [Tomas Della Vedova](http
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/1db56707b818ace550da1123a8ad1304?s=200" alt="Tomas Della Vedova" class="author" width="100" height="100" />
-</span>
+![Tomas Della Vedova|100|100|author](https://www.gravatar.com/avatar/1db56707b818ace550da1123a8ad1304?s=200)
 
 I am an enthusiastic software engineer, who spends most of his time programming in JavaScript and Node.js. I am constantly forward the enrichment of my knowledge and the exploration of new technologies. Moreover, I truly believe in the open source philosophy, and I will always be passionate about technology, design, and cinema.
-</p>
 
 ## How would you describe *Fastify* to someone who has never heard of it?
 

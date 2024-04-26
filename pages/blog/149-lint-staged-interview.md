@@ -10,12 +10,10 @@ Although [linting a project](/maintenance/code-quality/linting/) is a good techn
 [Andrey Okonetchnikov](https://twitter.com/okonetchnikov) figured out a way to solve the problem.
 
 ## Can you tell a bit about yourself?
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/69bb6b30cd7b682ba5d5a1f352e6862a?s=200" alt="Andrey Okonetchnikov" class="author" width="100" height="100" />
-</span>
+
+![Andrey Okonetchnikov|100|100|author](https://www.gravatar.com/avatar/69bb6b30cd7b682ba5d5a1f352e6862a?s=200)
+
 I’m a Front End Engineer and User Interaction Designer from Russia living in Vienna, Austria. I have been working with web technologies since 1999, and I love solving complex problems, no matter if it’s a design or a technical challenge. I’m passionate about UI and UX design, typography, music, photography, mountain biking, and coffee.
-</p>
 
 ## How would you describe *lint-staged* to someone who has never heard of it?
 
@@ -26,7 +24,7 @@ lint-staged is a simple to use tool to enforce code quality in teams.
 I care a lot about code readability and maintainability. To keep my code in good shape I use linters and other code analysis tools that help me catch simple bugs earlier. While working with different teams I noticed that:
 
 1. Not everyone cares so much about code quality.
-2. Not everyone has proper linter setup in their editors. 
+2. Not everyone has proper linter setup in their editors.
 
 As a result, even though some people were committed to using linters, the overall quality of the code was far from great, and it wasn’t improving. This kept me thinking about how to enhance the quality of code in teams without becoming a pain.
 

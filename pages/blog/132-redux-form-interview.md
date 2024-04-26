@@ -11,14 +11,9 @@ T> Erik has published a library agnostic successor to Redux Form. See [Final For
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/7e86f7e41168df55b65e30cdda423e10?s=200" alt="Erik Rasmussen" class="author" width="100" height="100" />
-</span>
+![Erik Rasmussen|100|100|author](https://www.gravatar.com/avatar/7e86f7e41168df55b65e30cdda423e10?s=200)
 
 I'm originally from North Carolina, but I hadn't lived in the US since late 2001, when I moved to Birmingham, England. I was there for four and a half years, and now I live in northern Spain with my Spanish wife and two bilingual kids. I'm a transatlantic telecommuter, working from home in Spain for my employer in the US.
-
-</p>
 
 I began using React immediately after it was open sourced in 2013, building side projects and ran into all of the state management problems that Flux was introduced to solve. I was active on the Reactiflux Slack channel as Redux was taking shape before its announcement in 2015, back when what is now called _reducers_ were still called _stores_.
 

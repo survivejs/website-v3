@@ -11,14 +11,9 @@ What if there was an alternative way to achieve the same while having more power
 
 ## Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://pbs.twimg.com/profile_images/1105592812396007426/_LRKW9Gp_400x400.jpg" alt="Artem Zakharchenko" class="author" width="100" height="100" />
-  </span>
+![Artem Zakharchenko|100|100|author](https://pbs.twimg.com/profile_images/1105592812396007426/_LRKW9Gp_400x400.jpg)
 
 Hi! My name is Artem, and I am a Full-stack JavaScript developer from Ukraine. I have graduated a medical university and decided to switch my occupation to programming because it's something I enjoy doing since I was a kid.
-
-</p>
 
 I'm grateful to find a job and turn my hobby into a full-time activity. That hasn't stopped me, however, from endeavoring into side projects and open source. Today I'd like to share with you one of such projects.
 

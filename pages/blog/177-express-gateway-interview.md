@@ -11,14 +11,9 @@ If you are dealing with microservices, you get questions like how to manage and 
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/4e6423770e850520261e06ea30d5afa2?s=200" alt="Vincenzo Chianese" class="author" width="100" height="100" />
-</span>
+![Vincenzo Chianese|100|100|author](https://www.gravatar.com/avatar/4e6423770e850520261e06ea30d5afa2?s=200)
 
 My name is Vincenzo Chianese — I am an Italian Software Developer (but I've been living away from my country for the last five years). I'm currently based in Madrid, working for [Stoplight.io](https://stoplight.io) where I help to develop tools for API Developers. Formerly, I've been working for other API-tooling companies.
-
-</p>
 
 I also organize the [API Meetup in Barcelona](https://www.meetup.com/API-Meetup-Barcelona/) that we're bringing it to the next level this year by turning in in a conference: [API Days Barcelona](https://apidays.co/barcelona)
 

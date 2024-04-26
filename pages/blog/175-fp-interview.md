@@ -11,14 +11,9 @@ In this interview with [Arfat Salman](https://twitter.com/salman_arfat), you'll 
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/879f2f512c354bb26c0af0a274a1a032?s=200" alt="Arfat Salman" class="author" width="100" height="100" />
-</span>
+![Arfat Salman|100|100|author](https://www.gravatar.com/avatar/879f2f512c354bb26c0af0a274a1a032?s=200)
 
 I graduated from the University of Delhi in Computer Science. Currently, I am the Director of Education at Pesto. I began as a Web Developer here, and since then I’ve taken more responsibility towards making other engineers better by helping and training them. I have a strong interest in Computer Science in general. Particularly in Artificial Intelligence, Recommendation Systems, Natural Language Processing, Compilers, and Algorithms.
-
-</p>
 
 In my spare time, I like to learn human languages. I learned Spanish as my 4th language (apart from Hindi/Urdu/English). Currently, I am trying to learn Japanese. I hope to learn Mandarin someday. I also co-organize and host a Spanish Meetup in Delhi in association with Duolingo.
 

@@ -11,13 +11,9 @@ To understand the topic more in-depth, this time around I'm interviewing [Charle
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/7f6a5e0c29577f724ad28bea4c577139?s=200" alt="Charles Pick" class="author" width="100" height="100" />
-</span>
+![Charles Pick|100|100|author](https://www.gravatar.com/avatar/7f6a5e0c29577f724ad28bea4c577139?s=200)
 
 I'm Charles, and I run a JavaScript consultancy called [codemix](https://codemix.com), I live in the countryside with my wife and kids near York, UK.
-</p>
 
 My first exposure to programming was with BASIC on the BBC Micro at school when I was seven, ever since then I've been hooked. I worked as a nightclub DJ before becoming a full-time web developer about twelve years ago.
 

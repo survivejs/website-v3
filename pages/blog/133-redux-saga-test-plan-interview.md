@@ -10,13 +10,9 @@ Redux Saga is famous for being easy to test but what if it could be even more co
 
 ## Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://www.gravatar.com/avatar/94bd558238b69c45d3d3e15797ae94f7?s=200" alt="Jeremy Fairbank" class="author" width="100" height="100" />
-  </span>
+![Jeremy Fairbank|100|100|author](https://www.gravatar.com/avatar/94bd558238b69c45d3d3e15797ae94f7?s=200)
 
 I'm a software engineer and consultant with [Test Double](https://testdouble.com/). We believe that software is broken, and we're here to fix it. Our mission is to improve how the world builds software.
-</p>
 
 I've been doing front-end development for almost ten years now and enjoy the paradigms that React and Redux helped introduce to the front-end world. I've created a few open source projects that work well with the React and Redux ecosystem such as [revalidate](https://github.com/jfairbank/revalidate), [redux-saga-router](https://github.com/jfairbank/redux-saga-router), and, the topic of this interview, [_redux-saga-test-plan_](https://github.com/jfairbank/redux-saga-test-plan).
 

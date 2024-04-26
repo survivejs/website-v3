@@ -11,13 +11,9 @@ In this post, we'll cover Parket, a solution by [Leah Ullmann](https://twitter.c
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/52401c37bc5c4d54a051c619767fdbf8?s=200" alt="Leah Ullmann" class="author" width="100" height="100" />
-</span>
+![Leah Ullmann|100|100|author](https://www.gravatar.com/avatar/52401c37bc5c4d54a051c619767fdbf8?s=200)
 
 I'm a (mostly) self-taught developer, started with Java in school, but the two languages I use the most at the moment are Rust and JavaScript.
-</p>
 
 My primary interests right now are web dev, devops, and game dev. I am currently working as a freelance full-stack developer.
 

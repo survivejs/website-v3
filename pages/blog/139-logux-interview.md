@@ -11,10 +11,7 @@ Logux by [Andrey Sitnik](https://twitter.com/sitnikcode) is one possible alterna
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/cd32d17c95d3bfb352504c36462b98bd?s=200" alt="Andrey Sitnik" class="author" width="100" height="100" />
-</span>
+![Andrey Sitnik|100|100|author](https://www.gravatar.com/avatar/cd32d17c95d3bfb352504c36462b98bd?s=200)
 
 I was born in Vladivostok, a Russian city near Japan and China. I spent childhood in Yemen, Arabic country where my grandparents work.</p>
 

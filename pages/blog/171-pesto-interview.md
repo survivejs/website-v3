@@ -11,14 +11,9 @@ One of the unique aspects of the internet is that it makes us all equal in a str
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://pbs.twimg.com/profile_images/982008082996674560/mKIHOlpe_400x400.jpg" alt="Andrew Linfoot" class="author" width="100" height="100" />
-</span>
+![Andrew Linfoot|100|100|author](https://pbs.twimg.com/profile_images/982008082996674560/mKIHOlpe_400x400.jpg)
 
 I have been working as a software engineer and living a nomadic lifestyle for the last eight years. I was born in the US, but I am a firm believer in the idea of global citizenship. I consider myself a citizen of the internet more than any one country. I feel the global tech community lives this ideology and I love being a part of it.
-
-</p>
 
 I'm obsessed with building things, usually involving software and startups. Currently, I am making [Pesto](https://pesto.tech).
 

@@ -11,14 +11,9 @@ To learn more about the topic, I am interviewing [Sergey Berezhnoy](https://twit
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/69aab18f21bd89606bf19a11c4989bb4?s=200" alt="Sergey Berezhnoy" class="author" width="100" height="100" />
-</span>
+![Sergey Berezhnov|100|100|author](https://www.gravatar.com/avatar/69aab18f21bd89606bf19a11c4989bb4?s=200)
 
 I am a web developer in [Yandex](https://yandex.com/company/) since 2005, and I participate in the development of such Yandex services like Search, Mail, Blog Search, Yandex blogging platform, Video and Images searches. Along with service development created internal tools for web development. I am one of the co-authors of BEM.
-
-</p>
 
 ## How would you describe _BEM_ to someone who has never heard of it?
 

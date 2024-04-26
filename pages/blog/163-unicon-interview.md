@@ -12,14 +12,9 @@ To understand more about the topic, I am interviewing [Travis Arnold](https://tw
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/4dd6d33b34ec56b2ba39c947dcaa07dc?s=200" alt="Travis Arnold" class="author" width="100" height="100" />
-</span>
+![Travis Arnold|100|100|author](https://www.gravatar.com/avatar/4dd6d33b34ec56b2ba39c947dcaa07dc?s=200)
 
 Hello, my name is Travis Arnold. I've been designing and developing for over ten years. I started my career out as a graphic designer and eventually made my way into front-end development. Recently, I've been enjoying creating design systems and working on design tooling.
-
-</p>
 
 ## How would you describe _Unicon_ to someone who has never heard of it?
 

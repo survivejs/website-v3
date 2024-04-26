@@ -11,14 +11,9 @@ It's difficult to write an application without side effects. Consider handling r
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/8f3bfe81d2d4de9670c430346c490c3f?s=200" alt="Thomas Roch" class="author" width="100" height="100" />
-</span>
+![Thomas Roch|100|100|author](https://www.gravatar.com/avatar/8f3bfe81d2d4de9670c430346c490c3f?s=200)
 
 Hey, my name is Thomas Roch. I work as a principal software engineer at FanDuel, and I live near Glasgow in Scotland. I've been focusing on front-end engineering for the last few years, and some people might know me for [router5](https://router5.js.org).
-
-</p>
 
 T> [Read the router5 interview](/blog/react-router5-interview/) to learn more about it.
 
