@@ -19,6 +19,13 @@
               &children="(get props data.title)"
             ></SiteLink>
           </slot>
+          <slot name="footer">
+            <div class="text-xs text-muted">
+              Published:&nbsp;<span
+                &children="(dateToString (get props data.date))"
+              ></span>
+            </div>
+          </slot>
         </Card>
       </div>
       <SiteLink href="../">Back to topics</SiteLink>
