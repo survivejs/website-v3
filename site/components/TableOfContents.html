@@ -11,7 +11,7 @@
       <a
         x-attr
         &@class="(concat
-          '[element.firstChild?.textContent === parent.closest?.firstChild?.textContent && `'
+          '[element.firstChild?.textContent.trim() === parent.closest?.firstChild?.textContent.trim() && `'
           (tw underline)
           '`]')"
         &href="(concat # (get props slug))"
