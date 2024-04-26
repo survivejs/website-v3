@@ -11,12 +11,9 @@ To learn about an alternative approach, I am interviewing [Andrew Powell](https:
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/f738f26dd1bba7ab3cf9f971ffed5cd0?s=200" alt="Andrew Powell" class="author" width="100" height="100" />
-</span>
+![Andrew Powell|100|100|author](https://www.gravatar.com/avatar/f738f26dd1bba7ab3cf9f971ffed5cd0?s=200)
+
 I reside in the U.S., in the great state of [Florida Man](https://www.reddit.com/r/FloridaMan/), have been a remote developer for ten years, and am pretty passionate about Fishing and Fishery + Ocean Conservation. There's a good chance I'm on a boat as you're reading this.
-</p>
 
 On the [nerdy](https://media1.tenor.com/images/38116553c1ba1b9f0e4fbc7673b22622/tenor.gif) side of things, I love me some Team Fortress Classic, have owned an N64 for forever, and my focus these days is squarely on Node.js for Backend and DevOps.
 
