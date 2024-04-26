@@ -11,13 +11,9 @@ What if it was possible to begin from the other extreme and go from there? This 
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/46846cd7fc5658dbae2c7a8998b394dc?s=200" alt="Juha Lindstedt" class='author' width='100' height='100' />
-</span>
+![Juha Lindstedt|100|100|author](https://www.gravatar.com/avatar/46846cd7fc5658dbae2c7a8998b394dc?s=200)
 
 I've been working as a freelance senior web developer, doing projects with small businesses and advertising agencies. Lately I've focused on developing [iDiD](http://www.idid.fi) digital signage system at [ConnectingTalents](http://www.talents.fi), where I currently work.
-</p>
 
 I started in 1999 with Flash and also used PHP few years. In 2011 I fell in love with Node.js and haven't looked back since. I love crafting tailor-made projects and am not into bootstraps or heavy frameworks (although I've used all kinds of frameworks a lot in the past). I always start with an empty canvas (HTML/CSS/JS).
 

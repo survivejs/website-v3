@@ -11,13 +11,9 @@ That is where services like [npms.io](https://npms.io/) by [André Cruz](https:/
 
 ### Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/1a691c6ddec4c073246eeaf13afeb0ef?s=200" alt="André Cruz" class="author" width="100" height="100" />
-</span>
+![André Cruz|100|100|author](https://www.gravatar.com/avatar/1a691c6ddec4c073246eeaf13afeb0ef?s=200)
 
 My name is André Cruz. I'm 28 years old and I live in Porto, Portugal with my wife and little child.
-</p>
 
 When I was a kid, I used to sneak into my brothers computer. Every time I used his computer, I asked myself how this little metal box was able to interpret and execute commands on my behalf. I quickly become intrigued and interested in knowing how it was built. Several years passed and, in the IRC apogee, I developed a several scripts for mIRC.
 

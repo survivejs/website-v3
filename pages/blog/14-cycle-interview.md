@@ -11,13 +11,9 @@ If there's one thing that has been bubbling below for a couple of years now, it 
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/d992db0c8f42fcee52f96dc320f8aa04?s=200" alt="André Staltz" class='author' width='100' height='100' />
-</span>
+![André Staltz|100|100|author](https://www.gravatar.com/avatar/d992db0c8f42fcee52f96dc320f8aa04?s=200)
 
 I am a UI developer at Futurice in Finland, with extensive knowledge in reactive programming. In my daily work I build web apps and Android applications, and on my free time I build open source libraries such as Cycle.js and contribute to ReactiveX.
-</p>
 
 A lot of people have read the [Introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754) that I wrote in the summer of 2014, or have seen [RxMarbles](http://RxMarbles.com). That is how most people know me.
 

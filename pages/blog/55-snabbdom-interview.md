@@ -11,13 +11,9 @@ There are specific virtual DOM implementations like [Matt-Esch/virtual-dom](http
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/894d95cf834e9c3b4966d10eaa52d610?s=200" alt="Simon Friis Vindum" class='author' width='100' height='100' />
-</span>
+![Simon Friis Vindum|100|100|author](https://www.gravatar.com/avatar/894d95cf834e9c3b4966d10eaa52d610?s=200)
 
 My name is Simon Friis Vindum. I live in Aarhus, Denmark. I currently study computer science at Aarhus University and work as a JavaScript developer on the side. Programming was my hobby for many years. After secondary school I was looking for a job and I was lucky to get one as a JavaScript developer.
-</p>
 
 I realized that my hobby was probably going to become my profession. I worked for two years and then began studying CS last summer. I love programming and learning about programming. I have written quite a few JavaScript libraries that are published on my [GitHub account](https://github.com/paldepind).
 

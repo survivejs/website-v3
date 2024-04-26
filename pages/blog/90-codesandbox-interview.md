@@ -11,13 +11,9 @@ Getting started with React can be daunting especially if you want to understand 
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://avatars1.githubusercontent.com/u/587016?v=3&s=460" alt="Ives van Hoorne" class="author" width="100" height="100" />
-</span>
+![Ives van Hoorne|100|100|author](https://avatars1.githubusercontent.com/u/587016?v=3&s=460)
 
 My name is Ives van Hoorne; I'm a Computer Science student at the [University of Twente](https://www.utwente.nl/en/) and a part-time developer at [Catawiki](https://catawiki.com). I worked there full-time last year, at that time I was responsible for converting the website to React.
-</p>
 
 Though I like all kinds of programming, I've been especially attracted to frontend the last few years, mostly because it's also a bit artistic. I get a lot of satisfaction from building user interfaces that people both find beautiful and easy to use.
 

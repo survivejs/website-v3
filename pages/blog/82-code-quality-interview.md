@@ -9,14 +9,9 @@ What makes code good? How do you tell bad code from good one? Issues like this c
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://0.gravatar.com/avatar/40405d52c92e546d32046560f4e5c40a?s=200" alt="João Caxaria" class="author" width="100" height="100" />
-</span>
+![João Caxaria|100|100|author](https://0.gravatar.com/avatar/40405d52c92e546d32046560f4e5c40a?s=200)
 
 I'm a software engineer currently disguised of a CTO for [Codacy](https://www.codacy.com). Before this, I did several years of software development as a consultant, having worked in several different companies, from small game studios to industry giants such as Citibank.
-
-</p>
 
 ## How would you describe the term _code quality_ to someone who has never heard of it?
 

@@ -11,13 +11,9 @@ This time around we'll discuss [Fluture](https://github.com/fluture-js/Fluture),
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/e30745ae3be2e0792957c89d7460d57c?s=200" alt="Aldwin Vlasblom" class="author" width="100" height="100" />
-</span>
+![Aldwin Vlasblom|100|100|author](https://www.gravatar.com/avatar/e30745ae3be2e0792957c89d7460d57c?s=200)
 
 I was born and raised in Rotterdam, the Netherlands. I got into programming at age eleven when I decided to make a website for my RuneScape clan and happened upon Macromedia Flash with ActionScript. At age fourteen I had made several small sites for family members and decided to do my internship at a digital agency.
-</p>
 
 That's where I was introduced to PHP and realized I want to pursue an education in this area, which lead me to do a course in interactive media design and development.
 

@@ -12,13 +12,9 @@ To understand a potential solution to this problem, I'm interviewing [Rhys Arkin
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/3cf3527d1ff144dd61717720c458802b?s=200" alt="Rhys Arkins" class="author" width="100" height="100" />
-</span>
+![Rhys Arkins|100|100|author](https://www.gravatar.com/avatar/3cf3527d1ff144dd61717720c458802b?s=200)
 
 For the past few years I've been building a rental information site in Singapore called [Key Location](https://keylocation.sg). Prior to this I was lucky to catch the tail end of a great period in "telecoms" via a startup that IPO'd and was later acquired.
-</p>
 
 ## How would you describe *renovate* to someone who has never heard of it?
 

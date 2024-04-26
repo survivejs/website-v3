@@ -9,13 +9,9 @@ I have chosen one approach when it comes to teaching JavaScript and related topi
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/3a6815d1148f39b83841a55d238cd563?s=200" alt="Bianca Gandolfo" class="author" width="100" height="100" />
-</span>
+![Bianca Gandolfo|100|100|author](https://www.gravatar.com/avatar/3a6815d1148f39b83841a55d238cd563?s=200)
 
 Sure. My name is Bianca, and I've been teaching people and writing curriculum on how to become a web developer for about 3 years now while working at Hack Reactor, cofounding Telegraph Academy and teaching in other venues like Girl Develop It, Laboratory (in Peru) and online with Frontend Masters, Pluralsight, and Udemy.
-</p>
 
 I also code on the side, but I spend 70% of my work time related to education, coaching, mentoring and content creation. Right now I am in Kuala Lumpur and will be traveling with my partner and working remotely for the next several months or so.
 

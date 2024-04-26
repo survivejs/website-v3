@@ -12,13 +12,9 @@ Perhaps the greatest thing about React is how flexible it is. It contains some o
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/9645266baa7fbac0823eee7dae06bbe4?s=200" alt="Nate Wang" class="author" width="100" height="100" />
-</span>
+![Nate Wang|100|100|author](https://www.gravatar.com/avatar/9645266baa7fbac0823eee7dae06bbe4?s=200)
 
 My name is Nate Wang, and I live in Shanghai, China. I started writing JavaScript more than ten years ago and now enjoy my job building UIs for enterprise applications. I have created iOS apps, published books, and talked about React at QCon.
-</p>
 
 ## How would you describe *Rekit* to someone who has never heard of it?
 

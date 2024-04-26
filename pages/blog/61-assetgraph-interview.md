@@ -11,13 +11,9 @@ Today I'm interviewing [Peter Müller](https://twitter.com/_munter_), the author
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/01349d877b6e4b9c0ddbadf97f07fa0d?s=200" alt="Peter Müller" class="author" width="100" height="100" />
-</span>
+![Peter Müller|100|100|author](https://www.gravatar.com/avatar/01349d877b6e4b9c0ddbadf97f07fa0d?s=200)
 
 I am a seasoned front-end developer with lots of experience in developing high usage productivity applications that drive daily workflows. I've focused my attention on the problems surrounding development and build tooling for web sites for a long time and have gained an ever-increasing appreciation of simplicity wherever it can be found.
-</p>
 
 I am a maintainer of the [Assetgraph](https://github.com/assetgraph/assetgraph) project, authored [one-color](https://github.com/One-com/one-color) and contribute to [Mocha](https://github.com/mochajs/mocha) and [Unexpected](https://github.com/unexpectedjs/unexpected). I recently had my first child, dealt with cancer, and became the owner of a garden, where I hope to put my feet up and relax once in a while.
 

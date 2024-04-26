@@ -12,14 +12,9 @@ Building universal web applications combining server side rendering with front-e
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/ab13df38843556b57f7d2f6fe78003cf?s=200" alt="Arunoda Susiripala" class="author" width="100" height="100" />
-</span>
+![Arunoda Susirapala|100|100|author](https://www.gravatar.com/avatar/ab13df38843556b57f7d2f6fe78003cf?s=200)
 
 I started working with JavaScript while I was studying at university. After this I had my first introduction to open source - I got involved with Joomla and Status.net as a part of Google Summer of Code.
-
-</p>
 
 My work started to turn towards Meteor-related projects next, and I founded kadira.io, a performance monitoring solution for Meteor. At Kadira, I started React Storybook with my colleagues, but eventually, we needed to shut down Kadira.
 

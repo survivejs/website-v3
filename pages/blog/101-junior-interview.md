@@ -11,13 +11,9 @@ To understand the topic better, I'm interviewing [Aimee Knight](https://twitter.
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://avatars1.githubusercontent.com/u/2165184?v=3&s=460" alt="Aimee Knight" class="author" width="100" height="100" />
-</span>
+![Aimee Knight|100|100|author](https://avatars1.githubusercontent.com/u/2165184?v=3&s=460)
 
 I'm a former competitive figure skater, graduate of the Nashville Software School, and software engineer at DramaFever, a subsidiary of Warner Bros.
-</p>
 
 Outside of work, I'm a weekly panelist on the JavaScript Jabber podcast, and I regularly participate in a variety others. In my spare time I love speaking at conferences, playing with new technology, running, working out, and trying new flavors of Kombucha!
 

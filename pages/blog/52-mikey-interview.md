@@ -9,13 +9,9 @@ It is tedious and boring to do the same thing over and over. That's where genera
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://secure.gravatar.com/avatar/5549c6f94f271b3cedd522e6b9d930b1?s=200" alt="Michael Farrell" class='author' width='100' height='100' />
-</span>
+![Michael Farrell|100|100|author](https://secure.gravatar.com/avatar/5549c6f94f271b3cedd522e6b9d930b1?s=200)
 
 I am Michael Farrell, a musician and music educator turned developer. I decided to pursue my love and passion for programming by diving into online resources for coding and attending The Firehose Project to learn all I can about programming and related computer science topics. Currently, I am looking for work in the Metro New York area.
-</p>
 
 ## How would you describe *Mikey* to someone who has never heard of it? How does it differ from other solutions?
 

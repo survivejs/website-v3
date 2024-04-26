@@ -12,13 +12,9 @@ Routing is one of those classic topics that comes up again and again. [HTML5 His
 
 ## Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://avatars2.githubusercontent.com/u/154732?v=4&s=460" alt="James Gillmore" class="author" width="100" height="100" />
-  </span>
+![James Gillmore|100|100|author](https://avatars2.githubusercontent.com/u/154732?v=4&s=460)
 
 I've tried to stay quiet and keep it to the code rather than myself. But perhaps now is a good time to say a few words about my story.
-</p>
 
 I started 12 years ago (2005) by hiring other developers to build things. I worked at a music studio in Times Square, NYC and hired developers to build websites for our clients. Eventually, I even got into the MySpace spamming thing. I had been doing a lot of audio engineering, but soon realized that my talents were best more directly applied to technology. My dreams of becoming a famous beat-maker never came true.
 

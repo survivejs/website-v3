@@ -11,13 +11,9 @@ Today I'm bugging Brian about the topic. Functional programming is close to my h
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/eace1736cd5e31e6c5288e363ed669ea?s=200" alt"Brian Lonsdorf" class="author" width="100" height="100" />
-</span>
+![Brian Lonsdorf|100|100|author](https://www.gravatar.com/avatar/eace1736cd5e31e6c5288e363ed669ea?s=200)
 
 I'm a software developer at Salesforce working on dev-ops stuff like build servers and css analyzers. Like many, I cut my teeth on Rails, then started to wander out into the world of different languages.
-</p>
 
 I was an object-oriented fanatic for about 5 years, then grew to strongly prefer the functional paradigm despite my lack of academic prowess. In my spare time, I like to create learning content with a little spice and whimsy.
 

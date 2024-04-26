@@ -12,13 +12,9 @@ To understand the topic better, I'm interviewing [Dylan Piercey](https://twitter
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/b61015f2b07ed0be4478713bed9348ef?s=200" alt="Dylan Piercey" class="author" width="100" height="100" />
-</span>
+![Dylan Piercey|100|100|author](https://www.gravatar.com/avatar/b61015f2b07ed0be4478713bed9348ef?s=200)
 
 I like to tinker. As a kid, I enjoyed modding video games and got into programming when I was 12 years old. I've programmed professionally for about four years now and fell in love with the massive community behind web development.
-</p>
 
 Open source software has been my peaceful haven since I learned git. For me, programming is fun, especially on my terms, and FOSS is exactly that.
 

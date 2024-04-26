@@ -171,7 +171,11 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             <img class="${
             className === "author" ? "" : "border"
           }" src="${href}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
-            <figcaption class="text-center text-sm">${alt}</figcaption>
+            ${
+            className === "author"
+              ? ""
+              : '<figcaption class="text-center text-sm">${alt}</figcaption>'
+          }
           </figure>`;
         },
         link(href: string, title: string, text: string) {

@@ -9,13 +9,9 @@ keywords: ['interview', 'react', 'boilerplate']
 
 ### Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/e5b6fdf2e8af6487241497183581f87a?s=200" alt="Ryan Roemer" class="author" width="100" height="100" />
-</span>
+![Ryan Roemer|100|100|author](https://www.gravatar.com/avatar/e5b6fdf2e8af6487241497183581f87a?s=200)
 
 I am the CTO and co-founder of [Formidable](http://formidable.com/), a   development shop in (the delightfully weird neighborhood of) Fremont in Seattle, WA. Our main area of focus is React frontends and Node.js backends. Most of my client and open source work these days tends towards frontend build infrastructures.
-</p>
 
 Before Formidable, I've had stints as a distributed systems engineer and security researcher. And, in my deep, dark past, I used to be a patent attorney before finding my way to engineering.
 

@@ -12,13 +12,9 @@ Writing good documentation isn't easy. [Tom MacWright](https://twitter.com/tmcw)
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/69a180136f3c237769452a4af0bbb9a1?s=200" alt="Tom MacWright" class="author" width="100" height="100" />
-</span>
+![Tom MacWright|100|100|author](https://www.gravatar.com/avatar/69a180136f3c237769452a4af0bbb9a1?s=200)
 
 At work, I'm a software engineer but also spend a lot of time writing, designing products, and so on. Until recently, that was in the mapping space at [Mapbox](https://mapbox.com/). I wrote lots of libraries that sliced and diced geospatial data, showed it on screens, and helped people design maps.
-</p>
 
 The last big project I worked on there was [Mapbox Studio](https://www.mapbox.com/mapbox-studio/). There are enough hard problems in the world of maps to spend a lifetime trying to solve them, but I decided to try out some new domains. I've been taking a few months off to relax, so recently I've been spending more time training a few bonsai trees and maintaining open source projects.
 

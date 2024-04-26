@@ -11,13 +11,9 @@ Today I'm interviewing [Ken Wheeler](https://twitter.com/ken_wheeler) about [rea
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/4751e2e9fe7b876958d38f86a718ca91?s=200" alt="Ken Wheeler" class="author" width="100" height="100" />
-</span>
+![Ken Wheeler|100|100|author](https://www.gravatar.com/avatar/4751e2e9fe7b876958d38f86a718ca91?s=200)
 
 My name is Ken. It means "handsome" in Gaelic, and "yes" in Hebrew.
-</p>
 
 I like America, short walks on the beach, food thats bad for you, recreational archery, and brown liquor.
 

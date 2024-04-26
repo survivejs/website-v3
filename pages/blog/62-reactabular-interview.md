@@ -13,13 +13,9 @@ Today I'm going to discuss an alternative which I developed during the Summer. T
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200" alt="Juho Vepsäläinen" class="author" width="100" height="100" />
-</span>
+![Juho Vepsäläinen|100|100|author](https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200)
 
 I maintain this site and have written a book on React and webpack (available on the site). I've been programming well over a decade and started web development when jQuery didn't even exist. The last year or two have been focused on establishing a little business. The books are an important part of that effort.
-</p>
 
 ## How would you describe *Reactabular* to someone who has never heard of it?
 

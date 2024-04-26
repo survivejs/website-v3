@@ -13,13 +13,9 @@ To get a better idea of the topic, I'm interviewing [Phil Freeman](https://twitt
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/cbed6f201f9a0e735e5660d118c6662d?s=200" alt="Phil Freeman" class="author" width="100" height="100" />
-</span>
+![Phil Freeman|100|100|author](https://www.gravatar.com/avatar/cbed6f201f9a0e735e5660d118c6662d?s=200)
 
 I created the PureScript language and compiler a few years ago, and I continue to develop the language and its libraries. I write Haskell code for a living, and I'm interested in the problem of program correctness generally, so I tend to enjoy using statically typed functional programming languages where possible.
-</p>
 
 ## How would you describe *PureScript* to someone who has never heard of it?
 

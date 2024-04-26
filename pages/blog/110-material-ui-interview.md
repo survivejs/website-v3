@@ -12,13 +12,9 @@ To understand the topic better, I'm interviewing [Olivier Tassinari](https://twi
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/e2b3127c877367bce1892635ffe153d0?s=200" alt="Olivier Tassinari" class="author" width="100" height="100" />
-</span>
+![Olivier Tassinari|100|100|author](https://www.gravatar.com/avatar/e2b3127c877367bce1892635ffe153d0?s=200)
 
 I spent my childhood mastering LEGO, but I ended up as a software engineer. I started with web development back in 2008. I went on to graduate from one of the most prestigious and selective *grandes écoles* in France with a Master's Degree in computer science.
-</p>
 
 Sometime later I worked at Doctolib, the leading booking platform, and management software provider for doctors in France.
 

@@ -11,11 +11,7 @@ Given React is component driven, the approach works beautifully here. Artem Sape
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://s.gravatar.com/avatar/16a1493bcecf09614c413e571c371e96?s=200" alt="Artem Sapegin" class='author' width='100' height='100' />
-</span>
-</p>
+![Artem Sapegin|100|100|author](https://s.gravatar.com/avatar/16a1493bcecf09614c413e571c371e96?s=200)
 
 I’m a front-end developer at [Here](http://here.com/) in Berlin where I’m trying to make work of my colleagues easier by developing internal tools using React.
 

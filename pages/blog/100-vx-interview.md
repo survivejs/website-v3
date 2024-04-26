@@ -11,10 +11,7 @@ This is where [vx](https://github.com/hshoff/vx) by [Harrison Shoff](https://twi
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/96383e1a07b37e9d5d0360416f81dbf9?s=200" alt="Harrison Shoff" class="author" width="100" height="100" />
-</span>
+![Harrison Shoff|100|100|author](https://www.gravatar.com/avatar/96383e1a07b37e9d5d0360416f81dbf9?s=200)
 
 I've been doing frontend at Airbnb since 2010. Along the way, I've helped make [wish lists](https://techcrunch.com/2012/06/27/airbnb-wish-lists-redesign/), [reviews](https://www.airbnb.com/help/article/1257/how-do-star-ratings-work), [referrals](https://thenextweb.com/apps/2011/06/21/airbnbs-new-referral-program-could-double-its-member-base/#.tnw_aooztlbz), [experience marketplace](https://techcrunch.com/2014/05/16/airbnb-experiences/), the [professional photography tool](https://thenextweb.com/apps/2011/10/06/airbnb-launches-its-photography-program-with-13000-verified-properties/#.tnw_ISpMS8RO), customer support chat, and the old m.airbnb.com.</p>
 

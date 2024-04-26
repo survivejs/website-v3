@@ -11,13 +11,9 @@ To get more perspective, I'm interviewing [Victoria Quirante](https://twitter.co
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/318e6153fb28db314d4ee01964e55f59?s=200" alt="Victoria Quirante" class="author" width="100" height="100" />
-</span>
+![Victoria Quirante|100|100|author](https://www.gravatar.com/avatar/318e6153fb28db314d4ee01964e55f59?s=200)
 
 I’m a Telecom Engineer from Murcia, Spain. I graduated from the Polytechnic University of Catalonia, doing my master thesis in computer vision at the ETH, in Zurich.
-</p>
 
 I started as a web developer back in 2008 and founded [Limenius](http://limenius.com/) together with [Nacho Martín](http://twitter.com/nacmartin) in 2011. There we provide consulting, training and development services to other companies, working mainly with React, React Native, Elixir, and Symfony.
 

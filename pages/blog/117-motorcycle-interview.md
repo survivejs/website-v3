@@ -12,13 +12,9 @@ Functional reactive programming allows us to think carefully about state and sid
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/8e82cfdc051e96e55ade3ccb870edeff?s=200" alt="Tylor Steinberger" class="author" width="100" height="100" />
-</span>
+![Tylor Steinberger|100|100|author](https://www.gravatar.com/avatar/8e82cfdc051e96e55ade3ccb870edeff?s=200)
 
 I'm a software engineer at a company called PokerJuice, where I mostly work on the front-end using Motorcycle and domain-driven design. I'm a self-taught developer with almost two years of open-source contributions and 1.5 years professional experience.
-</p>
 
 Besides my work on Motorcycle, I'm also a core Most.js contributor. My professional and open-source work have both been primarily focused on functional and reactive programming in TypeScript.
 

@@ -15,12 +15,9 @@ In order to give you more background on the effort, this felt like a good time t
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200" alt="Juho Vepsäläinen" class='author' width='100' height='100' />
-</span>
+![Juho Vepsäläinen|100|100|author](https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200)
+
 I am Juho Vepsäläinen, the person that maintains this little effort. My background is academic (<abbr title="Master of Science">MSc</abbr>), and before delving into the world of books, I spent a few years subcontracting and working with startups. The whole point of the current effort was to find a more sustainable direction.
-</p>
 
 It feels like the work hasn't been in vain. It has definitely taught me a lot about technology, authoring, and business in general. That said, there's still plenty to learn.
 

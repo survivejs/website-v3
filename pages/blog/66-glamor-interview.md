@@ -13,14 +13,9 @@ I've [discussed various approaches](/react/advanced-techniques/styling-react/) m
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/6eadce66e218b83b484c5e1ee293f5b9?s=200" alt="Sunil Pai" class="author" width="100" height="100" />
-</span>
+![Sunil Pai|100|100|author](https://www.gravatar.com/avatar/6eadce66e218b83b484c5e1ee293f5b9?s=200)
 
 Hi! My name's Sunil Pai, and I wrote the css-in-js library [Glamor](https://github.com/threepointone/glamor). In the past, I have built a bunch of websites for Myntra, Yahoo, Visa etc. I now write JavaScript libraries for fun and/or world domination.
-
-</p>
 
 ## How would you describe _Glamor_ to someone who has never heard of it?
 

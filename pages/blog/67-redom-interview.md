@@ -9,11 +9,9 @@ Sometimes small is beautiful. [Juha Lindstedt](https://twitter.com/pakastin)'s F
 
 ## How would you describe *RE:DOM* to someone who has never heard of it?
 
-<p>
-  ![RE:DOM|100|100|author](assets/img/redom.svg)
+![RE:DOM|100|100|author](assets/img/redom.svg)
 
-  [RE:DOM](https://redom.js.org) is a tiny UI library (~2 kB gzipped), handling only the hardest parts of managing the DOM. You could think of it as a vanilla JavaScript tool, but it's actually really useful in almost any kind of projects – even bigger ones.
-</p>
+[RE:DOM](https://redom.js.org) is a tiny UI library (~2 kB gzipped), handling only the hardest parts of managing the DOM. You could think of it as a vanilla JavaScript tool, but it's actually really useful in almost any kind of projects – even bigger ones.
 
 I create all my projects with it, even large single page applications. You can also render it on server-side with [NO:DOM](https://github.com/pakastin/nodom).
 

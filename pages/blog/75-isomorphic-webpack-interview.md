@@ -11,13 +11,9 @@ In this interview we'll discuss a solution known as [isomorphic-webpack](https:/
 
 ## Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://pbs.twimg.com/profile_images/796004738273865728/qRcdB4kf.jpg" alt="Gajus Kuizinas" class="author" width="100" height="100" />
-  </span>
+![Gajus Kuizinas|100|100|author](https://pbs.twimg.com/profile_images/796004738273865728/qRcdB4kf.jpg)
 
 My name is Gajus Kuizinas. I am a consultant software engineer, living in London. I advise companies on the subject of the software architecture, database design and DevOps. When not at work, I am spending a considerable amount of time contributing to the open-source.
-</p>
 
 ## How would you describe *isomorphic-webpack* to someone who has never heard of it?
 

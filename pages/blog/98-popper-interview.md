@@ -11,12 +11,9 @@ There are times when a vanilla `<abbr>` or `<acronym>` doesn't cut it. What if y
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/52648ca9bee250edf351385c1e87416c?s=200" alt="Federico Zivolo" class="author" width="100" height="100" />
-</span>
+![Federico Zivolo|100|100|author](https://www.gravatar.com/avatar/52648ca9bee250edf351385c1e87416c?s=200)
+
 I'm Federico (Fez) Zivolo, UI Specialist at Quid. Born in Italy, I live in Budapest now. I like to help with open source projects on GitHub and I maintain some created by me.
-</p>
 
 ## How would you describe *Popper.js* to someone who has never heard of it?
 

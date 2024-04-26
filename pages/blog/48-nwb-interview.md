@@ -11,13 +11,9 @@ Boilerplate code is perhaps one of the leading causes of JavaScript fatigue. You
 
 ### Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://www.gravatar.com/avatar/98d0816016ba9c3bfafbd9cf433aeaa4?s=200" alt="Jonny Buchanan" class='author' width='100' height='100' />
-  </span>
+![Jonny Buchanan|100|100|author](https://www.gravatar.com/avatar/98d0816016ba9c3bfafbd9cf433aeaa4?s=200)
 
 I've been working as a full-stack web developer for about 12 years, mostly on enterprise intranet apps. The main app I'm currently working on has a React-based frontend and makes use of nwb for development.
-</p>
 
 My wife and I live just outside Brisbane with our 3 kids after upping sticks in February this year and emigrated away from Northern Ireland.
 

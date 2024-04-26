@@ -11,13 +11,9 @@ One common way to deal with asynchronous concerns (fetching for example) in Reac
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/414f1942b9cb139e430fa864c276646b?s=200" alt="Sven Sauleau" class="author" width="100" height="100" />
-</span>
+![Sven Sauleau|100|100|author](https://www.gravatar.com/avatar/414f1942b9cb139e430fa864c276646b?s=200)
 
 Hi, my name is Sven Sauleau, and I'm a French software engineer. OSS enthusiast and a member of the Babel team. I consider myself as a Vim master.
-</p>
 
 ## How would you describe *async-reactor* to someone who has never heard of it?
 

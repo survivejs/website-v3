@@ -11,14 +11,9 @@ This time around I am interviewing [Jorge Bucaran](https://twitter.com/JorgeBuca
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/1823e8f81a08dbbdd59a19382c5c5af9?s=200" alt="Jorge Bucaran" class="author" width="100" height="100" />
-</span>
+![Jorge Bucaran|100|100|author](https://www.gravatar.com/avatar/1823e8f81a08dbbdd59a19382c5c5af9?s=200)
 
 I'm an engineer at Increments, Inc, based in Tokyo, Japan. We build [Qiita](https://qiita.com/), Japan’s technical knowledge sharing and collaboration platform for programmers. I was born and raised in Venezuela.
-
-</p>
 
 I started making simple web pages when I was around 15 years old, but I still need to look up how to link CSS with HTML. How I wound up in Japan is quite the story, but not for today.
 

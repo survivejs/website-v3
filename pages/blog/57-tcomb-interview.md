@@ -11,13 +11,9 @@ Testing can help to control the situation, but it's not the only way. Typing sys
 
 ### Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/17e7c06ba6bf8429ce311069b95c57d7?s=200" alt"Giulio Canti" class="author" width="100" height="100" />
-</span>
+![Giulio Canti|100|100|author](https://www.gravatar.com/avatar/17e7c06ba6bf8429ce311069b95c57d7?s=200)
 
 I am Giulio Canti, a mathematician turned frontend developer 15 years ago. I live in Milan, Italy. Math is still my love and passion and I try to bring its spirit and methodologies in my day to day work. I'm interested in functional programming languages, in particular the ML family: Scala, Haskell and OCaml.
-</p>
 
 Two years ago I started to do open source, which I genuinely love, with a precise goal: bring type safety to JavaScript.
 

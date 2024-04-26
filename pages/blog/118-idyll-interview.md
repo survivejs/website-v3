@@ -12,14 +12,9 @@ Since the early days of the web, people have wanted to visualize data to share w
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/e7129cf31550559f7eb9757cfbeea1d1?s=200" alt="Matthew Conlen" class="author" width="100" height="100" />
-</span>
+![Matthew Conlen|100|100|author](https://www.gravatar.com/avatar/e7129cf31550559f7eb9757cfbeea1d1?s=200)
 
 I'm currently working on my Ph.D. with [Jeffrey Heer](https://homes.cs.washington.edu/~jheer/) at the [Interactive Data Lab](https://idl.cs.washington.edu/) at the University of Washington. Prior to grad school I worked on data visualization tools and interactive stories at [FiveThirtyEight](http://fivethirtyeight.com/), helped [the Freeman Lab](https://www.janelia.org/our-research/former-labs/freeman-lab) build open-source tools for computational neuroscience, developed digital tools for journalists at [The Huffington Post](http://www.huffingtonpost.com/), and was the senior developer at [Rhizome](http://rhizome.org/).
-
-</p>
 
 ## How would you describe _Idyll_ to someone who has never heard of it?
 

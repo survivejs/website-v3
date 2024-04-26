@@ -11,13 +11,9 @@ To make things easier, [Eli Perelman](https://twitter.com/eliperelman) has devel
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/8dc4af17fcbc9d8c1919462680e46c5a?s=200" alt="Neutrino" class="author" width="100" height="100" />
-</span>
+![Eli Perelman|100|100|author](https://www.gravatar.com/avatar/8dc4af17fcbc9d8c1919462680e46c5a?s=200)
 
 I started learning to program when I was 13 or 14, back in 1996. And yes, JavaScript was the first language I ever learned. It sparked a love of the web and development that continues to this day. All in all, I've been doing professional development for about 12 years.
-</p>
 
 ## How would you describe *Neutrino* to someone who has never heard of it?
 

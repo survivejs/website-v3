@@ -11,12 +11,9 @@ Comparing different JavaScript projects is surprisingly tough. This is a problem
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/b1a049347f659b8455244bc50ac45ef9?s=200" alt="Dmitry Zaets" class="author" width="100" height="100" />
-</span>
+![Dmitry Zaets|100|100|author](https://www.gravatar.com/avatar/b1a049347f659b8455244bc50ac45ef9?s=200)
+
 My name is Dmitry Zaets. I am a Full-Stack Web Developer from Ukraine, living in Barcelona. Learning and sharing my knowledge with people are the things I enjoy to do. In a free time, I'm mentoring at NodeSchool Barcelona and helping to organize local ReactJS and .NET meetups.
-</p>
 
 My developer's journey started when I was 10 years old. Father showed me how to code with Basic and we've created a tiny chat bot. At that point, I understood that programming is a huge universe without boundaries. Currently, I'm interested in software design and architecture.
 

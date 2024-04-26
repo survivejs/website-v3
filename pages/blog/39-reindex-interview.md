@@ -13,14 +13,10 @@ W> [Reindex has been discontinued as a service](https://www.reindex.io/blog/disc
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img
-    src="https://www.gravatar.com/avatar/e89d8e6912bf23525337395769e16505?s=200"
-    alt="Ville Immonen" class='author' width='100' height='100' />
-</span>
+
+![Ville Immonen|100|100|author](https://www.gravatar.com/avatar/e89d8e6912bf23525337395769e16505?s=200)
+
 My name is Ville Immonen and I'm a co-founder at [Reindex](https://www.reindex.io/), where I work to make it simpler for developers to build web and mobile apps by using React and GraphQL.
-</p>
 
 ## How would you describe *Reindex* to someone who has never heard of it?
 

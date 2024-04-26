@@ -11,13 +11,9 @@ To learn more about the topic, I'm interviewing [Bradley Farias](https://twitter
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/0b22453288cedbe28d53e89e0e0b793d?s=200" alt="Bradley Farias" class="author" width="100" height="100" />
-</span>
+![Bradley Farias|100|100|author](https://www.gravatar.com/avatar/0b22453288cedbe28d53e89e0e0b793d?s=200)
 
 I am a Software Engineer at GoDaddy these days but have been at several startups before that. My childhood was mostly running around outside in the Texas heat and enjoying video games. At the end of high school, I started programming and have been doing it since then.
-</p>
 
 TiddlyWiki was the first open source project that I worked on in college. It was a single page wiki that could save to disk back in 2005. That is what got me interested in JavaScript. I spent many hours trying to recreate various things such as a spreadsheet editor and a polyfill for Range in IE6.
 

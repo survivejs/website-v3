@@ -15,13 +15,9 @@ Underneath webpack uses a library known as Ajv by [Evgeny Poberezkin](https://tw
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/f0e97301983c1019d98740935009ab6e?s=200" alt="Evgeny Poberezkin" class="author" width="100" height="100" />
-</span>
+![Evgeny Poberezkin|100|100|author](https://www.gravatar.com/avatar/f0e97301983c1019d98740935009ab6e?s=200)
 
 I've been interested in software since school. I've spent a big part of my life creating and managing businesses, only occasionally creating software for them. I've been coding full time for several years. Currently I lead the team of great software engineers at [MailOnline](http://dailymail.co.uk) (and we are hiring!).
-</p>
 
 ## How would you describe *Ajv* to someone who has never heard of it?
 

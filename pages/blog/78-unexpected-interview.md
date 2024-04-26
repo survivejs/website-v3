@@ -11,13 +11,9 @@ When it comes to testing, often you assert certain truths.  At the very least yo
 
 ### Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="http://we-knowhow.dk/interview/sune-simonsen.png" alt="Sune Simonsen" class="author" width="100" height="100" />
-</span>
+![Sune Simonsen|100|100|author](http://we-knowhow.dk/interview/sune-simonsen.png)
 
 I don't consider my personal life that exciting - or at least it is pretty far from your regular JavaScript hacker trying to start the next unicorn business from a dorm room. I am a family man with two small girls and a wife. We live a pretty regular and happy life in Copenhagen.
-</p>
 
 I started my career as an enterprise Java consultant, after doing that for five years I saw the industry starting to take a turn towards the front-end being the orchestrating part in most applications. So I decided to change my career and focused on the front-end - that was one of the best decisions I have ever made.
 

@@ -11,14 +11,9 @@ There was [an interview on glamor](/blog/glamor-interview) earlier. It's time to
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/73f8205a10da6e826075fdaa42201055?s=200" alt="Ryan Tsao" class="author" width="100" height="100" />
-</span>
+![Ryan Tsao|100|100|author](https://www.gravatar.com/avatar/73f8205a10da6e826075fdaa42201055?s=200)
 
 I'm a software engineer living in San Francisco currently working at Uber on the Web Platform team. I first got into web development at the age of 12 when, for whatever reason, I decided that I wanted to build a website.
-
-</p>
 
 The immediacy and accessibility of web programming and its synthesis of coding and visual design and proved tremendously appealing to me and I've been hooked ever since. Most recently, I've been focused on building JavaScript tools and libraries to support Node.js web application development, particularly in the area of UI components and styles.
 

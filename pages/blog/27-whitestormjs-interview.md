@@ -11,11 +11,7 @@ Today, I'm interviewing Alexander Buzin, the author of a new engine known as [Wh
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/e002d265845b7625ef396bf74763e31d?s=200" alt="Alexander Buzin" class='author' width='100' height='100' />
-</span>
-</p>
+![Alexander Buzin|100|100|author](https://www.gravatar.com/avatar/e002d265845b7625ef396bf74763e31d?s=200)
 
 My name is Alexander Buzin. I am a front-end developer and a hockey player from Kiev. I am interested in WebGL technology and everything related to 3D rendering in Web, such as [Three.js](http://threejs.org/), [seen.js](http://seenjs.io/) and 3D physics engines like [Cannon.js](http://www.cannonjs.org/) or [Oimo.js](https://github.com/lo-th/Oimo.js/). I am inspired by projects created on it and my favourite one is [ROME](http://www.ro.me/).
 

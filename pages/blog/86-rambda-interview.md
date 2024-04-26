@@ -11,13 +11,9 @@ In this interview, you'll learn about [Rambda](https://www.npmjs.com/package/ram
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/fbfd7af236eb986e5877c46d44a93263?s=200" alt="Dejan Toteff" class="author" width="100" height="100" />
-</span>
+![Dejan Toteff|100|100|author](https://www.gravatar.com/avatar/fbfd7af236eb986e5877c46d44a93263?s=200)
 
 I am a full stack JavaScript and React developer at Comstream, based in Sofia, Bulgaria. I also work at my side project I Learn Smarter.
-</p>
 
 I started learning JavaScript two years ago, and I am still fascinated by the language and its ecosystem. I don't believe in the narrative that we should use JavaScript for everything and ignore that there are other languages out there. So I spend some of my free time learning Golang as it is both powerful and beginners friendly.
 

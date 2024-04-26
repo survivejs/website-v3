@@ -12,13 +12,9 @@ Releasing new versions of npm modules is an `npm publish` away. But how do you m
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/4ca757a644d8fa2518f6308c6dfe6b24?s=200" alt="Gleb Bahmutov" class="author" width="100" height="100" />
-</span>
+![Gleb Bahmutov|100|100|author](https://www.gravatar.com/avatar/4ca757a644d8fa2518f6308c6dfe6b24?s=200)
 
 I have a degree in computer vision. I did panorama stitching and 3D scanners for a while which meant heavy duty C++ programming. At a certain point, I wanted to expand the areas of the business that I worked in: beyond image acquisition and processing. I also wanted to show results and make them useful to the users, for which I needed JavaScript. Now I mostly do Node.js and JS hacks.
-</p>
 
 ## How would you describe *dont-break* to someone who has never heard of it?
 

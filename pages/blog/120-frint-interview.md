@@ -11,14 +11,9 @@ React gives a lot of freedom by default. You can choose which libraries to use t
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/19a3655e6ba9e5a496ee690ba03f2180?s=200" alt="Fahad Ibnay Heylaal" class="author" width="100" height="100" />
-</span>
+![Fahad Ibnay Heylaal|100|100|author](https://www.gravatar.com/avatar/19a3655e6ba9e5a496ee690ba03f2180?s=200)
 
 Currently living in Amsterdam and working as a software engineer at [Travix](https://www.travix.com/). For the last few years, I have been focusing on JavaScript a lot. And never felt bored for a single day since!
-
-</p>
 
 I enjoy being involved with Open Source activities. Not just the coding part, but all the other opportunities it brings along with it too. I feel a lot of good things have happened in my life because of the people I got to know through Open Source. And whenever I can, I try to contribute meaningfully back to the community that's giving us all so much on a regular basis.
 

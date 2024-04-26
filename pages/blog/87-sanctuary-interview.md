@@ -11,13 +11,9 @@ If there's something that's easy, it's making mistakes while coding JavaScript. 
 
 ## Can you tell a bit about yourself?
 
-<p>
-  <span class="author">
-    <img src="https://www.gravatar.com/avatar/5f41fa18e9774f1a2ea7c519f476c348?s=200" alt="David Chambers" class="author" width="100" height="100" />
-  </span>
+![David Chambers|100|100|author](https://www.gravatar.com/avatar/5f41fa18e9774f1a2ea7c519f476c348?s=200)
 
 I grew up in New Zealand. I studied graphic design at University and worked briefly as a graphic designer after graduating. I found myself in a cycle of procrastination, guilt, self-doubt, and euphoria. I loved my job a small proportion of the time.
-</p>
 
 I became interested in web design and discovered that I enjoyed writing HTML, CSS, and JavaScript. This work was also creative, but I found the emotional ups and downs much less extreme. In recent years my interests have shifted towards programming, specifically functional programming.
 

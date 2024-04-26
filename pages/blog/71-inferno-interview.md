@@ -11,14 +11,11 @@ One of the cool things about React is that it managed to pull a lot of people in
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/5d645ce683649c2332294ea6fcc8b7a2?s=200" alt="Dominic Gannaway" class="author" width="100" height="100" />
-</span>
+![Dominic Gannaway|100|100|author](https://www.gravatar.com/avatar/5d645ce683649c2332294ea6fcc8b7a2?s=200)
+
 I'm currently a Software Development Engineer at Tesco, based in London.
 
 I've been developing and writing actual software since I was 15 years old, but I was first interested in coding when I was around 7 years old. (It was Visual Basic 5 back then!)
-</p>
 
 I'm a huge fan and advocate of web technologies, and I've always enjoyed optimising and making things fast. These days I spend a lot of time building complex UIs, middlewares, tooling and all the other things you would associate with a full-stack JavaScript engineer.
 

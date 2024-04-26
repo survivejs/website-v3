@@ -11,13 +11,9 @@ As building tools such as this isn't easy, I'm primarily curious to know why Ray
 
 ## How did you discover Webpack and React? Can you provide a bit of background?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/b3a21f6147bcc6bd9d997d5cc5b5f87c?size=200" alt="Andrew Ray" class='author' width='100' height='100' />
-</span>
+![Andrew Ray|100|100|author](https://www.gravatar.com/avatar/b3a21f6147bcc6bd9d997d5cc5b5f87c?size=200)
 
 The front-end ecosystem is constantly morphing, so we have to stay on top of front-end news. That's how I heard about React, most likely from Hacker News. The path to Webpack was natural from there. Many example projects use Webpack and there's a lot of Webpack and React development overlap in the community.
-</p>
 
 ## Why did you develop ShaderFrog? How would you describe it to someone who has never heard of it? What next?
 

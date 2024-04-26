@@ -11,13 +11,9 @@ When it comes to coding, the challenge is that you have to literally type it all
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://s.gravatar.com/avatar/da24dd3ef4d4c2cde869bde781369d99?s=200" alt="Per Harald Borgen" class="author" width="100" height="100" />
-</span>
+![Per Harald Borgen|100|100|author](https://s.gravatar.com/avatar/da24dd3ef4d4c2cde869bde781369d99?s=200)
 
 I'm Per, CEO and co-founder of [Scrimba](https://scrimba.com/). We're an Oslo-based startup consisting of three co-founders: [Sindre](https://github.com/somebee), [Magnus](https://twitter.com/judofyr) and [me](https://twitter.com/perborgen).
-</p>
 
 Our goal is to make online learning better than in-person learning, starting with programming. At the core of this is Scrimba - an interactive video format for explaining and understanding code.
 

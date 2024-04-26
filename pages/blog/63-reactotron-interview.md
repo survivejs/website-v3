@@ -9,13 +9,9 @@ If there's one thing that has set React community apart, it's the focus on devel
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/0fb48c7e9a462c7e6d312ef50d618e12?s=200" alt="Steve Kellock" class="author" width="100" height="100" />
-</span>
+![Steve Kellock|100|100|author](https://www.gravatar.com/avatar/0fb48c7e9a462c7e6d312ef50d618e12?s=200)
 
 Hi. I’m Steve. I live with my wife and 2 boys (4 and 2) in Tiny, Canada (2 hours north of Toronto). It’s pretty rural. Farms and tractors.  That sort of thing.  =)
-</p>
 
 Been a professional dev for 23(ish?) years. First computer was a TI 99/4A. First real language was Turbo Pascal, which turned in long love affair with Borland Delphi.
 

@@ -11,13 +11,9 @@ Given how much effort developing a static site generator takes, I can only imagi
 
 ## Can you tell a bit about yourself?
 
-<p>
-<span class="author">
-  <img src="https://www.gravatar.com/avatar/18af7addb03d91d4659db11dc8c6c325?s=200" alt="Bruno Mota" class='author' width='100' height='100' />
-</span>
+![Bruno Mota|100|100|author](https://www.gravatar.com/avatar/18af7addb03d91d4659db11dc8c6c325?s=200)
 
 My name is Bruno Mota and I'm one of the creators of Relax CMS. I've been working on web projects for the past few years, specially with JavaScript. I started making Flash projects with ActionScript when I was in high school which started my developer vein. Eventually switched to JavaScript and gradually to more advanced stuff.
-</p>
 
 Soon enough I was selling plugins and themes online, mainly on the [Envato](https://envato.com/?ref=plusquare) marketplace. And now, in the last months, Relax, a full CMS built using latest techs in the JavaScript world.
 
