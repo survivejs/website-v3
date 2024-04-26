@@ -11,6 +11,8 @@ For a conference organizer, one of the hardest things to do is to keep your conf
 
 ## Can you tell a bit about yourself?
 
+![Juho Vepsäläinen|100|100|author](https://www.gravatar.com/avatar/b26ec3c2769168c2cbc64cc3df9cdd9c?s=200)
+
 I'm Juho, the founder of this site and also the founder of the organization behind React Finland and Future Frontend. Lately I've been working on a new tool called [Gustwind](https://gustwind.js.org/) to enable rapid creation of websites but that's another story.
 
 ## How would you describe _Future Frontend_ to someone who has never heard of it?
