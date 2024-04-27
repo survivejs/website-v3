@@ -237,7 +237,7 @@ function parseCustomQuote(
 
     // @ts-expect-error This is fine for now
     token.tokens[0].text = token.tokens[0].text.replace(
-      match.replace(">", "&gt;"),
+      match,
       `<div class="inline-block rounded-full bg-muted text-white w-8 h-8 -ml-9 text-center">${textIcon}</div>`,
     );
 
