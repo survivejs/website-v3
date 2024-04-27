@@ -51,13 +51,8 @@ type Token = {
   tokens?: Token[];
 };
 
+// TODO: Add https://www.npmjs.com/package/marked-smartypants
 marked.setOptions({
-  gfm: true,
-  breaks: false,
-  pedantic: false,
-  sanitize: false,
-  smartLists: true,
-  smartypants: true,
   highlight: (code: string, language: string) => {
     try {
       // TODO: Is it a good idea to highlight as bash by default?
