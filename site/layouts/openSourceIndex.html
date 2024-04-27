@@ -25,13 +25,11 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
       >
-        <Card
-          showAnchor
+        <ContentCard
           title="Colorjoe (2012)"
           website="https://bebraw.github.io/colorjoe/"
-          github="https://github.com/bebraw/colorjoe"
         >
-          <slot name="description"
+          <slot name="content"
             >The development of colorjoe color picker was
             motivated by a need to find a light picker that
             doesn't rely on static images. The solution was
@@ -40,14 +38,12 @@
             old, it is still somehow relevant even
             today.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Reactabular (2014)"
           website="https://reactabular.js.org/"
-          github="https://github.com/reactabular/reactabular"
         >
-          <slot name="description"
+          <slot name="content"
             >Reactabular was perhaps the first headless
             table component built for React. It was built
             during the time when headless didn't exist at a
@@ -57,14 +53,12 @@
             If funding appeared, I would be happy to
             modernize the library.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Antwar (2015)"
           website="https://antwar.js.org/"
-          github="https://github.com/antwarjs/antwar"
         >
-          <slot name="description"
+          <slot name="content"
             >Antwar was my first serious static site
             generator. I developed it around React and
             webpack to develop this website and other
@@ -75,13 +69,12 @@
             webpage. Later on this idea has been formalized
             as the idea of islands architecture.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="webpack-merge (2015)"
-          github="https://github.com/survivejs/webpack-merge"
+          website="https://github.com/survivejs/webpack-merge"
         >
-          <slot name="description"
+          <slot name="content"
             >As I was writing my [webpack
             book](/books/webpack/), I realized it is
             difficult to explain how to construct webpack
@@ -92,14 +85,12 @@
             one-time $3000 grant from their infrastructure
             fund.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Sidewind (2019)"
           website="https://sidewind.js.org/"
-          github="https://github.com/survivejs/sidewind"
         >
-          <slot name="description"
+          <slot name="content"
             >After getting exposed to
             [Tailwind](https://tailwindcss.com/), I started
             thinking it would be a good idea to do the same
@@ -112,14 +103,12 @@
             I'll rewrite the project as a compiler one
             day.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Gustwind (2021)"
           website="https://gustwind.js.org/"
-          github="https://github.com/gustwindjs/gustwind"
         >
-          <slot name="description"
+          <slot name="content"
             >As I realized the approach of Antwar is too
             constraining and I wanted to learn
             [Deno](https://deno.com/), I decided to start
@@ -137,7 +126,7 @@
             and likely there are still many fun features to
             add (interactive editing on web etc.).</slot
           >
-        </Card>
+        </ContentCard>
       </div>
     </div>
   </slot>

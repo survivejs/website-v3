@@ -20,13 +20,12 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
       >
-        <Card
-          showAnchor
+        <ContentCard
           title="Resumability — A New Primitive for Developing Web Applications (2023)"
           websiteLabel="Paper"
           website="https://www.researchgate.net/publication/377351753_Resumability_-_a_New_Primitive_for_Developing_Web_Applications"
         >
-          <slot name="description"
+          <slot name="content"
             >Hydration is a common technique employed by
             current JavaScript-based frontend frameworks,
             such as React. In hydration, the application
@@ -53,14 +52,13 @@
             resumable solutions for developing web
             applications.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="ECMAScript - The journey of a programming language from an idea to a standard (2023)"
           websiteLabel="Paper"
           website="https://www.researchgate.net/publication/370469740_ECMAScript_-_The_journey_of_a_programming_language_from_an_idea_to_a_standard"
         >
-          <slot name="description"
+          <slot name="content"
             >A significant portion of the web is powered by
             ECMAScript. As a web technology, it is
             ubiquitous and available on most platforms
@@ -79,14 +77,13 @@
             Triangle framework and the theory of standards
             wars.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="The Rise of Disappearing Frameworks in Web Development (2023)"
           websiteLabel="Paper"
           website="https://www.researchgate.net/publication/371617502_The_Rise_of_Disappearing_Frameworks_in_Web_Development"
         >
-          <slot name="description"
+          <slot name="content"
             >The evolution of the web can be characterized
             as an emergence of frameworks paving the way
             from static websites to dynamic web
@@ -99,14 +96,13 @@
             web frameworks, providing benefits of the early
             web and simple static sites.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Implications of Edge Computing for Static Site Generation (2023)"
           websiteLabel="Paper"
           website="https://www.researchgate.net/publication/375814983_Implications_of_Edge_Computing_for_Static_Site_Generation"
         >
-          <slot name="description"
+          <slot name="content"
             >Static site generation (SSG) is a common
             technique in the web development space to create
             performant websites that are easy to host.
@@ -121,7 +117,7 @@
             of the recent developments in the edge computing
             space and consider its implications for SSG.
           </slot>
-        </Card>
+        </ContentCard>
       </div>
     </div>
   </slot>

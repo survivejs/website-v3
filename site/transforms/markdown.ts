@@ -188,11 +188,13 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             return this.code(fileContents, href.split(".").at(-1) as string);
           }
 
-          let out = '<a class="' + tw("underline") + '" href="' + href + '"';
+          let out = '<a class="' + tw("underline") + tw("hover:text-primary") +
+            '" href="' + href + '"';
           if (title) {
             out += ' title="' + title + '"';
           }
           out += ">" + text + "</a>";
+
           return out;
         },
         list(body: string, ordered: string, start: number) {

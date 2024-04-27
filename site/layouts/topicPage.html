@@ -13,7 +13,7 @@
         &foreach="(get context topic.posts)"
       >
         <Card>
-          <slot name="title">
+          <slot name="header">
             <SiteLink
               &href="(urlJoin / blog (get props data.slug) /)"
               &children="(get props data.title)"

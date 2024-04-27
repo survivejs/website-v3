@@ -17,12 +17,12 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose"
       >
-        <Card
-          showAnchor
+        <ContentCard
           title="Qwik katas (2023)"
-          github="https://github.com/survivejs/qwik-katas"
+          websiteLabel="GitHub"
+          website="https://github.com/survivejs/qwik-katas"
         >
-          <slot name="description"
+          <slot name="content"
             >[Qwik](https://qwik.dev/) is a recent web
             framework that approaches web application from a
             different angle by eschewing the concept of
@@ -33,13 +33,13 @@
             that want to develop performant websites and
             applications out of the box.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Deno katas (2023)"
-          github="https://github.com/survivejs/deno-katas"
+          websiteLabel="GitHub"
+          website="https://github.com/survivejs/deno-katas"
         >
-          <slot name="description"
+          <slot name="content"
             >[Deno](https://deno.com/) is the followup
             project of Ryan Dahl, the original author of
             [Node.js](https://nodejs.org/). In Deno, Ryan
@@ -49,13 +49,13 @@
             server-side programming problems particularly in
             terms of tooling.</slot
           >
-        </Card>
-        <Card
-          showAnchor
+        </ContentCard>
+        <ContentCard
           title="Web Audio katas (2023)"
-          github="https://github.com/survivejs/audio-katas"
+          websiteLabel="GitHub"
+          website="https://github.com/survivejs/audio-katas"
         >
-          <slot name="description"
+          <slot name="content"
             >[Web
             Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
             is a powerful, yet underestimated, web API that
@@ -65,7 +65,7 @@
             getting acquainted with the relevant APIs and
             some of the history behind digital audio.</slot
           >
-        </Card>
+        </ContentCard>
       </div>
     </div>
   </slot>

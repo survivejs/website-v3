@@ -20,8 +20,8 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
       >
-        <Card showAnchor title="Custom development">
-          <slot name="description"
+        <ContentCard title="Custom development">
+          <slot name="content"
             >Occasionally I have been hired to perform
             custom development. Example cases include
             developing a complex table component or building
@@ -32,9 +32,9 @@
             backend that you might characterize as the
             backend of the frontend.</slot
           >
-        </Card>
-        <Card showAnchor title="Workshops">
-          <slot name="description"
+        </ContentCard>
+        <ContentCard title="Workshops">
+          <slot name="content"
             >To train up staff, I have run several workshops
             throughout the years in my specialized topics. I
             have focused mainly on webpack and React
@@ -44,9 +44,9 @@
             through predesigned katas that allow attendees
             at different levels understand the topic.</slot
           >
-        </Card>
-        <Card showAnchor title="Conferences">
-          <slot name="description"
+        </ContentCard>
+        <ContentCard title="Conferences">
+          <slot name="content"
             >I have been running conferences since 2017
             ([React Finland](https://react-finland.fi/),
             [GraphQL Finland](https://graphql-finland.fi/),
@@ -57,9 +57,9 @@
             conference director focused on the big picture
             (concept, speakers, marketing).</slot
           >
-        </Card>
-        <Card showAnchor title="Research">
-          <slot name="description"
+        </ContentCard>
+        <ContentCard title="Research">
+          <slot name="content"
             >Since 2022, I have been working as a researcher
             for Aalto University. Through my research, I
             have learned how the world of scientific
@@ -71,7 +71,7 @@
             qualitative and quantitative ends of the
             spectrum.</slot
           >
-        </Card>
+        </ContentCard>
       </div>
     </div>
   </slot>

@@ -16,7 +16,7 @@
         &foreach="(get context blogPosts)"
       >
         <Card &description="(get props data.preview)">
-          <slot name="title">
+          <slot name="header">
             <SiteLink
               &href="(get props data.slug)"
               &children="(get props data.title)"

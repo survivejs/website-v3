@@ -96,14 +96,13 @@
             &foreach="(get context document.data.topics)"
           >
             <li>
-              <Card>
-                <slot name="title">
-                  <SiteLink
-                    &children="(get props title)"
-                    &href="(urlJoin / blog topics (get props slug) /)"
-                  />
-                </slot>
-              </Card>
+              <Badge>
+                <SiteLink
+                  class="p-2"
+                  &children="(get props title)"
+                  &href="(urlJoin / blog topics (get props slug) /)"
+                />
+              </Badge>
             </li>
           </ul>
         </div>

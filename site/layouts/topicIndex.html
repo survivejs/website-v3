@@ -11,7 +11,7 @@
         &foreach="(get context topics)"
       >
         <Card>
-          <slot name="title">
+          <slot name="header">
             <SiteLink
               &href="(get props slug)"
               &children="(concat (get props title) ' ' '(' (length (get props posts)) ')')"

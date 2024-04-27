@@ -1,32 +1,19 @@
 <div class="border p-2 flex flex-col gap-2 justify-between">
-  <div>
-    <Heading
-      level="3"
-      class="font-medium"
-      &children="(get props title)"
-      &showAnchor="(get props showAnchor)"
+  <div
+    &visibleIf="(or (get props header) (get props content))"
+    class="flex flex-col justify-between"
+  >
+    <div
+      &visibleIf="(get props header)"
+      &children="(get props header)"
     />
-    <Markdown
-      &visibleIf="(get props description)"
-      &children="(get props description)"
+    <div
+      &visibleIf="(get props content)"
+      &children="(get props content)"
     />
   </div>
-  <ul
-    class="flex flex-row gap-2"
-    &visibleIf="(or (get props website) (get props github))"
-  >
-    <li &visibleIf="(get props website)">
-      <SiteLink
-        &href="(get props website)"
-        &children="(get props websiteLabel 'Website')"
-      />
-    </li>
-    <li &visibleIf="(get props github)">
-      <SiteLink &href="(get props github)">GitHub</SiteLink>
-    </li>
-  </ul>
   <div
     &visibleIf="(get props footer)"
     &children="(get props footer)"
-  ></div>
+  />
 </div>
