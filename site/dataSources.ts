@@ -15,13 +15,16 @@ type MarkdownWithFrontmatter = {
     slug: string;
     title: string;
     date: Date;
-    author?: { name: string; twitter: string };
+    author?: Author;
+    editors?: Author[];
     description?: string;
     preview?: string;
     keywords: string[];
   };
   content: string;
 };
+
+type Author = { name: string; twitter: string };
 
 type Topic = {
   title: string;
@@ -277,6 +280,12 @@ function resolveBlogPost(path: string, p: MarkdownWithFrontmatter) {
       name: "Juho Vepsäläinen",
       twitter: "https://twitter.com/bebraw",
     },
+    editors: p.data?.editors?.map((handle) => ({
+      // @ts-ignore This is fine since there's a transformation here
+      // that's not caught by typing yet.
+      name: handleToName(handle),
+      twitter: `https://twitter.com/${handle}`,
+    })),
     topics: p.data?.keywords?.map((keyword: string) => {
       return {
         title: resolveKeywordToTitle(keyword),
@@ -284,6 +293,19 @@ function resolveBlogPost(path: string, p: MarkdownWithFrontmatter) {
       };
     }) || [],
   };
+}
+
+function handleToName(handle: string) {
+  switch (handle) {
+    case "bebraw":
+      return "Juho Vepsäläinen";
+    case "karlhorky":
+      return "Karl Horky";
+    default:
+      break;
+  }
+
+  return "";
 }
 
 function cleanSlug(resourcePath: string) {
