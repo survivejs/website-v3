@@ -8,7 +8,7 @@ editors: ['bebraw', 'karlhorky']
 
 If there's one thing that divides web developers, it's styling. A part of this has to do with the different requirements of websites and web applications. What is good in another domain, is an anti-pattern in another.
 
-To understand the topic better, I am interviewing [Oleg Slobodskoi](https://twitter.com/oleg008), the author of [JSS](http://cssinjs.org).
+To understand the topic better, I am interviewing [Oleg Isonen](https://twitter.com/oleg008), the author of [JSS](http://cssinjs.org).
 
 ## Can you tell a bit about yourself?
 
