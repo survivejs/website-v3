@@ -174,7 +174,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             ${
             className === "author"
               ? ""
-              : '<figcaption class="text-center text-sm">${alt}</figcaption>'
+              : `<figcaption class="text-center text-sm">${alt}</figcaption>`
           }
           </figure>`;
         },
