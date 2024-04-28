@@ -188,16 +188,11 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             return this.code(fileContents, href.split(".").at(-1) as string);
           }
 
-          // TODO: Use renderSync here to catch <SiteLink> improvements
-          let out = '<a class="' + tw("underline") + " " +
-            tw("hover:text-primary") +
-            '" href="' + href + '"';
-          if (title) {
-            out += ' title="' + title + '"';
-          }
-          out += ">" + text + "</a>";
-
-          return out;
+          return renderSync({
+            htmlInput: `<SiteLink href="${href}" title="${title || ""}">
+              ${text}
+            </SiteLink>`,
+          });
         },
         list(body: string, ordered: string, start: number) {
           const type = ordered ? "ol" : "ul",
