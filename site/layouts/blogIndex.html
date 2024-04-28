@@ -15,7 +15,7 @@
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
         &foreach="(get context blogPosts)"
       >
-        <Card &description="(get props data.preview)">
+        <Card &content="(get props data.preview)">
           <slot name="header">
             <SiteLink
               &href="(get props data.slug)"
