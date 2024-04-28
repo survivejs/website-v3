@@ -1,120 +1,120 @@
-/blog/survivejs-webpack-23 /blog/webpack-book-updated-to-webpack-4
-/blog/survivejs-webpack120 /blog/survivejs-webpack-120
-/blog/mobservable-interview /blog/mobx-interview
-/blog/react-router5 /blog/react-router5-interview
-/blog/upcoming-events /blog/summer-2018-events
-/clinic /consulting
-/training /consulting
-/maintenance/code-quality/dependencies /books/maintenance/packaging/managing-dependencies
-/webpack_react/introduction /books/react/introduction
-/webpack_react/webpack /books/webpack/introduction
-/webpack_react/webpack_compared /books/webpack/appendices/comparison
-/webpack_react/developing_with_webpack /books/webpack/developing
-/webpack_react/webpack_and_react /books/webpack/output/server-side-rendering
-/webpack_react/react /books/react/getting-started
-/webpack_react/implementing_notes /books/react/getting-started/implementing-notes
-/webpack_react/react_and_flux /books/react/implementing-kanban/react-and-flux
-/webpack_react/from_notes_to_kanban /books/react/implementing-kanban/from-notes-to-kanban
-/webpack_react/implementing_dnd /books/react/implementing-kanban/drag-and-drop
-/webpack_react/building_kanban /books/webpack/building
-/webpack_react/advanced /books/react/advanced-techniques
-/webpack_react/testing_react /books/react/advanced-techniques/testing-react
-/webpack_react/typing_with_react /books/react/advanced-techniques/typing-with-react
-/webpack_react/linting_in_webpack /books/maintenance/code-quality/linting
-/webpack_react/authoring_libraries /books/maintenance/packaging
-/webpack_react/styling_react /books/react/advanced-techniques/styling-react
-/webpack_react/appendices /books/react/appendices
-/webpack_react/structuring_react_projects /books/react/advanced-techniques/structuring-react-projects
-/webpack_react/language_features /books/react/appendices/language-features
-/webpack_react/understanding_decorators /books/react/appendices/understanding-decorators
-/webpack_react/troubleshooting /books/react/appendices/troubleshooting
-/webpack/webpack-compared /books/webpack/appendices/comparison
-/webpack/compared /books/webpack/appendices/comparison
-/webpack/developing-with-webpack /books/webpack/developing
-/webpack/developing-with-webpack/setting-up-npm-install-webpack-plugin /books/webpack/introduction/
-/webpack/developing-with-webpack/optimizing-development /books/webpack/optimizing-build/
-/webpack/developing-with-webpack/getting-started /books/webpack/developing/getting-started/
-/webpack/developing-with-webpack/automatic-browser-refresh /books/webpack/developing/automatic-browser-refresh/
-/webpack/developing-with-webpack/configuring-hmr /books/webpack/appendices/hmr/
-/webpack/developing-with-webpack/linting /books/maintenance/code-quality/linting/
-/webpack/developing-with-webpack/composing-configuration /books/webpack/developing/composing-configuration/
-/webpack/developing-with-webpack/refreshing-css /books/webpack/developing/automatic-browser-refresh/
-/webpack/developing-with-webpack/enabling-sourcemaps /books/webpack/building/source-maps/
-/webpack/developing-with-webpack/splitting-configuration /books/webpack/developing/composing-configuration/
-/webpack/developing/webpack-dev-server /books/webpack/developing/development-server/
-/webpack/developing/automatic-browser-refresh /books/webpack/developing/development-server/
-/webpack/developing/linting /books/maintenance/code-quality/linting/
-/webpack/styling/linting /books/maintenance/code-quality/linting/
-/webpack/output/bundling-libraries /books/maintenance/packaging/standalone-builds/
-/webpack/building-with-webpack /books/webpack/building/
-/webpack/output/library-output https://webpack.js.org/configuration/output/
-/webpack/packages/consuming-techniques /books/webpack/packaging/standalone-builds/
-/webpack/packages/consuming /books/maintenance/packaging/
-/webpack/packages/authoring /books/maintenance/packaging/
-/webpack/packages/authoring-techniques /books/maintenance/packaging/
-/webpack/appendices/hmr-with-react https://github.com/gaearon/react-hot-loader
-/webpack/appendices/customizing-eslint /books/maintenance/appendices/customizing-eslint/
-/webpack/building-with-webpack/minifying-build /books/webpack/optimizing/minifying/
-/webpack/building-with-webpack/processing-with-babel /books/webpack/loading/javascript/
-/webpack/building-with-webpack/cleaning-build /books/webpack/building/tidying-up/
-/webpack/building-with-webpack/attaching-revision /books/webpack/building/tidying-up/
-/webpack/building-with-webpack/source-maps /books/webpack/building/source-maps/
-/webpack/building-with-webpack/splitting-bundles /books/webpack/building/splitting-bundles/
-/webpack/building-with-webpack/code-splitting /books/webpack/building/code-splitting/
-/webpack/building-with-webpack/setting-environment-variables /books/webpack/optimizing/environment-variables/
-/webpack/building-with-webpack/adding-hashes-to-filenames /books/webpack/optimizing/adding-hashes-to-filenames/
-/webpack/building-with-webpack/separating-css /books/webpack/styling/separating-css/
-/webpack/building-with-webpack/eliminating-unused-css /books/webpack/styling/eliminating-unused-css/
-/webpack/building-with-webpack/analyzing-build-statistics /books/webpack/optimizing/build-analysis/
-/webpack/building-with-webpack/hosting-on-github-pages /books/webpack/techniques/deploying/
-/webpack/building-with-webpack/enabling-sourcemaps /books/webpack/building/source-maps/
-/webpack/optimizing-build /books/webpack/optimizing/
-/webpack/optimizing-build/minifying /books/webpack/optimizing/minifying/
-/webpack/optimizing-build/tree-shaking /books/webpack/optimizing/tree-shaking/
-/webpack/optimizing-build/setting-environment-variables /books/webpack/optimizing/environment-variables/
-/webpack/optimizing-build/adding-hashes-to-filenames /books/webpack/optimizing/adding-hashes-to-filenames/
-/webpack/optimizing-build/separating-manifest /books/webpack/optimizing/separating-runtime/
-/webpack/optimizing/separating-manifest/ /books/webpack/optimizing/separating-runtime/
-/webpack/optimizing-build/analyzing-build-statistics /books/webpack/optimizing/build-analysis/
-/webpack/optimizing/setting-environment-variables /books/webpack/optimizing/environment-variables/
-/webpack/optimizing/analyzing-build-statistics /books/webpack/optimizing/build-analysis
-/webpack/developing/configuring-hmr /books/webpack/appendices/hmr/
-/webpack/handling-styles /books/webpack/styling/
-/webpack/handling-styles/loading /books/webpack/styling/loading/
-/webpack/handling-styles/separating-css /books/webpack/styling/separating-css/
-/webpack/handling-styles/autoprefixing /books/webpack/styling/autoprefixing/
-/webpack/handling-styles/eliminating-unused-css /books/webpack/styling/eliminating-unused-css/
-/webpack/handling-styles/linting /books/maintenance/code-quality/linting/
-/webpack/loading-assets /books/webpack/loading/
-/webpack/loading-assets/formats-supported /books/webpack/loading/loader-definitions/
-/webpack/loading-assets/loader-definitions /books/webpack/loading/loader-definitions/
-/webpack/loading-assets/loading-styles /books/webpack/styling/loading/
-/webpack/loading-assets/loading-images /books/webpack/loading/images/
-/webpack/loading-assets/loading-fonts /books/webpack/loading/fonts/
-/webpack/understanding-loaders /books/webpack/loading/
-/webpack/understanding-loaders/loader-definitions /books/webpack/loading/loader-definitions/
-/webpack/understanding-loaders/images /books/webpack/loading/images/
-/webpack/understanding-loaders/fonts /books/webpack/loading/fonts/
-/webpack/understanding-loaders/writing-loaders /books/webpack/extending/loaders/
-/webpack/extending-webpack /books/webpack/extending/
-/webpack/extending-webpack/loaders /books/webpack/extending/loaders/
-/webpack/extending-webpack/plugins /books/webpack/extending/plugins/
-/webpack/advanced-techniques /books/webpack/packages/
-/webpack/advanced-techniques/consuming-packages /books/webpack/packages/consuming/
-/webpack/advanced-techniques/authoring-packages /books/webpack/packages/authoring/
-/webpack/advanced-techniques/understanding-chunks /books/webpack/building/bundle-splitting/
-/webpack/advanced-techniques/linting-in-webpack /books/maintenance/code-quality/linting/
-/webpack/advanced-techniques/writing-loaders /books/webpack/extending/loaders/
-/webpack/advanced-techniques/configuring-react /books/webpack/output/server-side-rendering/
-/webpack/appendices/configuring-hmr-with-react https://github.com/gaearon/react-hot-loader
-/webpack/appendices/writing-eslint-plugins /books/webpack/appendices/customizing-eslint/
-/webpack/appendices/dynamic-loading /books/webpack/techniques/dynamic-loading/
-/webpack/appendices/using-web-workers /books/webpack/techniques/web-workers/
-/webpack/appendices/i18n /books/webpack/techniques/i18n/
-/webpack/appendices/deploying /books/webpack/techniques/deploying/
-/webpack/appendices/configuring-hmr /books/webpack/appendices/hmr/
-/webpack/why-webpack /books/webpack/what-is-webpack/
-/webpack/building/splitting-bundles /books/webpack/building/bundle-splitting/
-/maintenance/* /books/maintenance/:splat
-/react/* /books/react/:splat
-/webpack/* /books/webpack/:splat
+/blog/survivejs-webpack-23 /blog/webpack-book-updated-to-webpack-4/ 301
+/blog/survivejs-webpack120 /blog/survivejs-webpack-120/ 301
+/blog/mobservable-interview /blog/mobx-interview/ 301
+/blog/react-router5 /blog/react-router5-interview/ 301
+/blog/upcoming-events /blog/summer-2018-events/ 301
+/clinic /consulting/ 301
+/training /consulting/ 301
+/maintenance/code-quality/dependencies /books/maintenance/packaging/managing-dependencies/ 301
+/webpack_react/introduction /books/react/introduction/ 301
+/webpack_react/webpack /books/webpack/introduction/ 301
+/webpack_react/webpack_compared /books/webpack/appendices/comparison/ 301
+/webpack_react/developing_with_webpack /books/webpack/developing/ 301
+/webpack_react/webpack_and_react /books/webpack/output/server-side-rendering/ 301
+/webpack_react/react /books/react/getting-started/ 301
+/webpack_react/implementing_notes /books/react/getting-started/implementing-notes/ 301
+/webpack_react/react_and_flux /books/react/implementing-kanban/react-and-flux/ 301
+/webpack_react/from_notes_to_kanban /books/react/implementing-kanban/from-notes-to-kanban/ 301
+/webpack_react/implementing_dnd /books/react/implementing-kanban/drag-and-drop/ 301
+/webpack_react/building_kanban /books/webpack/building/ 301
+/webpack_react/advanced /books/react/advanced-techniques/ 301
+/webpack_react/testing_react /books/react/advanced-techniques/testing-react/ 301
+/webpack_react/typing_with_react /books/react/advanced-techniques/typing-with-react/ 301
+/webpack_react/linting_in_webpack /books/maintenance/code-quality/linting/ 301
+/webpack_react/authoring_libraries /books/maintenance/packaging/ 301
+/webpack_react/styling_react /books/react/advanced-techniques/styling-react/ 301
+/webpack_react/appendices /books/react/appendices/ 301
+/webpack_react/structuring_react_projects /books/react/advanced-techniques/structuring-react-projects/ 301
+/webpack_react/language_features /books/react/appendices/language-features/ 301
+/webpack_react/understanding_decorators /books/react/appendices/understanding-decorators/ 301
+/webpack_react/troubleshooting /books/react/appendices/troubleshooting/ 301
+/webpack/webpack-compared /books/webpack/appendices/comparison/ 301
+/webpack/compared /books/webpack/appendices/comparison/ 301
+/webpack/developing-with-webpack /books/webpack/developing/ 301
+/webpack/developing-with-webpack/setting-up-npm-install-webpack-plugin /books/webpack/introduction/ 301
+/webpack/developing-with-webpack/optimizing-development /books/webpack/optimizing-build/ 301
+/webpack/developing-with-webpack/getting-started /books/webpack/developing/getting-started/ 301
+/webpack/developing-with-webpack/automatic-browser-refresh /books/webpack/developing/automatic-browser-refresh/ 301
+/webpack/developing-with-webpack/configuring-hmr /books/webpack/appendices/hmr/ 301
+/webpack/developing-with-webpack/linting /books/maintenance/code-quality/linting/ 301
+/webpack/developing-with-webpack/composing-configuration /books/webpack/developing/composing-configuration/ 301
+/webpack/developing-with-webpack/refreshing-css /books/webpack/developing/automatic-browser-refresh/ 301
+/webpack/developing-with-webpack/enabling-sourcemaps /books/webpack/building/source-maps/ 301
+/webpack/developing-with-webpack/splitting-configuration /books/webpack/developing/composing-configuration/ 301
+/webpack/developing/webpack-dev-server /books/webpack/developing/development-server/ 301
+/webpack/developing/automatic-browser-refresh /books/webpack/developing/development-server/ 301
+/webpack/developing/linting /books/maintenance/code-quality/linting/ 301
+/webpack/styling/linting /books/maintenance/code-quality/linting/ 301
+/webpack/output/bundling-libraries /books/maintenance/packaging/standalone-builds/ 301
+/webpack/building-with-webpack /books/webpack/building/ 301
+/webpack/output/library-output https://webpack.js.org/configuration/output/ 301
+/webpack/packages/consuming-techniques /books/webpack/packaging/standalone-builds/ 301
+/webpack/packages/consuming /books/maintenance/packaging/ 301
+/webpack/packages/authoring /books/maintenance/packaging/ 301
+/webpack/packages/authoring-techniques /books/maintenance/packaging/ 301
+/webpack/appendices/hmr-with-react https://github.com/gaearon/react-hot-loader 301
+/webpack/appendices/customizing-eslint /books/maintenance/appendices/customizing-eslint/ 301
+/webpack/building-with-webpack/minifying-build /books/webpack/optimizing/minifying/ 301
+/webpack/building-with-webpack/processing-with-babel /books/webpack/loading/javascript/ 301
+/webpack/building-with-webpack/cleaning-build /books/webpack/building/tidying-up/ 301
+/webpack/building-with-webpack/attaching-revision /books/webpack/building/tidying-up/ 301
+/webpack/building-with-webpack/source-maps /books/webpack/building/source-maps/ 301
+/webpack/building-with-webpack/splitting-bundles /books/webpack/building/splitting-bundles/ 301
+/webpack/building-with-webpack/code-splitting /books/webpack/building/code-splitting/ 301
+/webpack/building-with-webpack/setting-environment-variables /books/webpack/optimizing/environment-variables/ 301
+/webpack/building-with-webpack/adding-hashes-to-filenames /books/webpack/optimizing/adding-hashes-to-filenames/ 301
+/webpack/building-with-webpack/separating-css /books/webpack/styling/separating-css/ 301
+/webpack/building-with-webpack/eliminating-unused-css /books/webpack/styling/eliminating-unused-css/ 301
+/webpack/building-with-webpack/analyzing-build-statistics /books/webpack/optimizing/build-analysis/ 301
+/webpack/building-with-webpack/hosting-on-github-pages /books/webpack/techniques/deploying/ 301
+/webpack/building-with-webpack/enabling-sourcemaps /books/webpack/building/source-maps/ 301
+/webpack/optimizing-build /books/webpack/optimizing/ 301
+/webpack/optimizing-build/minifying /books/webpack/optimizing/minifying/ 301
+/webpack/optimizing-build/tree-shaking /books/webpack/optimizing/tree-shaking/ 301
+/webpack/optimizing-build/setting-environment-variables /books/webpack/optimizing/environment-variables/ 301
+/webpack/optimizing-build/adding-hashes-to-filenames /books/webpack/optimizing/adding-hashes-to-filenames/ 301
+/webpack/optimizing-build/separating-manifest /books/webpack/optimizing/separating-runtime/ 301
+/webpack/optimizing/separating-manifest/ /books/webpack/optimizing/separating-runtime/ 301
+/webpack/optimizing-build/analyzing-build-statistics /books/webpack/optimizing/build-analysis/ 301
+/webpack/optimizing/setting-environment-variables /books/webpack/optimizing/environment-variables/ 301
+/webpack/optimizing/analyzing-build-statistics /books/webpack/optimizing/build-analysis/ 301
+/webpack/developing/configuring-hmr /books/webpack/appendices/hmr/ 301
+/webpack/handling-styles /books/webpack/styling/ 301
+/webpack/handling-styles/loading /books/webpack/styling/loading/ 301
+/webpack/handling-styles/separating-css /books/webpack/styling/separating-css/ 301
+/webpack/handling-styles/autoprefixing /books/webpack/styling/autoprefixing/ 301
+/webpack/handling-styles/eliminating-unused-css /books/webpack/styling/eliminating-unused-css/ 301
+/webpack/handling-styles/linting /books/maintenance/code-quality/linting/ 301
+/webpack/loading-assets /books/webpack/loading/ 301
+/webpack/loading-assets/formats-supported /books/webpack/loading/loader-definitions/ 301
+/webpack/loading-assets/loader-definitions /books/webpack/loading/loader-definitions/ 301
+/webpack/loading-assets/loading-styles /books/webpack/styling/loading/ 301
+/webpack/loading-assets/loading-images /books/webpack/loading/images/ 301
+/webpack/loading-assets/loading-fonts /books/webpack/loading/fonts/ 301
+/webpack/understanding-loaders /books/webpack/loading/ 301
+/webpack/understanding-loaders/loader-definitions /books/webpack/loading/loader-definitions/ 301
+/webpack/understanding-loaders/images /books/webpack/loading/images/ 301
+/webpack/understanding-loaders/fonts /books/webpack/loading/fonts/ 301
+/webpack/understanding-loaders/writing-loaders /books/webpack/extending/loaders/ 301
+/webpack/extending-webpack /books/webpack/extending/ 301
+/webpack/extending-webpack/loaders /books/webpack/extending/loaders/ 301
+/webpack/extending-webpack/plugins /books/webpack/extending/plugins/ 301
+/webpack/advanced-techniques /books/webpack/packages/ 301
+/webpack/advanced-techniques/consuming-packages /books/webpack/packages/consuming/ 301
+/webpack/advanced-techniques/authoring-packages /books/webpack/packages/authoring/ 301
+/webpack/advanced-techniques/understanding-chunks /books/webpack/building/bundle-splitting/ 301
+/webpack/advanced-techniques/linting-in-webpack /books/maintenance/code-quality/linting/ 301
+/webpack/advanced-techniques/writing-loaders /books/webpack/extending/loaders/ 301
+/webpack/advanced-techniques/configuring-react /books/webpack/output/server-side-rendering/ 301
+/webpack/appendices/configuring-hmr-with-react https://github.com/gaearon/react-hot-loader 301
+/webpack/appendices/writing-eslint-plugins /books/webpack/appendices/customizing-eslint/ 301
+/webpack/appendices/dynamic-loading /books/webpack/techniques/dynamic-loading/ 301
+/webpack/appendices/using-web-workers /books/webpack/techniques/web-workers/ 301
+/webpack/appendices/i18n /books/webpack/techniques/i18n/ 301
+/webpack/appendices/deploying /books/webpack/techniques/deploying/ 301
+/webpack/appendices/configuring-hmr /books/webpack/appendices/hmr/ 301
+/webpack/why-webpack /books/webpack/what-is-webpack/ 301
+/webpack/building/splitting-bundles /books/webpack/building/bundle-splitting/ 301
+/maintenance/* /books/maintenance/:splat 301
+/react/* /books/react/:splat 301
+/webpack/* /books/webpack/:splat 301
