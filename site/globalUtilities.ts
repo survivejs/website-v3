@@ -1,6 +1,28 @@
 import { urlJoin as urlJoinFn } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 
 function init() {
+  function getDate(d: string) {
+    const date = new Date(d);
+
+    return `${date.getDate()}.${date.getMonth() + 1}`;
+  }
+
+  function getYear(d: string) {
+    return new Date(d).getFullYear();
+  }
+
+  function getDatetime(d: string) {
+    const date = new Date(d);
+
+    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  }
+
+  function getFullDate(d: string) {
+    const date = new Date(d);
+
+    return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+  }
+
   function dateToString(date: string) {
     try {
       return (new Date(date)).toISOString().split("T")[0];
@@ -25,7 +47,15 @@ function init() {
 
   // Add your global page utilities here.
   // Alternatively they can be defined per component.
-  return { dateToString, length, urlJoin };
+  return {
+    dateToString,
+    getDate,
+    getYear,
+    getDatetime,
+    getFullDate,
+    length,
+    urlJoin,
+  };
 }
 
 export { init };

@@ -7,6 +7,7 @@
       >
         <span>Author:</span>
         <SiteLink
+          class="font-extralight"
           &children="(get props document.data.author.name)"
           &href="(get props document.data.author.twitter)"
         ></SiteLink>
@@ -22,6 +23,7 @@
         >
           <li>
             <SiteLink
+              class="font-extralight"
               &children="(get props name)"
               &href="(get props twitter)"
             />
@@ -38,7 +40,7 @@
         <li>
           <Badge>
             <SiteLink
-              class="p-1"
+              class="p-1 font-extralight"
               &children="(get props title)"
               &href="(urlJoin / blog topics (get props slug) /)"
             />
@@ -51,8 +53,9 @@
       class="flex flex-col sm:flex-row gap-1"
     >
       <span>Published:</span>
-      <span
-        &children="(dateToString (get props document.data.date))"
+      <FormattedTime
+        class="font-extralight"
+        &date="(get props document.data.date)"
       />
     </div>
   </div>
