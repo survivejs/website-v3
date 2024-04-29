@@ -165,7 +165,9 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             }
           }
 
-          return `<figure class="not-prose my-0 ${className}">
+          return `<figure class="not-prose my-0 ${
+            className ? "" : "w-screen md:w-full -ml-4 md:ml-0"
+          } ${className}">
             <img class="${
             className === "author" ? "" : "border"
           }" src="${href}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
