@@ -1,49 +1,51 @@
 <div
-  class="sticky top-0 h-10 md:h-auto md:px-4 md:pt-4 pb-4 font-thin bg-secondary"
+  class="sticky top-0 h-10 md:h-auto font-thin bg-secondary"
 >
-  <input
-    class="hidden peer"
-    id="nav__toggle"
-    type="checkbox"
-  />
-  <label
-    class="md:hidden p-2 pointer-events-all absolute right-0 w-10 h-10 rounded-full flex z-50"
-    for="nav__toggle"
-  >
-    <span class="w-4 h-4 leading-4 m-auto">☰</span>
-  </label>
-  <nav
-    class="absolute bg-secondary border-b-2 border-primary md:border-none p-4 md:p-0 md:relative w-full transition-all -translate-y-full md:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4"
-  >
-    <div
-      class="flex flex-row md:flex-col gap-8 justify-between"
+  <div class="md:px-4 md:pt-4">
+    <input
+      class="hidden peer"
+      id="nav__toggle"
+      type="checkbox"
+    />
+    <label
+      class="md:hidden p-2 pointer-events-all absolute right-0 w-10 h-10 rounded-full flex z-50"
+      for="nav__toggle"
+    >
+      <span class="w-4 h-4 leading-4 m-auto">☰</span>
+    </label>
+    <nav
+      class="absolute bg-secondary border-b-2 border-primary md:border-none p-4 md:p-0 md:relative w-full transition-all -translate-y-full md:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4"
     >
       <div
-        class="md:w-full flex flex-col md:flex-row md:justify-between gap-4"
+        class="flex flex-row md:flex-col gap-8 justify-between"
       >
         <div
-          class="grid md:flex md:flex-row gap-4 md:gap-8 md:mr-auto"
+          class="md:w-full flex flex-col md:flex-row md:justify-between gap-4"
         >
-          <Navigation />
+          <div
+            class="grid md:flex md:flex-row gap-4 md:gap-8 md:mr-auto"
+          >
+            <Navigation />
+          </div>
+          <div
+            class="grid md:flex md:flex-row gap-4 md:gap-8 md:ml-auto"
+          >
+            <SiteLink href="https://twitter.com/survivejs/"
+              >@survivejs</SiteLink
+            >
+          </div>
         </div>
         <div
-          class="grid md:flex md:flex-row gap-4 md:gap-8 md:ml-auto"
-        >
-          <SiteLink href="https://twitter.com/survivejs/"
-            >@survivejs</SiteLink
-          >
-        </div>
+          class="md:hidden"
+          &visibleIf="(get props aside)"
+          &children="(get props aside)"
+        />
       </div>
-      <div
-        class="md:hidden"
-        &visibleIf="(get props aside)"
-        &children="(get props aside)"
-      />
-    </div>
-    <div class="md:mx-auto w-full md:max-w-3xl bg-white">
-      <PageFind />
-    </div>
-  </nav>
+      <div class="md:mx-auto w-full md:max-w-3xl bg-white">
+        <PageFind />
+      </div>
+    </nav>
+  </div>
   <div class="mx-12 md:mx-0">
     <ReadingProgress />
   </div>

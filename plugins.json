@@ -1,6 +1,6 @@
 {
   "env": {
-    "GUSTWIND_PATH": "https://deno.land/x/gustwind@v0.73.1"
+    "GUSTWIND_PATH": "https://deno.land/x/gustwind@v0.74.2"
   },
   "plugins": [
     {
