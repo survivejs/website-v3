@@ -1,0 +1,92 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-row gap-4 justify-between text-sm">
+    <div class="flex flex-col gap-2">
+      <div
+        &visibleIf="(get props document.data.author.name)"
+        class="flex flex-col sm:flex-row gap-1"
+      >
+        <span>Author:</span>
+        <SiteLink
+          &children="(get props document.data.author.name)"
+          &href="(get props document.data.author.twitter)"
+        ></SiteLink>
+      </div>
+      <div
+        &visibleIf="(get props document.data.editors)"
+        class="flex flex-col sm:flex-row gap-1"
+      >
+        <span>Editors:</span>
+        <ul
+          class="inline-flex flex flex-row gap-2"
+          &foreach="(get props document.data.editors)"
+        >
+          <li>
+            <SiteLink
+              &children="(get props name)"
+              &href="(get props twitter)"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div &visibleIf="(get props document.data.topics)">
+      <Heading level="2" class="sr-only">Topics</Heading>
+      <ul
+        class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm whitespace-nowrap"
+        &foreach="(get props document.data.topics)"
+      >
+        <li>
+          <Badge>
+            <SiteLink
+              class="p-1"
+              &children="(get props title)"
+              &href="(urlJoin / blog topics (get props slug) /)"
+            />
+          </Badge>
+        </li>
+      </ul>
+    </div>
+    <div
+      &visibleIf="(get props document.data.date)"
+      class="flex flex-col sm:flex-row gap-1"
+    >
+      <span>Published:</span>
+      <span
+        &children="(dateToString (get props document.data.date))"
+      />
+    </div>
+  </div>
+  <div
+    class="flex flex-row gap-4 justify-between text-sm"
+    &visibleIf="(or (get props previous) (get props next))"
+  >
+    <div
+      &visibleIf="(get props previous)"
+      class="flex flex-col gap-2"
+    >
+      <div class="flex flex-row gap-2">
+        <span>←</span><span>Previous</span>
+      </div>
+      <div>
+        <SiteLink
+          &href="(concat ../ (get props previous.data.slug))"
+          &children="(get props previous.data.title)"
+        ></SiteLink>
+      </div>
+    </div>
+    <div
+      &visibleIf="(get props next)"
+      class="flex flex-col gap-2"
+    >
+      <div class="flex flex-row gap-2 ml-auto">
+        <span>Next</span><span>→</span>
+      </div>
+      <div class="text-right">
+        <SiteLink
+          &href="(concat ../ (get props next.data.slug))"
+          &children="(get props next.data.title)"
+        ></SiteLink>
+      </div>
+    </div>
+  </div>
+</div>
