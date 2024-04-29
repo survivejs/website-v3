@@ -48,6 +48,9 @@
       "options": { "setupPath": "./site/twindSetup.ts" }
     },
     {
+      "path": "${GUSTWIND_PATH}/plugins/pagefind/mod.ts"
+    },
+    {
       "path": "${GUSTWIND_PATH}/plugins/sitemap/mod.ts"
     },
     {

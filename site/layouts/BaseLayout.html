@@ -24,12 +24,12 @@
   <body>
     <MainNavigation &aside="(get props aside)" />
     <aside
-      class="fixed top-16 mt-8 pl-4 hidden xl:inline w-56 bg-white p-2 rounded-md"
+      class="fixed mt-16 pl-4 hidden xl:inline w-56 bg-white p-2 rounded-md"
       &children="(get props aside)"
     ></aside>
     <main
+      class="md:pt-4"
       &children="(get props content)"
-      class="md:my-8"
     ></main>
     <MainFooter />
     <Scripts />
