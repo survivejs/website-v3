@@ -5,6 +5,18 @@ import type { GlobalUtilities } from "https://deno.land/x/gustwind@v0.71.2/types
 const init: GlobalUtilities["init"] = function init(
   { matchRoute, url: currentUrl },
 ) {
+  function isActive(href: string, url: string) {
+    if (!url) {
+      return;
+    }
+
+    if (href === "/") {
+      return href === url;
+    }
+
+    return url.startsWith(href);
+  }
+
   function getLinkSuffix(url: string, children: string) {
     if (!url) {
       return;
@@ -62,7 +74,7 @@ const init: GlobalUtilities["init"] = function init(
     */
   }
 
-  return { getLinkSuffix, validateUrl };
+  return { getLinkSuffix, isActive, validateUrl };
 };
 
 function resolveUrl(root: string, fragment: string) {
