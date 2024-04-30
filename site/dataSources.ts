@@ -50,8 +50,13 @@ function init({ load, render, renderSync }: DataSourcesApi) {
       };
     });
 
-    // TODO: attach descriptions + attach keywords
-    // TODO: fix image paths when rendering markdown files
+    // TODO: Figure out a good way to sort the chapters
+    // Likely the way to do this is to first read
+    // {directory}/Book.txt
+    // and then use the order from there
+    // While doing this, it's likely smart to extract book sections
+    // so they can be rendered better at the main toc.
+    // TODO: Fix image paths when rendering markdown files
     return generateAdjacent(
       chapters.toSorted((a, b) => getIndex(a.name) - getIndex(b.name)),
     );
