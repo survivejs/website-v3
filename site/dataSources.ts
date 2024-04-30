@@ -2,6 +2,7 @@ import {
   extract,
   test,
 } from "https://deno.land/std@0.207.0/front_matter/yaml.ts";
+import path from "node:path";
 import { parse } from "https://deno.land/std@0.207.0/yaml/parse.ts";
 import removeMarkdown from "https://esm.sh/remove-markdown@0.5.0";
 import getMarkdown from "./transforms/markdown.ts";
@@ -36,30 +37,24 @@ function init({ load, render, renderSync }: DataSourcesApi) {
   const markdownToHtml = getMarkdown({ load, render, renderSync });
 
   async function indexBook(directory: string) {
-    const chapters = (await indexMarkdown(directory, {
+    const chapters = Object.fromEntries((await indexMarkdown(directory, {
       parseHeadmatter: true,
       recursive: true,
     })).map((c) => {
       const { title, body } = parseTitle(c.content || "");
 
-      return {
+      return [c.name, {
         ...c,
         slug: cleanChapterName(c.name),
         title,
         description: generatePreview(body, 300),
-      };
-    });
+      }];
+    }));
+    const chapterOrder = (await load.textFile(path.join(directory, "Book.txt")))
+      .split("\n").filter((n) => path.extname(n) === ".md");
 
-    // TODO: Figure out a good way to sort the chapters
-    // Likely the way to do this is to first read
-    // {directory}/Book.txt
-    // and then use the order from there
-    // While doing this, it's likely smart to extract book sections
-    // so they can be rendered better at the main toc.
     // TODO: Fix image paths when rendering markdown files
-    return generateAdjacent(
-      chapters.toSorted((a, b) => getIndex(a.name) - getIndex(b.name)),
-    );
+    return generateAdjacent(chapterOrder.map((name) => chapters[name]));
   }
 
   async function indexBlog(directory: string, amount?: number) {
