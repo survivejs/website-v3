@@ -1,6 +1,7 @@
 {
   "version": "3",
   "redirects": {
+    "https://esm.sh/v135/@types/remove-markdown@~0/index.d.ts": "https://esm.sh/v135/@types/remove-markdown@0.3.4/index.d.ts",
     "https://unpkg.com/highlight.js@11.9.0/es/languages/bash": "https://unpkg.com/highlight.js@11.9.0/es/languages/bash.js",
     "https://unpkg.com/highlight.js@11.9.0/es/languages/c": "https://unpkg.com/highlight.js@11.9.0/es/languages/c.js",
     "https://unpkg.com/highlight.js@11.9.0/es/languages/css": "https://unpkg.com/highlight.js@11.9.0/es/languages/css.js",

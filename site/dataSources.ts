@@ -3,7 +3,7 @@ import {
   test,
 } from "https://deno.land/std@0.207.0/front_matter/yaml.ts";
 import { parse } from "https://deno.land/std@0.207.0/yaml/parse.ts";
-import removeMarkdown from "https://esm.sh/remove-markdown@0.3.0";
+import removeMarkdown from "https://esm.sh/remove-markdown@0.5.0";
 import getMarkdown from "./transforms/markdown.ts";
 import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
 import trimStart from "https://deno.land/x/lodash@4.17.15-es/trimStart.js";
@@ -37,16 +37,18 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
   async function indexBook(directory: string) {
     const chapters = (await indexMarkdown(directory, {
-      parseHeadmatter: false,
+      parseHeadmatter: true,
       recursive: true,
-    })).map((c) => ({
-      ...c,
-      slug: cleanChapterName(c.name),
-      // TODO: To get title and description, first five lines or so
-      // of each chapter has to be parsed
-      title: "TODO",
-      description: "TODO",
-    }));
+    })).map((c) => {
+      const { title, body } = parseTitle(c.content || "");
+
+      return {
+        ...c,
+        slug: cleanChapterName(c.name),
+        title,
+        description: generatePreview(body, 300),
+      };
+    });
 
     // TODO: attach descriptions + attach keywords
     // TODO: fix image paths when rendering markdown files
@@ -80,8 +82,10 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
       p.data.keywords?.forEach((keyword: string) => {
         if (keywords[keyword]) {
+          // @ts-expect-error This is fine for now
           keywords[keyword].push({ ...p, data: resolveBlogPost(path, p) });
         } else {
+          // @ts-expect-error This is fine for now
           keywords[keyword] = [{ ...p, data: resolveBlogPost(path, p) }];
         }
       });
@@ -183,7 +187,9 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
   async function parseHeadmatter(
     path: string,
-  ): Promise<MarkdownWithFrontmatter> {
+  ): Promise<
+    MarkdownWithFrontmatter | { data: { keywords: string[] }; content: string }
+  > {
     const file = await load.textFile(path);
 
     if (test(file)) {
@@ -200,7 +206,13 @@ function init({ load, render, renderSync }: DataSourcesApi) {
       };
     }
 
-    throw new Error(`path ${path} did not contain a headmatter`);
+    // TODO: Likely it would be better to extract this branch
+    return {
+      data: { keywords: [] },
+      content: file,
+    };
+
+    // throw new Error(`path ${path} did not contain a headmatter`);
   }
 
   // Interestingly enough caching to fs doesn't result in a speedup
@@ -363,6 +375,26 @@ function cleanChapterName(path: string) {
     .split(".")
     .slice(0, -1)
     .join(".");
+}
+
+function parseTitle(body: string) {
+  const lines = body.split("\n");
+
+  if (lines[0].indexOf("#") === 0 && lines[0][1] === " ") {
+    return {
+      title: removeMarkdown(lines[0]),
+      body: lines.slice(1).join("\n"),
+    };
+  }
+
+  if (lines[0].indexOf("-#") === 0) {
+    return {
+      title: removeMarkdown(lines[0].slice(2).trim()),
+      body: lines.slice(1).join("\n"),
+    };
+  }
+
+  return { body };
 }
 
 export { init };

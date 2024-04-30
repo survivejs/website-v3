@@ -7,14 +7,17 @@
         &children="(get context meta.title)"
       />
       <Markdown as="div" &children="(get context meta.description)" />
-      <ul class="flex flex-col gap-2" &foreach="(get context chapters)">
+      <ol class="flex flex-col gap-2" &foreach="(get context chapters)">
         <li>
-          <SiteLink
-            &href="(urlJoin (get props slug) /)"
-            &children="(get props title)"
-          />
+          <div class="flex flex-col gap-1">
+            <SiteLink
+              &href="(urlJoin (get props slug) /)"
+              &children="(get props title)"
+            />
+            <span &children="(get props description)" />
+          </div>
         </li>
-      </ul>
+      </ol>
     </div>
   </slot>
 </BaseLayout>
