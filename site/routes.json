@@ -4,6 +4,12 @@
     "meta": {
       "title": "SurviveJS",
       "description": "Get started with JavaScript and related technologies"
+    },
+    "dataSources": {
+      "blogPosts": {
+        "operation": "indexBlog",
+        "parameters": ["./pages/blog", 8]
+      }
     }
   },
   "blog": {

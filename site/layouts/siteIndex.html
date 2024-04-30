@@ -47,9 +47,11 @@
         </div>
         <div>
           <Heading class="text-2xl" level="2">Latest blog posts</Heading>
-          <div class="flex flex-col gap-2">
-            a couple of the latest blog posts go here
-          </div>
+          <BlogPosts
+            class="flex flex-col gap-2"
+            &blogPosts="(get context blogPosts)"
+            linkPrefix="/blog/"
+          />
         </div>
         <div>
           <Heading class="text-2xl" level="2">Open source</Heading>

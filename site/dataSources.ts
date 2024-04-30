@@ -52,7 +52,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
     return generateAdjacent(chapters);
   }
 
-  async function indexBlog(directory: string) {
+  async function indexBlog(directory: string, amount?: number) {
     const blogFiles =
       (await indexMarkdown(directory, { parseHeadmatter: true })).map((p) => ({
         ...p,
@@ -60,9 +60,12 @@ function init({ load, render, renderSync }: DataSourcesApi) {
         data: resolveBlogPost(p.path, p),
       }));
 
-    blogFiles.sort((a, b) => getIndex(b.name) - getIndex(a.name));
-
-    return generateAdjacent(blogFiles);
+    return generateAdjacent(
+      blogFiles.toSorted((a, b) => getIndex(b.name) - getIndex(a.name)).slice(
+        0,
+        amount,
+      ),
+    );
   }
 
   async function indexTopics(directory: string): Promise<Topic[]> {

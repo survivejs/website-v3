@@ -3,11 +3,11 @@
     "bootstrap": "scripts/bootstrap.sh",
     "fetch:book-repositories": "scripts/fetch-books.sh",
     "fetch:image-references": "deno run --allow-net=get-images.survivejs.workers.dev --allow-read=. --allow-write=. --allow-env scripts/fetch-images.ts > .images.json",
-    "build": "deno run -A --unstable --no-check https://deno.land/x/gustwind@v0.74.3/gustwind-cli/mod.ts -b -t cpuMax -o ./build",
+    "build": "deno run -A --unstable --no-check https://deno.land/x/gustwind@v0.74.4/gustwind-cli/mod.ts -b -t cpuMax -o ./build",
     "build:linked": "gustwind -b -t cpuHalf -o ./build",
-    "start": "deno run -A --unstable --no-check https://deno.land/x/gustwind@v0.74.3/gustwind-cli/mod.ts -d -p 3000",
+    "start": "deno run -A --unstable --no-check https://deno.land/x/gustwind@v0.74.4/gustwind-cli/mod.ts -d -p 3000",
     "start:linked": "gustwind -d -p 3000",
-    "serve": "deno run -A --unstable --no-check https://deno.land/x/gustwind@v0.74.3/gustwind-cli/mod.ts -s -p 3000 -i ./build",
+    "serve": "deno run -A --unstable --no-check https://deno.land/x/gustwind@v0.74.4/gustwind-cli/mod.ts -s -p 3000 -i ./build",
     "serve:linked": "gustwind -s -p 3000 -i ./build"
   }
 }

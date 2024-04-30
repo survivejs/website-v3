@@ -1,36 +1,17 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
-      <Heading class="text-4xl" level="1"
-        >Blog posts</Heading
-      >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
+      <Heading class="text-4xl" level="1">Blog posts</Heading>
       <Markdown as="div"
-        >The blog consists mainly of developer interviews.
-        If you have a specific topic in mind, I recommend
-        [checking out the topic index](./topics/).
+        >The blog consists mainly of developer interviews. If you have a
+        specific topic in mind, I recommend [checking out the topic
+        index](./topics/).
       </Markdown>
-      <div
+      <BlogPosts
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
-        &foreach="(get context blogPosts)"
-      >
-        <Card &content="(get props data.preview)">
-          <slot name="header">
-            <SiteLink
-              &href="(get props data.slug)"
-              &children="(get props data.title)"
-            ></SiteLink>
-          </slot>
-          <slot name="footer">
-            <div class="text-xs text-muted">
-              Published:&nbsp;<span
-                &children="(dateToString (get props data.date))"
-              ></span>
-            </div>
-          </slot>
-        </Card>
-      </div>
+        &blogPosts="(get context blogPosts)"
+        linkPrefix="./"
+      />
     </div>
   </slot>
 </BaseLayout>

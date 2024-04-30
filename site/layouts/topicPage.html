@@ -8,26 +8,11 @@
         level="1"
         &children="(get context topic.title)"
       ></Heading>
-      <div
+      <BlogPosts
         class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
-        &foreach="(get context topic.posts)"
-      >
-        <Card>
-          <slot name="header">
-            <SiteLink
-              &href="(urlJoin / blog (get props data.slug) /)"
-              &children="(get props data.title)"
-            ></SiteLink>
-          </slot>
-          <slot name="footer">
-            <div class="text-xs text-muted">
-              Published:&nbsp;<span
-                &children="(dateToString (get props data.date))"
-              ></span>
-            </div>
-          </slot>
-        </Card>
-      </div>
+        &blogPosts="(get context topic.posts)"
+        linkPrefix="/blog/"
+      />
       <SiteLink href="../">Back to topics</SiteLink>
     </div>
   </slot>

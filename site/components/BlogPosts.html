@@ -1,0 +1,17 @@
+<div &class="(get props class)" &foreach="(get props blogPosts)">
+  <Card &content="(get props data.preview)">
+    <slot name="header">
+      <SiteLink
+        &href="(urlJoin (get props linkPrefix) (get props data.slug) /)"
+        &children="(get props data.title)"
+      ></SiteLink>
+    </slot>
+    <slot name="footer">
+      <div class="text-xs text-muted">
+        Published:&nbsp;<span
+          &children="(dateToString (get props data.date))"
+        ></span>
+      </div>
+    </slot>
+  </Card>
+</div>
