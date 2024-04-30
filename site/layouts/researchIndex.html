@@ -1,123 +1,20 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
       <Heading class="text-4xl" level="1">Research</Heading>
       <Markdown as="div"
-        >My research focuses mainly on static site
-        generation, edge computing, islands architecture,
-        and web architectures. You can get the best overview
-        of my research outputs through
+        >My research focuses mainly on static site generation, edge computing,
+        islands architecture, and web architectures. You can get the best
+        overview of my research outputs through
         [ORCID](https://orcid.org/0000-0003-0025-5540),
         [ResearchGate](https://www.researchgate.net/profile/Juho-Vepsaelaeinen),
         or [Google
-        Scholar](https://scholar.google.com/citations?user=vf9Y1xQAAAAJ).
-        I have listed several of my main papers below and
-        you can find more from the aforementioned
-        sources.</Markdown
+        Scholar](https://scholar.google.com/citations?user=vf9Y1xQAAAAJ). I have
+        listed several of my main papers below and you can find more from the
+        aforementioned sources.</Markdown
       >
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
-      >
-        <ContentCard
-          title="Resumability — A New Primitive for Developing Web Applications (2023)"
-          websiteLabel="Paper"
-          website="https://www.researchgate.net/publication/377351753_Resumability_-_a_New_Primitive_for_Developing_Web_Applications"
-        >
-          <slot name="content"
-            >Hydration is a common technique employed by
-            current JavaScript-based frontend frameworks,
-            such as React. In hydration, the application
-            code is re-executed on the client to recover
-            component boundaries, application state, and
-            event listeners. In this article, we look into a
-            new primitive called resumability that avoids
-            thework as the necessary information is
-            serialized into HTML. The idea has been adopted
-            by Asta (2023), Google Wiz, Marko (planned for
-            version 6 [1]), Sidewind (since 2022), and Qwik
-            (2021) as a main building block. Resumability
-            gives these solutions unique advantages by
-            avoiding the cost of hydration. Furthermore,
-            resumability can allow developers to leverage
-            code-splitting out of the box, depending on the
-            implementation. The shift has implications for
-            both developer and user experience. This article
-            aims to understand why resumability matters and
-            why it is a good option for replacing earlier
-            hydration-based approaches. We also consider
-            challenges related to adopting resumability on a
-            framework level and briefly highlight the first
-            resumable solutions for developing web
-            applications.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="ECMAScript - The journey of a programming language from an idea to a standard (2023)"
-          websiteLabel="Paper"
-          website="https://www.researchgate.net/publication/370469740_ECMAScript_-_The_journey_of_a_programming_language_from_an_idea_to_a_standard"
-        >
-          <slot name="content"
-            >A significant portion of the web is powered by
-            ECMAScript. As a web technology, it is
-            ubiquitous and available on most platforms
-            natively or through a web browser. ECMAScript is
-            the dominant language of the web, but at the
-            same time, it was not designed as such. The
-            story of ECMAScript is a story of the impact of
-            standardization on the popularity of technology.
-            Simultaneously, the story shows how external
-            pressures can shape a programming language and
-            how politics can mar the evolution of a
-            standard. In this article, we will go through
-            the movements that led to the dominant position
-            of ECMAScript, evaluate the factors leading to
-            it, and consider its evolution using the Futures
-            Triangle framework and the theory of standards
-            wars.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="The Rise of Disappearing Frameworks in Web Development (2023)"
-          websiteLabel="Paper"
-          website="https://www.researchgate.net/publication/371617502_The_Rise_of_Disappearing_Frameworks_in_Web_Development"
-        >
-          <slot name="content"
-            >The evolution of the web can be characterized
-            as an emergence of frameworks paving the way
-            from static websites to dynamic web
-            applications. As the scope of web applications
-            has grown, new technical challenges have
-            emerged, leading to the need for new solutions.
-            The latest of these developments is the rise of
-            so-called disappearing web frameworks that
-            question the axioms of earlier generations of
-            web frameworks, providing benefits of the early
-            web and simple static sites.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Implications of Edge Computing for Static Site Generation (2023)"
-          websiteLabel="Paper"
-          website="https://www.researchgate.net/publication/375814983_Implications_of_Edge_Computing_for_Static_Site_Generation"
-        >
-          <slot name="content"
-            >Static site generation (SSG) is a common
-            technique in the web development space to create
-            performant websites that are easy to host.
-            Numerous SSG tools exist, and the approach has
-            been complemented by newer approaches, such as
-            Jamstack, that extend its usability. Edge
-            computing represents a new option to extend the
-            usefulness of SSG further by allowing the
-            creation of dynamic sites on top of a static
-            backdrop, providing dynamic resources close to
-            the user. In this paper, we explore the impact
-            of the recent developments in the edge computing
-            space and consider its implications for SSG.
-          </slot>
-        </ContentCard>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+        <Research />
       </div>
     </div>
   </slot>

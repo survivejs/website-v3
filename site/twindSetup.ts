@@ -16,6 +16,12 @@ export default {
       marginLeft: "1em",
     }],
     ["text-1", { fontSize: "1px" }],
+    ["line-clamp-6", {
+      overflow: "hidden",
+      display: "-webkit-box",
+      "-webkit-box-orient": "vertical",
+      "-webkit-line-clamp": 6,
+    }],
   ],
   theme: {
     extend: {

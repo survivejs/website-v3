@@ -7,7 +7,31 @@
       showAnchor
   /></slot>
   <slot name="content">
-    <Markdown &children="(get props content)" />
+    <div x-state="{ showMore: false }" class="flex flex-col gap-2">
+      <div
+        hidden
+        x-cloak
+        x-attr
+        &@class="(concat
+          '[state.showMore ? `` :`'
+          (tw line-clamp-6)
+          '`]')"
+      >
+        <Markdown &children="(get props content)" />
+      </div>
+      <div hidden x-cloak>
+        <Rounded>
+          <button
+            onclick="setState(({ showMore }) => ({ showMore: !showMore }))"
+            class="font-extralight text-sm"
+            type="button"
+            x="state.showMore ? 'Show less' : 'Show more'"
+          >
+            Show more
+          </button>
+        </Rounded>
+      </div>
+    </div>
   </slot>
   <slot name="footer">
     <SiteLink
