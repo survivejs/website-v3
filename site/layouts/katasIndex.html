@@ -1,71 +1,17 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
       <Heading class="text-4xl" level="1">Katas</Heading>
       <Markdown as="div"
-        >I run my workshops using a kata format. In other
-        words, they form of series of smaller tasks that
-        contain exercises to complete to encourage learning
-        through doing. Often I complete my kata workshops
-        with a brief introduction to the topic. Although it
-        is fun to complete them in a workshop format, it is
-        possible to go through them alone and I have listed
-        my katas below.</Markdown
+        >I run my workshops using a kata format. In other words, they form of
+        series of smaller tasks that contain exercises to complete to encourage
+        learning through doing. Often I complete my kata workshops with a brief
+        introduction to the topic. Although it is fun to complete them in a
+        workshop format, it is possible to go through them alone and I have
+        listed my katas below.</Markdown
       >
-      <div
-        class="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose"
-      >
-        <ContentCard
-          title="Qwik katas (2023)"
-          websiteLabel="GitHub"
-          website="https://github.com/survivejs/qwik-katas"
-        >
-          <slot name="content"
-            >[Qwik](https://qwik.dev/) is a recent web
-            framework that approaches web application from a
-            different angle by eschewing the concept of
-            hydration and replacing it with resumability.
-            This means it provides unique benefits, such as
-            automatic code-splitting, out of the box making
-            it an interesting alternative for web developers
-            that want to develop performant websites and
-            applications out of the box.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Deno katas (2023)"
-          websiteLabel="GitHub"
-          website="https://github.com/survivejs/deno-katas"
-        >
-          <slot name="content"
-            >[Deno](https://deno.com/) is the followup
-            project of Ryan Dahl, the original author of
-            [Node.js](https://nodejs.org/). In Deno, Ryan
-            wanted to fix his perceived mistakes of Node.js
-            and Deno could be characterized as a whole
-            toolbox that comes with solutions for common
-            server-side programming problems particularly in
-            terms of tooling.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Web Audio katas (2023)"
-          websiteLabel="GitHub"
-          website="https://github.com/survivejs/audio-katas"
-        >
-          <slot name="content"
-            >[Web
-            Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-            is a powerful, yet underestimated, web API that
-            allows you to build complex audio-based web
-            application. In this kata, you will build a
-            small Digital Audio Workstation (DAW) while
-            getting acquainted with the relevant APIs and
-            some of the history behind digital audio.</slot
-          >
-        </ContentCard>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose">
+        <Katas />
       </div>
     </div>
   </slot>

@@ -1,77 +1,13 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
-      <Heading class="text-4xl" level="1"
-        >Presentations</Heading
-      >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
+      <Heading class="text-4xl" level="1">Presentations</Heading>
       <Markdown as="div"
-        >I have given many presentations and lectures
-        through the years and I have included some of the
-        most recent ones below.
+        >I have given many presentations and lectures through the years and I
+        have included some of the most recent ones below.
       </Markdown>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
-      >
-        <ContentCard
-          title="Web application development - The past, the present, the future (2023)"
-          websiteLabel="Slides"
-          website="https://www.slideshare.net/bebraw/web-application-development-the-past-the-present-the-future-260849308"
-        >
-          <slot name="content"
-            >In this brief lecture, I take a look at the
-            history of web application development to
-            understand where we are coming, what's the
-            current state, and where we are heading. By
-            understanding the past constraints, also current
-            struggles and the need for new solutions makes
-            sense.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="ECMAScript - From an idea to a major standard (2023)"
-          websiteLabel="Slides"
-          website="https://www.slideshare.net/slideshow/ecmascript-from-an-idea-to-a-major-standard/258704081"
-        >
-          <slot name="content"
-            >In this brief presentation held at EURAS2023, I
-            discuss how ECMAScript became a major standard
-            having concrete impact on our daily lives.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Quick introduction to Qwik (2023)"
-          websiteLabel="Slides"
-          website="https://www.slideshare.net/bebraw/quick-introduction-to-qwik"
-        >
-          <slot name="content"
-            >In this presentation, I give a quick
-            introduction to Qwik, an upcoming full stack
-            JavaScript framework.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="JavaScript frameworks of tomorrow (2023)"
-          websiteLabel="Slides"
-          website="https://www.slideshare.net/bebraw/fooconf-javascript-frameworks-of-tomorrow"
-        >
-          <slot name="content"
-            >Expect to learn a lot about the direction of
-            the frontend.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="The future is mostly static (2022)"
-          websiteLabel="Slides"
-          website="https://www.slideshare.net/bebraw/the-future-is-mostly-static-253901205"
-        >
-          <slot name="content"
-            >In this brief presentation, I go through the
-            main trends of web development in 2022 and share
-            my views on where we are going.</slot
-          >
-        </ContentCard>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+        <Presentations />
       </div>
     </div>
   </slot>
