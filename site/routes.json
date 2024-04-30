@@ -250,6 +250,13 @@
       "description": "I have compiled slides of several of my presentations on this page."
     }
   },
+  "search": {
+    "layout": "searchIndex",
+    "meta": {
+      "title": "Search",
+      "description": "You can search the site contents using this page."
+    }
+  },
   "atom.xml": {
     "layout": "rssPage",
     "meta": {
