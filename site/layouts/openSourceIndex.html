@@ -1,132 +1,20 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
-      <Heading class="text-4xl" level="1"
-        >Open source</Heading
-      >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
+      <Heading class="text-4xl" level="1">Open source</Heading>
       <Markdown as="div"
-        >I have been working with open source since 2004 as
-        I started contributing to
-        [Blender](https://www.blender.org/). Later on I was
-        a part of the group that established the core team
-        of [webpack](https://webpack.js.org/). Besides
-        working on well-known projects, I have developed
-        numerous small projects of my own. Given there are
-        too many to mention, I have highlighted several I
-        consider interesting on this page. You can [find
-        more behind my GitHub
+        >I have been working with open source since 2004 as I started
+        contributing to [Blender](https://www.blender.org/). Later on I was a
+        part of the group that established the core team of
+        [webpack](https://webpack.js.org/). Besides working on well-known
+        projects, I have developed numerous small projects of my own. Given
+        there are too many to mention, I have highlighted several I consider
+        interesting on this page. You can [find more behind my GitHub
         profile](https://github.com/bebraw).
       </Markdown>
-      <Heading class="text-2xl" level="2"
-        >Libraries</Heading
-      >
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
-      >
-        <ContentCard
-          title="Colorjoe (2012)"
-          website="https://bebraw.github.io/colorjoe/"
-        >
-          <slot name="content"
-            >The development of colorjoe color picker was
-            motivated by a need to find a light picker that
-            doesn't rely on static images. The solution was
-            to use CSS to generate gradients and let the
-            browser compose them. Although the project is
-            old, it is still somehow relevant even
-            today.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Reactabular (2014)"
-          website="https://reactabular.js.org/"
-        >
-          <slot name="content"
-            >Reactabular was perhaps the first headless
-            table component built for React. It was built
-            during the time when headless didn't exist at a
-            time. Although the project started from my
-            personal interest, its development was later
-            funded by [Kenandy](https://www.kenandy.com/).
-            If funding appeared, I would be happy to
-            modernize the library.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Antwar (2015)"
-          website="https://antwar.js.org/"
-        >
-          <slot name="content"
-            >Antwar was my first serious static site
-            generator. I developed it around React and
-            webpack to develop this website and other
-            smaller projects. The unique feature at the time
-            had to do with interactive components which
-            could include small pieces of React code to
-            avoid the problem of having to hydrate the whole
-            webpage. Later on this idea has been formalized
-            as the idea of islands architecture.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="webpack-merge (2015)"
-          website="https://github.com/survivejs/webpack-merge"
-        >
-          <slot name="content"
-            >As I was writing my [webpack
-            book](/books/webpack/), I realized it is
-            difficult to explain how to construct webpack
-            configurations in a simple way. To allow
-            composition, I wrote webpack-merge. I consider
-            the project feature complete and I am thankful
-            to Google for supporting my efforts with a
-            one-time $3000 grant from their infrastructure
-            fund.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Sidewind (2019)"
-          website="https://sidewind.js.org/"
-        >
-          <slot name="content"
-            >After getting exposed to
-            [Tailwind](https://tailwindcss.com/), I started
-            thinking it would be a good idea to do the same
-            but for state. Sidewind was born out of this
-            experiment and it includes a small (~5k) runtime
-            for managing state. As a unique feature, it
-            implements the basic idea of resumability. In
-            other words, it is able to construct its state
-            from the initial HTML markup. It is possible
-            I'll rewrite the project as a compiler one
-            day.</slot
-          >
-        </ContentCard>
-        <ContentCard
-          title="Gustwind (2021)"
-          website="https://gustwind.js.org/"
-        >
-          <slot name="content"
-            >As I realized the approach of Antwar is too
-            constraining and I wanted to learn
-            [Deno](https://deno.com/), I decided to start
-            working on
-            [Tailspin](https://github.com/survivejs/tailspin).
-            The initial idea was to combine the ideas of a
-            static site generator with a design system tool
-            but the initial attempt was a technical dead
-            end. In Gustwind, I started from a JSON
-            definition for components due to its simplicity.
-            Later on I understood it's not fun to author and
-            ended up developing a HTML dialect called
-            [HTMLisp](https://gustwind.js.org/templating/).
-            This site has been rewritten using the approach
-            and likely there are still many fun features to
-            add (interactive editing on web etc.).</slot
-          >
-        </ContentCard>
+      <Heading class="text-2xl" level="2">Libraries</Heading>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+        <OpenSource />
       </div>
     </div>
   </slot>
