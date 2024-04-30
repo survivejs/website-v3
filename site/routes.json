@@ -88,14 +88,14 @@
     "layout": "booksIndex",
     "meta": {
       "title": "Books",
-      "description": "I have listed my books related to JavaScript on this page"
+      "description": "I have listed my books related to JavaScript on this page."
     },
     "routes": {
       "webpack": {
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – Webpack 5",
-          "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript"
+          "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript."
         },
         "dataSources": {
           "chapters": {
@@ -134,7 +134,7 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – React",
-          "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework"
+          "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework."
         },
         "dataSources": {
           "chapters": {
@@ -175,7 +175,7 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – Maintenance",
-          "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages"
+          "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages."
         },
         "dataSources": {
           "chapters": {

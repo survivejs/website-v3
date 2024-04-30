@@ -42,14 +42,17 @@ function init({ load, render, renderSync }: DataSourcesApi) {
     })).map((c) => ({
       ...c,
       slug: cleanChapterName(c.name),
+      // TODO: To get title and description, first five lines or so
+      // of each chapter has to be parsed
+      title: "TODO",
+      description: "TODO",
     }));
-
-    chapters.sort((a, b) => getIndex(a.name) - getIndex(b.name));
 
     // TODO: attach descriptions + attach keywords
     // TODO: fix image paths when rendering markdown files
-
-    return generateAdjacent(chapters);
+    return generateAdjacent(
+      chapters.toSorted((a, b) => getIndex(a.name) - getIndex(b.name)),
+    );
   }
 
   async function indexBlog(directory: string, amount?: number) {

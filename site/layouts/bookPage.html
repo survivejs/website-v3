@@ -1,10 +1,19 @@
 <BaseLayout>
   <slot name="content">
     <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
-      <Heading class="text-4xl" level="1">Book name goes here</Heading>
-      <Markdown as="div">Book description goes here </Markdown>
+      <Heading
+        class="text-4xl"
+        level="1"
+        &children="(get context meta.title)"
+      />
+      <Markdown as="div" &children="(get context meta.description)" />
       <ul class="flex flex-col gap-2" &foreach="(get context chapters)">
-        <li>Book chapters go here</li>
+        <li>
+          <SiteLink
+            &href="(urlJoin (get props slug) /)"
+            &children="(get props title)"
+          />
+        </li>
       </ul>
     </div>
   </slot>
