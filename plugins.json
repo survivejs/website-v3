@@ -37,7 +37,7 @@
         "scripts": [
           {
             "type": "text/javascript",
-            "src": "https://cdn.jsdelivr.net/npm/sidewind@7.8.1/dist/sidewind.umd.production.min.js"
+            "src": "https://cdn.jsdelivr.net/npm/sidewind@8.0.0/dist/sidewind.umd.production.min.js"
           }
         ],
         "scriptsPath": ["./site/scripts"]
