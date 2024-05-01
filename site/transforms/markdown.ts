@@ -122,8 +122,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
               "</code></pre>\n";
           }
 
-          return '<pre class="' +
-            '"><code class="' +
+          return '<pre><code class="' +
             // @ts-ignore How to type this?
             (this.options.langPrefix || "") +
             lang +
