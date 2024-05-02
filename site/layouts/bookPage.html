@@ -4,9 +4,9 @@
       <Heading
         class="text-4xl"
         level="1"
-        &children="(get context meta.data.title)"
+        &children="(get context meta.title)"
       />
-      <Markdown as="div" &children="(get context meta.data.description)" />
+      <Markdown as="div" &children="(get context meta.description)" />
       <ol class="flex flex-col gap-2" &foreach="(get context chapters)">
         <li>
           <div class="flex flex-col gap-1">
