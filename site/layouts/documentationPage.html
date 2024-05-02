@@ -9,9 +9,7 @@
           class="font-bold text-4xl"
           &children="(get context document.data.title)"
         ></Heading>
-        <DocumentationMeta
-          &document="(get context document)"
-        />
+        <DocumentationMeta &document="(get context document)" />
         <div
           class="prose lg:prose-xl"
           &children="(get context document.content)"
@@ -24,10 +22,14 @@
           &next="(get context document.next)"
         />
         <div>
-          <Heading level="2" class="text-lg"
-            >Comments</Heading
-          >
+          <Heading level="2" class="text-lg">Comments</Heading>
           <Disqus />
+        </div>
+      </div>
+      <div>
+        <Heading level="2" class="text-lg">Feeling social?</Heading>
+        <div class="flex flex-row gap-4">
+          <SocialLinks />
         </div>
       </div>
     </div>
@@ -35,9 +37,7 @@
   <slot name="aside">
     <div class="flex flex-col gap-4">
       <Advertisement />
-      <TableOfContents
-        &toc="(get context document.tableOfContents)"
-      />
+      <TableOfContents &toc="(get context document.tableOfContents)" />
     </div>
   </slot>
 </BaseLayout>
