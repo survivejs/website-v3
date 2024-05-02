@@ -33,7 +33,7 @@ hljs.registerLanguage("ts", highlightTS);
 hljs.registerLanguage("xml", highlightXML);
 hljs.registerLanguage("yaml", highlightYAML);
 
-function highlight(code: string, language: string) {
+function highlight(code: string, language?: string) {
   try {
     // TODO: Is it a good idea to highlight as bash by default?
     return hljs.highlight(code, { language: language || "bash" }).value;
