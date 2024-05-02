@@ -36,7 +36,31 @@ hljs.registerLanguage("yaml", highlightYAML);
 function highlight(code: string, language?: string) {
   try {
     // TODO: Is it a good idea to highlight as bash by default?
-    return hljs.highlight(code, { language: language || "bash" }).value;
+    return hljs.highlight(
+      // The problem is that delete is a keyword in JavaScript
+      // so it has to be obscured.
+      code.replace(
+        new RegExp("leanpub-start-delete", "gi"),
+        "leanpub-start-del",
+      ).replace(
+        new RegExp("leanpub-end-delete", "gi"),
+        "leanpub-end-del",
+      ),
+      { language: language || "bash" },
+    ).value
+      .replace(
+        new RegExp("leanpub-start-insert\n", "gi"),
+        '<div class="hljs-addition inline">',
+      ).replace(
+        new RegExp("\nleanpub-end-insert", "gi"),
+        "</div>",
+      ).replace(
+        new RegExp("leanpub-start-del\n", "gi"),
+        '<div class="hljs-deletion inline">',
+      ).replace(
+        new RegExp("\nleanpub-end-del", "gi"),
+        "</div>",
+      );
   } catch (error) {
     console.error("Missing a known language for", code);
     console.error(error);

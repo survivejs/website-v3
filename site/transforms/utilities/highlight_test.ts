@@ -23,7 +23,7 @@ const test = 'foo';
 leanpub-end-insert`,
       "javascript",
     ),
-    `<div class="hljs-addition"><span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;</div>`,
+    `<div class="hljs-addition inline"><span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;</div>`,
   );
 });
 
@@ -35,6 +35,6 @@ const test = 'foo';
 leanpub-end-delete`,
       "javascript",
     ),
-    `<div class="hljs-deletion"><span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;</div>`,
+    `<div class="hljs-deletion inline"><span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;</div>`,
   );
 });
