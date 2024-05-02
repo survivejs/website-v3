@@ -3,14 +3,13 @@
   name="viewport"
   content="width=device-width, initial-scale=1.0"
 />
+<meta name="description" &content="(get context meta.description)" />
 <meta
-  name="description"
-  &content="(get context meta.description)"
+  name="keywords"
+  &visibleIf="(get context meta.keywords)"
+  &content="(get context meta.keywords)"
 />
-<meta
-  property="built"
-  &content="(get context meta.built)"
-/>
+<meta property="built" &content="(get context meta.built)" />
 <meta property="url" &content="(get context url)" />
 
 <meta
@@ -18,38 +17,17 @@
   &content="(urlJoin (get context meta.url) (trim (get context url) /))"
 />
 <meta property="og:type" content="website" />
-<meta
-  property="og:site_name"
-  &content="(get context meta.siteName)"
-/>
-<meta
-  property="og:title"
-  &content="(get context meta.title)"
-/>
-<meta
-  property="og:description"
-  &content="(get context meta.description)"
-/>
-<meta
-  property="og:image"
-  &content="(urlJoin (get context meta.url) (trim (get context url) /) og.png)"
-/>
+<meta property="og:site_name" &content="(get context meta.siteName)" />
+<meta property="og:title" &content="(get context meta.title)" />
+<meta property="og:description" &content="(get context meta.description)" />
 
-<meta
-  property="twitter:card"
-  content="summary_large_image"
-/>
-<meta
-  property="twitter:site"
-  &content="(get context meta.siteName)"
-/>
-<meta
-  property="twitter:title"
-  &content="(get context meta.title)"
-/>
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:site" &content="(get context meta.siteName)" />
+<meta property="twitter:title" &content="(get context meta.title)" />
 <meta
   property="twitter:description"
   &content="(get context meta.description)"
 />
+<meta name="wot-verification" content="977256fc058a018ddec2" />
 
 <title &children="(get context meta.title)"></title>

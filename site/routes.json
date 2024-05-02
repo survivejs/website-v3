@@ -3,7 +3,8 @@
     "layout": "siteIndex",
     "meta": {
       "title": "SurviveJS",
-      "description": "Get started with JavaScript and related technologies"
+      "description": "Get started with JavaScript and related technologies",
+      "keywords": "JavaScript, React, webpack, web development"
     },
     "dataSources": {
       "blogPosts": {
