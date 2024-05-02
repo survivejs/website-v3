@@ -1,12 +1,11 @@
 <div &class="(get props class)" &foreach="(get props blogPosts)">
   <Card &content="(get props data.preview)">
     <slot name="header">
-      <Heading
-        level="3"
-        class="font-medium"
-        &children="(get props data.title)"
-        showAnchor
-      />
+      <Heading level="3" class="font-medium" showAnchor
+        ><SiteLink
+          &children="(get props data.title)"
+          &href="(urlJoin (get props linkPrefix) (get props data.slug) /)"
+      /></Heading>
     </slot>
     <slot name="footer">
       <div class="flex flex-row justify-between">
