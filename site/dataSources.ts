@@ -53,8 +53,9 @@ function init({ load, render, renderSync }: DataSourcesApi) {
     const chapterOrder = (await load.textFile(path.join(directory, "Book.txt")))
       .split("\n").filter((n) => path.extname(n) === ".md");
 
-    // TODO: Fix image paths when rendering markdown files
-    return generateAdjacent(chapterOrder.map((name) => chapters[name]));
+    return generateAdjacent(chapterOrder.map((name) => chapters[name]), {
+      invert: true,
+    });
   }
 
   async function indexBlog(directory: string, amount?: number) {
@@ -132,15 +133,17 @@ function init({ load, render, renderSync }: DataSourcesApi) {
     return parseInt(str.split("-")[0], 10);
   }
 
-  function generateAdjacent(pages: unknown[]) {
+  function generateAdjacent(pages: unknown[], o?: { invert: boolean }) {
     return pages.map((page, i) => {
       // Avoid mutation
       const ret = structuredClone(page);
+      const next = i > 0 && pages[i - 1];
+      const previous = i < pages.length - 1 && pages[i + 1];
 
       // @ts-expect-error This is fine
-      ret.next = i > 0 && pages[i - 1];
+      ret.next = o?.invert ? previous : next;
       // @ts-expect-error This is fine
-      ret.previous = i < pages.length - 1 && pages[i + 1];
+      ret.previous = o?.invert ? next : previous;
 
       return ret;
     });
