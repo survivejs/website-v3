@@ -9,6 +9,11 @@
   &visibleIf="(get context meta.keywords)"
   &content="(get context meta.keywords)"
 />
+<meta
+  name="author"
+  &visibleIf="(get context document.data.author.name)"
+  &content="(get context document.data.author.name)"
+/>
 <meta property="built" &content="(get context meta.built)" />
 <meta property="url" &content="(get context url)" />
 
