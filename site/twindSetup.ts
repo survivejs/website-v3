@@ -22,6 +22,7 @@ export default {
       "-webkit-box-orient": "vertical",
       "-webkit-line-clamp": 6,
     }],
+    ["max-w-ch80", { maxWidth: "80ch" }],
   ],
   theme: {
     extend: {
