@@ -2,21 +2,7 @@ import { install, tw } from "https://esm.sh/@twind/core@1.1.1";
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
 // import type { Token } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.d.ts";
 import { markedSmartypants } from "https://cdn.jsdelivr.net/npm/marked-smartypants@1.1.6/lib/index.mjs";
-import highlight from "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/es/core.min.js";
-import highlightBash from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/bash.js";
-import highlightC from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/c.js";
-import highlightCSS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/css.js";
-import highlightHaskell from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/haskell.js";
-import highlightIni from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/ini.js";
-import highlightJS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/javascript.js";
-import highlightJSON from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/json.js";
-import highlightMakefile from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/makefile.js";
-import highlightMarkdown from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/markdown.js";
-import highlightSCSS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/scss.js";
-import highlightSQL from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/sql.js";
-import highlightTS from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/typescript.js";
-import highlightXML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/xml.js";
-import highlightYAML from "https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/es/languages/yaml.js";
+import { highlight } from "./utilities/highlight.ts";
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
 import twindSetup from "../twindSetup.ts";
@@ -24,25 +10,6 @@ import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.71.0/types.
 
 // load() doesn't check env, just possible .dev.vars file
 const env = await load({ envPath: "./.dev.vars" });
-
-highlight.registerLanguage("bash", highlightBash);
-highlight.registerLanguage("c", highlightC);
-highlight.registerLanguage("clike", highlightC);
-highlight.registerLanguage("css", highlightCSS);
-highlight.registerLanguage("haskell", highlightHaskell);
-highlight.registerLanguage("ini", highlightIni);
-highlight.registerLanguage("html", highlightXML);
-highlight.registerLanguage("javascript", highlightJS);
-highlight.registerLanguage("js", highlightJS);
-highlight.registerLanguage("json", highlightJSON);
-highlight.registerLanguage("makefile", highlightMakefile);
-highlight.registerLanguage("markdown", highlightMarkdown);
-highlight.registerLanguage("scss", highlightSCSS);
-highlight.registerLanguage("sql", highlightSQL);
-highlight.registerLanguage("typescript", highlightTS);
-highlight.registerLanguage("ts", highlightTS);
-highlight.registerLanguage("xml", highlightXML);
-highlight.registerLanguage("yaml", highlightYAML);
 
 // TODO: Get this from marked types instead
 type Token = {
@@ -54,18 +21,7 @@ type Token = {
 };
 
 marked.use(markedSmartypants());
-
-marked.setOptions({
-  highlight: (code: string, language: string) => {
-    try {
-      // TODO: Is it a good idea to highlight as bash by default?
-      return highlight.highlight(code, { language: language || "bash" }).value;
-    } catch (error) {
-      console.error("Missing a known language for", code);
-      console.error(error);
-    }
-  },
-});
+marked.setOptions({ highlight });
 
 // @ts-expect-error This is fine
 install(twindSetup);
