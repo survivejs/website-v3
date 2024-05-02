@@ -14,3 +14,6 @@ Deno.test("highlights simple JavaScript", () => {
     `<span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;`,
   );
 });
+
+// TODO: leanpub-start-insert/leanpub-end-insert
+// TODO: leanpub-start-delete/leanpub-end-delete
