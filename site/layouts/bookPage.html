@@ -4,17 +4,17 @@
       <Heading
         class="text-4xl"
         level="1"
-        &children="(get context meta.title)"
+        &children="(get context meta.data.title)"
       />
-      <Markdown as="div" &children="(get context meta.description)" />
+      <Markdown as="div" &children="(get context meta.data.description)" />
       <ol class="flex flex-col gap-2" &foreach="(get context chapters)">
         <li>
           <div class="flex flex-col gap-1">
             <SiteLink
-              &href="(urlJoin (get props slug) /)"
-              &children="(get props title)"
+              &href="(urlJoin (get props data.slug) /)"
+              &children="(get props data.title)"
             />
-            <span &children="(get props description)" />
+            <span &children="(get props data.description)" />
           </div>
         </li>
       </ol>

@@ -109,7 +109,7 @@
               "operation": "indexBook",
               "parameters": ["./books/webpack-book/manuscript"]
             },
-            "slug": "slug"
+            "slug": "data.slug"
           },
           "layout": "documentationPage",
           "dataSources": {
@@ -121,11 +121,11 @@
           "meta": {
             "title": {
               "utility": "get",
-              "parameters": ["context", "document.title"]
+              "parameters": ["context", "document.data.title"]
             },
             "description": {
               "utility": "get",
-              "parameters": ["context", "document.description"]
+              "parameters": ["context", "document.data.description"]
             }
           }
         }
@@ -148,7 +148,7 @@
               "operation": "indexBook",
               "parameters": ["./books/react-book/manuscript"]
             },
-            "slug": "slug"
+            "slug": "data.slug"
           },
           "layout": "documentationPage",
           "dataSources": {
@@ -162,11 +162,11 @@
           "meta": {
             "title": {
               "utility": "get",
-              "parameters": ["context", "document.title"]
+              "parameters": ["context", "document.data.title"]
             },
             "description": {
               "utility": "get",
-              "parameters": ["context", "document.description"]
+              "parameters": ["context", "document.data.description"]
             }
           }
         }
@@ -189,7 +189,7 @@
               "operation": "indexBook",
               "parameters": ["./books/maintenance-book/manuscript"]
             },
-            "slug": "slug"
+            "slug": "data.slug"
           },
           "layout": "documentationPage",
           "dataSources": {
@@ -203,11 +203,11 @@
           "meta": {
             "title": {
               "utility": "get",
-              "parameters": ["context", "document.title"]
+              "parameters": ["context", "document.data.title"]
             },
             "description": {
               "utility": "get",
-              "parameters": ["context", "document.description"]
+              "parameters": ["context", "document.data.description"]
             }
           }
         }

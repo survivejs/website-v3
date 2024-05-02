@@ -45,9 +45,11 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
       return [c.name, {
         ...c,
-        slug: cleanChapterName(c.name),
-        title,
-        description: generatePreview(body, 300),
+        data: {
+          slug: cleanChapterName(c.name),
+          title,
+          description: generatePreview(body, 300),
+        },
       }];
     }));
     const chapterOrder = (await load.textFile(path.join(directory, "Book.txt")))
