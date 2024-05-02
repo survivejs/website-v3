@@ -15,5 +15,26 @@ Deno.test("highlights simple JavaScript", () => {
   );
 });
 
-// TODO: leanpub-start-insert/leanpub-end-insert
-// TODO: leanpub-start-delete/leanpub-end-delete
+Deno.test("marks leanpub insertions", () => {
+  assertEquals(
+    highlight(
+      `leanpub-start-insert
+const test = 'foo';
+leanpub-end-insert`,
+      "javascript",
+    ),
+    `<div class="hljs-addition"><span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;</div>`,
+  );
+});
+
+Deno.test("marks leanpub deletions", () => {
+  assertEquals(
+    highlight(
+      `leanpub-start-delete
+const test = 'foo';
+leanpub-end-delete`,
+      "javascript",
+    ),
+    `<div class="hljs-deletion"><span class="hljs-keyword">const</span> test = <span class="hljs-string">&#x27;foo&#x27;</span>;</div>`,
+  );
+});
