@@ -1,77 +1,75 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
-      <Heading class="text-4xl" level="1"
-        >Consulting</Heading
-      >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
+      <Heading class="text-4xl" level="1">Consulting</Heading>
       <Markdown as="div"
-        >Since officially starting my personal limited
-        company in 2016, I have occasionally worked as a
-        consultant to earn additional income and to develop
-        my competence as consulting cases allow me to stay
-        grounded in reality. In addition, I've been pursuing
-        a doctorate since 2022 with Aalto University. [See
-        my research outputs](/research/) if you are
+        >Since officially starting my personal limited company in 2016, I have
+        occasionally worked as a consultant to earn additional income and to
+        develop my competence as consulting cases allow me to stay grounded in
+        reality. In addition, I've been pursuing a doctorate since 2022 with
+        Aalto University. [See my research outputs](/research/) if you are
         interested in the academic side.
       </Markdown>
       <Heading class="text-2xl" level="2">Services</Heading>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
-      >
-        <ContentCard title="Custom development">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+        <Card>
+          <slot name="header">
+            <Heading level="3" class="font-medium">Custom development</Heading>
+          </slot>
           <slot name="content"
-            >Occasionally I have been hired to perform
-            custom development. Example cases include
-            developing a complex table component or building
-            up a new system in collaboration with a design
-            system developer. I understand different aspects
-            of modern frontend development well and work
-            best in the interface between frontend and
-            backend that you might characterize as the
-            backend of the frontend.</slot
+            >Occasionally I have been hired to perform custom development.
+            Example cases include developing a complex table component or
+            building up a new system in collaboration with a design system
+            developer. I understand different aspects of modern frontend
+            development well and work best in the interface between frontend and
+            backend that you might characterize as the backend of the
+            frontend.</slot
           >
-        </ContentCard>
-        <ContentCard title="Workshops">
+        </Card>
+        <Card>
+          <slot name="header">
+            <Heading level="3" class="font-medium">Workshops</Heading>
+          </slot>
           <slot name="content"
-            >To train up staff, I have run several workshops
-            throughout the years in my specialized topics. I
-            have focused mainly on webpack and React
-            although I have given workshops on topics like
-            Deno and Qwik too. These days I prefer a
-            hands-on approach and like to run my workshops
-            through predesigned katas that allow attendees
-            at different levels understand the topic.</slot
+            >To train up staff, I have run several workshops throughout the
+            years in my specialized topics. I have focused mainly on webpack and
+            React although I have given workshops on topics like Deno and Qwik
+            too. These days I prefer a hands-on approach and like to run my
+            workshops through predesigned katas that allow attendees at
+            different levels understand the topic.</slot
           >
-        </ContentCard>
-        <ContentCard title="Conferences">
+        </Card>
+        <Card>
+          <slot name="header">
+            <Heading level="3" class="font-medium">Conferences</Heading>
+          </slot>
           <slot name="content"
-            >I have been running conferences since 2017
-            ([React Finland](https://react-finland.fi/),
-            [GraphQL Finland](https://graphql-finland.fi/),
-            [Future Frontend](https://futurefrontend.com/))
-            and have gained a strong understanding on how
-            the business works. I have run both physical and
-            online events and have operated mainly as a
-            conference director focused on the big picture
-            (concept, speakers, marketing).</slot
+            ><Markdown
+              >I have been running conferences since 2017 ([React
+              Finland](https://react-finland.fi/), [GraphQL
+              Finland](https://graphql-finland.fi/), [Future
+              Frontend](https://futurefrontend.com/)) and have gained a strong
+              understanding on how the business works. I have run both physical
+              and online events and have operated mainly as a conference
+              director focused on the big picture (concept, speakers,
+              marketing).</Markdown
+            ></slot
           >
-        </ContentCard>
-        <ContentCard title="Research">
+        </Card>
+        <Card>
+          <slot name="header">
+            <Heading level="3" class="font-medium">Research</Heading>
+          </slot>
           <slot name="content"
-            >Since 2022, I have been working as a researcher
-            for Aalto University. Through my research, I
-            have learned how the world of scientific
-            publishing works. I have not done any commercial
-            research cases but I have not ruled out the
-            option in case a suitable case becomes
-            available. I have done mainly surveys and
-            empirical research so I understand both
-            qualitative and quantitative ends of the
+            >Since 2022, I have been working as a researcher for Aalto
+            University. Through my research, I have learned how the world of
+            scientific publishing works. I have not done any commercial research
+            cases but I have not ruled out the option in case a suitable case
+            becomes available. I have done mainly surveys and empirical research
+            so I understand both qualitative and quantitative ends of the
             spectrum.</slot
           >
-        </ContentCard>
+        </Card>
       </div>
     </div>
   </slot>
