@@ -78,6 +78,10 @@ const init: GlobalUtilities["init"] = function init(
 };
 
 function resolveUrl(root: string, fragment: string) {
+  if (!root) {
+    return fragment;
+  }
+
   if (fragment === "../") {
     const parts = root.split("/").filter(Boolean).slice(0, -1);
 

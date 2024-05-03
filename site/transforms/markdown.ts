@@ -39,7 +39,13 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
     },
   });
 
-  return function transformMarkdown(input: string) {
+  // TODO: Merge parameters into a single object
+  return function transformMarkdown(
+    input: string,
+    o?: {
+      chapters?: Record<string, string>;
+    },
+  ) {
     if (typeof input !== "string") {
       console.error("input", input);
       throw new Error("transformMarkdown - passed wrong type of input");
@@ -85,6 +91,18 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             '">' +
             code +
             "</code></pre>\n";
+        },
+        em(text: string) {
+          const chapters = o?.chapters || {};
+          const match = chapters[text];
+
+          if (match) {
+            return renderSync({
+              htmlInput: `<SiteLink href="${match}">${text}</SiteLink>`,
+            });
+          }
+
+          return text;
         },
         heading(
           text: string,

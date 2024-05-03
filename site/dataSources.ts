@@ -6,7 +6,8 @@ import path from "node:path";
 import { parse } from "https://deno.land/std@0.207.0/yaml/parse.ts";
 import removeMarkdown from "https://esm.sh/remove-markdown@0.5.0";
 import getMarkdown from "./transforms/markdown.ts";
-import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
+import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
+// import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
 import trimStart from "https://deno.land/x/lodash@4.17.15-es/trimStart.js";
 import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
 
@@ -160,8 +161,37 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
     return {
       ...d,
-      data: resolveBlogPost(path, d),
+      data: resolveBlogPost(
+        path,
+        // @ts-expect-error This is fine for now - TODO: Debug the type
+        d,
+      ),
     };
+  }
+
+  function processChapter(
+    { path, previous, next }: {
+      path: string;
+      previous: MarkdownWithFrontmatter;
+      next: MarkdownWithFrontmatter;
+    },
+  ) {
+    // @ts-expect-error This is fine
+    const contextChapters = this.parentDataSources.chapters;
+    let chapters = {};
+
+    if (contextChapters) {
+      chapters = Object.fromEntries(
+        contextChapters.map((
+          // @ts-expect-error This is fine
+          c,
+        ) => [c.data.title, urlJoin("..", c.data.slug, "/")]),
+      );
+    }
+
+    return processMarkdown({ path, previous, next }, {
+      parseHeadmatter: false,
+    }, { chapters });
   }
 
   async function processMarkdown(
@@ -170,7 +200,8 @@ function init({ load, render, renderSync }: DataSourcesApi) {
       previous: MarkdownWithFrontmatter;
       next: MarkdownWithFrontmatter;
     },
-    o?: { parseHeadmatter: boolean; skipFirstLine: boolean },
+    o?: { parseHeadmatter?: boolean; skipFirstLine?: boolean },
+    rest?: Record<string, unknown>,
   ) {
     if (o?.parseHeadmatter) {
       const headmatter = await parseHeadmatter(path);
@@ -186,7 +217,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
     return {
       previous,
       next,
-      ...(await parseMarkdown(await load.textFile(path), o)),
+      ...(await parseMarkdown(await load.textFile(path), o, rest)),
     };
   }
 
@@ -223,13 +254,21 @@ function init({ load, render, renderSync }: DataSourcesApi) {
   // Interestingly enough caching to fs doesn't result in a speedup
   // TODO: Investigate why not
   // const fs = await fsCache(path.join(Deno.cwd(), ".gustwind"));
-  const memo = getMemo(new Map());
-  function parseMarkdown(lines: string, o?: { skipFirstLine: boolean }) {
+  // const memo = getMemo(new Map());
+  function parseMarkdown(
+    lines: string,
+    o?: { skipFirstLine?: boolean },
+    rest?: Record<string, unknown>,
+  ) {
     const input = o?.skipFirstLine
       ? lines.split("\n").slice(1).join("\n")
       : lines;
 
-    return memo(markdownToHtml, input);
+    return markdownToHtml(input, rest);
+
+    // TODO: Restore memo -> Likely this needs better keying (JSON.stringify)
+    // at memo to make sense.
+    // return memo(markdownToHtml, input, ...rest);
   }
 
   return {
@@ -238,6 +277,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
     indexMarkdown,
     indexTopics,
     processBlogPost,
+    processChapter,
     processMarkdown,
     processTopic,
   };

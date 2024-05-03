@@ -27,6 +27,7 @@
     },
     "expand": {
       "matchBy": {
+        "name": "blogPosts",
         "indexer": {
           "operation": "indexBlog",
           "parameters": ["./pages/blog"]
@@ -68,6 +69,7 @@
         },
         "expand": {
           "matchBy": {
+            "name": "topics",
             "indexer": {
               "operation": "indexTopics",
               "parameters": ["./pages/blog"]
@@ -106,6 +108,7 @@
         },
         "expand": {
           "matchBy": {
+            "name": "chapters",
             "indexer": {
               "operation": "indexBook",
               "parameters": ["./books/webpack-book/manuscript"]
@@ -115,8 +118,7 @@
           "layout": "documentationPage",
           "dataSources": {
             "document": {
-              "operation": "processMarkdown",
-              "parameters": [{ "parseHeadmatter": false }]
+              "operation": "processChapter"
             }
           },
           "meta": {
@@ -145,6 +147,7 @@
         },
         "expand": {
           "matchBy": {
+            "name": "chapters",
             "indexer": {
               "operation": "indexBook",
               "parameters": ["./books/react-book/manuscript"]
@@ -154,10 +157,7 @@
           "layout": "documentationPage",
           "dataSources": {
             "document": {
-              "operation": "processMarkdown",
-              "parameters": [
-                { "parseHeadmatter": false }
-              ]
+              "operation": "processChapter"
             }
           },
           "meta": {
@@ -186,6 +186,7 @@
         },
         "expand": {
           "matchBy": {
+            "name": "chapters",
             "indexer": {
               "operation": "indexBook",
               "parameters": ["./books/maintenance-book/manuscript"]
@@ -195,10 +196,7 @@
           "layout": "documentationPage",
           "dataSources": {
             "document": {
-              "operation": "processMarkdown",
-              "parameters": [
-                { "parseHeadmatter": false }
-              ]
+              "operation": "processChapter"
             }
           },
           "meta": {
