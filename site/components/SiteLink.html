@@ -1,6 +1,6 @@
 <a
   &visibleIf="(get props href)"
-  &class="(concat underline ' ' hover:text-primary ' ' (get props class ' ') (pick (isActive (get props href) (get context url)) font-bold))"
+  &class="(concat underline ' ' text-muted ' ' hover:text-primary ' ' (get props class ' ') (pick (isActive (get props href) (get context url)) font-medium))"
   &title="(get props title)"
   &href="(validateUrl (get props href))"
   &children="(getLinkSuffix (get props href) (get props children))"
