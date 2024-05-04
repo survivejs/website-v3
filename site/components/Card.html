@@ -1,19 +1,10 @@
-<div class="border p-2 flex flex-col gap-2 justify-between">
+<div class="border p-4 flex flex-col gap-2 justify-between">
   <div
     &visibleIf="(or (get props header) (get props content))"
     class="flex flex-col justify-between"
   >
-    <div
-      &visibleIf="(get props header)"
-      &children="(get props header)"
-    />
-    <div
-      &visibleIf="(get props content)"
-      &children="(get props content)"
-    />
+    <div &visibleIf="(get props header)" &children="(get props header)" />
+    <div &visibleIf="(get props content)" &children="(get props content)" />
   </div>
-  <div
-    &visibleIf="(get props footer)"
-    &children="(get props footer)"
-  />
+  <div &visibleIf="(get props footer)" &children="(get props footer)" />
 </div>

@@ -15,7 +15,7 @@
           &children="(get context document.content)"
         ></div>
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-8">
         <DocumentationMeta
           &document="(get context document)"
           &previous="(get context document.previous)"
@@ -28,14 +28,14 @@
       </div>
       <div>
         <Heading level="2" class="text-lg">Feeling social?</Heading>
-        <div class="flex flex-row gap-4">
+        <div class="flex flex-row gap-8">
           <SocialLinks />
         </div>
       </div>
     </div>
   </slot>
   <slot name="aside">
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-8">
       <Advertisement />
       <TableOfContents &toc="(get context document.tableOfContents)" />
     </div>

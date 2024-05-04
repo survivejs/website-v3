@@ -1,13 +1,9 @@
 <BaseLayout>
   <slot name="content">
-    <div
-      class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose"
-    >
-      <Heading class="text-4xl" level="1"
-        >Blog topics</Heading
-      >
+    <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
+      <Heading class="text-4xl" level="1">Blog topics</Heading>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose"
         &foreach="(get context topics)"
       >
         <Card>
