@@ -161,11 +161,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
     return {
       ...d,
-      data: resolveBlogPost(
-        path,
-        // @ts-expect-error This is fine for now - TODO: Debug the type
-        d,
-      ),
+      data: resolveBlogPost(path, d),
     };
   }
 
