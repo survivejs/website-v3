@@ -41,12 +41,14 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
 
   // TODO: Merge parameters into a single object
   return function transformMarkdown(
-    input: string,
-    o?: {
+    o: {
+      input: string;
       book?: string;
       chapters?: Record<string, string>;
     },
   ) {
+    const { input } = o;
+
     if (typeof input !== "string") {
       console.error("input", input);
       throw new Error("transformMarkdown - passed wrong type of input");

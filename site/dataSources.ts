@@ -7,7 +7,7 @@ import { parse } from "https://deno.land/std@0.207.0/yaml/parse.ts";
 import removeMarkdown from "https://esm.sh/remove-markdown@0.5.0";
 import getMarkdown from "./transforms/markdown.ts";
 import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
-// import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
+import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
 import trimStart from "https://deno.land/x/lodash@4.17.15-es/trimStart.js";
 import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
 
@@ -255,7 +255,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
   // Interestingly enough caching to fs doesn't result in a speedup
   // TODO: Investigate why not
   // const fs = await fsCache(path.join(Deno.cwd(), ".gustwind"));
-  // const memo = getMemo(new Map());
+  const memo = getMemo(new Map());
   function parseMarkdown(
     lines: string,
     o?: { skipFirstLine?: boolean },
@@ -265,11 +265,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
       ? lines.split("\n").slice(1).join("\n")
       : lines;
 
-    return markdownToHtml(input, rest);
-
-    // TODO: Restore memo -> Likely this needs better keying (JSON.stringify)
-    // at memo to make sense.
-    // return memo(markdownToHtml, input, ...rest);
+    return memo(markdownToHtml, { ...rest, input });
   }
 
   return {
