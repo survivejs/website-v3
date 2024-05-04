@@ -16,7 +16,7 @@
   "blog": {
     "layout": "blogIndex",
     "meta": {
-      "title": "Blog",
+      "title": "SurviveJS - Blog",
       "description": "Read blog interviews to learn more about JavaScript and related technologies"
     },
     "dataSources": {
@@ -58,7 +58,7 @@
       "topics": {
         "layout": "topicIndex",
         "meta": {
-          "title": "Topics",
+          "title": "SurviveJS - Blog topics",
           "description": "Blog topics"
         },
         "dataSources": {
@@ -90,7 +90,7 @@
   "books": {
     "layout": "booksIndex",
     "meta": {
-      "title": "Books",
+      "title": "SurviveJS - Books",
       "description": "I have listed my books related to JavaScript on this page."
     },
     "routes": {
@@ -219,42 +219,42 @@
   "open-source": {
     "layout": "openSourceIndex",
     "meta": {
-      "title": "Open source",
+      "title": "SurviveJS - Open source",
       "description": "Through the years, I have contributed to open source in various ways."
     }
   },
   "research": {
     "layout": "researchIndex",
     "meta": {
-      "title": "Research",
+      "title": "SurviveJS - Research",
       "description": "As a part of my studies, I have performed some research related to computer science."
     }
   },
   "consulting": {
     "layout": "consultingIndex",
     "meta": {
-      "title": "Consulting",
+      "title": "SurviveJS - Consulting",
       "description": "I do occasional software consulting through my personal company."
     }
   },
   "katas": {
     "layout": "katasIndex",
     "meta": {
-      "title": "Katas",
+      "title": "SurviveJS - Katas",
       "description": "I have prepared a series of katas on different programming topics."
     }
   },
   "presentations": {
     "layout": "presentationsIndex",
     "meta": {
-      "title": "Presentations",
+      "title": "SurviveJS - Presentations",
       "description": "I have compiled slides of several of my presentations on this page."
     }
   },
   "search": {
     "layout": "searchIndex",
     "meta": {
-      "title": "Search",
+      "title": "SurviveJS - Search",
       "description": "You can search the site contents using this page."
     }
   },
@@ -274,7 +274,7 @@
   "404.html": {
     "layout": "404",
     "meta": {
-      "title": "Page not found",
+      "title": "SurviveJS - Page not found",
       "description": "This page does not exist"
     }
   }
