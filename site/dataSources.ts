@@ -17,6 +17,7 @@ type MarkdownWithFrontmatter = {
     slug: string;
     title: string;
     date: Date;
+    updateDate?: Date;
     author?: Author;
     editors?: Author[];
     description?: string;

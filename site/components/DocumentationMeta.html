@@ -48,15 +48,27 @@
         </li>
       </ul>
     </div>
-    <div
-      &visibleIf="(get props document.data.date)"
-      class="flex flex-col sm:flex-row gap-1"
-    >
-      <span>Published:</span>
-      <FormattedTime
-        class="font-extralight"
-        &date="(get props document.data.date)"
-      />
+    <div class="flex flex-col gap-2">
+      <div
+        &visibleIf="(get props document.data.date)"
+        class="flex flex-col sm:flex-row gap-1"
+      >
+        <span>Published:</span>
+        <FormattedTime
+          class="font-extralight"
+          &date="(get props document.data.date)"
+        />
+      </div>
+      <div
+        &visibleIf="(get props document.data.updateDate)"
+        class="flex flex-col sm:flex-row gap-1"
+      >
+        <span>Updated:</span>
+        <FormattedTime
+          class="font-extralight"
+          &date="(get props document.data.updateDate)"
+        />
+      </div>
     </div>
   </div>
   <div
