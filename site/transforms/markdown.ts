@@ -166,7 +166,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           return renderSync({
             htmlInput: `<SiteLink href="${href}" title="${
               title || ""
-            }" children="${text}" />`,
+            }">${text}</SiteLink>`,
           });
         },
         list(body: string, ordered: string, start: number) {
