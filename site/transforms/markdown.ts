@@ -129,13 +129,21 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
 
           // TODO: Rewrite book image urls
           if (!href.startsWith("http")) {
-            // Rewrite blog urls to look from root
-            if (href.startsWith("assets/")) {
-              href = `/${href}`;
-            }
+            // Rewrite book image urls
+            if (o?.book) {
+              if (href.startsWith("images/")) {
+                href = "/images/" + o.book + "/" +
+                  href.replace(/^(images\/)/, "");
+              }
+            } else {
+              // Rewrite blog urls to look from root
+              if (href.startsWith("assets/")) {
+                href = `/${href}`;
+              }
 
-            if (env.IMAGES_ROOT) {
-              href = urlJoin(env.IMAGES_ROOT, href);
+              if (env.IMAGES_ROOT) {
+                href = urlJoin(env.IMAGES_ROOT, href);
+              }
             }
           }
 
@@ -162,10 +170,6 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             const fileContents = load.textFileSync(href);
 
             return this.code(fileContents, href.split(".").at(-1) as string);
-          }
-
-          if (o?.book) {
-            // TODO: Fix link paths if they start with "images/"
           }
 
           return renderSync({
