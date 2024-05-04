@@ -14,10 +14,9 @@
           &href="(urlJoin (get props linkPrefix) (get props data.slug) /)"
           >Read the post</SiteLink
         >
-        <div class="text-xs text-muted">
-          Published:&nbsp;<span
-            &children="(dateToString (get props data.date))"
-          ></span>
+        <div class="text-xs text-muted flex flex-row gap-1">
+          <span>Published:</span>
+          <FormattedTime &date="(get props data.date)" />
         </div>
       </div>
     </slot>
