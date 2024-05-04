@@ -43,6 +43,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
   return function transformMarkdown(
     input: string,
     o?: {
+      book?: string;
       chapters?: Record<string, string>;
     },
   ) {
@@ -161,6 +162,10 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             const fileContents = load.textFileSync(href);
 
             return this.code(fileContents, href.split(".").at(-1) as string);
+          }
+
+          if (o?.book) {
+            // TODO: Fix link paths if they start with "images/"
           }
 
           return renderSync({

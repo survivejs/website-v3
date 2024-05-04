@@ -175,6 +175,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
       previous: MarkdownWithFrontmatter;
       next: MarkdownWithFrontmatter;
     },
+    book: string,
   ) {
     // @ts-expect-error This is fine
     const contextChapters = this.parentDataSources.chapters;
@@ -191,7 +192,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
 
     return processMarkdown({ path, previous, next }, {
       parseHeadmatter: false,
-    }, { chapters });
+    }, { book, chapters });
   }
 
   async function processMarkdown(

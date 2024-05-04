@@ -32,6 +32,27 @@
       }
     },
     {
+      "path": "${GUSTWIND_PATH}/plugins/copy/mod.ts",
+      "options": {
+        "inputPath": "./books/webpack-book/manuscript/images",
+        "outputPath": "./images/webpack"
+      }
+    },
+    {
+      "path": "${GUSTWIND_PATH}/plugins/copy/mod.ts",
+      "options": {
+        "inputPath": "./books/react-book/manuscript/images",
+        "outputPath": "./images/react"
+      }
+    },
+    {
+      "path": "${GUSTWIND_PATH}/plugins/copy/mod.ts",
+      "options": {
+        "inputPath": "./books/maintenance-book/manuscript/images",
+        "outputPath": "./images/maintenance"
+      }
+    },
+    {
       "path": "${GUSTWIND_PATH}/plugins/script/mod.ts",
       "options": {
         "scripts": [
