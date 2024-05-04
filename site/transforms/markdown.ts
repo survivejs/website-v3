@@ -127,7 +127,6 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           const height = textParts[2] || "";
           const className = textParts[3] || "";
 
-          // TODO: Rewrite book image urls
           if (!href.startsWith("http")) {
             // Rewrite book image urls
             if (o?.book) {
