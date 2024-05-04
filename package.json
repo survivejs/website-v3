@@ -5,10 +5,12 @@
   "description": "SurviveJS site",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "scripts": {
+    "check:links": "linkinator ./build --recurse --verbosity error",
     "start": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
+    "linkinator": "^6.0.4",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "wrangler": "^3.50.0"
