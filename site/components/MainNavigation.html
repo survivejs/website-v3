@@ -1,32 +1,34 @@
-<div class="z-50 sticky top-0 h-10 md:h-auto font-light bg-secondary">
-  <div class="md:px-4 md:pt-4">
+<div class="z-50 sticky top-0 h-10 xl:h-auto font-light bg-secondary">
+  <div class="xl:px-4 xl:pt-4">
     <input class="hidden peer" id="nav__toggle" type="checkbox" />
     <label
-      class="md:hidden p-2 pointer-events-all absolute right-0 w-10 h-10 rounded-full flex z-50"
+      class="xl:hidden p-2 pointer-events-all absolute right-0 w-10 h-10 rounded-full flex z-50"
       for="nav__toggle"
     >
       <span class="w-4 h-4 leading-4 m-auto">☰</span>
     </label>
     <nav
-      class="absolute bg-secondary border-b-2 border-primary md:border-none p-4 md:p-0 md:relative w-full transition-all -translate-y-full md:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4"
+      class="absolute bg-secondary border-b-2 border-primary xl:border-none p-4 xl:p-0 xl:relative w-full transition-all -translate-y-full xl:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4 lg:gap-8 lg:flex-row"
     >
-      <div class="md:w-full flex flex-col md:flex-row md:justify-between gap-4">
-        <div class="grid md:flex md:flex-row gap-4 md:gap-8 md:mr-auto">
+      <div
+        class="xl:w-full flex flex-col flex-wrap xl:flex-row xl:justify-between gap-4"
+      >
+        <div class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:mr-auto">
           <Navigation />
         </div>
-        <div class="grid md:flex md:flex-row gap-4 md:gap-8 md:ml-auto">
+        <div class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:ml-auto">
           <SiteLink href="/search/">Search</SiteLink>
           <SiteLink href="https://twitter.com/survivejs/">@survivejs</SiteLink>
         </div>
       </div>
       <div
-        class="md:hidden"
+        class="xl:hidden"
         &visibleIf="(get props aside)"
         &children="(get props aside)"
       />
     </nav>
   </div>
-  <div class="mx-12 md:mx-0">
+  <div class="mx-12 xl:mx-0">
     <ReadingProgress />
   </div>
 </div>
