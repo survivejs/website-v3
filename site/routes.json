@@ -9,7 +9,7 @@
     "dataSources": {
       "blogPosts": {
         "operation": "indexBlog",
-        "parameters": ["./pages/blog", 8]
+        "parameters": ["./pages/blog", 4]
       }
     }
   },

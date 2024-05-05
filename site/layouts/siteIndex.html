@@ -88,6 +88,14 @@
           </div>
         </div>
         <div>
+          <Heading class="text-2xl" level="2">Latest blog posts</Heading>
+          <BlogPosts
+            class="flex flex-col gap-8"
+            &blogPosts="(get context blogPosts)"
+            linkPrefix="/blog/"
+          />
+        </div>
+        <div>
           <Heading class="text-2xl" level="2">Workshops</Heading>
           <div class="flex flex-col gap-8">
             <Workshops />
@@ -98,14 +106,6 @@
           <div class="flex flex-col gap-8">
             <Presentations />
           </div>
-        </div>
-        <div>
-          <Heading class="text-2xl" level="2">Latest blog posts</Heading>
-          <BlogPosts
-            class="flex flex-col gap-8"
-            &blogPosts="(get context blogPosts)"
-            linkPrefix="/blog/"
-          />
         </div>
         <div>
           <Heading class="text-2xl" level="2">Open source</Heading>
