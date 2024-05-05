@@ -122,28 +122,28 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             </HeadingWithAnchor>`,
           });
         },
-        image(href: string, title: string, text: string) {
+        image(src: string, title: string, text: string) {
           const textParts = text ? text.split("|") : [];
           const alt = textParts[0] || "";
           const width = textParts[1] || "";
           const height = textParts[2] || "";
           const className = textParts[3] || "";
 
-          if (!href.startsWith("http")) {
+          if (!src.startsWith("http")) {
             // Rewrite book image urls
             if (o?.book) {
-              if (href.startsWith("images/")) {
-                href = "/images/" + o.book + "/" +
-                  href.replace(/^(images\/)/, "");
+              if (src.startsWith("images/")) {
+                src = "/images/" + o.book + "/" +
+                  src.replace(/^(images\/)/, "");
               }
             } else {
               // Rewrite blog urls to look from root
-              if (href.startsWith("assets/")) {
-                href = `/${href}`;
+              if (src.startsWith("assets/")) {
+                src = `/${src}`;
               }
 
               if (env.IMAGES_ROOT) {
-                href = urlJoin(env.IMAGES_ROOT, href);
+                src = urlJoin(env.IMAGES_ROOT, src);
               }
             }
           }
@@ -153,7 +153,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           } ${className}">
             <img class="${
             className === "author" ? "" : "border"
-          }" src="${href}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
+          }" src="${src}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
             ${
             className === "author"
               ? ""

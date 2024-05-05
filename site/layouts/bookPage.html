@@ -7,17 +7,67 @@
         &children="(get context meta.title)"
       />
       <Markdown as="div" &children="(get context meta.description)" />
-      <ol class="flex flex-col gap-2" &foreach="(get context chapters)">
-        <li>
-          <div class="flex flex-col gap-1">
-            <SiteLink
-              &href="(urlJoin (get props data.slug) /)"
-              &children="(get props data.title)"
-            />
-            <span &children="(get props data.description)" />
-          </div>
-        </li>
-      </ol>
+      <div &visibleIf="(get context meta.testimonials)">
+        <Heading level="2">Testimonials</Heading>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 gap-4 not-prose"
+          &foreach="(get context meta.testimonials)"
+        >
+          <TestimonialCard &website="(get props website)">
+            <slot name="title">
+              <SiteImage
+                class="-mt-8 mx-auto rounded-full border w-16 h-16"
+                &src="(get props image)"
+                &alt="(get props name)" />
+              <div class="flex flex-col">
+                <span class="mx-auto" &children="(get props name)" />
+                <span class="mx-auto" &children="(get props title)" /></div
+            ></slot>
+            <slot name="content">
+              <Markdown &children="(get props text)" />
+            </slot>
+          </TestimonialCard>
+        </div>
+      </div>
+      <div>
+        <Heading level="2">Availability</Heading>
+        <Markdown
+          >Although you can read the book online for free, you can also purchase
+          it in a copy to support the development of the content. [See also
+          consulting](/consulting/) for other available options.
+        </Markdown>
+        <ul>
+          <li &visibleIf="(get context meta.bookUrls.leanpub)">
+            <SiteLink &href="(get context meta.bookUrls.leanpub)"
+              >Leanpub (digital, always up to date with the site)</SiteLink
+            >
+          </li>
+          <li &visibleIf="(get context meta.bookUrls.amazon)">
+            <SiteLink &href="(get context meta.bookUrls.amazon)"
+              >Amazon (paperback, last major revision)</SiteLink
+            >
+          </li>
+          <li &visibleIf="(get context meta.bookUrls.kindle)">
+            <SiteLink &href="(get context meta.bookUrls.kindle)"
+              >Kindle (digital, last major revision)</SiteLink
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Heading level="2">Table of contents</Heading>
+        <ol class="flex flex-col gap-2" &foreach="(get context chapters)">
+          <li>
+            <div class="flex flex-col gap-1">
+              <SiteLink
+                &href="(urlJoin (get props data.slug) /)"
+                &children="(get props data.title)"
+              />
+              <span &children="(get props data.description)" />
+            </div>
+          </li>
+        </ol>
+      </div>
     </div>
   </slot>
 </BaseLayout>

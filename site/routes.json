@@ -98,7 +98,56 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – Webpack 5",
-          "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript."
+          "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript.",
+          "bookUrls": {
+            "amazon": "https://www.amazon.com/dp/B08P2C69PR",
+            "leanpub": "https://leanpub.com/survivejs-webpack",
+            "kindle": "https://www.amazon.com/dp/B08P3S2G66"
+          },
+          "testimonials": [
+            {
+              "name": "Clément Paris",
+              "title": "Front-end Engineer",
+              "website": "",
+              "image": "/assets/img/testimonials/clement.jpg",
+              "text": "After weeks failing at configuring webpack, I stumbled upon SurviveJS book while looking for yet another tutorial. Since that day, it has been my go-to resource for every single webpack question I ever had."
+            },
+            {
+              "name": "Andrea Chiumenti",
+              "title": "CEO, Red Software Systems",
+              "website": "https://red.software.systems/",
+              "image": "/assets/img/testimonials/andrea.png",
+              "text": "Brilliant! A must have if you want to to learn webpack but also if need an updated reference guide. I always use it as a reference guide when I develop."
+            },
+            {
+              "name": "Gavin Doughtie",
+              "title": "Senior Software Engineer, Google",
+              "website": "https://www.google.com/",
+              "image": "/assets/img/testimonials/gavin.jpg",
+              "text": "Before I worked through the SurviveJS webpack book, my own webpack config, cobbled together from random code on the Internet, was a mystery to me. Afterwards, I have route-splitting and parallel-loading superpowers."
+            },
+            {
+              "name": "Neeraj Singh",
+              "title": "Founder, Big Binary",
+              "website": "https://www.bigbinary.com/",
+              "image": "/assets/img/testimonials/raj.jpg",
+              "text": "Webpack is powerful but configuring it can be painful. Same goes with React. There are so many ways of configuring React with asset compilation, minification etc that it is easy to get lost. This book provides practical tips on how to proceed."
+            },
+            {
+              "name": "Aaron Harris",
+              "title": "Software Engineer",
+              "website": "",
+              "image": "/assets/img/testimonials/aaron.jpg",
+              "text": "This guide was a great starter in taming the Wild West of ESNext-era JavaScript development. Its beauty comes from its commitment to not skipping the fundamentals in favor of a fast demo, but making sure you're understanding what you're doing as you bootstrap your next JavaScript-based UI project."
+            },
+            {
+              "name": "Julien Castelain",
+              "title": "Software Engineer, Liferay",
+              "website": "https://www.liferay.com/",
+              "image": "/assets/img/testimonials/julien.jpg",
+              "text": "This guide is a great way to get started with webpack or improve your existing skills. After a detailed introduction, you'll start working on a webpack project that provides all you need to push your app to production. Highly recommended."
+            }
+          ]
         },
         "dataSources": {
           "chapters": {
@@ -138,7 +187,12 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – React",
-          "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework."
+          "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework.",
+          "bookUrls": {
+            "amazon": "",
+            "leanpub": "https://leanpub.com/survivejs-react",
+            "kindle": ""
+          }
         },
         "dataSources": {
           "chapters": {
@@ -178,7 +232,12 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – Maintenance",
-          "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages."
+          "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages.",
+          "bookUrls": {
+            "amazon": "",
+            "leanpub": "https://leanpub.com/survivejs-maintenance",
+            "kindle": ""
+          }
         },
         "dataSources": {
           "chapters": {
