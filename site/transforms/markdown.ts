@@ -1,7 +1,8 @@
 import { install, tw } from "https://esm.sh/@twind/core@1.1.1";
 import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
 // import type { Token } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.d.ts";
-import { markedSmartypants } from "https://cdn.jsdelivr.net/npm/marked-smartypants@1.1.6/lib/index.mjs";
+import { markedSmartypants } from "npm:marked-smartypants@1.1.6";
+import smartypants from "npm:smartypants@0.2.2";
 import { highlight } from "./utilities/highlight.ts";
 import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
@@ -115,7 +116,12 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           const slug = slugify(raw);
 
           if (level > 1) {
-            tableOfContents.push({ slug, level, text, raw });
+            tableOfContents.push({
+              slug,
+              level,
+              text,
+              raw: smartypants(raw, 2),
+            });
           }
 
           return renderSync({

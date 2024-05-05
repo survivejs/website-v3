@@ -3,10 +3,7 @@
   x-state="{ closest: {} }"
   x-closest="{ state: { closest: document.querySelectorAll('main h2, main h3') } }"
 >
-  <ul
-    &foreach="(get props toc)"
-    class="flex flex-col gap-2"
-  >
+  <ul &foreach="(get props toc)" class="flex flex-col gap-2">
     <li>
       <a
         x-attr

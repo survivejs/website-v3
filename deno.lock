@@ -1,5 +1,28 @@
 {
   "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:marked-smartypants@1.1.6": "npm:marked-smartypants@1.1.6_marked@12.0.0",
+      "npm:smartypants@0.2.2": "npm:smartypants@0.2.2"
+    },
+    "npm": {
+      "marked-smartypants@1.1.6_marked@12.0.0": {
+        "integrity": "sha512-38rdxcV3+EHrvoHioSrgBDvOmFb+TNcszZggrl15qe4MEfQxBArfSgsGgFP0YqHlGy8Rgoyi4gN4ThBWzwNJeA==",
+        "dependencies": {
+          "marked": "marked@12.0.0",
+          "smartypants": "smartypants@0.2.2"
+        }
+      },
+      "marked@12.0.0": {
+        "integrity": "sha512-Vkwtq9rLqXryZnWaQc86+FHLC6tr/fycMfYAhiOIXkrNmeGAyhSxjqu0Rs1i0bBqw5u0S7+lV9fdH2ZSVaoa0w==",
+        "dependencies": {}
+      },
+      "smartypants@0.2.2": {
+        "integrity": "sha512-TzobUYoEft/xBtb2voRPryAUIvYguG0V7Tt3de79I1WfXgCwelqVsGuZSnu3GFGRZhXR90AeEYIM+icuB/S06Q==",
+        "dependencies": {}
+      }
+    }
+  },
   "redirects": {
     "https://esm.sh/v135/@types/remove-markdown@~0/index.d.ts": "https://esm.sh/v135/@types/remove-markdown@0.3.4/index.d.ts",
     "https://unpkg.com/highlight.js@11.9.0/es/languages/bash": "https://unpkg.com/highlight.js@11.9.0/es/languages/bash.js",
@@ -42,6 +65,7 @@
     "packageJson": {
       "dependencies": [
         "npm:@cloudflare/workers-types@^4.20240405.0",
+        "npm:linkinator@^6.0.4",
         "npm:prettier@^3.2.5",
         "npm:typescript@^5.4.5",
         "npm:wrangler@^3.50.0"
