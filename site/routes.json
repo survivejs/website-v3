@@ -308,11 +308,11 @@
       "description": "I do occasional software consulting through my personal company."
     }
   },
-  "katas": {
-    "layout": "katasIndex",
+  "workshops": {
+    "layout": "workshopsIndex",
     "meta": {
-      "title": "SurviveJS - Katas",
-      "description": "I have prepared a series of katas on different programming topics."
+      "title": "SurviveJS - Workshops",
+      "description": "I have prepared a series of workshops on different programming topics."
     }
   },
   "presentations": {
