@@ -114,7 +114,9 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
         ) {
           const slug = slugify(raw);
 
-          tableOfContents.push({ slug, level, text, raw });
+          if (level > 1) {
+            tableOfContents.push({ slug, level, text, raw });
+          }
 
           return renderSync({
             htmlInput: `<HeadingWithAnchor anchor="${slug}" level="${level}">
