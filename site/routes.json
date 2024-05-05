@@ -114,21 +114,24 @@
             },
             {
               "name": "Andrea Chiumenti",
-              "title": "CEO, Red Software Systems",
+              "title": "CEO",
+              "company": "Red Software Systems",
               "website": "https://red.software.systems/",
               "image": "/assets/img/testimonials/andrea.png",
               "text": "Brilliant! A must have if you want to to learn webpack but also if need an updated reference guide. I always use it as a reference guide when I develop."
             },
             {
               "name": "Gavin Doughtie",
-              "title": "Senior Software Engineer, Google",
+              "title": "Senior Software Engineer",
+              "company": "Google",
               "website": "https://www.google.com/",
               "image": "/assets/img/testimonials/gavin.jpg",
               "text": "Before I worked through the SurviveJS webpack book, my own webpack config, cobbled together from random code on the Internet, was a mystery to me. Afterwards, I have route-splitting and parallel-loading superpowers."
             },
             {
               "name": "Neeraj Singh",
-              "title": "Founder, Big Binary",
+              "title": "Founder",
+              "company": "Big Binary",
               "website": "https://www.bigbinary.com/",
               "image": "/assets/img/testimonials/raj.jpg",
               "text": "Webpack is powerful but configuring it can be painful. Same goes with React. There are so many ways of configuring React with asset compilation, minification etc that it is easy to get lost. This book provides practical tips on how to proceed."
@@ -142,7 +145,8 @@
             },
             {
               "name": "Julien Castelain",
-              "title": "Software Engineer, Liferay",
+              "title": "Software Engineer",
+              "company": "Liferay",
               "website": "https://www.liferay.com/",
               "image": "/assets/img/testimonials/julien.jpg",
               "text": "This guide is a great way to get started with webpack or improve your existing skills. After a detailed introduction, you'll start working on a webpack project that provides all you need to push your app to production. Highly recommended."

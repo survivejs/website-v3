@@ -1,21 +1,23 @@
 <Card>
   <slot name="header">
-    <Heading level="3" class="font-medium" showAnchor>
+    <SiteImage
+      class="-mt-8 mx-auto rounded-full border w-16 h-16"
+      &src="(get props image)"
+      &alt="(get props name)" />
+    <Heading level="3" class="font-medium flex flex-col">
+      <span class="mx-auto" &children="(get props name)" />
+      <span class="mx-auto" &children="(get props title)" />
       <SiteLink
         &visibleIf="(get props website)"
-        &children="(get props title)"
+        class="mx-auto"
         &href="(get props website)"
-      />
-      <span
-        &visibleIf="(not (get props website))"
-        &children="(get props title)"
-      /> </Heading
+        &children="(get props company)" /></Heading
   ></slot>
   <slot name="content">
     <div
       class="max-h-96 overflow-auto before:text-muted before:content-['\201D'] before:text-2xl after:text-muted after:content-['\201D'] after:text-2xl after:float-right"
     >
-      <Markdown &children="(get props content)" />
+      <Markdown &children="(get props text)" />
     </div>
   </slot>
 </Card>

@@ -13,20 +13,14 @@
           class="grid grid-cols-2 sm:grid-cols-3 gap-4 not-prose"
           &foreach="(get context meta.testimonials)"
         >
-          <TestimonialCard &website="(get props website)">
-            <slot name="title">
-              <SiteImage
-                class="-mt-8 mx-auto rounded-full border w-16 h-16"
-                &src="(get props image)"
-                &alt="(get props name)" />
-              <div class="flex flex-col">
-                <span class="mx-auto" &children="(get props name)" />
-                <span class="mx-auto" &children="(get props title)" /></div
-            ></slot>
-            <slot name="content">
-              <Markdown &children="(get props text)" />
-            </slot>
-          </TestimonialCard>
+          <TestimonialCard
+            &website="(get props website)"
+            &image="(get props image)"
+            &company="(get props company)"
+            &name="(get props name)"
+            &title="(get props title)"
+            &text="(get props text)"
+          />
         </div>
       </div>
       <div>
