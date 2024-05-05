@@ -6,7 +6,7 @@
         level="1"
         &children="(get context meta.title)"
       />
-      <Markdown as="div" &children="(get context meta.description)" />
+      <Markdown as="div" &children="(get context fullDescription)" />
       <div &visibleIf="(get context meta.testimonials)">
         <Heading level="2">Testimonials</Heading>
         <div
@@ -32,9 +32,10 @@
       <div>
         <Heading level="2">Availability</Heading>
         <Markdown
-          >Although you can read the book online for free, you can also purchase
-          it in a copy to support the development of the content. [See also
-          consulting](/consulting/) for other available options.
+          >Although you can [read the book online for free](./introduction/),
+          you can also purchase it in a copy to support the development of the
+          content. [See also consulting](/consulting/) for other available
+          options.
         </Markdown>
         <ul>
           <li &visibleIf="(get context meta.bookUrls.leanpub)">

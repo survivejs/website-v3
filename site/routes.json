@@ -153,6 +153,10 @@
           "chapters": {
             "operation": "indexBook",
             "parameters": ["./books/webpack-book/manuscript"]
+          },
+          "fullDescription": {
+            "operation": "getBookDescription",
+            "parameters": ["webpack"]
           }
         },
         "expand": {
@@ -198,6 +202,10 @@
           "chapters": {
             "operation": "indexBook",
             "parameters": ["./books/react-book/manuscript"]
+          },
+          "fullDescription": {
+            "operation": "getBookDescription",
+            "parameters": ["react"]
           }
         },
         "expand": {
@@ -243,6 +251,10 @@
           "chapters": {
             "operation": "indexBook",
             "parameters": ["./books/maintenance-book/manuscript"]
+          },
+          "fullDescription": {
+            "operation": "getBookDescription",
+            "parameters": ["maintenance"]
           }
         },
         "expand": {

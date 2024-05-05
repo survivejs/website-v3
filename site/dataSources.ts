@@ -38,6 +38,21 @@ type Topic = {
 function init({ load, render, renderSync }: DataSourcesApi) {
   const markdownToHtml = getMarkdown({ load, render, renderSync });
 
+  function getBookDescription(book: "maintenance" | "react" | "webpack") {
+    switch (book) {
+      case "maintenance":
+        return "TODO";
+      case "react":
+        return "TODO";
+      case "webpack":
+        return `[Webpack](https://webpack.js.org/) is a module bundler meant for building JavaScript applications and sites. In this book, I will go through main features of webpack while teaching you to compose configuration using [webpack-merge](https://www.npmjs.com/package/webpack-merge).
+
+Incidentally, I developed webpack-merge for the purposes of this book and since then it has become a popular solution for taming the complexity of webpack configuration. The book is meant to web developers ranging from beginners to advanced although you should be familiar with the basic ideas behind JavaScript language to get most out of it.
+
+The book content was developed during many years with the help of the community and it complements the official documentation. Even if you know webpack well already, I have taken care to include short summaries capturing the main points of the book so you can fill the gaps in your knowledge and understanding of the tool.`;
+    }
+  }
+
   async function indexBook(directory: string) {
     const chapters = Object.fromEntries((await indexMarkdown(directory, {
       parseHeadmatter: true,
@@ -266,6 +281,7 @@ function init({ load, render, renderSync }: DataSourcesApi) {
   }
 
   return {
+    getBookDescription,
     indexBlog,
     indexBook,
     indexMarkdown,
