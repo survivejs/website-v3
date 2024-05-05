@@ -1,38 +1,30 @@
 <footer class="py-8 font-light border-t-2 border-primary bg-secondary">
   <div class="flex flex-col container mx-auto gap-8">
     <section
-      class="md:mx-auto px-4 sm:px-0 grid grid-cols-2 sm:grid-cols-4 w-full md:max-w-3xl gap-8"
+      class="md:mx-auto px-4 sm:px-0 grid grid-cols-2 sm:grid-cols-4 w-full md:max-w-3xl gap-8 text-lg"
     >
       <div class="flex flex-col">
-        <Heading level="2">Navigation</Heading>
-        <div class="flex flex-col gap-2 font-thin text-sm">
-          <Navigation />
+        <Heading level="2">Books</Heading>
+        <div class="flex flex-col gap-2 text-sm">
+          <SiteLink href="/books/webpack/">Survivejs – Webpack 5</SiteLink>
+          <SiteLink href="/books/maintenance/"
+            >Survivejs – Maintenance</SiteLink
+          >
+          <SiteLink href="/books/react/">Survivejs – React</SiteLink>
         </div>
       </div>
-      <div class="flex flex-col gap-8">
-        <div>
-          <Heading level="2">Books</Heading>
-          <div class="flex flex-col gap-2 font-thin text-sm">
-            <SiteLink href="/books/webpack/">Survivejs – Webpack 5</SiteLink>
-            <SiteLink href="/books/maintenance/"
-              >Survivejs – Maintenance</SiteLink
-            >
-            <SiteLink href="/books/react/">Survivejs – React</SiteLink>
-          </div>
-        </div>
-        <div>
-          <Heading level="2">Conferences</Heading>
-          <div class="flex flex-col gap-2 font-thin text-sm">
-            <SiteLink href="https://futurefrontend.com/"
-              >Future Frontend</SiteLink
-            >
-            <SiteLink href="https://react-finland.fi/">React Finland</SiteLink>
-          </div>
+      <div class="flex flex-col">
+        <Heading level="2">Conferences</Heading>
+        <div class="flex flex-col gap-2 text-sm">
+          <SiteLink href="https://futurefrontend.com/"
+            >Future Frontend</SiteLink
+          >
+          <SiteLink href="https://react-finland.fi/">React Finland</SiteLink>
         </div>
       </div>
       <div class="flex flex-col">
         <Heading level="2">Social</Heading>
-        <div class="flex flex-col gap-2 font-thin text-sm">
+        <div class="flex flex-col gap-2 text-sm">
           <SocialLinks />
         </div>
       </div>
@@ -40,11 +32,11 @@
         <div>
           <Heading level="2">About</Heading>
           <div class="flex flex-col gap-2">
-            <Markdown as="div" class="font-thin text-sm"
+            <Markdown as="div" class="text-sm"
               >SurviveJS is maintained by [Juho
               Vepsäläinen](https://github.com/bebraw).
             </Markdown>
-            <Markdown as="div" class="font-thin text-sm"
+            <Markdown as="div" class="text-sm"
               >You can [find the site source at
               GitHub](https://github.com/survivejs/website-v3).
             </Markdown>
