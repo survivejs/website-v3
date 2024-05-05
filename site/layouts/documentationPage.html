@@ -3,7 +3,7 @@
     <div
       class="md:mx-auto px-4 lg:px-0 w-full md:max-w-3xl flex flex-col gap-8"
     >
-      <div class="flex flex-col gap-8">
+      <article class="flex flex-col gap-8">
         <Heading
           level="1"
           class="font-extrabold text-4xl"
@@ -14,8 +14,8 @@
           class="prose lg:prose-xl"
           &children="(get context document.content)"
         ></div>
-      </div>
-      <div class="flex flex-col gap-8">
+      </article>
+      <section class="flex flex-col gap-8">
         <DocumentationMeta
           &document="(get context document)"
           &previous="(get context document.previous)"
@@ -25,13 +25,13 @@
           <Heading level="2" class="text-lg">Comments</Heading>
           <Disqus />
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <Heading level="2" class="text-lg">Feeling social?</Heading>
         <div class="flex flex-row gap-8">
           <SocialLinks />
         </div>
-      </div>
+      </section>
     </div>
   </slot>
   <slot name="aside">
