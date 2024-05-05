@@ -6,7 +6,14 @@
         level="1"
         &children="(get context meta.title)"
       />
-      <Markdown as="div" &children="(get context fullDescription)" />
+      <div class="flex flex-col md:flex-row gap-4">
+        <Markdown as="div" &children="(get context fullDescription)" />
+        <SiteImage
+          class="not-prose object-contain max-h-64"
+          &src="(get context meta.coverUrl)"
+          &alt="(get context meta.title)"
+        />
+      </div>
       <div &visibleIf="(get context meta.testimonials)">
         <Heading level="2">Testimonials</Heading>
         <div
