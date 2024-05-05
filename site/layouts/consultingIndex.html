@@ -1,76 +1,182 @@
 <BaseLayout>
   <slot name="content">
     <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
-      <Heading class="text-4xl font-extrabold" level="1">Consulting</Heading>
-      <Markdown as="div"
-        >Since officially starting my personal limited company in 2016, I have
-        occasionally worked as a consultant to earn additional income and to
-        develop my competence as consulting cases allow me to stay grounded in
-        reality. In addition, I've been pursuing a doctorate since 2022 with
-        Aalto University. [See my research outputs](/research/) if you are
-        interested in the academic side.
-      </Markdown>
-      <Heading class="text-2xl" level="2">Services</Heading>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
-        <Card>
-          <slot name="header">
-            <Heading level="3" class="font-medium">Custom development</Heading>
-          </slot>
-          <slot name="content"
-            >Occasionally I have been hired to perform custom development.
-            Example cases include developing a complex table component or
-            building up a new system in collaboration with a design system
-            developer. I understand different aspects of modern frontend
-            development well and work best in the interface between frontend and
-            backend that you might characterize as the backend of the
-            frontend.</slot
-          >
-        </Card>
-        <Card>
-          <slot name="header">
-            <Heading level="3" class="font-medium">Workshops</Heading>
-          </slot>
-          <slot name="content"
-            >To train up staff, I have run several workshops throughout the
-            years in my specialized topics. I have focused mainly on webpack and
-            React although I have given workshops on topics like Deno and Qwik
-            too. These days I prefer a hands-on approach and like to run my
-            workshops through predesigned [katas](/workshops/) that allow
-            attendees at different levels understand the topic.</slot
-          >
-        </Card>
-        <Card>
-          <slot name="header">
-            <Heading level="3" class="font-medium">Conferences</Heading>
-          </slot>
-          <slot name="content"
-            ><Markdown
-              >I have been running conferences since 2017 ([React
-              Finland](https://react-finland.fi/), [GraphQL
-              Finland](https://graphql-finland.fi/), [Future
-              Frontend](https://futurefrontend.com/)) and have gained a strong
-              understanding on how the business works. I have run both physical
-              and online events and have operated mainly as a conference
-              director focused on the big picture (concept, speakers,
-              marketing).</Markdown
-            ></slot
-          >
-        </Card>
-        <Card>
-          <slot name="header">
-            <Heading level="3" class="font-medium">Research</Heading>
-          </slot>
-          <slot name="content"
-            >Since 2022, I have been working as a researcher for Aalto
-            University. Through my research, I have learned how the world of
-            scientific publishing works. I have not done any commercial research
-            cases but I have not ruled out the option in case a suitable case
-            becomes available. I have done mainly surveys and empirical research
-            so I understand both qualitative and quantitative ends of the
-            spectrum.</slot
-          >
-        </Card>
-      </div>
+      <section>
+        <Heading class="text-4xl font-extrabold" level="1">Consulting</Heading>
+        <Markdown as="p"
+          >Since officially starting my personal limited company in 2016, I have
+          occasionally worked as a consultant to earn additional income and to
+          develop my competence as consulting cases allow me to stay grounded in
+          reality. In addition, I've been pursuing a doctorate since 2022 at
+          [Aalto University](https://www.aalto.fi/fi).
+        </Markdown>
+      </section>
+      <section>
+        <Heading class="text-2xl" level="2">Services</Heading>
+        <p>I offer a variety of services and I have listed examples below.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium"
+                >Custom development</Heading
+              >
+            </slot>
+            <slot name="content"
+              >Occasionally I have been hired to perform custom development.
+              Example cases include developing a complex table component or
+              building up a new system in collaboration with a design system
+              developer. I understand different aspects of modern frontend
+              development well and work best in the interface between frontend
+              and backend that you might characterize as the backend of the
+              frontend.</slot
+            >
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Workshops</Heading>
+            </slot>
+            <slot name="content"
+              ><Markdown as="p"
+                >To train up staff, I have run several workshops throughout the
+                years in my specialized topics. I have focused mainly on webpack
+                and React although I have given workshops on topics like Deno
+                and Qwik too. These days I prefer a hands-on approach and like
+                to [run my workshops through predesigned katas](/workshops/)
+                that allow attendees at different levels understand the topic
+                and dive straight into the topic. I can also provide a short
+                lecture on the topic in the beginning if needed.</Markdown
+              ></slot
+            >
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium"
+                >Conference organizing</Heading
+              >
+            </slot>
+            <slot name="content"
+              ><Markdown as="p"
+                >I have been running conferences since 2017 ([React
+                Finland](https://react-finland.fi/), [GraphQL
+                Finland](https://graphql-finland.fi/), [Future
+                Frontend](https://futurefrontend.com/)) and have gained a strong
+                understanding on how the business works. I have run both
+                physical and online events and have operated mainly as a
+                conference director focused on the big picture (concept,
+                speakers, marketing). In case you have questions related how to
+                build up your own concept, I might some kind of answers to
+                this.</Markdown
+              ></slot
+            >
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Research</Heading>
+            </slot>
+            <slot name="content"
+              ><Markdown as="p"
+                >Since 2022, I have been working as a doctoral researcher for
+                Aalto University. Through my research, I have learned how the
+                world of scientific publishing works. I have not done any
+                commercial research cases but I have not ruled out the option in
+                case a suitable case becomes available. I have done mainly
+                surveys and empirical research so I understand both qualitative
+                and quantitative ends of the spectrum. [See my research
+                outputs](/research/) if you are interested in the academic
+                side.</Markdown
+              ></slot
+            >
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Cleaning up</Heading>
+            </slot>
+            <slot name="content"
+              >Let's face it, not all development is clean and sometimes you
+              have to go fast and make a mess. That is the situation when you
+              might need someone like me to address your technical debt in a
+              fast and effective manner. I can support your clean-up efforts on
+              different levels by for example doing a superficial review to
+              provide clear points for improvements or dig down into details and
+              for example migrate your webpack configuration to the latest
+              standard or a more effective tool.</slot
+            >
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Coaching</Heading>
+            </slot>
+            <slot name="content"
+              >These days I tend to work a lot with university students as they
+              learn academic writing. In case you are looking for a personal
+              coach, you could hire me to spend a focused hour or two per week
+              around development and JavaScript related topics in your mind to
+              grow as a professional. I am happy to provide my expertise to you
+              in the form of coaching.</slot
+            >
+          </Card>
+        </div>
+      </section>
+      <section>
+        <Heading class="text-2xl" level="2">References</Heading>
+        <Markdown as="p"
+          >I have worked with numerous companies during my career as a
+          consultant. To mention some, consider the following list:
+          [AlphaSense](https://www.alpha-sense.com/),
+          [eBay](https://www.ebay.de/), [Kitchen
+          Reklamebyrå](http://www.kitchen.no/), [Kleiner
+          Perkins](https://www.kleinerperkins.com/),
+          [Typeform](https://www.typeform.com/), [Wix](https://www.wix.com/),
+          [Xeneta](https://www.xeneta.com/).</Markdown
+        >
+      </section>
+      <section>
+        <Heading class="text-2xl" level="2">Testimonials</Heading>
+        <p>
+          I have listed several of my testimonials below. In some cases I bring
+          needed additional expertise on board through my broad personal
+          networks to complement my own knowledge.
+        </p>
+        <ul>
+          <li>
+            <Markdown
+              >[Kapsch](http://www.kapsch.net/) - "Great and helpful workshops
+              with @bebraw @filipematossilv and @wSokra Thank you, guys. Great
+              work!"
+              [Source](https://twitter.com/aalbericio/status/935574136528818177).</Markdown
+            >
+          </li>
+          <li>
+            <Markdown
+              >[Namics](https://www.namics.com/) - "This will bring our Webpack
+              builds to the next level: great workshop with deep knowledge from
+              @bebraw and @wsokra. Thank you guys!"</Markdown
+            >
+          </li>
+          <li>
+            <Markdown
+              >[Quantifio](http://www.quantifio.no/) - "I learned and understood
+              more of webpack in a two-hour masterclass than all previous
+              training combined. Juho has the skills and repertoire to improvise
+              content and fine tune relevancy - he connected the dots on
+              specific topics in an Electron environment and had the answers you
+              wont find online."</Markdown
+            >
+          </li>
+        </ul>
+      </section>
+      <section>
+        <Heading class="text-2xl" level="2">How to hire me?</Heading>
+        <Markdown as="p"
+          >In case you are interested in hiring me or collaborating in some
+          manner, [please fill my contact
+          form](https://goo.gl/forms/OWdGIOdHm9") and I will get back to you.
+          Generally more specialized and intense work tends to be more expensive
+          while lower commitment tends to come with a lower price. I cannot
+          guarantee instant or full-time availability, but the situation can
+          change fast so it is worth sending a query regardless.
+        </Markdown>
+      </section>
     </div>
   </slot>
 </BaseLayout>
