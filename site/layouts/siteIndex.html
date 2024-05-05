@@ -7,19 +7,56 @@
         <div class="flex flex-row gap-4 not-prose">
           <Heading class="text-4xl font-extrabold" level="1">SurviveJS</Heading>
           <span class="text-2xl content-end text-muted"
-            >From apprentice to master</span
+            >Grom from an apprentice to master of JavaScript</span
           >
         </div>
 
-        <Markdown as="div"
+        <Markdown as="p"
           >Welcome to survivejs.com. I (Juho Vepsäläinen) have gathered material
-          related to JavaScript since 2016. In addition to [books](/books/),
-          make sure to [check out the blog](/blog/), [my open source
-          projects](/open-source/), and [academic research](/research/). You can
-          consider this site as a learning resource where I capture my
-          learnings. The level of the material varies from beginner to bleeding
-          edge.
+          related to JavaScript since 2016. You can consider this site as a
+          learning resource at different levels where I have gathered my
+          learnings about the topic. Given JavaScript is a broad subject, I have
+          divided the site as follows:
         </Markdown>
+        <ul>
+          <li>
+            <SiteLink href="/books/"
+              >In the books section you can find my larger writings about
+              JavaScript.</SiteLink
+            >
+            Currently maintenance,
+            <SiteLink href="https://react.dev/">React</SiteLink>, and
+            <SiteLink href="https://webpack.js.org/">webpack</SiteLink> (most up
+            to date book) are covered.
+          </li>
+          <li>
+            <SiteLink href="/blog/"
+              >The blog contains numerous of developer interviews (200+) and
+              shorter posts about JavaScript.</SiteLink
+            >
+          </li>
+          <li>
+            <SiteLink href="/research/"
+              >In the academic research section you can find my papers about the
+              topics.</SiteLink
+            >
+            I have taken care to include enough background material in my papers
+            to keep them accessible so it is not as dry as you might think.
+          </li>
+          <li>
+            <SiteLink href="/workshops/"
+              >I have gathered material related to my recent workshops at the
+              workshops section of the site.</SiteLink
+            >
+            Currently <SiteLink href="https://qwik.dev/">Qwik</SiteLink>,
+            <SiteLink href="https://deno.com/">Deno</SiteLink>, and
+            <SiteLink
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
+              >Web Audio</SiteLink
+            >
+            are covered.
+          </li>
+        </ul>
         <Markdown as="div"
           >Most of the content is freely available although you can support my
           efforts by buying [books](/books/) or considering some form of
@@ -34,7 +71,9 @@
           users of React. You could consider the site itself as a learning
           resource as I have built it using Tailwind syntax and you can
           copy/paste from the source easily although my custom components have
-          been removed from the output.</Markdown
+          been removed from the output although [you can find the custom
+          components at
+          GitHub](https://github.com/survivejs/website-v3).</Markdown
         >
       </div>
     </div>
