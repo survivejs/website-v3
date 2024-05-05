@@ -1,5 +1,4 @@
 .DS_Store
-.antwar/
 .gustwind/
 .wrangler
 build/
@@ -7,6 +6,5 @@ node_modules/
 *.diff
 *.log
 books/
-*.emotion.css
 .dev.vars
 .images.json
