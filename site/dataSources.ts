@@ -41,9 +41,9 @@ function init({ load, render, renderSync }: DataSourcesApi) {
   function getBookDescription(book: "maintenance" | "react" | "webpack") {
     switch (book) {
       case "maintenance":
-        return "TODO";
+        return "The maintenance book captures good practices related to developing and maintaining JavaScript applications or packages at scale. I co-authored the book with [Artem Sapegin](https://sapegin.me/) and the book is not yet fully complete although completion and a bigger update is planned.";
       case "react":
-        return "TODO";
+        return "[React](https://react.dev/) is a popular library for developing JavaScript applications and websites. In this book, you will implement a simple Kanban application step-wise. Note that the book is still using old class-based syntax and needs an update to the latest. You can follow the book with the help of the official documentation for now, however.";
       case "webpack":
         return `[Webpack](https://webpack.js.org/) is a module bundler meant for building JavaScript applications and sites. In this book, I will go through main features of webpack while teaching you to compose configuration using [webpack-merge](https://www.npmjs.com/package/webpack-merge).
 
