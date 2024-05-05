@@ -17,10 +17,12 @@
     </div>
   </slot>
   <slot name="footer">
-    <SiteLink
-      class="text-sm text-muted"
-      &href="(get props website)"
-      &children="(get props websiteLabel 'Website')"
-    />
+    <Rounded>
+      <SiteLink
+        class="text-sm text-muted px-1"
+        &href="(get props website)"
+        &children="(get props websiteLabel 'Website')"
+      />
+    </Rounded>
   </slot>
 </Card>

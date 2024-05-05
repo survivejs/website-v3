@@ -9,11 +9,13 @@
     </slot>
     <slot name="footer">
       <div class="flex flex-row justify-between">
-        <SiteLink
-          class="text-sm text-muted"
-          &href="(urlJoin (get props linkPrefix) (get props data.slug) /)"
-          >Read the post</SiteLink
-        >
+        <Rounded>
+          <SiteLink
+            class="text-sm text-muted p-1"
+            &href="(urlJoin (get props linkPrefix) (get props data.slug) /)"
+            >Read the post</SiteLink
+          >
+        </Rounded>
         <div class="text-xs text-muted flex flex-row gap-1">
           <span>Published:</span>
           <FormattedTime &date="(get props data.date)" />
