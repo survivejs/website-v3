@@ -1,7 +1,7 @@
 <div class="border p-4 flex flex-col gap-2 justify-between hover:bg-gray-50">
   <div
     &visibleIf="(or (get props header) (get props content))"
-    class="flex flex-col justify-between"
+    class="flex flex-col justify-between gap-2"
   >
     <div &visibleIf="(get props header)" &children="(get props header)" />
     <div &visibleIf="(get props content)" &children="(get props content)" />
