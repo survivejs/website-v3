@@ -3,9 +3,9 @@
     <section
       class="md:mx-auto px-4 sm:px-0 grid grid-cols-2 sm:grid-cols-4 w-full md:max-w-3xl gap-8 text-lg"
     >
-      <div class="flex flex-col">
-        <Heading level="2">Books</Heading>
-        <div class="flex flex-col gap-2 text-sm">
+      <div class="flex flex-col gap-2">
+        <Heading level="2" class="font-medium">Books</Heading>
+        <div class="flex flex-col gap-4 md:gap-2 md:text-sm">
           <SiteLink href="/books/webpack/">Survivejs – Webpack 5</SiteLink>
           <SiteLink href="/books/maintenance/"
             >Survivejs – Maintenance</SiteLink
@@ -13,34 +13,32 @@
           <SiteLink href="/books/react/">Survivejs – React</SiteLink>
         </div>
       </div>
-      <div class="flex flex-col">
-        <Heading level="2">Conferences</Heading>
-        <div class="flex flex-col gap-2 text-sm">
+      <div class="flex flex-col gap-2">
+        <Heading level="2" class="font-medium">Conferences</Heading>
+        <div class="flex flex-col gap-4 md:gap-2 md:text-sm">
           <SiteLink href="https://futurefrontend.com/"
             >Future Frontend</SiteLink
           >
           <SiteLink href="https://react-finland.fi/">React Finland</SiteLink>
         </div>
       </div>
-      <div class="flex flex-col">
-        <Heading level="2">Social</Heading>
-        <div class="flex flex-col gap-2 text-sm">
+      <div class="flex flex-col gap-2">
+        <Heading level="2" class="font-medium">Feeling social?</Heading>
+        <div class="flex flex-col gap-4 md:gap-2 md:text-sm">
           <SocialLinks />
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <div>
-          <Heading level="2">About</Heading>
-          <div class="flex flex-col gap-2">
-            <Markdown as="div" class="text-sm"
-              >SurviveJS is maintained by [Juho
-              Vepsäläinen](https://github.com/bebraw).
-            </Markdown>
-            <Markdown as="div" class="text-sm"
-              >You can [find the site source at
-              GitHub](https://github.com/survivejs/website-v3).
-            </Markdown>
-          </div>
+        <Heading level="2" class="font-medium">About</Heading>
+        <div class="flex flex-col gap-4 md:gap-2">
+          <Markdown as="div" class="md:text-sm"
+            >SurviveJS is maintained by [Juho
+            Vepsäläinen](https://github.com/bebraw).
+          </Markdown>
+          <Markdown as="div" class="md:text-sm"
+            >You can [find the site source at
+            GitHub](https://github.com/survivejs/website-v3).
+          </Markdown>
         </div>
       </div>
     </section>
