@@ -6,15 +6,31 @@
         level="1"
         &children="(get context meta.title)"
       />
-      <div class="flex flex-col md:flex-row gap-8">
+      <section class="flex flex-col md:flex-row gap-8">
         <Markdown as="div" &children="(get context fullDescription)" />
-        <SiteImage
-          class="not-prose object-contain max-h-64"
-          &src="(get context meta.coverUrl)"
-          &alt="(get context meta.title)"
-        />
-      </div>
-      <div &visibleIf="(get context meta.testimonials)">
+        <div class="max-h-64 flex flex-col gap-4 not-prose">
+          <SiteImage
+            class="object-contain"
+            &src="(get context meta.coverUrl)"
+            &alt="(get context meta.title)"
+          />
+          <Rounded>
+            <SiteLink
+              class="m-2"
+              href="./introduction"
+              &children="(concat 'Read the' ' ' (get context meta.topic) ' ' 'book' )"
+            />
+          </Rounded>
+          <Rounded>
+            <SiteLink
+              class="m-2"
+              &href="(get context meta.bookUrls.leanpub)"
+              &children="(concat 'Buy the' ' ' (get context meta.topic) ' ' 'book' )"
+            />
+          </Rounded>
+        </div>
+      </section>
+      <section &visibleIf="(get context meta.testimonials)">
         <Heading level="2">Testimonials</Heading>
         <div
           class="grid grid-cols-2 sm:grid-cols-3 gap-4 not-prose"
@@ -29,8 +45,8 @@
             &text="(get props text)"
           />
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <Heading level="2">Availability</Heading>
         <Markdown
           >Although you can [read the book online for free](./introduction/),
@@ -55,8 +71,8 @@
             >
           </li>
         </ul>
-      </div>
-      <div>
+      </section>
+      <section>
         <Heading level="2">Table of contents</Heading>
         <ol class="flex flex-col gap-2" &foreach="(get context chapters)">
           <li>
@@ -69,7 +85,7 @@
             </div>
           </li>
         </ol>
-      </div>
+      </section>
     </div>
   </slot>
 </BaseLayout>

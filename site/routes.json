@@ -98,6 +98,7 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – Webpack 5",
+          "topic": "webpack",
           "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript.",
           "bookUrls": {
             "amazon": "https://www.amazon.com/dp/B08P2C69PR",
@@ -196,6 +197,7 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – React",
+          "topic": "React",
           "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework.",
           "coverUrl": "/assets/img/covers/react-cover.svg",
           "bookUrls": {
@@ -246,6 +248,7 @@
         "layout": "bookPage",
         "meta": {
           "title": "SurviveJS – Maintenance",
+          "topic": "maintenance",
           "coverUrl": "/assets/img/covers/maintenance-cover.svg",
           "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages.",
           "bookUrls": {
