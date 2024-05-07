@@ -1,10 +1,12 @@
 {
   "/": {
     "layout": "siteIndex",
-    "meta": {
-      "title": "SurviveJS",
-      "description": "Get started with JavaScript and related technologies",
-      "keywords": "JavaScript, React, webpack, web development"
+    "context": {
+      "meta": {
+        "title": "SurviveJS",
+        "description": "Get started with JavaScript and related technologies",
+        "keywords": "JavaScript, React, webpack, web development"
+      }
     },
     "dataSources": {
       "blogPosts": {
@@ -15,9 +17,11 @@
   },
   "blog": {
     "layout": "blogIndex",
-    "meta": {
-      "title": "SurviveJS - Blog",
-      "description": "Read blog interviews to learn more about JavaScript and related technologies"
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Blog",
+        "description": "Read blog interviews to learn more about JavaScript and related technologies"
+      }
     },
     "dataSources": {
       "blogPosts": {
@@ -43,23 +47,27 @@
           ]
         }
       },
-      "meta": {
-        "title": {
-          "utility": "get",
-          "parameters": ["context", "document.data.title"]
-        },
-        "description": {
-          "utility": "get",
-          "parameters": ["context", "document.data.description"]
+      "context": {
+        "meta": {
+          "title": {
+            "utility": "get",
+            "parameters": ["context", "document.data.title"]
+          },
+          "description": {
+            "utility": "get",
+            "parameters": ["context", "document.data.description"]
+          }
         }
       }
     },
     "routes": {
       "topics": {
         "layout": "topicIndex",
-        "meta": {
-          "title": "SurviveJS - Blog topics",
-          "description": "Blog topics"
+        "context": {
+          "meta": {
+            "title": "SurviveJS - Blog topics",
+            "description": "Blog topics"
+          }
         },
         "dataSources": {
           "topics": {
@@ -82,24 +90,39 @@
               "operation": "processTopic"
             }
           },
-          "meta": {}
+          "context": {
+            "meta": {
+              "title": {
+                "utility": "get",
+                "parameters": ["context", "topic.title"]
+              },
+              "description": {
+                "utility": "get",
+                "parameters": ["context", "topic.data.description"]
+              }
+            }
+          }
         }
       }
     }
   },
   "books": {
     "layout": "booksIndex",
-    "meta": {
-      "title": "SurviveJS - Books",
-      "description": "I have listed my books related to JavaScript on this page."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Books",
+        "description": "I have listed my books related to JavaScript on this page."
+      }
     },
     "routes": {
       "webpack": {
         "layout": "bookPage",
-        "meta": {
-          "title": "SurviveJS – Webpack 5",
+        "context": {
+          "meta": {
+            "title": "SurviveJS – Webpack 5",
+            "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript."
+          },
           "topic": "webpack",
-          "description": "The webpack book gives you an overview of webpack, a module bundler meant for JavaScript.",
           "bookUrls": {
             "amazon": "https://www.amazon.com/dp/B08P2C69PR",
             "leanpub": "https://leanpub.com/survivejs-webpack",
@@ -181,24 +204,28 @@
               "parameters": ["webpack"]
             }
           },
-          "meta": {
-            "title": {
-              "utility": "get",
-              "parameters": ["context", "document.data.title"]
-            },
-            "description": {
-              "utility": "get",
-              "parameters": ["context", "document.data.description"]
+          "context": {
+            "meta": {
+              "title": {
+                "utility": "get",
+                "parameters": ["context", "document.data.title"]
+              },
+              "description": {
+                "utility": "get",
+                "parameters": ["context", "document.data.description"]
+              }
             }
           }
         }
       },
       "react": {
         "layout": "bookPage",
-        "meta": {
-          "title": "SurviveJS – React",
+        "context": {
+          "meta": {
+            "title": "SurviveJS – React",
+            "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework."
+          },
           "topic": "React",
-          "description": "The React book uses a simple Kanban-based example to discuss through different features of React UI framework.",
           "coverUrl": "/assets/img/covers/react-cover.svg",
           "bookUrls": {
             "amazon": "",
@@ -232,25 +259,29 @@
               "parameters": ["react"]
             }
           },
-          "meta": {
-            "title": {
-              "utility": "get",
-              "parameters": ["context", "document.data.title"]
-            },
-            "description": {
-              "utility": "get",
-              "parameters": ["context", "document.data.description"]
+          "context": {
+            "meta": {
+              "title": {
+                "utility": "get",
+                "parameters": ["context", "document.data.title"]
+              },
+              "description": {
+                "utility": "get",
+                "parameters": ["context", "document.data.description"]
+              }
             }
           }
         }
       },
       "maintenance": {
         "layout": "bookPage",
-        "meta": {
-          "title": "SurviveJS – Maintenance",
+        "context": {
+          "meta": {
+            "title": "SurviveJS – Maintenance",
+            "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages."
+          },
           "topic": "maintenance",
           "coverUrl": "/assets/img/covers/maintenance-cover.svg",
-          "description": "The maintenance book shows you how to maintain your JavaScript projects and publish new packages.",
           "bookUrls": {
             "amazon": "",
             "leanpub": "https://leanpub.com/survivejs-maintenance",
@@ -283,14 +314,16 @@
               "parameters": ["maintenance"]
             }
           },
-          "meta": {
-            "title": {
-              "utility": "get",
-              "parameters": ["context", "document.data.title"]
-            },
-            "description": {
-              "utility": "get",
-              "parameters": ["context", "document.data.description"]
+          "context": {
+            "meta": {
+              "title": {
+                "utility": "get",
+                "parameters": ["context", "document.data.title"]
+              },
+              "description": {
+                "utility": "get",
+                "parameters": ["context", "document.data.description"]
+              }
             }
           }
         }
@@ -299,52 +332,67 @@
   },
   "open-source": {
     "layout": "openSourceIndex",
-    "meta": {
-      "title": "SurviveJS - Open source",
-      "description": "Through the years, I have contributed to open source in various ways."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Open source",
+        "description": "Through the years, I have contributed to open source in various ways."
+      }
     }
   },
   "research": {
     "layout": "researchIndex",
-    "meta": {
-      "title": "SurviveJS - Research",
-      "description": "As a part of my studies, I have performed some research related to computer science."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Research",
+        "description": "As a part of my studies, I have performed some research related to computer science."
+      }
     }
   },
   "consulting": {
     "layout": "consultingIndex",
-    "meta": {
-      "title": "SurviveJS - Consulting",
-      "description": "I do occasional software consulting through my personal company."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Consulting",
+        "description": "I do occasional software consulting through my personal company."
+      }
     }
   },
   "workshops": {
     "layout": "workshopsIndex",
-    "meta": {
-      "title": "SurviveJS - Workshops",
-      "description": "I have prepared a series of workshops on different programming topics."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Workshops",
+        "description": "I have prepared a series of workshops on different programming topics."
+      }
     }
   },
   "presentations": {
     "layout": "presentationsIndex",
-    "meta": {
-      "title": "SurviveJS - Presentations",
-      "description": "I have compiled slides of several of my presentations on this page."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Presentations",
+        "description": "I have compiled slides of several of my presentations on this page."
+      }
     }
   },
   "search": {
     "layout": "searchIndex",
-    "meta": {
-      "title": "SurviveJS - Search",
-      "description": "You can search the site contents using this page."
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Search",
+        "description": "You can search the site contents using this page."
+      }
     }
   },
   "atom.xml": {
     "layout": "rssPage",
-    "meta": {
-      "title": "SurviveJS",
-      "description": "SurviveJS blog"
+    "context": {
+      "meta": {
+        "title": "SurviveJS",
+        "description": "SurviveJS blog"
+      }
     },
+
     "dataSources": {
       "blogPosts": {
         "operation": "indexBlog",
@@ -354,9 +402,11 @@
   },
   "404.html": {
     "layout": "404",
-    "meta": {
-      "title": "SurviveJS - Page not found",
-      "description": "This page does not exist"
+    "context": {
+      "meta": {
+        "title": "SurviveJS - Page not found",
+        "description": "This page does not exist"
+      }
     }
   }
 }

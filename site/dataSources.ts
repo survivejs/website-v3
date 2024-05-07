@@ -117,6 +117,7 @@ The book content was developed during many years with the help of the community 
 
     return keywordsArray.map((topic) => ({
       title: resolveKeywordToTitle(topic),
+      description: topic, // TODO: This could be more accurate
       posts: keywords[topic].toSorted((a, b) =>
         b.data.date.getTime() - a.data.date.getTime()
       ),

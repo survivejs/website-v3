@@ -11,30 +11,30 @@
         <div class="max-h-64 flex flex-col gap-4 not-prose">
           <SiteImage
             class="object-contain"
-            &src="(get context meta.coverUrl)"
+            &src="(get context coverUrl)"
             &alt="(get context meta.title)"
           />
           <Rounded>
             <SiteLink
               class="m-2"
               href="./introduction"
-              &children="(concat 'Read the' ' ' (get context meta.topic) ' ' 'book' )"
+              &children="(concat 'Read the' ' ' (get context topic) ' ' 'book' )"
             />
           </Rounded>
           <Rounded>
             <SiteLink
               class="m-2"
-              &href="(get context meta.bookUrls.leanpub)"
-              &children="(concat 'Buy the' ' ' (get context meta.topic) ' ' 'book' )"
+              &href="(get context bookUrls.leanpub)"
+              &children="(concat 'Buy the' ' ' (get context topic) ' ' 'book' )"
             />
           </Rounded>
         </div>
       </section>
-      <section &visibleIf="(get context meta.testimonials)">
+      <section &visibleIf="(get context testimonials)">
         <Heading level="2">Testimonials</Heading>
         <div
           class="grid grid-cols-2 sm:grid-cols-3 gap-4 not-prose"
-          &foreach="(get context meta.testimonials)"
+          &foreach="(get context testimonials)"
         >
           <TestimonialCard
             &website="(get props website)"
@@ -55,18 +55,18 @@
           options.
         </Markdown>
         <ul>
-          <li &visibleIf="(get context meta.bookUrls.leanpub)">
-            <SiteLink &href="(get context meta.bookUrls.leanpub)"
+          <li &visibleIf="(get context bookUrls.leanpub)">
+            <SiteLink &href="(get context bookUrls.leanpub)"
               >Leanpub (digital, always up to date with the site)</SiteLink
             >
           </li>
-          <li &visibleIf="(get context meta.bookUrls.amazon)">
-            <SiteLink &href="(get context meta.bookUrls.amazon)"
+          <li &visibleIf="(get context bookUrls.amazon)">
+            <SiteLink &href="(get context bookUrls.amazon)"
               >Amazon (paperback, last major revision)</SiteLink
             >
           </li>
-          <li &visibleIf="(get context meta.bookUrls.kindle)">
-            <SiteLink &href="(get context meta.bookUrls.kindle)"
+          <li &visibleIf="(get context bookUrls.kindle)">
+            <SiteLink &href="(get context bookUrls.kindle)"
               >Kindle (digital, last major revision)</SiteLink
             >
           </li>
