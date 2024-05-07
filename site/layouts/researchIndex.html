@@ -2,20 +2,191 @@
   <slot name="content">
     <div class="md:mx-auto px-4 md:px-0 w-full lg:max-w-3xl prose">
       <Heading class="text-4xl" level="1">Research</Heading>
-      <Markdown as="div"
-        >My research focuses mainly on static site generation, edge computing,
-        islands architecture, and web architectures. You can get the best
-        overview of my research outputs through
-        [ORCID](https://orcid.org/0000-0003-0025-5540),
-        [ResearchGate](https://www.researchgate.net/profile/Juho-Vepsaelaeinen),
-        or [Google
-        Scholar](https://scholar.google.com/citations?user=vf9Y1xQAAAAJ). I have
-        listed several of my main papers below and you can find more from the
-        aforementioned sources.</Markdown
+      <Markdown as="p"
+        >For the completion of my PhD, I have produced several papers. You can
+        [find all of the papers I have written at
+        ORCID](https://orcid.org/0000-0003-0025-5540) and you can find a
+        collection of few on this page in addition to other related
+        works.</Markdown
       >
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
-        <Research />
-      </div>
+      <section>
+        <Heading level="2">Papers</Heading>
+        <Markdown as="p"
+          >My research focuses mainly on static site generation, edge computing,
+          islands architecture, and web architectures. You can get the best
+          overview of my research outputs through
+          [ORCID](https://orcid.org/0000-0003-0025-5540),
+          [ResearchGate](https://www.researchgate.net/profile/Juho-Vepsaelaeinen),
+          or [Google
+          Scholar](https://scholar.google.com/citations?user=vf9Y1xQAAAAJ). I
+          have listed several of my main papers below and you can find more from
+          the aforementioned sources.</Markdown
+        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+          <Research />
+        </div>
+      </section>
+      <section>
+        <Heading level="2">Booklets</Heading>
+        <Markdown as="p"
+          >As a part of coursework, I authored a short booklet under the title
+          "Disappearing frameworks explained". [The booklet was published in
+          2023 through arXiv.](https://arxiv.org/pdf/2309.03201)</Markdown
+        >
+      </section>
+      <section>
+        <Heading level="2">Advisory work</Heading>
+        <Markdown as="p"
+          >During my studies, I have worked as an advisor for several theses.
+          You can find a selection below.</Markdown
+        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+          <ContentCard
+            title="Improving the Initial Rendering Performance of React Applications Through Contemporary Rendering Approaches (Touko Lonka, 2023, MSc)"
+            websiteLabel="Read about initial rendering performance"
+            website="https://aaltodoc.aalto.fi/items/1d6ae644-a536-4607-b4e3-60c70b29f8e8"
+          >
+            <slot name="content"
+              >Modern JavaScript frameworks have enabled the development of
+              interactive and user-friendly web applications. Over the past
+              decade, React has become the leading user interface framework in
+              the JavaScript world, contributing to the rise of Single Page
+              Applications (SPA). However, the extensive development of SPAs has
+              led to an increase in the amount of client-side JavaScript, thus
+              triggering performance issues in terms of initial loading
+              times.<br />The speed at which a web application is initially
+              rendered can significantly influence its potential for revenue
+              generation, as the initial loading time often determines whether a
+              user stays on or abandons a web page. Recognizing the integral
+              role of the initial loading speed in user retention, this study
+              delves into the realm of performance optimization strategies,
+              focusing predominantly on the use of React-like UI frameworks and
+              meta-frameworks as a means to improve the initial rendering
+              performance of web applications. Through this exploration, we aim
+              to provide a comprehensive understanding of contemporary rendering
+              approaches and their role in enhancing web application
+              performance.<br />To compare the performance impacts of various
+              rendering approaches, we implement a React application simulating
+              the dynamics of a real-world e-commerce platform and replicate the
+              same application through multiple technologies. These technologies
+              include the UI frameworks Preact, Qwik, and Solid, as well as the
+              meta-frameworks Next, Astro, and Qwik City. Finally, we provide
+              extensive benchmarks to measure the page weights and initial
+              rendering performance of each application version.<br />Our
+              findings demonstrate that the utilization of React-like UI
+              frameworks and meta-frameworks can considerably decrease the
+              amount of JavaScript downloaded by the client, contributing to
+              improved initial rendering times. The most promising results are
+              achieved by using meta-frameworks for extending the capabilities
+              of UI frameworks with modern rendering strategies like Server-Side
+              Rendering and Static Site Generation. However, these approaches
+              often present significant trade-offs, such as increased Server
+              Response Times and extended build durations.</slot
+            >
+          </ContentCard>
+          <ContentCard
+            title="Upcoming JavaScript web frameworks and their techniques (Juho Paakkanen, 2023, BSc)"
+            websiteLabel="Read about upcoming JavaScript frameworks"
+            website="https://www.researchgate.net/publication/376835044_Upcoming_JavaScript_web_frameworks_and_their_techniques"
+          >
+            <slot name="content"
+              >The interactivity and size of web applications have continuously
+              increased, resulting in the fact that user interface frameworks
+              alone often no longer meet the requirements of modern
+              applications. To solve this, one of the latest trends in web
+              software development has been using server-side rendering to
+              improve the user experience. However, this has made the developer
+              experience more complex, as a separate meta-framework must be
+              included to achieve desired server-side functionalities. This
+              thesis explores current mainstream and upcoming JavaScript web
+              frameworks and their techniques by studying front-end frameworks
+              and meta-frameworks. The research question the thesis aims to
+              answer is: ”What benefits does the latest generation of JavaScript
+              web frameworks offer over mainstream ones?” The goal is to find
+              the best techniques for future web software development by
+              analyzing research and observing practical trends. This is carried
+              out through a literature review and by presenting the
+              implementations of the selected frameworks. The frameworks
+              selected for examination are React, Next, Svelte, Qwik, Astro, and
+              HTMX. Many benefits of using upcoming frameworks and novel
+              techniques were found. Newer solutions offer smaller runtime
+              sizes, more efficient rendering approaches, and often a better
+              developer experience. These are achieved by techniques such as
+              more extensive compiler use and adopting finely-grained reactivity
+              with signals. Most of this progress is incremental, and the
+              benefits are mostly relevant for specific use cases. However, Qwik
+              uses a technique called resumability, which might fundamentally
+              change the currently prevalent server-side rendering by
+              eliminating the need for hydration. Lastly, it is important to
+              recognize that artificial intelligence will most likely have a
+              significant impact on the future of web development.</slot
+            >
+          </ContentCard>
+          <ContentCard
+            title="Private Key Vulnerabilities in Browser Wallets (Jaakko Pentinsaari, 2023, BSc)"
+            websiteLabel="Read about private key vulnerabilities"
+            website="https://www.researchgate.net/publication/377397278_Private_Key_Vulnerabilities_in_Browser_Wallets"
+          >
+            <slot name="content"
+              >Blockchain technology and cryptocurrencies have gained
+              significant attention both as a research topic as well as a
+              platform for entertainment and finance services. The space has
+              progressed from just currency to where it is now possible to also
+              run a decentralized virtual machine that executes program code
+              written on the blockchain. This decentralized virtual machine
+              state allows developers to implement transactions and
+              authentication that enable payment for services and proving
+              ownership of digital assets. Implementing and using these
+              technologies, however, has its own security concerns. One popular
+              solution for users is a wallet that is conveniently stored in the
+              browser and can easily interact with websites. This paper proposes
+              how malicious extensions, screenshot attacks, keyloggers, XSS and
+              malware could be used to steal private keys from the
+              aforementioned browser wallets. It turns out that the secret
+              recovery phrase protocol in popular browser wallet applications is
+              particularly vulnerable and could be exploited with screenshots or
+              keyloggers.</slot
+            >
+          </ContentCard>
+          <ContentCard
+            title="The Effects of Architectural Design Decisions on Framework Adoption: A Comparative Evaluation of Meta-Frameworks in Modern Web Development (Joel Hassan, 2024, MSc)"
+            websiteLabel="Read about initial rendering performance"
+            website="https://www.researchgate.net/publication/380342898_The_Effects_of_Architectural_Design_Decisions_on_Framework_Adoption_A_Comparative_Evaluation_of_Meta-Frameworks_in_Modern_Web_Development"
+          >
+            <slot name="content"
+              >The rise of JavaScript meta-frameworks has transformed the
+              development of web applications in recent years. Alongside
+              established frameworks, such as Next.js, more recent entrants,
+              such as Astro and Qwik City have introduced novel approaches cen-
+              tred on simplifying developer experience and improving the
+              perceived performance of applications for users. The competitive
+              nature of the meta-framework space and the long-term impact of
+              framework choice on projects calls for an understanding of the
+              factors that drive framework adoption. This research first
+              delineates extensibility, ease of migration and updates as a set
+              of adoption factors based on prior research and their relevance to
+              modern meta- frameworks. The factors form a basis of evaluating
+              three meta-frameworks—Next.js, Astro, and Qwik City—selected based
+              on their popularity, design, and phase on the innovation curve. A
+              developer survey is conducted to complement the analysis,
+              gathering insights from developers on the value they associate
+              with architectural aspects and their personal experiences with the
+              selected frameworks. The findings substantiate previous research
+              that identified learnability and extensibility as primary adoption
+              drivers. The main risks driving unadoption involve complexity
+              associated with a high degree of configurability and the perceived
+              framework lock-in due to an abundance of framework-specific
+              concepts. Despite shared authoring experiences across evaluated
+              meta-frameworks, the analysis indicates that newer frameworks are
+              showing potential to considerably enhance user and developer
+              experiences by focusing on a simplified authoring experience,
+              addressing issues related to the transmission of application logic
+              from the server to the client and providing more fine-grained
+              approaches to managing client-side JavaScript.</slot
+            >
+          </ContentCard>
+        </div>
+      </section>
     </div>
   </slot>
 </BaseLayout>
