@@ -16,14 +16,26 @@
       <div
         class="xl:w-full flex flex-col flex-wrap xl:flex-row xl:justify-between gap-4 text-lg"
       >
-        <div class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:mr-auto">
+        <div
+          class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:mr-auto items-center"
+        >
           <Navigation class="!no-underline" />
         </div>
-        <div class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:ml-auto">
-          <SiteLink class="!no-underline" href="/search/">Search</SiteLink>
+        <div
+          class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:ml-auto items-center"
+          x-state="{ showSearch: false }"
+        >
+          <Rounded
+            ><button class="px-2" onclick="setState({ showSearch: true })">
+              Search
+            </button></Rounded
+          >
           <SiteLink class="!no-underline" href="https://twitter.com/survivejs/"
             >@survivejs</SiteLink
           >
+          <div x-attr @class="!state.showSearch && 'hidden'" hidden x-cloak>
+            <Modal><PageFind /></Modal>
+          </div>
         </div>
       </div>
       <div
