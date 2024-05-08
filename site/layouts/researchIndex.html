@@ -42,6 +42,43 @@
         >
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
           <ContentCard
+            title="Survey of Serverless Edge Computing for Web Applications (Mikael Siidorow, 2024, BSc)"
+            websiteLabel="Read about serverless edge computing"
+            website="https://www.researchgate.net/publication/380424331_Survey_of_Serverless_Edge_Computing_for_Web_Applications"
+          >
+            <slot name="content"
+              >Cloud computing has revolutionized the way we build software with
+              infrastructure and computing power available always on demand.
+              Serverless computing has allowed developers to focus on
+              applications instead of infrastructure management. However, large
+              data center are often far away from the end users, which
+              introduces latency. Edge computing attempts to bring computing
+              closer to the users, to the edge. Edge computing is already widely
+              used in Internet of Things and mobile devices, and there exists a
+              large amount of research this area. Web applications already use
+              edge technologies such as Content Delivery Networks, but edge
+              computing for dynamic computation is not yet widely used. This
+              thesis reviews edge computing for web applications and summarizes
+              research and service providers as literature research. The aim of
+              the study is to determine what are the benefits and limitations of
+              serverless edge computing compared to serverless cloud computing
+              for web application development. The technical review showed that
+              edge computing service providers were split in two based on the
+              internal runtime: AWS uses micro virtual machines, while
+              Cloudflare and Deno use V8 isolates. V8 isolates start faster with
+              less overhead, but their technologies are more limited and
+              security is less obvious than virtual machines. Serverless edge
+              and cloud computing are not mutually exclusive technologies. The
+              benefits of edge computing come from both closer location and
+              faster runtimes. Edge is suitable for latency-critical parts of
+              the application and V8 isolates significantly reduce load times.
+              When developing serverless applications, some computation should
+              be moved to the edge. Many web applications could improve
+              usability and user experience by moving computation to the edge,
+              reducing latency.</slot
+            >
+          </ContentCard>
+          <ContentCard
             title="Using Storybook.js for component-driven design system web development (Tuomas Nummela, 2024, BSc)"
             websiteLabel="Read about Storybook.js"
             website="https://www.researchgate.net/publication/380396572_Using_Storybookjs_for_component-driven_design_system_web_development"
