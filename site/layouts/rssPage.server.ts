@@ -1,5 +1,5 @@
 function init() {
-  function dateToISO(date: string) {
+  function dateToISO(date: string, d: string) {
     return (new Date(date)).toISOString();
   }
 

@@ -119,7 +119,7 @@ The book content was developed during many years with the help of the community 
       title: resolveKeywordToTitle(topic),
       description: topic, // TODO: This could be more accurate
       posts: keywords[topic].toSorted((a, b) =>
-        b.data.date.getTime() - a.data.date.getTime()
+        new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
       ),
       slug: cleanSlug(topic),
     }));
@@ -348,6 +348,9 @@ function resolveBlogPost(path: string, p: MarkdownWithFrontmatter) {
     description: p.data?.description || p.data?.preview || preview,
     // TODO
     images: {}, // resolveImages(p.data?.headerImage),
+    // Without this tweak date becomes a {} at the frontend likely due
+    // to a bug in Gustwind (utility application might do too much work).
+    date: new Date(p.data.date).toString(),
     slug: cleanSlug(path),
     preview,
     author: p.data?.author || {
