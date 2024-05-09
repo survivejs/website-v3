@@ -1,8 +1,18 @@
-<div id="disqus_thread"></div>
-<LazyLoad src="https://survivejs.disqus.com/embed.js">
-  <script
-    @src="state.src"
-    x-attr
-    @data-timestamp="new Date()"
-  ></script>
-</LazyLoad>
+<div x-state="{ showComments: false }">
+  <Rounded>
+    <button
+      x-attr
+      class="px-2"
+      @class="state.showComments && 'hidden'"
+      onclick="setState({ showComments: true })"
+    >
+      Show comments
+    </button>
+  </Rounded>
+  <div id="disqus_thread"></div>
+  <div hidden x-cloak x-attr @class="!state.showComments && 'hidden'">
+    <LazyLoad src="https://survivejs.disqus.com/embed.js">
+      <script @src="state.src" x-attr @data-timestamp="new Date()"></script>
+    </LazyLoad>
+  </div>
+</div>
