@@ -1,5 +1,5 @@
-<div class="z-50 sticky top-0 h-10 xl:h-auto bg-secondary">
-  <div class="xl:px-8 xl:pt-4">
+<div class="xl:h-auto bg-secondary h-10">
+  <div class="xl:px-8 xl:py-4">
     <div class="xl:hidden absolute left-0 p-2">
       <SiteLink href="/">Home</SiteLink>
     </div>
@@ -11,7 +11,7 @@
       <span class="w-4 h-4 leading-4 m-auto text-2xl">☰</span>
     </label>
     <nav
-      class="absolute bg-secondary border-b-2 border-primary xl:border-none p-4 xl:p-0 xl:relative w-full transition-all -translate-y-full xl:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4 lg:gap-8 lg:flex-row"
+      class="absolute bg-secondary p-4 xl:p-0 xl:relative w-full transition-all -translate-y-full xl:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4 lg:gap-8 lg:flex-row"
     >
       <div
         class="xl:w-full flex flex-col flex-wrap xl:flex-row xl:justify-between gap-4 text-lg"
@@ -32,8 +32,5 @@
         &children="(get props aside)"
       />
     </nav>
-  </div>
-  <div class="ml-24 mr-16 xl:mx-0">
-    <ReadingProgress />
   </div>
 </div>
