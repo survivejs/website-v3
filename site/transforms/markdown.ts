@@ -156,7 +156,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             }
           }
 
-          return `<figure class="not-prose my-0 ${
+          return `<figure class="not-prose my-0 flex flex-col gap-2 ${
             className ? "" : "w-screen md:w-full -ml-4 md:ml-0"
           } ${className}">
             <img class="${
