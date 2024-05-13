@@ -25,7 +25,7 @@ const init: GlobalUtilities["init"] = function init(
     if (url.startsWith("http")) {
       return children +
         `<span class="${
-          tw("inline-block -mt-1 text-xs align-text-top")
+          tw("inline-block -mt-1 ml-0.5 text-xs align-text-top")
         }">↗</span>`;
     }
 
