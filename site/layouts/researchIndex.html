@@ -42,6 +42,51 @@
         >
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
           <ContentCard
+            title="Understanding re-emergence of the RPC model in web development (Ruupert Koponen, 2024, BSc)"
+            websiteLabel="Read about the RPC model"
+            website="https://www.researchgate.net/publication/380547826_Understanding_re-emergence_of_the_RPC_model_in_web_development"
+          >
+            <slot name="content"
+              >RPC is a request-response protocol from the 1980s, which allows
+              developers to invoke remote functions from an application. It was
+              originally used in distributed systems, but was also used in web
+              development in the late 1990s and early 2000s. RPC's popularity
+              began decreasing after the REST-style architecture appeared in the
+              early 2000s. However, in the recent years, the RPC-model has
+              re-emerged in web development. This bachelor's thesis focuses on
+              understanding the recent growth in popularity of the RPC model. In
+              addition, this work explores the impact of modern RPC frameworks
+              on web development practices and offers comparison between REST,
+              RPC and GraphQL. This thesis is a literature review that utilizes
+              scientific articles, technological documentation and blog posts.
+              This study found out that in the early 2000s, web development
+              moved from RPC to REST architecture due to the low performance of
+              RPC implementations at the time. The internet was growing rapidly,
+              requiring scalable and high-performance web services, and REST
+              answered to this demand. The 2010s saw new trends in web
+              development, such as microservices and TypeScript. These trends
+              led to the emergence of new RPC frameworks, such as gRPC and tRPC.
+              These modern RPC frameworks leverage advancements in network
+              protocols, serialization formats, and type systems to offer an
+              alternative to the REST architectural style. gRPC is especially
+              popular in microservices systems due to its high performance,
+              whereas tRPC offers developers using TypeScript the ability to
+              develop type-safe full-stack applications. The RPC model has also
+              been integrated into the popular front-end framework React, which
+              provides the ability to call server-side methods directly from
+              client-side components. With the emergence of modern RPC
+              frameworks, developers have more options in web service
+              development tools. Developers have access to more specialized
+              tools and can choose the one that best suits their needs. Although
+              modern RPC implementations may not be as universally applicable as
+              REST or GraphQL, they can offer significant benefits in certain
+              types of applications. gRPC and tRPC streamline the development of
+              web services by offering an improved developer experience.
+              Additionally, they reduce the risk of errors through type
+              safety.</slot
+            >
+          </ContentCard>
+          <ContentCard
             title="Survey of Serverless Edge Computing for Web Applications (Mikael Siidorow, 2024, BSc)"
             websiteLabel="Read about serverless edge computing"
             website="https://www.researchgate.net/publication/380424331_Survey_of_Serverless_Edge_Computing_for_Web_Applications"
