@@ -1,9 +1,18 @@
 function init() {
   let foundIds: Record<string, number> = {};
-  function getUniqueAnchorId(anchor: string) {
+
+  function resolveAnchor(v: string, children: string) {
+    if (v) {
+      return v;
+    }
+
     // @ts-expect-error This is fine.
     const { url } = this.context;
 
+    return getUniqueAnchorId(url, children);
+  }
+
+  function getUniqueAnchorId(url: string, anchor: string) {
     if (!anchor || Array.isArray(anchor) || isObject(anchor)) {
       return;
     }
@@ -30,7 +39,7 @@ function init() {
     foundIds = {};
   }
 
-  return { getUniqueAnchorId, _onRenderStart };
+  return { resolveAnchor, getUniqueAnchorId, _onRenderStart };
 }
 
 function slugify(idBase: string) {

@@ -1,7 +1,7 @@
 <noop
   &visibleIf="(get props children)"
   &type="(concat h (get props level))"
-  &id="(get props anchor)"
+  &id="(resolveAnchor (get props anchor) (get props children))"
   &class="(concat
     (get props class)
     ' '
@@ -11,7 +11,7 @@
   <div class="inline" &children="(get props children)" />
   <a
     class="ml-2 no-underline text-md md:text-sm align-middle mask-text-gray hover:mask-text-black"
-    &href="(concat # (get props anchor))"
+    &href="(concat # (get local id))"
     >🔗</a
   >
 </noop>
