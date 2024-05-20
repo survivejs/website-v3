@@ -339,6 +339,15 @@
       }
     }
   },
+  "about-me": {
+    "layout": "aboutMeIndex",
+    "context": {
+      "meta": {
+        "title": "SurviveJS - About me",
+        "description": "You can learn more about me from this page."
+      }
+    }
+  },
   "research": {
     "layout": "researchIndex",
     "context": {
