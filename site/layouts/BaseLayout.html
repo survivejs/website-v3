@@ -27,7 +27,7 @@
     <a href="#content" class="sr-only focus:not-sr-only p-4">
       Skip to content
     </a>
-    <div class="z-50 sticky top-0 h-10">
+    <div class="z-50 sticky top-0 h-10 print:hidden">
       <ReadingProgress />
       <MainNavigation &aside="(get props aside)" />
     </div>
@@ -41,7 +41,9 @@
       class="md:py-16 scroll-mt-24"
       &children="(get props content)"
     ></main>
-    <MainFooter />
+    <div class="print:hidden">
+      <MainFooter />
+    </div>
     <Scripts />
   </body>
 </html>
