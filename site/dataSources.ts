@@ -352,7 +352,8 @@ function resolveBlogPost(path: string, p: MarkdownWithFrontmatter) {
     preview,
     author: p.data?.author || {
       name: "Juho Vepsäläinen",
-      twitter: "https://twitter.com/bebraw",
+      // TODO: Rename this field to something like "url"
+      twitter: "/about-me/",
     },
     editors: p.data?.editors?.map((handle) => ({
       // @ts-ignore This is fine since there's a transformation here

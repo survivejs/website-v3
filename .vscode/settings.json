@@ -23,7 +23,5 @@
     "https://esm.sh": false,
     "https://deno.land": false
   },
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "develop"
-  ]
+  "githubPullRequests.ignoredPullRequestBranches": ["develop"]
 }
