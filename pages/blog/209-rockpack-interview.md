@@ -109,4 +109,4 @@ SurviveJS is a considerable contributor to the React community; thanks a lot for
 
 Thanks for the interview, Sergey! It's going to be interesting to see how the community adopts the project. I know CRA and Next.js are the standard starting points for many but at the same time there's still room for innovation and improvement.
 
-T> [Learn how to get started fast with Rockpack](https://www.rockpack.io/fast-setup). See also [the projet on GitHub](https://github.com/AlexSergey/rockpack).
+T> [Learn how to get started fast with Rockpack](https://www.rockpack.io/fast-setup). See also [the project on GitHub](https://github.com/AlexSergey/rockpack).
