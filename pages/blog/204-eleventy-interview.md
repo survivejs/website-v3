@@ -55,7 +55,7 @@ The main thing for me is that it's built in the same ecosystem I work. For Jekyl
 
 ## What does the future look like for _Eleventy_ and web development in general? Can you see any particular trends?
 
-I don't know if I see a trend or _ I wish_ it becomes a trend, but it seems part of the web developers are becoming more aware we have a lot of different and more optimal options around tech stack for specific projects.
+I don't know if I see a trend, or I wish it becomes a trend, but it seems part of the web developers are becoming more aware we have a lot of different and more optimal options around tech stack for specific projects.
 
 I understand why companies go for widely used frameworks; onboarding new people to a custom stack takes a lot of time (and money, I guess). Building on top of a broadly used and well-tested ecosystem gives a feeling of having a more stable foundation. Still, we need to see that not all cases fit the default technology.
 
