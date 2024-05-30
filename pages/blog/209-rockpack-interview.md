@@ -98,9 +98,7 @@ Do not be afraid of not knowing something and making mistakes. We are not robots
 Our Ukrainian community is very diverse and vibrant. But among all, my top three are:
 
 1. Illya Klymov is a Rockstar who makes tons of useful content and has invested titanic efforts in developing the Russian-speaking community. He is an easy-going, erudite person, communication with who will be very interesting. He has his own [YouTube channel](https://www.youtube.com/channel/UCW9pyonagDWGMCy7V_Kro6g) with unique content
-
 2. Vladimir Agafonkin is a creator of a trendy library [Leaflet](https://github.com/Leaflet/Leaflet)
-
 3. Yuri Artyukh - he also has [YouTube channel](https://www.youtube.com/channel/UCDo7RTzizoOdPjY8A-xDR7g). The creativity of this person impresses everyone!
 
 ## Any last remarks?
