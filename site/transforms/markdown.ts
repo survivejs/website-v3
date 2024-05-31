@@ -211,7 +211,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
       },
     });
 
-    return { content: marked(input), tableOfContents };
+    return { content: marked(input.replace(/-# /g, "# ")), tableOfContents };
   };
 }
 
