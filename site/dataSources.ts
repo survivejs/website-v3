@@ -74,6 +74,8 @@ The book content was developed during many years with the help of the community 
 
     return generateAdjacent(chapterOrder.map((name) => chapters[name]), {
       invert: true,
+      // For books, extra nesting for slugs is needed
+      slugPrefix: "../",
     });
   }
 
@@ -90,6 +92,7 @@ The book content was developed during many years with the help of the community 
         0,
         amount,
       ),
+      { invert: false, slugPrefix: "" },
     );
   }
 
@@ -153,7 +156,10 @@ The book content was developed during many years with the help of the community 
     return parseInt(str.split("-")[0], 10);
   }
 
-  function generateAdjacent(pages: unknown[], o?: { invert: boolean }) {
+  function generateAdjacent(
+    pages: unknown[],
+    o: { invert: boolean; slugPrefix: string },
+  ) {
     return pages.map((page, i) => {
       // Avoid mutation
       const ret = structuredClone(page);
@@ -164,6 +170,32 @@ The book content was developed during many years with the help of the community 
       ret.next = o?.invert ? previous : next;
       // @ts-expect-error This is fine
       ret.previous = o?.invert ? next : previous;
+
+      // @ts-expect-error This is fine
+      if (ret.next) {
+        // @ts-expect-error This is fine
+        ret.next = {
+          // @ts-expect-error This is fine
+          ...ret.next,
+          // @ts-expect-error This is fine
+          data: { ...ret.next.data, slug: o.slugPrefix + ret.next.data.slug },
+        };
+      }
+
+      // @ts-expect-error This is fine
+      if (ret.previous) {
+        // @ts-expect-error This is fine
+        ret.previous = {
+          // @ts-expect-error This is fine
+          ...ret.previous,
+          data: {
+            // @ts-expect-error This is fine
+            ...ret.previous.data,
+            // @ts-expect-error This is fine
+            slug: o.slugPrefix + ret.previous.data.slug,
+          },
+        };
+      }
 
       return ret;
     });
