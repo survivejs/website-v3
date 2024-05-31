@@ -115,6 +115,7 @@
 /webpack/appendices/configuring-hmr /books/webpack/appendices/hmr/ 301
 /webpack/why-webpack /books/webpack/what-is-webpack/ 301
 /webpack/building/splitting-bundles /books/webpack/building/bundle-splitting/ 301
+/common_problems/pyramid.html /blog/pyramid-of-doom/
 /maintenance/* /books/maintenance/:splat 301
 /react/* /books/react/:splat 301
 /webpack/* /books/webpack/:splat 301
