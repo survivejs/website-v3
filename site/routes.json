@@ -181,7 +181,7 @@
         "dataSources": {
           "chapters": {
             "operation": "indexBook",
-            "parameters": ["./books/webpack-book/manuscript"]
+            "parameters": ["./books/webpack-book/manuscript", "/books/webpack/"]
           },
           "fullDescription": {
             "operation": "getBookDescription",
@@ -193,7 +193,10 @@
             "name": "chapters",
             "indexer": {
               "operation": "indexBook",
-              "parameters": ["./books/webpack-book/manuscript"]
+              "parameters": [
+                "./books/webpack-book/manuscript",
+                "/books/webpack/"
+              ]
             },
             "slug": "data.slug"
           },
@@ -236,7 +239,7 @@
         "dataSources": {
           "chapters": {
             "operation": "indexBook",
-            "parameters": ["./books/react-book/manuscript"]
+            "parameters": ["./books/react-book/manuscript", "/books/react/"]
           },
           "fullDescription": {
             "operation": "getBookDescription",
@@ -248,7 +251,7 @@
             "name": "chapters",
             "indexer": {
               "operation": "indexBook",
-              "parameters": ["./books/react-book/manuscript"]
+              "parameters": ["./books/react-book/manuscript", "/books/react/"]
             },
             "slug": "data.slug"
           },
@@ -291,7 +294,10 @@
         "dataSources": {
           "chapters": {
             "operation": "indexBook",
-            "parameters": ["./books/maintenance-book/manuscript"]
+            "parameters": [
+              "./books/maintenance-book/manuscript",
+              "/books/maintenance/"
+            ]
           },
           "fullDescription": {
             "operation": "getBookDescription",
@@ -303,7 +309,10 @@
             "name": "chapters",
             "indexer": {
               "operation": "indexBook",
-              "parameters": ["./books/maintenance-book/manuscript"]
+              "parameters": [
+                "./books/maintenance-book/manuscript",
+                "/books/maintenance/"
+              ]
             },
             "slug": "data.slug"
           },

@@ -53,7 +53,7 @@ The book content was developed during many years with the help of the community 
     }
   }
 
-  async function indexBook(directory: string) {
+  async function indexBook(directory: string, slugPrefix: string) {
     const chapters = Object.fromEntries((await indexMarkdown(directory, {
       parseHeadmatter: true,
       recursive: true,
@@ -74,8 +74,7 @@ The book content was developed during many years with the help of the community 
 
     return generateAdjacent(chapterOrder.map((name) => chapters[name]), {
       invert: true,
-      // For books, extra nesting for slugs is needed
-      slugPrefix: "../",
+      slugPrefix,
     });
   }
 
@@ -92,7 +91,7 @@ The book content was developed during many years with the help of the community 
         0,
         amount,
       ),
-      { invert: false, slugPrefix: "" },
+      { invert: false, slugPrefix: "/blog/" },
     );
   }
 

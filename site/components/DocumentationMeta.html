@@ -81,7 +81,7 @@
       </div>
       <div &visibleIf="(get props previous)">
         <SiteLink
-          &href="(concat ../ (get props previous.data.slug))"
+          &href="(get props previous.data.slug)"
           &children="(get props previous.data.title)"
         ></SiteLink>
       </div>
@@ -92,7 +92,7 @@
       </div>
       <div class="text-right" &visibleIf="(get props next)">
         <SiteLink
-          &href="(concat ../ (get props next.data.slug))"
+          &href="(get props next.data.slug)"
           &children="(get props next.data.title)"
         ></SiteLink>
       </div>
