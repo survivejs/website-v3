@@ -108,6 +108,8 @@ Technically speaking, the solution is not exactly the same, given that `Promise.
 
 An excellent way to solve this problem might be to wrap the operations within a transaction that allows the operations to be undone should any fail. The exact implementation method depends on the underlying API, and in this case, we could assume the database driver supports transactions directly.
 
+T> As pointed out by Joe Shelby, [Promise.allSettled](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) may often be a preferable solution over `Promise.all` as it allows you to deal with possible `Promise` rejections individually. In case any of the promises passed to `Promise.all` fails, execution completes on the first rejection. The problem with this is that in user interface facing code your logic might get easily out of sync with the backend due to the abstract nature of `Promise.all` rejection. In other words, use `Promise.allSettled` for more control over errors.
+
 ## Error handling
 
  The main drawback of all the examples is that they need more error handling. It is easy to write `await`/`async` style code while forgetting to handle exceptions. It is good to remember that `await` works with `Promise`s internally, meaning you can use the standard [catch method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) with it (i.e., `await db.get("key1").catch(...)`). The same applies to `Promise.all`. You can also use the standard `try`/`catch` structure with these primitives and construct the type of error handling you prefer. The question is, what kind of errors do you want to handle and how.
