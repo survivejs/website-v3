@@ -11,7 +11,7 @@
     "dataSources": {
       "blogPosts": {
         "operation": "indexBlog",
-        "parameters": ["./pages/blog", 3]
+        "parameters": ["./pages/blog", { "amount": 3 }]
       }
     }
   },
@@ -410,11 +410,10 @@
         "description": "SurviveJS blog"
       }
     },
-
     "dataSources": {
       "blogPosts": {
         "operation": "indexBlog",
-        "parameters": ["./pages/blog"]
+        "parameters": ["./pages/blog", { "charactersPerDescription": 250 }]
       }
     }
   },

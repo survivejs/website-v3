@@ -78,18 +78,21 @@ The book content was developed during many years with the help of the community 
     });
   }
 
-  async function indexBlog(directory: string, amount?: number) {
+  async function indexBlog(
+    directory: string,
+    o?: { amount?: number; charactersPerDescription?: number },
+  ) {
     const blogFiles =
       (await indexMarkdown(directory, { parseHeadmatter: true })).map((p) => ({
         ...p,
         // @ts-expect-error This is fine for now (inaccurate type)
-        data: resolveBlogPost(p.path, p),
+        data: resolveBlogPost(p.path, p, o?.charactersPerDescription),
       }));
 
     return generateAdjacent(
       blogFiles.toSorted((a, b) => getIndex(b.name) - getIndex(a.name)).slice(
         0,
-        amount,
+        o?.amount,
       ),
       { invert: false, slugPrefix: "/blog/" },
     );
@@ -366,8 +369,12 @@ function resolveKeywordToTitle(keyword: string) {
   }
 }
 
-function resolveBlogPost(path: string, p: MarkdownWithFrontmatter) {
-  const preview = generatePreview(p.content, 150);
+function resolveBlogPost(
+  path: string,
+  p: MarkdownWithFrontmatter,
+  charactersPerDescription?: number,
+) {
+  const preview = generatePreview(p.content, charactersPerDescription || 150);
 
   if (!p.data.date) {
     console.error(path);
