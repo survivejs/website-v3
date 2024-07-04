@@ -8,26 +8,29 @@
       />
       <section class="flex flex-col md:flex-row gap-8">
         <Markdown as="div" &children="(get context fullDescription)" />
-        <div class="max-h-64 flex flex-col gap-4 not-prose">
+        <div class="max-h-64 flex flex-row md:flex-col gap-4 not-prose">
           <SiteImage
-            class="object-contain"
+            class="min-w-56"
+            width="200px"
             &src="(get context coverUrl)"
             &alt="(get context meta.title)"
           />
-          <Rounded>
-            <SiteLink
-              class="m-2"
-              href="./introduction"
-              &children="(concat 'Read the' ' ' (get context topic) ' ' 'book' )"
-            />
-          </Rounded>
-          <Rounded>
-            <SiteLink
-              class="m-2"
-              &href="(get context bookUrls.leanpub)"
-              &children="(concat 'Buy the' ' ' (get context topic) ' ' 'book' )"
-            />
-          </Rounded>
+          <div class="flex flex-col gap-2 mx-auto">
+            <Rounded>
+              <SiteLink
+                class="m-2"
+                href="./introduction"
+                &children="(concat 'Read the' ' ' (get context topic) ' ' 'book' )"
+              />
+            </Rounded>
+            <Rounded>
+              <SiteLink
+                class="m-2"
+                &href="(get context bookUrls.leanpub)"
+                &children="(concat 'Buy the' ' ' (get context topic) ' ' 'book' )"
+              />
+            </Rounded>
+          </div>
         </div>
       </section>
       <section &visibleIf="(get context testimonials)">
