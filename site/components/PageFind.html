@@ -1,12 +1,15 @@
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-<script src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
-<script>
-  window.addEventListener("DOMContentLoaded", (event) => {
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      showImages: false,
-    });
-  });
-</script>
+<LazyLoad src="/pagefind/pagefind-ui.js">
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script @src="state.src" x-attr onload="searchLoaded()"></script>
+  <script>
+    function searchLoaded(event) {
+      document.getElementById("search").innerHTML = "";
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false,
+      });
+    }
+  </script>
+</LazyLoad>
+<div id="search">Loading...</div>

@@ -5,6 +5,7 @@
 /blog/upcoming-events /blog/summer-2018-events/ 301
 /clinic /consulting/ 301
 /training /consulting/ 301
+/search / 301
 /maintenance/code-quality/dependencies /books/maintenance/packaging/managing-dependencies/ 301
 /webpack_react/introduction /books/react/introduction/ 301
 /webpack_react/webpack /books/webpack/introduction/ 301

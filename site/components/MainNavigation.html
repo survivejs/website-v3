@@ -1,9 +1,14 @@
 <div class="xl:h-auto bg-secondary h-10">
   <div class="xl:px-8 xl:py-4">
-    <div class="xl:hidden absolute left-0 p-2">
+    <div class="xl:hidden absolute left-0 p-2 flex flex-row gap-8">
       <SiteLink href="/">Home</SiteLink>
+      <label
+        for="search__toggle"
+        class="cursor-pointer text-muted hover:text-primary"
+        >Search</label
+      >
     </div>
-    <input class="hidden peer" id="nav__toggle" type="checkbox" />
+    <input class="hidden peer/navigation" id="nav__toggle" type="checkbox" />
     <label
       class="xl:hidden p-2 pointer-events-all absolute right-0 w-10 h-10 rounded-full flex z-50"
       for="nav__toggle"
@@ -11,7 +16,7 @@
       <span class="w-4 h-4 leading-4 m-auto text-2xl">☰</span>
     </label>
     <nav
-      class="absolute bg-secondary p-4 xl:p-0 xl:relative w-full transition-all -translate-y-full xl:translate-y-0 peer-checked:translate-y-0 flex flex-col gap-4 lg:gap-8 lg:flex-row"
+      class="absolute bg-secondary p-4 xl:p-0 xl:relative w-full transition-all -translate-y-full xl:translate-y-0 peer-checked/navigation:translate-y-0 flex flex-col gap-4 lg:gap-8 lg:flex-row"
     >
       <div
         class="xl:w-full flex flex-col flex-wrap xl:flex-row xl:justify-between gap-4 text-lg"
@@ -20,7 +25,11 @@
           <Navigation class="!no-underline" />
         </div>
         <div class="grid xl:flex xl:flex-row gap-4 xl:gap-8 xl:ml-auto">
-          <SiteLink class="!no-underline" href="/search/">Search</SiteLink>
+          <label
+            for="search__toggle"
+            class="cursor-pointer text-muted hover:text-primary hidden xl:inline"
+            >Search</label
+          >
           <SiteLink class="!no-underline" href="/about-me/">About me</SiteLink>
         </div>
       </div>

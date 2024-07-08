@@ -393,15 +393,6 @@
       }
     }
   },
-  "search": {
-    "layout": "searchIndex",
-    "context": {
-      "meta": {
-        "title": "SurviveJS - Search",
-        "description": "You can search the site contents using this page."
-      }
-    }
-  },
   "atom.xml": {
     "layout": "rssPage",
     "context": {
