@@ -30,8 +30,10 @@
   </slot>
   <slot name="aside">
     <div class="flex flex-col gap-8">
-      <Advertisement />
       <TableOfContents &toc="(get context document.tableOfContents)" />
     </div>
+  </slot>
+  <slot name="ad">
+    <Advertisement />
   </slot>
 </BaseLayout>

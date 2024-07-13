@@ -34,8 +34,10 @@
     <aside
       &visibleIf="(get props aside)"
       class="fixed ml-4 mt-16 hidden xl:inline w-56 bg-white p-2 rounded-md border"
-      &children="(get props aside)"
-    ></aside>
+    >
+      <noop &children="(get props ad)" />
+      <noop &children="(get props aside)" />
+    </aside>
     <main id="content" class="md:py-16 scroll-mt-24">
       <input class="hidden peer/search" id="search__toggle" type="checkbox" />
       <div
