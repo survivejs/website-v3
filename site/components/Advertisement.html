@@ -1,6 +1,11 @@
-<script
-  async
-  type="text/javascript"
+<LazyLoad
   src="//cdn.carbonads.com/carbon.js?serve=CE7I5KQJ&placement=survivejscom"
-  id="_carbonads_js"
-></script>
+>
+  <script
+    async
+    type="text/javascript"
+    @src="state.src"
+    x-attr
+    id="_carbonads_js"
+  ></script>
+</LazyLoad>
