@@ -119,4 +119,3 @@ T> As pointed out by Joe Shelby, [Promise.allSettled](https://developer.mozilla.
 Our solutions went quite far from the pyramid of doom and ended up with somewhat flat solutions that are easy to interpret. Adding error handling would complicate them, but it is important to consider which error handling approach to take in production-level code to avoid leaking errors to the user. For a rough developer tool, leaking errors might be acceptable and even expected, but for anything client-facing, a good strategy should be decided.
 
 The list of solutions here is not exhaustive, as you could try using a different programming model entirely. Reactive programming using a library, such as [RxJS](https://rxjs.dev/), would be an interesting direction. It provides an event bus, and you can decouple your events from their handling without having to introduce a library to your codebase.
-
