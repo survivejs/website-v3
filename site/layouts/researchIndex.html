@@ -42,6 +42,49 @@
         >
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
           <ContentCard
+            title="Impact of React component libraries on developer experience - An empirical study on component libraries' styling approaches (Ossian Rajala, 2024, MSc)"
+            websiteLabel="Read about component libraries for React"
+            website="https://www.researchgate.net/publication/383941317_Impact_of_React_component_libraries_on_developer_experience_-_An_empirical_study_on_component_libraries'_styling_approaches"
+          >
+            <slot name="content"
+              >Over the past three decades, web design has transitioned from
+              simple static pages to complex, interactive applications. Modern
+              web development relies heavily on JavaScript frameworks and
+              reusable components, often utilizing third-party, pre-styled
+              component libraries. Customizing the styles - which are typically
+              implemented with CSS (Cascading Style Sheets) - of such libraries
+              to meet specific design requirements is a common task. This
+              customization creates a need for effective styling solutions that
+              enhance developer experience and maintainability. Despite its
+              widespread use in web development, CSS remains under-researched,
+              particularly in the context of how it affects developers'
+              day-to-day work with component libraries. As technologies continue
+              to evolve, understanding and improving the developer experience
+              becomes increasingly crucial, as it can positively impact software
+              development outcomes. This thesis seeks to understand how React
+              component libraries' theming approaches impact customization,
+              particularly ease of implementation, reusability of styles, and
+              flexibility to accommodate various design requirements.
+              Furthermore, the study investigates how the aforementioned factors
+              and the library's documentation support or hinder the developer's
+              work. These factors were investigated by porting the same
+              application to four pre-styled component libraries. The
+              implementation process, methods used, and challenges encountered
+              were documented and analyzed. As a result, the study found that
+              meeting the design requirements was possible with all compared
+              libraries: Ant Design, Chakra UI, shadcn/ui, and Mantine. However,
+              the ease, intuitiveness, and maintainability of required solutions
+              varied. Especially as one of the libraries, Ant Design, was
+              tightly coupled with a specific design system. Color customization
+              and dark and light modes were frequent sources of confusion.
+              Overall, the libraries offered a positive experience and allowed
+              the desired design to be reached without resorting to style hacks.
+              Still, all the libraries would benefit from improved
+              documentation, namely more detailed examples and explanations of
+              the customization options.</slot
+            >
+          </ContentCard>
+          <ContentCard
             title="Understanding re-emergence of the RPC model in web development (Ruupert Koponen, 2024, BSc)"
             websiteLabel="Read about the RPC model"
             website="https://www.researchgate.net/publication/380547826_Understanding_re-emergence_of_the_RPC_model_in_web_development"
