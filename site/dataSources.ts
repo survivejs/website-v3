@@ -106,6 +106,9 @@ The book content was developed during many years with the help of the community 
       const p = await parseHeadmatter(path);
 
       p.data.keywords?.forEach((keyword: string) => {
+        // Spaces to -
+        keyword = keyword.replace(" ", "-");
+
         if (keywords[keyword]) {
           // @ts-expect-error This is fine for now
           keywords[keyword].push({ ...p, data: resolveBlogPost(path, p) });
@@ -402,7 +405,7 @@ function resolveBlogPost(
     topics: p.data?.keywords?.map((keyword: string) => {
       return {
         title: resolveKeywordToTitle(keyword),
-        slug: keyword,
+        slug: keyword.replace(" ", "-"),
       };
     }) || [],
   };
