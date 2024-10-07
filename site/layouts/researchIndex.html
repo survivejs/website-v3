@@ -40,43 +40,8 @@
           >During my studies, I have worked as an advisor for several theses.
           You can find a selection below.</Markdown
         >
+        <HeadingWithAnchor level="3">Masters</HeadingWithAnchor>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
-          <ContentCard
-            title="Survey of the current state of 3D production pipelines for the web (Lauri Lyytikäinen, 2024, BSc)"
-            websiteLabel="Read about 3D production for the web"
-            website="https://www.researchgate.net/publication/384687761_Survey_of_the_current_state_of_3D_production_pipelines_for_the_web"
-          >
-            <slot name="content"
-              >This paper aims to find out what is the current state of 3D
-              production for the web. The research focuses on examining the
-              process of creating 3D content, optimising it, and integrating it
-              into a final product. It contains an overview of the long and
-              complicated process of creating content for web-based platforms.
-              The review was conducted as the current research on the topic is
-              limited or the available information is several years old. The
-              sources used were scientific articles and books about the topic,
-              programming library documentation and programming articles. The
-              research presents the different steps and tools available for
-              creating good quality and functional 3D content for web
-              applications. The paper outlines how 3D data is created, edited,
-              and exported and the different applications for it. How the
-              different libraries, frameworks and tools can be used heavily
-              depends on the final content’s specific purpose and use case,
-              budget and target audience. The survey also explores the different
-              criteria that the developers can use to select their libraries and
-              pipelines, and when it might be better to create a custom
-              implementation. The different applications of 3D content and their
-              unique differences are also investigated. My main findings were
-              that 3D content in web applications is growing in popularity, and
-              new uses for it are discovered continuously. While 3D technology
-              has been around for multiple decades, it still is relatively new
-              on the web platform. It is being avoided because of a complicated
-              development process, technical limitations and the lack of
-              standardisation. Different libraries and programming languages
-              have greatly evolved in recent years and the standards in the
-              industry are still forming.</slot
-            >
-          </ContentCard>
           <ContentCard
             title="Impact of React component libraries on developer experience - An empirical study on component libraries' styling approaches (Ossian Rajala, 2024, MSc)"
             websiteLabel="Read about component libraries for React"
@@ -118,6 +83,125 @@
               Still, all the libraries would benefit from improved
               documentation, namely more detailed examples and explanations of
               the customization options.</slot
+            >
+          </ContentCard>
+          <ContentCard
+            title="The Effects of Architectural Design Decisions on Framework Adoption: A Comparative Evaluation of Meta-Frameworks in Modern Web Development (Joel Hassan, 2024, MSc)"
+            websiteLabel="Read about initial rendering performance"
+            website="https://www.researchgate.net/publication/380342898_The_Effects_of_Architectural_Design_Decisions_on_Framework_Adoption_A_Comparative_Evaluation_of_Meta-Frameworks_in_Modern_Web_Development"
+          >
+            <slot name="content"
+              >The rise of JavaScript meta-frameworks has transformed the
+              development of web applications in recent years. Alongside
+              established frameworks, such as Next.js, more recent entrants,
+              such as Astro and Qwik City have introduced novel approaches
+              centred on simplifying developer experience and improving the
+              perceived performance of applications for users. The competitive
+              nature of the meta-framework space and the long-term impact of
+              framework choice on projects calls for an understanding of the
+              factors that drive framework adoption. This research first
+              delineates extensibility, ease of migration and updates as a set
+              of adoption factors based on prior research and their relevance to
+              modern meta- frameworks. The factors form a basis of evaluating
+              three meta-frameworks—Next.js, Astro, and Qwik City—selected based
+              on their popularity, design, and phase on the innovation curve. A
+              developer survey is conducted to complement the analysis,
+              gathering insights from developers on the value they associate
+              with architectural aspects and their personal experiences with the
+              selected frameworks. The findings substantiate previous research
+              that identified learnability and extensibility as primary adoption
+              drivers. The main risks driving unadoption involve complexity
+              associated with a high degree of configurability and the perceived
+              framework lock-in due to an abundance of framework-specific
+              concepts. Despite shared authoring experiences across evaluated
+              meta-frameworks, the analysis indicates that newer frameworks are
+              showing potential to considerably enhance user and developer
+              experiences by focusing on a simplified authoring experience,
+              addressing issues related to the transmission of application logic
+              from the server to the client and providing more fine-grained
+              approaches to managing client-side JavaScript.</slot
+            >
+          </ContentCard>
+          <ContentCard
+            title="Improving the Initial Rendering Performance of React Applications Through Contemporary Rendering Approaches (Touko Lonka, 2023, MSc)"
+            websiteLabel="Read about initial rendering performance"
+            website="https://aaltodoc.aalto.fi/items/1d6ae644-a536-4607-b4e3-60c70b29f8e8"
+          >
+            <slot name="content"
+              >Modern JavaScript frameworks have enabled the development of
+              interactive and user-friendly web applications. Over the past
+              decade, React has become the leading user interface framework in
+              the JavaScript world, contributing to the rise of Single Page
+              Applications (SPA). However, the extensive development of SPAs has
+              led to an increase in the amount of client-side JavaScript, thus
+              triggering performance issues in terms of initial loading
+              times.<br />The speed at which a web application is initially
+              rendered can significantly influence its potential for revenue
+              generation, as the initial loading time often determines whether a
+              user stays on or abandons a web page. Recognizing the integral
+              role of the initial loading speed in user retention, this study
+              delves into the realm of performance optimization strategies,
+              focusing predominantly on the use of React-like UI frameworks and
+              meta-frameworks as a means to improve the initial rendering
+              performance of web applications. Through this exploration, we aim
+              to provide a comprehensive understanding of contemporary rendering
+              approaches and their role in enhancing web application
+              performance.<br />To compare the performance impacts of various
+              rendering approaches, we implement a React application simulating
+              the dynamics of a real-world e-commerce platform and replicate the
+              same application through multiple technologies. These technologies
+              include the UI frameworks Preact, Qwik, and Solid, as well as the
+              meta-frameworks Next, Astro, and Qwik City. Finally, we provide
+              extensive benchmarks to measure the page weights and initial
+              rendering performance of each application version.<br />Our
+              findings demonstrate that the utilization of React-like UI
+              frameworks and meta-frameworks can considerably decrease the
+              amount of JavaScript downloaded by the client, contributing to
+              improved initial rendering times. The most promising results are
+              achieved by using meta-frameworks for extending the capabilities
+              of UI frameworks with modern rendering strategies like Server-Side
+              Rendering and Static Site Generation. However, these approaches
+              often present significant trade-offs, such as increased Server
+              Response Times and extended build durations.</slot
+            >
+          </ContentCard>
+        </div>
+        <HeadingWithAnchor level="3">Bachelors</HeadingWithAnchor>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+          <ContentCard
+            title="Survey of the current state of 3D production pipelines for the web (Lauri Lyytikäinen, 2024, BSc)"
+            websiteLabel="Read about 3D production for the web"
+            website="https://www.researchgate.net/publication/384687761_Survey_of_the_current_state_of_3D_production_pipelines_for_the_web"
+          >
+            <slot name="content"
+              >This paper aims to find out what is the current state of 3D
+              production for the web. The research focuses on examining the
+              process of creating 3D content, optimising it, and integrating it
+              into a final product. It contains an overview of the long and
+              complicated process of creating content for web-based platforms.
+              The review was conducted as the current research on the topic is
+              limited or the available information is several years old. The
+              sources used were scientific articles and books about the topic,
+              programming library documentation and programming articles. The
+              research presents the different steps and tools available for
+              creating good quality and functional 3D content for web
+              applications. The paper outlines how 3D data is created, edited,
+              and exported and the different applications for it. How the
+              different libraries, frameworks and tools can be used heavily
+              depends on the final content’s specific purpose and use case,
+              budget and target audience. The survey also explores the different
+              criteria that the developers can use to select their libraries and
+              pipelines, and when it might be better to create a custom
+              implementation. The different applications of 3D content and their
+              unique differences are also investigated. My main findings were
+              that 3D content in web applications is growing in popularity, and
+              new uses for it are discovered continuously. While 3D technology
+              has been around for multiple decades, it still is relatively new
+              on the web platform. It is being avoided because of a complicated
+              development process, technical limitations and the lack of
+              standardisation. Different libraries and programming languages
+              have greatly evolved in recent years and the standards in the
+              industry are still forming.</slot
             >
           </ContentCard>
           <ContentCard
@@ -236,86 +320,6 @@
               tool and later creating and maintaining all of its content. The
               consensus of the developer experiences on building design systems
               using Storybook was positive.</slot
-            >
-          </ContentCard>
-          <ContentCard
-            title="The Effects of Architectural Design Decisions on Framework Adoption: A Comparative Evaluation of Meta-Frameworks in Modern Web Development (Joel Hassan, 2024, MSc)"
-            websiteLabel="Read about initial rendering performance"
-            website="https://www.researchgate.net/publication/380342898_The_Effects_of_Architectural_Design_Decisions_on_Framework_Adoption_A_Comparative_Evaluation_of_Meta-Frameworks_in_Modern_Web_Development"
-          >
-            <slot name="content"
-              >The rise of JavaScript meta-frameworks has transformed the
-              development of web applications in recent years. Alongside
-              established frameworks, such as Next.js, more recent entrants,
-              such as Astro and Qwik City have introduced novel approaches
-              centred on simplifying developer experience and improving the
-              perceived performance of applications for users. The competitive
-              nature of the meta-framework space and the long-term impact of
-              framework choice on projects calls for an understanding of the
-              factors that drive framework adoption. This research first
-              delineates extensibility, ease of migration and updates as a set
-              of adoption factors based on prior research and their relevance to
-              modern meta- frameworks. The factors form a basis of evaluating
-              three meta-frameworks—Next.js, Astro, and Qwik City—selected based
-              on their popularity, design, and phase on the innovation curve. A
-              developer survey is conducted to complement the analysis,
-              gathering insights from developers on the value they associate
-              with architectural aspects and their personal experiences with the
-              selected frameworks. The findings substantiate previous research
-              that identified learnability and extensibility as primary adoption
-              drivers. The main risks driving unadoption involve complexity
-              associated with a high degree of configurability and the perceived
-              framework lock-in due to an abundance of framework-specific
-              concepts. Despite shared authoring experiences across evaluated
-              meta-frameworks, the analysis indicates that newer frameworks are
-              showing potential to considerably enhance user and developer
-              experiences by focusing on a simplified authoring experience,
-              addressing issues related to the transmission of application logic
-              from the server to the client and providing more fine-grained
-              approaches to managing client-side JavaScript.</slot
-            >
-          </ContentCard>
-          <ContentCard
-            title="Improving the Initial Rendering Performance of React Applications Through Contemporary Rendering Approaches (Touko Lonka, 2023, MSc)"
-            websiteLabel="Read about initial rendering performance"
-            website="https://aaltodoc.aalto.fi/items/1d6ae644-a536-4607-b4e3-60c70b29f8e8"
-          >
-            <slot name="content"
-              >Modern JavaScript frameworks have enabled the development of
-              interactive and user-friendly web applications. Over the past
-              decade, React has become the leading user interface framework in
-              the JavaScript world, contributing to the rise of Single Page
-              Applications (SPA). However, the extensive development of SPAs has
-              led to an increase in the amount of client-side JavaScript, thus
-              triggering performance issues in terms of initial loading
-              times.<br />The speed at which a web application is initially
-              rendered can significantly influence its potential for revenue
-              generation, as the initial loading time often determines whether a
-              user stays on or abandons a web page. Recognizing the integral
-              role of the initial loading speed in user retention, this study
-              delves into the realm of performance optimization strategies,
-              focusing predominantly on the use of React-like UI frameworks and
-              meta-frameworks as a means to improve the initial rendering
-              performance of web applications. Through this exploration, we aim
-              to provide a comprehensive understanding of contemporary rendering
-              approaches and their role in enhancing web application
-              performance.<br />To compare the performance impacts of various
-              rendering approaches, we implement a React application simulating
-              the dynamics of a real-world e-commerce platform and replicate the
-              same application through multiple technologies. These technologies
-              include the UI frameworks Preact, Qwik, and Solid, as well as the
-              meta-frameworks Next, Astro, and Qwik City. Finally, we provide
-              extensive benchmarks to measure the page weights and initial
-              rendering performance of each application version.<br />Our
-              findings demonstrate that the utilization of React-like UI
-              frameworks and meta-frameworks can considerably decrease the
-              amount of JavaScript downloaded by the client, contributing to
-              improved initial rendering times. The most promising results are
-              achieved by using meta-frameworks for extending the capabilities
-              of UI frameworks with modern rendering strategies like Server-Side
-              Rendering and Static Site Generation. However, these approaches
-              often present significant trade-offs, such as increased Server
-              Response Times and extended build durations.</slot
             >
           </ContentCard>
           <ContentCard
