@@ -11,11 +11,9 @@ In order to understand the topic a little better, it's probably best to let the 
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![Guillaume Plique|100|100|author](assets/img/interviews/plique.jpg)
+![Guillaume Plique|100|100|author](assets/img/interviews/plique.jpg)
 
-  My name is Guillaume Plique and I am a full stack developer currently working in Paris for Sciences Po's [médialab](https://github.com/medialab) which is a laboratory aiming at gathering people from social sciences, design and IT in order to develop innovative research projects.
-</p>
+My name is Guillaume Plique and I am a full stack developer currently working in Paris for Sciences Po's [médialab](https://github.com/medialab) which is a laboratory aiming at gathering people from social sciences, design and IT in order to develop innovative research projects.
 
 I mostly deal with web mining, graph processing and, of course, UI development. More concretely, my job consists in helping researchers achieve their goals by designing and developing the correct tools for them.
 

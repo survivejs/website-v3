@@ -11,11 +11,9 @@ Besides React Hot Loader, Dan is behind well-known projects such as [React DnD](
 
 ## How did you discover React? Can you provide a bit of background?
 
-<p>
-  ![Dan Abramov|100|100|author](assets/img/interviews/dan.jpg)
+![Dan Abramov|100|100|author](assets/img/interviews/dan.jpg)
 
-  I think it’s a typical story. In 2014, when I was working at [Stampsy](http://stampsy.com), we needed to pivot from an iPad app to a webapp in a matter of a few months. We only knew Backbone so we went with it, but as the app grew more dynamic and complicated, we knew we couldn’t use it for much longer.
-</p>
+I think it’s a typical story. In 2014, when I was working at [Stampsy](http://stampsy.com), we needed to pivot from an iPad app to a webapp in a matter of a few months. We only knew Backbone so we went with it, but as the app grew more dynamic and complicated, we knew we couldn’t use it for much longer.
 
 However, we also decidedly did not adopt any opinionated data binding library because we wanted to maintain a simple mental model of what’s happening in the app. At some point in time, there was a widget with a dozen of different states that occurred several times on the page, and we knew we *had* to throw some data binding library into the mix.
 

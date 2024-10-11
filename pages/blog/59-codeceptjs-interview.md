@@ -11,11 +11,9 @@ Michael Bodnarchuk, an old friend of mine from the [JSter](http://jster.net/) er
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![Michael Bodnarchuk|100|100|author](assets/img/interviews/michael.jpg)
+![Michael Bodnarchuk|100|100|author](assets/img/interviews/michael.jpg)
 
-  My name is Michael, I live in Kyiv, Ukraine. What I do the most is open-source development, mountain trips, and exploring the world step by step.
-</p>
+My name is Michael, I live in Kyiv, Ukraine. What I do the most is open-source development, mountain trips, and exploring the world step by step.
 
 To be honest, I didn't ever have a motivation to travel a lot (except for tracking) so I started to send my talks to conferences. After I started being accepted there, I visited Barcelona, Istanbul, Amsterdam. What would I do there without tech conferences? No idea. :)
 

@@ -161,7 +161,9 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           } ${className}">
             <img class="${
             className === "author" ? "" : "border"
-          }" src="${src}" loading="lazy" alt="${alt}" title="${title}" width="${width}" height="${height}" />
+          }" src="${src}" loading="lazy" alt="${alt}" title="${
+            title || ""
+          }" width="${width}" height="${height}" />
             ${
             className === "author"
               ? ""

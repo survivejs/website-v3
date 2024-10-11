@@ -11,11 +11,9 @@ To learn more about the topic, I'm interviewing [Brian Cavalier](https://twitter
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![Brian Cavalier|100|100|author](assets/img/interviews/brian.jpg)
+![Brian Cavalier|100|100|author](assets/img/interviews/brian.jpg)
 
 I'm a software engineer at Yelp in Pittsburgh, PA, where I work on Node-based web services and distributed systems. I had done all kinds of stuff before I started writing JavaScript: Basic, Assembly, C, C++, Ruby, ML, and way more Java than I want to admit. Recently, I've done a decent amount of Haskell, and have been actively digging into Purescript, Rust, and Idris. I love learning about how to solve problems in different ways.
-</p>
 
 In 2007, I was working for a Pittsburgh startup as a Java server-side engineer. They wanted to create an ambitious web UI, and I ended up diving into the role of front-end JavaScript developer. A few years later, John Hann (unscriptable) and I created cujojs, and I became hooked on doing open source work.
 

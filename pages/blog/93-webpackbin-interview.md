@@ -15,11 +15,9 @@ T> **Editor's note:** WebpackBin isn't online anymore. You can still read the bl
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![Christian Alfoni|100|100|author](assets/img/interviews/christian.jpg)
+![Christian Alfoni|100|100|author](assets/img/interviews/christian.jpg)
 
-  For sure! :) I am a 33-year-old JavaScript hacker, developer, OSS enthusiast and due to that an emotional wreck. Living in Trondheim, Norway. I spend my days at Ducky, a startup I joined last year.
-</p>
+For sure! :) I am a 33-year-old JavaScript hacker, developer, OSS enthusiast and due to that an emotional wreck. Living in Trondheim, Norway. I spend my days at Ducky, a startup I joined last year.
 
 We are trying to save the planet, and my part in that is making technology choices and informally running a small development team to support the constant changes and ambitions of the company.
 

@@ -9,11 +9,9 @@ Given there's a lot going on in the React ecosystem, it can be difficult to keep
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![Jeff Winkler|100|100|author](assets/img/interviews/jeff.jpg)
+![Jeff Winkler|100|100|author](assets/img/interviews/jeff.jpg)
 
-  I am a full stack developer and I have been writing code for over 20 years. From museum kiosks to big enterprise software. I've been using React for a couple years. I'm a tool/feedback loop junkie. I've been lucky enough to work on a couple green-field ReactJS projects.
-</p>
+I am a full stack developer and I have been writing code for over 20 years. From museum kiosks to big enterprise software. I've been using React for a couple years. I'm a tool/feedback loop junkie. I've been lucky enough to work on a couple green-field ReactJS projects.
 
 My wife and I live outside Boston and we have a five year old, it's really fun to see through the eyes of a kid.
 

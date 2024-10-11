@@ -13,11 +13,9 @@ This time I'm interviewing [Thomas Roch](https://twitter.com/tcroch), the author
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![Thomas Roch|100|100|author](assets/img/interviews/roch.jpg)
+![Thomas Roch|100|100|author](assets/img/interviews/roch.jpg)
 
-  I have a degree in engineering, although my education was for most parts non specialised, I ended up studying a bit more mechanical and electronics engineering. I have always been programming in my spare time and hacking stuff, and inevitably, my early professional career slowly drifted towards software engineering. I explored a few areas and languages: embedded software on micro-processors, desktop applications and web applications.
-</p>
+I have a degree in engineering, although my education was for most parts non specialised, I ended up studying a bit more mechanical and electronics engineering. I have always been programming in my spare time and hacking stuff, and inevitably, my early professional career slowly drifted towards software engineering. I explored a few areas and languages: embedded software on micro-processors, desktop applications and web applications.
 
 I did a fair amount of full-stack web development, and a few years ago I decided to take front-end development very seriously, being amazed by what a difference Node.js and social coding had started to make. I am a French national, I am currently a software engineer at Fanduel and live in Glasgow, Scotland.
 

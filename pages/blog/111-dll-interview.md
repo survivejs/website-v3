@@ -12,11 +12,9 @@ Perhaps one of my favorite [webpack performance related tricks](/webpack/optimiz
 
 ## Can you tell a bit about yourself?
 
-<p>
-  ![James Wiens|100|100|author](assets/img/interviews/wiens.jpg)
+![James Wiens|100|100|author](assets/img/interviews/wiens.jpg)
 
-  👋 I'm a flow state enthusiast and crafting code is my life's passion. I'm from Vancouver, Canada, eh.
-</p>
+👋 I'm a flow state enthusiast and crafting code is my life's passion. I'm from Vancouver, Canada, eh.
 
 ## How would you describe *d-l-l* to someone who has never heard of it?
 
