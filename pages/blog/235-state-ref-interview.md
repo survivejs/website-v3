@@ -56,7 +56,7 @@ The ideas you come up with are not trivial or personal; they might be messages f
 
 ## Who should I interview next?
 
-I recommend an interview with `Tao Xin`, the creator of [VanJS](https://vanjs.org/about). While I don't know him personally, I've always admired his passion for developing VanJS with good intentions and ideas. I believe he is a great developer who can inspire many people.
+I recommend an interview with Tao Xin, the creator of [VanJS](https://vanjs.org/about). While I don't know him personally, I've always admired his passion for developing VanJS with good intentions and ideas. I believe he is a great developer who can inspire many people.
 
 ## Any last remarks?
 
