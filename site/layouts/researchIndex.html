@@ -43,6 +43,38 @@
         <HeadingWithAnchor level="3">Masters</HeadingWithAnchor>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
           <ContentCard
+            title="The potential of WebAssembly in Edge Computing (Antti Nousiainen, 2024, MSc)"
+            websiteLabel="Read about WebAssembly in Edge Computing"
+            website="https://www.researchgate.net/publication/386087411_The_potential_of_WebAssembly_in_Edge_Computing"
+          >
+            <slot name="content"
+              >WebAssembly is a well-supported web technology that allows easy
+              conversion of existing code as well as generation of new projects
+              from a multitude of programming languages for the web, in a
+              portable manner. Edge environments, meanwhile, provide a way to
+              distribute workloads near the end user, and allow scaling of
+              execution well. Furthermore, edge environments offer the
+              possibility of decreased latency compared to more conventional
+              cloud services. Combining these could improve the usability and
+              suitability of edge computing in certain kinds of applications,
+              such as data processing for Internet-of-Things (IoT) devices.
+              Therefore, research into combining these technologies makes sense.
+              The objective of this thesis was to study this intersection of
+              WebAssembly and edge environments through examination of
+              performance and usability. Performance was considered through
+              creating a test environment and by benchmarking WebAssembly, while
+              usability was considered by documenting in detail potential
+              problems for developers and the ways how WebAssembly and edge
+              environments can be used together. Overall, the thesis found that
+              even though some roadblocks were encountered during the test
+              environment development and performance was decreased in
+              comparison to locally executed tests, existing C-based benchmarks
+              could be converted to WebAssembly and be run in the selected edge
+              environment with acceptable performance when compared to locally
+              executed tests.</slot
+            >
+          </ContentCard>
+          <ContentCard
             title="Impact of React component libraries on developer experience - An empirical study on component libraries' styling approaches (Ossian Rajala, 2024, MSc)"
             websiteLabel="Read about component libraries for React"
             website="https://www.researchgate.net/publication/383941317_Impact_of_React_component_libraries_on_developer_experience_-_An_empirical_study_on_component_libraries'_styling_approaches"
