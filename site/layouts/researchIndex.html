@@ -201,6 +201,44 @@
         <HeadingWithAnchor level="3">Bachelors</HeadingWithAnchor>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
           <ContentCard
+            title="Survey of Edge Databases for the Web (Arttu Pesonen, 2024, BSc)"
+            websiteLabel="Read about edge databases"
+            website="https://www.researchgate.net/publication/388001154_Survey_of_Edge_Databases_for_the_Web"
+          >
+            <slot name="content"
+              >Database as a Service offerings have transformed the development
+              of web applications, enabling almost limitless scalability of
+              databases according to the capacity and performance requirements.
+              With the growth of global user bases in web applications, the use
+              of traditional database systems can lead to high latency, as the
+              database is often located far from the end users. Edge databases
+              aim to bring data processing closer to the end users, reducing
+              latency and improving service performance. While cloud computing
+              has enabled the deployment of traditional databases in regions
+              with the highest concentrations of end users, it has not fully
+              addressed the challenges of growing global user bases. This thesis
+              examines edge databases and their use in the context of web
+              applications through a literature review and by comparing
+              different edge database service providers. This study seeks to
+              identify the edge databases designed for web applications and
+              explore their features and design approaches. The technical review
+              found that all the compared edge database solutions are compatible
+              with existing database technologies and models: CockroachDB is
+              compatible with PostgreSQL, Redis Cloud with Redis, and Turso with
+              SQLite. This compatibility simplifies the adoption of the
+              services, as developers can use familiar tools and programming
+              languages, and integrate the services directly into existing web
+              applications. All three compared edge database services enable
+              extensive scalability by leveraging the infrastructure of major
+              cloud service providers for deployment. Edge databases are
+              especially beneficial for web applications that require precise
+              management of database locations, as this has a significant impact
+              on the latency experienced by end users. By using edge databases,
+              web applications can improve their usability and customer
+              experience by reducing service latency.</slot
+            >
+          </ContentCard>
+          <ContentCard
             title="Comparison of web performance optimization techniques -1990s vs. 2020s (Klaus Rehnberg, 2024, BSc)"
             websiteLabel="Read about web performance optimization"
             website="https://www.researchgate.net/publication/387485302_Comparison_of_web_performance_optimization_techniques_-1990s_vs_2020s"
