@@ -43,6 +43,40 @@
         <HeadingWithAnchor level="3">Masters</HeadingWithAnchor>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
           <ContentCard
+            title="FlagShip: Reimagining Stateful Serverless Architectures at the Edge (Anoop Bidikar, 2024, MSc)"
+            websiteLabel="Read about serverless architectures"
+            website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/d5d3c0a8-0da1-4ae2-8d9e-c347bd67052d/content"
+          >
+            <slot name="content"
+              >Feature flag systems enable dynamic control of application
+              features without code redeployment, playing a crucial role in
+              modern software development. While edge computing and serverless
+              architectures offer promising solutions for low-latency
+              applications, integrating stateful services into these
+              environments presents significant challenges. This research
+              investigates how stateful services in commercial edge computing
+              platforms influence the feasibility and performance of stateful
+              serverless applications, through the implementation and evaluation
+              of a feature flag management system. We developed FlagShip, an
+              edge-based feature flag management system utilizing stateful
+              serverless functions and storage services from a commercial edge
+              platform provider. Through extensive evaluation, we compared
+              FlagShip’s performance against traditional cloud-hosted feature
+              flag services, analyzing metrics such as client-side and
+              server-side latency across different deployment configurations.
+              Our results demonstrate that FlagShip achieved up to 70% reduction
+              in client-side latency and 93% decrease in server-side latency
+              compared to baseline implementations. Notably, a cached
+              cloud-hosted variant outperformed all implementations, including
+              edge deployments, challenging conventional assumptions about edge
+              computing’s performance advantages. These findings provide
+              valuable insights into the practical implications of building
+              stateful edge applications, highlighting the critical role of
+              storage and caching solutions that operate within the same runtime
+              environment.</slot
+            >
+          </ContentCard>
+          <ContentCard
             title="The potential of WebAssembly in Edge Computing (Antti Nousiainen, 2024, MSc)"
             websiteLabel="Read about WebAssembly in Edge Computing"
             website="https://www.researchgate.net/publication/386087411_The_potential_of_WebAssembly_in_Edge_Computing"
