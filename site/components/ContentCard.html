@@ -17,7 +17,7 @@
     </div>
   </slot>
   <slot name="footer">
-    <Rounded>
+    <Rounded &visibleIf="(get props website)">
       <SiteLink
         class="text-sm text-muted px-2"
         &href="(get props website)"
