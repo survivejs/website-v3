@@ -1,4 +1,66 @@
 <ContentCard
+  title="Local-First Software: Promises and Pitfalls (Otto Otsamo, 2025, BSc)"
+  websiteLabel="Read about local-first software"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/c81d0858-b4df-48b2-ab2d-f0c699e9b240/content"
+>
+  <slot name="content"
+    >Software applications with collaboration features are typically built to
+    store and process data on remote servers, making the client application
+    completely dependent on those servers. This architectural pattern is simple
+    to implement but has drawbacks: it is not possible to use the application
+    without an internet connection, it is not always clear who owns the user's
+    data, communication with the server may cause delays in actions taken by the
+    user, and the application stops working if the service shuts down,
+    potentially resulting in data loss. Local-first software refers to a
+    software design pattern that prioritises storing and processing data locally
+    on the user's device instead of remote servers. In this approach, servers
+    are typically only utilised as a synchronisation tool to enable
+    collaboration between users. This thesis reviews the benefits and drawbacks
+    of each approach based on existing research and describes the common
+    technologies typically used to build local-first software. The study
+    demonstrates that the local-first pattern can be beneficial in applications
+    involving asynchronous collaboration, but is unable to replace certain types
+    of cloud-based software, such as those handling financial transactions or
+    large datasets. Currently, the development of local-first applications
+    remains relatively limited; however, there is clear interest in the topic
+    within both academic and professional communities. To advance local-first
+    development, it would be beneficial to research how existing synchronous
+    data structures could be adapted to support asynchronous collaboration and
+    how the memory overhead and other limitations of local-first data structures
+    can be mitigated.
+  </slot>
+</ContentCard>
+<ContentCard
+  title="Comparison of web application architecture styles (Otto Söderman, 2025, BSc)"
+  websiteLabel="Read about web application architecture styles"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/4e1121c4-6409-4032-91aa-381b7b17096b/content"
+>
+  <slot name="content"
+    >Web application architecture styles define the overall structure of a web
+    application. In today's web development landscape, there are numerous web
+    architecture styles to choose from. Choosing the right architecture is often
+    difficult, and the choice can have a significant impact on the performance,
+    development, and maintainability of a given web software project. Currently,
+    information about these architectures is scattered. Therefore, the purpose
+    of this thesis is to consolidate this information. In particular, the
+    research goal is to identify the commonly used web application architectures
+    and map out their benefits and drawbacks. The research was conducted as a
+    literature review, using conference proceedings, research articles, and
+    books as the main sources. The four main software application architecture
+    styles that were identified are: monolithic, tiered, microservices, and
+    micro-frontends. Monolithic systems were found to be the easiest to setup
+    and manage, with tiered systems being a bit harder, and microservice-based
+    systems, which include micro-frontends, being even more difficult. However,
+    microservice-based systems were found to often be easier to maintain and
+    develop further features for, as opposed to monolithic and tiered systems.
+    Microservice-based systems were also found to be more scalable than
+    monoliths, while tiered systems sit somewhere in the middle. In addition,
+    microservice-based systems, and to a lesser extent tiered systems, were less
+    prone to technology lock-in, and more suitable for multi-team development
+    than monolithic systems.
+  </slot>
+</ContentCard>
+<ContentCard
   title="Comparison of the standardization processes of ECMAScript, HTML, and CSS (Juhana Laakso, 2025, BSc)"
   websiteLabel="Read about web standardization"
   website="https://www.researchgate.net/publication/391851352_Comparison_of_the_standardization_processes_of_ECMAScript_HTML_and_CSS"
