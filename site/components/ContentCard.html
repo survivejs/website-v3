@@ -17,12 +17,21 @@
     </div>
   </slot>
   <slot name="footer">
-    <Rounded &visibleIf="(get props website)">
-      <SiteLink
-        class="text-sm text-muted px-2"
-        &href="(get props website)"
-        &children="(get props websiteLabel 'Website')"
-      />
-    </Rounded>
+    <div class="flex flex-col gap-2">
+      <Rounded &visibleIf="(get props website)">
+        <SiteLink
+          class="text-sm text-muted px-2"
+          &href="(get props website)"
+          &children="(get props websiteLabel 'Website')"
+        />
+      </Rounded>
+      <Rounded &visibleIf="(get props seeAlso)">
+        <SiteLink
+          class="text-sm text-muted px-2"
+          &href="(get props seeAlso)"
+          &children="(get props seeAlsoLabel 'See also')"
+        />
+      </Rounded>
+    </div>
   </slot>
 </Card>
