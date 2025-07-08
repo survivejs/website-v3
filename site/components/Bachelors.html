@@ -123,6 +123,27 @@
   >
 </ContentCard>
 <ContentCard
+  title="Adapting SQLite to the Distributed Edge: A Comparative Study of Different Adaptations (Kalle Ahlström, 2025, BSc)"
+  websiteLabel="Read about SQLite on distributed edge"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/e3df40d2-a6e3-4a6a-8341-d10837b2f834/content"
+>
+  <slot name="content"
+    >This thesis is a comparative study of different SQLite adaptations and
+    their viability for Distributed Edge Computing environments. The four
+    adaptions chosen for closer analysis are FaaSFS, LiteFS, libSQL, and rqlite.
+    An ideal architecture is presented and that is used as a basis for the
+    comparison between the adaptations. None of the solutions studied implement
+    the ideal architecture. Each has different trade-offs, making the selection
+    process of what to use use-case specific. The main trade-offs highlight
+    significant differences between write performance, stronger consistency
+    guarantees, and/or increased read latency. According to the CAP theorem,
+    distributed systems can’t fully guarantee consistency, availability, and
+    partition tolerance simultaneously. Empirical analysis of the chosen
+    adaptations indicates that implementation designs inherently favor either
+    the CA or AP model, thereby substantiating the theorem.</slot
+  >
+</ContentCard>
+<ContentCard
   title="Survey of web API definition languages (Niklas Saarikoski, 2025, BSc)"
   websiteLabel="Read about API definition languages"
   website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/5689d6a8-f146-43d0-8313-21bfa5c4ee6c/content"
