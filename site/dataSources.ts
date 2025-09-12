@@ -236,7 +236,12 @@ The book content was developed during many years with the help of the community 
         contextChapters.map((
           // @ts-expect-error This is fine
           c,
-        ) => [c.data.title, urlJoin("..", c.data.slug, "/")]),
+        ) => {
+          const parts = c.data.slug.split("/").length;
+          const prefix = Array(parts).fill("..").join("/");
+
+          return [c.data.title, urlJoin(prefix, c.data.slug, "/")];
+        }),
       );
     }
 
