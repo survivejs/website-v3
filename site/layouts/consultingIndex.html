@@ -1,20 +1,178 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto p-4 md:p-0 w-full lg:max-w-3xl prose">
-      <section>
-        <Heading class="text-4xl font-extrabold" level="1">Consulting</Heading>
-        <Markdown as="p"
-          >Since officially starting my personal limited company in 2016, I have
-          occasionally worked as a consultant to earn additional income and to
-          develop my competence as consulting cases allow me to stay grounded in
-          reality. In addition, I've been pursuing a doctorate since 2022 at
-          [Aalto University](https://www.aalto.fi/fi).
-        </Markdown>
+    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
+      <section
+        class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-stretch"
+      >
+        <div
+          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col justify-between min-h-65"
+        >
+          <div class="absolute right-0 top-0 hidden md:block opacity-70">
+            <div class="grid grid-cols-6 gap-2 p-6">
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+            </div>
+          </div>
+          <div class="relative flex flex-col gap-6 max-w-3xl">
+            <div class="flex flex-wrap gap-2 text-xs uppercase">
+              <span class="bg-white border border-primary px-2 py-1"
+                >Frontend</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Tooling</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Workshops</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Research</span
+              >
+            </div>
+            <div class="flex flex-col gap-4">
+              <Heading
+                class="text-5xl md:text-7xl font-extrabold leading-none"
+                level="1"
+                >Consulting</Heading
+              >
+              <p class="text-2xl md:text-3xl leading-tight text-muted">
+                Focused support for web teams that need senior JavaScript,
+                tooling, or training expertise.
+              </p>
+            </div>
+            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
+              I have done occasional consulting through my personal limited
+              company since 2016. The work keeps me grounded in real projects
+              while my research at
+              <SiteLink href="https://www.aalto.fi/fi"
+                >Aalto University</SiteLink
+              >
+              keeps the longer technical arc in view.
+            </p>
+          </div>
+          <div class="relative flex flex-col sm:flex-row gap-3 mt-8">
+            <SiteLink
+              class="!no-underline bg-primary text-white hover:text-white px-4 py-3 font-semibold text-center"
+              href="https://goo.gl/forms/OWdGIOdHm9"
+              >Start a conversation</SiteLink
+            >
+            <a
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="#services"
+              >See services</a
+            >
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="/research/"
+              >Review research</SiteLink
+            >
+          </div>
+        </div>
+
+        <aside class="grid gap-4">
+          <div class="grid grid-cols-3 border-2 border-primary bg-primary">
+            <div class="bg-white p-4">
+              <div class="text-3xl font-extrabold">2016</div>
+              <div class="text-xs uppercase text-muted">Company</div>
+            </div>
+            <div class="bg-white p-4 border-l-2 border-primary">
+              <div class="text-3xl font-extrabold">6</div>
+              <div class="text-xs uppercase text-muted">Services</div>
+            </div>
+            <div class="bg-white p-4 border-l-2 border-primary">
+              <div class="text-3xl font-extrabold">EU</div>
+              <div class="text-xs uppercase text-muted">Based</div>
+            </div>
+          </div>
+          <div class="border-2 border-muted p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Best fit</div>
+            <div class="mt-5 grid gap-4">
+              <div class="grid grid-cols-[2rem_1fr] gap-4 items-start">
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >01</span
+                >
+                <span>
+                  <strong class="block">Complex frontend work</strong>
+                  <span class="block text-muted"
+                    >Especially where frontend architecture meets backend
+                    constraints.</span
+                  >
+                </span>
+              </div>
+              <div class="grid grid-cols-[2rem_1fr] gap-4 items-start">
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >02</span
+                >
+                <span>
+                  <strong class="block">Practical training</strong>
+                  <span class="block text-muted"
+                    >Hands-on workshops with katas rather than passive slide
+                    sessions.</span
+                  >
+                </span>
+              </div>
+              <div class="grid grid-cols-[2rem_1fr] gap-4 items-start">
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >03</span
+                >
+                <span>
+                  <strong class="block">Technical debt</strong>
+                  <span class="block text-muted"
+                    >Reviews, migrations, and cleanup plans for projects that
+                    need traction.</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+        </aside>
       </section>
-      <section>
-        <Heading class="text-2xl" level="2">Services</Heading>
-        <p>I offer a variety of services and I have listed examples below.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+
+      <section class="grid md:grid-cols-3 gap-4">
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Clients</div>
+          <p class="mt-3 text-lg">
+            AlphaSense, eBay, Kitchen Reklamebyrå, Kleiner Perkins, Typeform,
+            Wix, Xeneta, and others.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Mode</div>
+          <p class="mt-3 text-lg">
+            Short focused engagements, training days, reviews, or custom
+            development scoped around a concrete need.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Availability</div>
+          <p class="mt-3 text-lg">
+            I cannot guarantee instant or full-time availability, but suitable
+            cases are worth discussing.
+          </p>
+        </div>
+      </section>
+
+      <section id="services" class="flex flex-col gap-4 scroll-mt-16">
+        <div class="max-w-3xl">
+          <Heading class="text-3xl font-extrabold" level="2">Services</Heading>
+          <p class="mt-3 text-lg text-muted">
+            I shape each engagement around the client. These are the recurring
+            service types I can provide.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card>
             <slot name="header">
               <Heading level="3" class="font-medium"
@@ -22,31 +180,23 @@
               >
             </slot>
             <slot name="content"
-              >Occasionally I have been hired to perform custom development.
-              Example cases include developing a complex table component or
-              building up a new system in collaboration with a design system
-              developer. I understand different aspects of modern frontend
-              development well and work best in the interface between frontend
-              and backend that you might characterize as the backend of the
-              frontend.</slot
+              >I can help with complex frontend work, design-system-adjacent
+              implementation, table-heavy interfaces, and the backend-facing
+              side of frontend architecture.</slot
             >
           </Card>
           <Card>
             <slot name="header">
               <Heading level="3" class="font-medium">Workshops</Heading>
             </slot>
-            <slot name="content"
-              ><Markdown as="p"
-                >To train up staff, I have run several workshops throughout the
-                years in my specialized topics. I have focused mainly on webpack
-                and React although I have given workshops on topics like Deno
-                and Qwik too. These days I prefer a hands-on approach and like
-                to [run my workshops through predesigned katas](/workshops/)
-                that allow attendees at different levels understand the topic
-                and dive straight into the topic. I can also provide a short
-                lecture on the topic in the beginning if needed.</Markdown
-              ></slot
-            >
+            <slot name="content">
+              <Markdown as="p"
+                >I run hands-on workshops on topics such as webpack, React,
+                Deno, and Qwik. I prefer [predesigned katas](/workshops/) so
+                attendees can work at different levels and still make concrete
+                progress.</Markdown
+              >
+            </slot>
           </Card>
           <Card>
             <slot name="header">
@@ -54,52 +204,38 @@
                 >Conference organizing</Heading
               >
             </slot>
-            <slot name="content"
-              ><Markdown as="p"
-                >I have been running conferences since 2017 ([React
+            <slot name="content">
+              <Markdown as="p"
+                >I have run conferences since 2017, including [React
                 Finland](https://react-finland.fi/), [GraphQL
-                Finland](https://graphql-finland.fi/), [Future
-                Frontend](https://futurefrontend.com/)) and have gained a strong
-                understanding on how the business works. I have run both
-                physical and online events and have operated mainly as a
-                conference director focused on the big picture (concept,
-                speakers, marketing). In case you have questions related how to
-                build up your own concept, I might some kind of answers to
-                this.</Markdown
-              ></slot
-            >
+                Finland](https://graphql-finland.fi/), and [Future
+                Frontend](https://futurefrontend.com/). I can help with concept,
+                speaker work, marketing, and event direction.</Markdown
+              >
+            </slot>
           </Card>
           <Card>
             <slot name="header">
               <Heading level="3" class="font-medium">Research</Heading>
             </slot>
-            <slot name="content"
-              ><Markdown as="p"
-                >Since 2022, I have been working as a doctoral researcher for
-                Aalto University. Through my research, I have learned how the
-                world of scientific publishing works. I have not done any
-                commercial research cases but I have not ruled out the option in
-                case a suitable case becomes available. I have done mainly
-                surveys and empirical research so I understand both qualitative
-                and quantitative ends of the spectrum. [See my research
-                outputs](/research/) if you are interested in the academic
-                side.</Markdown
-              ></slot
-            >
+            <slot name="content">
+              <Markdown as="p"
+                >My doctoral work has given me practical experience with
+                scientific publishing, surveys, empirical research, and
+                qualitative and quantitative methods. [See my research
+                outputs](/research/) for the academic side.</Markdown
+              >
+            </slot>
           </Card>
           <Card>
             <slot name="header">
-              <Heading level="3" class="font-medium">Cleaning up</Heading>
+              <Heading level="3" class="font-medium">Cleanup</Heading>
             </slot>
             <slot name="content"
-              >Let's face it, not all development is clean and sometimes you
-              have to go fast and make a mess. That is the situation when you
-              might need someone like me to address your technical debt in a
-              fast and effective manner. I can support your clean-up efforts on
-              different levels by for example doing a superficial review to
-              provide clear points for improvements or dig down into details and
-              for example migrate your webpack configuration to the latest
-              standard or a more effective tool.</slot
+              >I can review technical debt, produce prioritized improvement
+              points, or dig into implementation details such as modernizing a
+              webpack setup or moving a project toward a simpler
+              toolchain.</slot
             >
           </Card>
           <Card>
@@ -107,89 +243,113 @@
               <Heading level="3" class="font-medium">Coaching</Heading>
             </slot>
             <slot name="content"
-              >These days I tend to work a lot with university students as they
-              learn academic writing. In case you are looking for a personal
-              coach, you could hire me to spend a focused hour or two per week
-              around development and JavaScript related topics in your mind to
-              grow as a professional. I am happy to provide my expertise to you
-              in the form of coaching.</slot
+              >For individuals, I can provide focused weekly or occasional
+              coaching around JavaScript, web development, technical writing,
+              and professional growth topics.</slot
             >
           </Card>
         </div>
       </section>
-      <section>
-        <Heading class="text-2xl" level="2">References</Heading>
-        <Markdown as="p"
-          >I have worked with numerous companies during my career as a
-          consultant. To mention some, consider the following list:
-          [AlphaSense](https://www.alpha-sense.com/),
-          [eBay](https://www.ebay.de/), [Kitchen
-          Reklamebyrå](http://www.kitchen.no/), [Kleiner
-          Perkins](https://www.kleinerperkins.com/),
-          [Typeform](https://www.typeform.com/), [Wix](https://www.wix.com/),
-          [Xeneta](https://www.xeneta.com/).</Markdown
-        >
+
+      <section
+        class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 border-y-2 border-primary py-8"
+      >
+        <div class="flex flex-col gap-4">
+          <Heading class="text-3xl font-extrabold" level="2"
+            >Example engagements</Heading
+          >
+          <p class="text-xl leading-relaxed text-muted">
+            Each case is negotiated around the actual need rather than a fixed
+            package.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Kapsch</div>
+            <p class="mt-3">
+              Facilitated refactoring of an internal tool, including two days of
+              on-site training.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">eBay</div>
+            <p class="mt-3">
+              Supported internal training and development work around frontend
+              tooling.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Typeform</div>
+            <p class="mt-3">
+              Delivered a full on-site week with training on relevant technical
+              topics.
+            </p>
+          </div>
+        </div>
       </section>
-      <section>
-        <Heading class="text-2xl" level="2">Consulting examples</Heading>
-        <Markdown as="p"
-          >I negotiate each consulting case to fit the needs of the client. For
-          example, with [Kapsch](http://www.kapsch.net/) I helped the company to
-          facilitate refactoring of an internal tool including two days of
-          on-site training. With [eBay](https://www.ebay.de/), I helped the
-          company with internal training and development work. For
-          [Typeform](https://www.typeform.com/), I did a full week on-site with
-          training on relevant topics as needed. These are only a few cases out
-          of many and the offering is always customized to suit the needs of the
-          client.</Markdown
-        >
+
+      <section class="flex flex-col gap-4">
+        <div class="max-w-3xl">
+          <Heading class="text-3xl font-extrabold" level="2"
+            >Testimonials</Heading
+          >
+          <p class="mt-3 text-lg text-muted">
+            Selected comments from past training and consulting work.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Kapsch</Heading>
+            </slot>
+            <slot name="content">
+              <Markdown as="p"
+                >"Great and helpful workshops with @bebraw @filipematossilv and
+                @wSokra Thank you, guys. Great work!"
+                [Source](https://twitter.com/aalbericio/status/935574136528818177)</Markdown
+              >
+            </slot>
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Namics</Heading>
+            </slot>
+            <slot name="content"
+              >"This will bring our Webpack builds to the next level: great
+              workshop with deep knowledge from @bebraw and @wsokra. Thank you
+              guys!"</slot
+            >
+          </Card>
+          <Card>
+            <slot name="header">
+              <Heading level="3" class="font-medium">Quantifio</Heading>
+            </slot>
+            <slot name="content"
+              >"I learned and understood more of webpack in a two-hour
+              masterclass than all previous training combined."</slot
+            >
+          </Card>
+        </div>
       </section>
-      <section>
-        <Heading class="text-2xl" level="2">Testimonials</Heading>
-        <p>
-          I have listed several of my testimonials below. In some cases I bring
-          needed additional expertise on board through my broad personal
-          networks to complement my own knowledge.
-        </p>
-        <ul>
-          <li>
-            <Markdown
-              >[Kapsch](http://www.kapsch.net/) - "Great and helpful workshops
-              with @bebraw @filipematossilv and @wSokra Thank you, guys. Great
-              work!"
-              [Source](https://twitter.com/aalbericio/status/935574136528818177).</Markdown
+
+      <section class="border-2 border-primary bg-secondary p-6 md:p-8">
+        <div class="grid md:grid-cols-[1fr_auto] gap-6 md:items-center">
+          <div class="flex flex-col gap-3">
+            <Heading class="text-3xl font-extrabold" level="2"
+              >How to hire me</Heading
             >
-          </li>
-          <li>
-            <Markdown
-              >[Namics](https://www.namics.com/) - "This will bring our Webpack
-              builds to the next level: great workshop with deep knowledge from
-              @bebraw and @wsokra. Thank you guys!"</Markdown
-            >
-          </li>
-          <li>
-            <Markdown
-              >[Quantifio](http://www.quantifio.no/) - "I learned and understood
-              more of webpack in a two-hour masterclass than all previous
-              training combined. Juho has the skills and repertoire to improvise
-              content and fine tune relevancy - he connected the dots on
-              specific topics in an Electron environment and had the answers you
-              wont find online."</Markdown
-            >
-          </li>
-        </ul>
-      </section>
-      <section>
-        <Heading class="text-2xl" level="2">How to hire me?</Heading>
-        <Markdown as="p"
-          >In case you are interested in hiring me or collaborating in some
-          manner, [please fill my contact
-          form](https://goo.gl/forms/OWdGIOdHm9") and I will get back to you.
-          Generally more specialized and intense work tends to be more expensive
-          while lower commitment tends to come with a lower price. I cannot
-          guarantee instant or full-time availability, but the situation can
-          change fast so it is worth sending a query regardless.
-        </Markdown>
+            <p class="text-lg max-w-3xl">
+              More specialized and intense work tends to be more expensive,
+              while lower-commitment advisory work can be scoped lighter. Send a
+              query with the problem, timeline, and constraints.
+            </p>
+          </div>
+          <SiteLink
+            class="!no-underline bg-primary text-white hover:text-white px-4 py-3 font-semibold text-center"
+            href="https://goo.gl/forms/OWdGIOdHm9"
+            >Fill the contact form</SiteLink
+          >
+        </div>
       </section>
     </div>
   </slot>
