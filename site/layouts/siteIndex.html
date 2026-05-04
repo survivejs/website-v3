@@ -1,101 +1,237 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto p-4 md:p-0 w-full md:max-w-3xl flex flex-col gap-8">
-      <div class="prose max-w-ch80">
-        <div class="flex flex-col md:flex-row gap-4 not-prose">
-          <Heading class="text-4xl font-extrabold" level="1">SurviveJS</Heading>
-          <span class="text-2xl content-end text-muted"
-            >From an apprentice to a master of JavaScript</span
+    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
+      <section
+        class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-stretch"
+      >
+        <div
+          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col justify-between min-h-65"
+        >
+          <div
+            class="absolute right-0 top-0 hidden md:grid grid-cols-6 gap-2 p-6 opacity-60"
           >
+            <span class="w-3 h-3 bg-primary"></span>
+            <span class="w-3 h-3 bg-warning"></span>
+            <span class="w-3 h-3 bg-white"></span>
+            <span class="w-3 h-3 bg-primary"></span>
+            <span class="w-3 h-3 bg-warning"></span>
+            <span class="w-3 h-3 bg-white"></span>
+            <span class="w-3 h-3 bg-warning"></span>
+            <span class="w-3 h-3 bg-white"></span>
+            <span class="w-3 h-3 bg-primary"></span>
+            <span class="w-3 h-3 bg-white"></span>
+            <span class="w-3 h-3 bg-primary"></span>
+            <span class="w-3 h-3 bg-warning"></span>
+          </div>
+          <div class="relative flex flex-col gap-6 max-w-3xl">
+            <div class="flex flex-wrap gap-2 text-xs uppercase">
+              <span class="bg-white border border-primary px-2 py-1"
+                >JavaScript</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >TypeScript</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Tooling</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Performance</span
+              >
+            </div>
+            <div class="flex flex-col gap-4">
+              <Heading
+                class="text-5xl md:text-7xl font-extrabold leading-none"
+                level="1"
+                >SurviveJS</Heading
+              >
+              <p class="text-2xl md:text-3xl leading-tight text-muted">
+                Practical routes from JavaScript fundamentals to production
+                craft.
+              </p>
+            </div>
+            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
+              I am Juho Vepsäläinen. Since 2016, I have collected books,
+              interviews, research notes, and workshop material for developers
+              who want to understand the web platform beyond quick recipes.
+            </p>
+          </div>
+          <div class="relative flex flex-col sm:flex-row gap-3 mt-8">
+            <SiteLink
+              class="!no-underline bg-primary text-white hover:text-white px-4 py-3 font-semibold text-center"
+              href="/books/"
+              >Start with books</SiteLink
+            >
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="/blog/"
+              >Read the blog</SiteLink
+            >
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="/consulting/"
+              >Work with me</SiteLink
+            >
+          </div>
         </div>
 
-        <Markdown as="p"
-          >Welcome to survivejs.com. I (Juho Vepsäläinen) have gathered material
-          related to JavaScript since 2016. You can consider this site as a
-          learning resource at different levels where I have gathered my
-          learnings about the topic. Given JavaScript is a broad subject, I have
-          divided the site as follows:
-        </Markdown>
-        <ul>
-          <li>
-            <SiteLink href="/books/"
-              >In the books section you can find my larger writings about
-              JavaScript.</SiteLink
-            >
-            Currently maintenance,
-            <SiteLink href="https://react.dev/">React</SiteLink>, and
-            <SiteLink href="https://webpack.js.org/">webpack</SiteLink> (most up
-            to date book) are covered.
-          </li>
-          <li>
-            <SiteLink href="/blog/"
-              >The blog contains numerous of developer interviews (200+) and
-              shorter posts about JavaScript.</SiteLink
-            >
-          </li>
-          <li>
-            <SiteLink href="/research/"
-              >In the academic research section you can find my papers about the
-              topics.</SiteLink
-            >
-            I have taken care to include enough background material in my papers
-            to keep them accessible so it is not as dry as you might think.
-          </li>
-          <li>
-            <SiteLink href="/workshops/"
-              >I have gathered material related to my recent workshops at the
-              workshops section of the site.</SiteLink
-            >
-            Currently <SiteLink href="https://qwik.dev/">Qwik</SiteLink>,
-            <SiteLink href="https://deno.com/">Deno</SiteLink>, and
-            <SiteLink
-              href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
-              >Web Audio</SiteLink
-            >
-            are covered.
-          </li>
-        </ul>
-        <Markdown as="p"
-          >Most of the content is freely available although you can support my
-          efforts by buying [books](/books/) or considering some form of
-          [consulting](/consulting/). I work mainly around TypeScript, tooling,
-          and web performance these days. Through my research efforts I have had
-          to delve into the latest rendering techniques and upcoming themes like
-          edge computing.
-        </Markdown>
-        <Markdown as="p"
-          >This site has been built using [Gustwind](https://gustwind.js.org/),
-          my personal framework that is close to HTML with an API familiar to
-          users of React. You could consider the site itself as a learning
-          resource as I have built it using Tailwind syntax and you can
-          copy/paste from the source easily although my custom components have
-          been removed from the output although [you can find the custom
-          components at
-          GitHub](https://github.com/survivejs/website-v3).</Markdown
-        >
-      </div>
+        <aside class="grid gap-4">
+          <div class="border-2 border-muted p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Learning map</div>
+            <div class="mt-5 grid gap-4">
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/books/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >01</span
+                >
+                <span>
+                  <strong class="block text-black">Books</strong>
+                  <span class="block text-muted"
+                    >Long-form guides for webpack, maintenance, and React.</span
+                  >
+                </span>
+              </SiteLink>
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/blog/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >02</span
+                >
+                <span>
+                  <strong class="block text-black">Interviews</strong>
+                  <span class="block text-muted"
+                    >More than 200 conversations with tool and library
+                    authors.</span
+                  >
+                </span>
+              </SiteLink>
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/research/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >03</span
+                >
+                <span>
+                  <strong class="block text-black">Research</strong>
+                  <span class="block text-muted"
+                    >Academic work with enough background to stay
+                    readable.</span
+                  >
+                </span>
+              </SiteLink>
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/workshops/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >04</span
+                >
+                <span>
+                  <strong class="block text-black">Workshops</strong>
+                  <span class="block text-muted"
+                    >Katas for Qwik, Deno, Web Audio, and modern web APIs.</span
+                  >
+                </span>
+              </SiteLink>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 border-2 border-primary bg-primary">
+            <div class="bg-white p-4">
+              <div class="text-3xl font-extrabold">3</div>
+              <div class="text-xs uppercase text-muted">Books</div>
+            </div>
+            <div class="bg-white p-4 border-l-2 border-primary">
+              <div class="text-3xl font-extrabold">200+</div>
+              <div class="text-xs uppercase text-muted">Posts</div>
+            </div>
+            <div class="bg-white p-4 border-l-2 border-primary">
+              <div class="text-3xl font-extrabold">2016</div>
+              <div class="text-xs uppercase text-muted">Since</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid md:grid-cols-3 gap-4">
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Current focus</div>
+          <p class="mt-3 text-lg">
+            TypeScript, tooling, web performance, rendering techniques, and edge
+            computing.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Use the source</div>
+          <p class="mt-3 text-lg">
+            The site is built with
+            <SiteLink href="https://gustwind.js.org/">Gustwind</SiteLink> and
+            Tailwind syntax, so the source doubles as a learning resource.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Support the work</div>
+          <p class="mt-3 text-lg">
+            Most material is free. Buying
+            <SiteLink href="/books/">books</SiteLink> or booking
+            <SiteLink href="/consulting/">consulting</SiteLink> keeps it going.
+          </p>
+        </div>
+      </section>
     </div>
-    <div class="md:mx-auto p-4 md:p-0 w-full md:max-w-3xl flex flex-col gap-8">
-      <div class="flex flex-col gap-4">
-        <Heading class="text-2xl" level="2">Books</Heading>
-        <div class="grid xl:grid-cols-3 gap-8">
+
+    <div
+      class="md:mx-auto px-4 md:px-6 pt-12 w-full max-w-6xl flex flex-col gap-12"
+    >
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
+        >
+          <Heading class="text-3xl font-extrabold" level="2">Books</Heading>
+          <SiteLink class="!no-underline text-sm" href="/books/"
+            >Browse all books</SiteLink
+          >
+        </div>
+        <div class="grid xl:grid-cols-3 gap-6">
           <Books />
         </div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <Heading class="text-2xl" level="2">Latest blog posts</Heading>
+      </section>
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
+        >
+          <Heading class="text-3xl font-extrabold" level="2"
+            >Latest blog posts</Heading
+          >
+          <SiteLink class="!no-underline text-sm" href="/blog/"
+            >Browse the archive</SiteLink
+          >
+        </div>
         <BlogPosts
-          class="grid xl:grid-cols-3 gap-8"
+          class="grid xl:grid-cols-3 gap-6"
           &blogPosts="(get context blogPosts)"
           linkPrefix="/blog/"
         />
-      </div>
-      <div class="flex flex-col gap-4">
-        <Heading class="text-2xl" level="2">Workshops</Heading>
-        <div class="grid xl:grid-cols-3 gap-8">
+      </section>
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
+        >
+          <Heading class="text-3xl font-extrabold" level="2">Workshops</Heading>
+          <SiteLink class="!no-underline text-sm" href="/workshops/"
+            >See workshop material</SiteLink
+          >
+        </div>
+        <div class="grid xl:grid-cols-3 gap-6">
           <Workshops />
         </div>
-      </div>
+      </section>
     </div>
   </slot>
 </BaseLayout>
