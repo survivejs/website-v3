@@ -1,141 +1,313 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto p-4 md:p-0 w-full lg:max-w-3xl prose">
-      <Heading class="text-4xl" level="1">Research</Heading>
-      <Markdown as="p"
-        >For the completion of my doctorate, I produced several papers and you
-        can [find all of the papers I have written at
-        ORCID](https://orcid.org/0000-0003-0025-5540). I have listed several on
-        this page in addition to other works, including works of my students
-        (MSc, BSc).</Markdown
+    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
+      <section
+        class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-stretch"
       >
-      <section>
-        <HeadingWithAnchor level="2"
-          >Dissertation – Emergence of hybrid rendering models in web
-          application development (2025)
-        </HeadingWithAnchor>
-        <Markdown as="p"
-          >Web is the largest application platform available globally as at
-          least 60% of humanity has access to it [52]. The situation has been
-          enabled by the almost ubiquitous nature of the internet and broad
-          access to it. The popularity of the web platform comes with its
-          challenges, as it was originally designed for static content and
-          evolved to support application development.</Markdown
-        ><Markdown as="p"
-          >The continuous process of evolution has forced developers to evaluate
-          their development practices from time to time. Simultaneously, the
-          demands for the quality of web applications have increased and so has
-          their size as their size has tripled over the past ten years [22]. The
-          development contradicts the global trend of increased web usage
-          through mobile devices, where bandwidth and computational power are
-          limited by definition. Due to the prevailing trends of increasing
-          application size and mobile usage, new, more effective ways to develop
-          web applications are needed.</Markdown
-        ><Markdown as="p"
-          >This dissertation captures the current situation of web development
-          while providing directions on how to address the industry's current
-          pain points. The dissertation shows how web developers can apply niche
-          techniques and technologies to improve their applications on all
-          levels while delivering faster and better user experiences without
-          forgetting developer experience.</Markdown
-        ><Markdown as="p"
-          >Examining so-called hybrid rendering techniques and edge computing, I
-          show what web development might become in the years to come and
-          propose solutions beyond what is available in the mainstream. The
-          primary purpose of this dissertation is to explore the space between
-          static and dynamic web development to open new venues for web
-          developers through novel techniques and technologies without
-          forgetting users.</Markdown
+        <div
+          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col gap-8"
         >
-        <div class="flex flex-col sm:flex-row gap-2">
-          <Rounded>
-            <SiteLink
-              class="text-sm text-muted px-2"
-              href="https://www.researchgate.net/publication/391900001_Emergence_of_hybrid_rendering_models_in_web_application_development"
-              >Read the dissertation at ResearchGate</SiteLink
+          <div class="absolute right-0 top-0 hidden md:block opacity-70">
+            <div class="grid grid-cols-5 gap-2 p-6">
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+            </div>
+          </div>
+          <div class="relative flex flex-col gap-5 max-w-3xl">
+            <div class="flex flex-wrap gap-2 text-xs uppercase">
+              <span class="bg-white border border-primary px-2 py-1"
+                >Web engineering</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Performance</span
+              >
+              <span class="bg-white border border-primary px-2 py-1">AI</span>
+              <span class="bg-white border border-primary px-2 py-1"
+                >Education</span
+              >
+            </div>
+            <Heading
+              class="text-5xl md:text-7xl font-extrabold leading-none"
+              level="1"
+              >Research</Heading
             >
-          </Rounded>
-          <Rounded>
+            <p class="text-2xl md:text-3xl leading-tight text-muted">
+              Academic work on how the web platform changes, scales, and becomes
+              teachable.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
+              For my doctorate and advisory work, I have studied hybrid
+              rendering, edge computing, web performance, artificial
+              intelligence, and the long arc of JavaScript and web development.
+            </p>
+          </div>
+          <div class="relative flex flex-col sm:flex-row gap-3">
             <SiteLink
-              class="text-sm text-muted px-2"
-              href="https://www.youtube.com/watch?v=6OXV_TxDjLs"
-              >View the defense at YouTube</SiteLink
+              class="!no-underline bg-primary text-white hover:text-white px-4 py-3 font-semibold text-center"
+              href="https://orcid.org/0000-0003-0025-5540"
+              >View ORCID</SiteLink
             >
-          </Rounded>
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="https://www.researchgate.net/profile/Juho-Vepsaelaeinen"
+              >ResearchGate</SiteLink
+            >
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="https://scholar.google.com/citations?user=vf9Y1xQAAAAJ"
+              >Google Scholar</SiteLink
+            >
+          </div>
+        </div>
+
+        <aside class="grid gap-4">
+          <div class="grid grid-cols-3 border-2 border-primary bg-primary">
+            <div class="bg-white p-4">
+              <div class="text-3xl font-extrabold">2025</div>
+              <div class="text-xs uppercase text-muted">Doctorate</div>
+            </div>
+            <div class="bg-white p-4 border-l-2 border-primary">
+              <div class="text-3xl font-extrabold">4</div>
+              <div class="text-xs uppercase text-muted">Themes</div>
+            </div>
+            <div class="bg-white p-4 border-l-2 border-primary">
+              <div class="text-3xl font-extrabold">BSc/MSc</div>
+              <div class="text-xs uppercase text-muted">Topics</div>
+            </div>
+          </div>
+          <div class="border-2 border-muted p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Page map</div>
+            <div class="mt-5 grid gap-4">
+              <a
+                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
+                href="#dissertation"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >01</span
+                >
+                <span>
+                  <strong class="block text-black">Dissertation</strong>
+                  <span class="block"
+                    >Hybrid rendering models in web application
+                    development.</span
+                  >
+                </span>
+              </a>
+              <a
+                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
+                href="#selected-papers"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >02</span
+                >
+                <span>
+                  <strong class="block text-black">Selected papers</strong>
+                  <span class="block"
+                    >Web performance, AI, hypermedia, resumability, and
+                    standards.</span
+                  >
+                </span>
+              </a>
+              <a
+                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
+                href="#advisory-work"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >03</span
+                >
+                <span>
+                  <strong class="block text-black">Advisory work</strong>
+                  <span class="block"
+                    >BSc and MSc theses completed with students.</span
+                  >
+                </span>
+              </a>
+              <a
+                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
+                href="#thesis-themes"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >04</span
+                >
+                <span>
+                  <strong class="block text-black">Thesis themes</strong>
+                  <span class="block"
+                    >Open directions for BSc and MSc students.</span
+                  >
+                </span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section
+        class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 border-y-2 border-primary py-8"
+      >
+        <div class="flex flex-col gap-4">
+          <HeadingWithAnchor anchor="dissertation" level="2"
+            >Dissertation – Emergence of hybrid rendering models in web
+            application development (2025)
+          </HeadingWithAnchor>
+          <p class="text-xl leading-relaxed text-muted">
+            The dissertation examines the space between static and dynamic web
+            development, then shows how niche rendering techniques and edge
+            computing can improve both user experience and developer experience.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <Rounded>
+              <SiteLink
+                class="text-sm text-muted px-2"
+                href="https://www.researchgate.net/publication/391900001_Emergence_of_hybrid_rendering_models_in_web_application_development"
+                >Read at ResearchGate</SiteLink
+              >
+            </Rounded>
+            <Rounded>
+              <SiteLink
+                class="text-sm text-muted px-2"
+                href="https://www.youtube.com/watch?v=6OXV_TxDjLs"
+                >View the defense</SiteLink
+              >
+            </Rounded>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Problem</div>
+            <p class="mt-3">
+              Web applications keep growing while mobile bandwidth and device
+              capacity remain constrained.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Approach</div>
+            <p class="mt-3">
+              Study hybrid rendering, edge computing, and emerging frontend
+              techniques beyond mainstream defaults.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Outcome</div>
+            <p class="mt-3">
+              Practical directions for faster web applications without
+              sacrificing developer experience.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Scope</div>
+            <p class="mt-3">
+              Static, dynamic, serverless, and edge-assisted application
+              delivery models.
+            </p>
+          </div>
         </div>
       </section>
-      <section>
-        <HeadingWithAnchor level="2">Selected papers</HeadingWithAnchor>
-        <Markdown as="p"
-          >My research focuses mainly on the intersection of web engineering,
-          web performance, and artificial intelligence. You can get the best
-          overview of my research outputs through
-          [ORCID](https://orcid.org/0000-0003-0025-5540),
-          [ResearchGate](https://www.researchgate.net/profile/Juho-Vepsaelaeinen),
-          or [Google
-          Scholar](https://scholar.google.com/citations?user=vf9Y1xQAAAAJ). I
-          have listed several of my main papers below and you can find more from
-          the aforementioned sources.</Markdown
+
+      <section class="grid md:grid-cols-3 gap-4">
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Booklets</div>
+          <p class="mt-3">
+            <SiteLink href="https://arxiv.org/pdf/2309.03201"
+              >Disappearing frameworks explained</SiteLink
+            >
+            and
+            <SiteLink
+              href="https://www.researchgate.net/publication/400668319_The_Process_of_Scientific_Writing_-_Your_guide_to_getting_started_with_scientific_publishing"
+              >The Process of Scientific Writing</SiteLink
+            >
+            collect compact guidance for web development and publishing.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Lectures</div>
+          <p class="mt-3">
+            The annual
+            <SiteLink
+              href="https://www.researchgate.net/publication/395572589_Web_application_development_-_The_past_the_present_the_future_2025_version"
+              >Web application development</SiteLink
+            >
+            lecture is paired with material on
+            <SiteLink
+              href="https://www.researchgate.net/publication/400934202_Hypermedia_-_The_solution_for_lighter_web_applications"
+              >hypermedia</SiteLink
+            >.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Student work</div>
+          <p class="mt-3">
+            I advise BSc and MSc theses at Aalto University, usually in English,
+            around current web platform and software engineering themes.
+          </p>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
         >
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+          <div class="max-w-3xl">
+            <HeadingWithAnchor level="2">Selected papers</HeadingWithAnchor>
+            <p class="mt-3 text-lg text-muted">
+              My research focuses on the intersection of web engineering, web
+              performance, and artificial intelligence. The publication profiles
+              above provide the fullest bibliography.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Research />
         </div>
       </section>
-      <section>
-        <HeadingWithAnchor level="2">Booklets</HeadingWithAnchor>
-        <Markdown as="p"
-          >As a part of coursework, I authored a short booklet under the title
-          "Disappearing frameworks explained". [The booklet was published in
-          2023 through arXiv.](https://arxiv.org/pdf/2309.03201)</Markdown
-        >
-        <Markdown as="p"
-          >Another booklet I authored is called "The Process of Scientific
-          Writing – Your guide to getting started with scientific publishing"
-          and I wrote it to support my work with my students to make the process
-          easier. [The writing booklet is available
-          here.](https://www.researchgate.net/publication/400668319_The_Process_of_Scientific_Writing_-_Your_guide_to_getting_started_with_scientific_publishing)</Markdown
-        >
-      </section>
-      <section>
-        <HeadingWithAnchor level="2">Lectures</HeadingWithAnchor>
-        <Markdown as="p"
-          >I give a yearly lecture titled "Web application development - The
-          past, the present, the future". You can [find the 2025 slides of the
-          lecture
-          here](https://www.researchgate.net/publication/395572589_Web_application_development_-_The_past_the_present_the_future_2025_version).</Markdown
-        >
-        <Markdown as="p"
-          >I also have another lecture titled [Hypermedia – The solution for
-          lighter web
-          applications?](https://www.researchgate.net/publication/400934202_Hypermedia_-_The_solution_for_lighter_web_applications).</Markdown
-        >
-      </section>
-      <section>
-        <HeadingWithAnchor level="2">Advisory work</HeadingWithAnchor>
-        <Markdown as="p"
-          >During my studies, I have worked as an advisor for several theses.
-          You can find a selection below.</Markdown
-        >
-        <HeadingWithAnchor level="3">Masters</HeadingWithAnchor>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
-          <Masters />
+
+      <section class="flex flex-col gap-4">
+        <div class="max-w-3xl">
+          <HeadingWithAnchor level="2">Advisory work</HeadingWithAnchor>
+          <p class="mt-3 text-lg text-muted">
+            During my studies, I have worked as an advisor for several theses.
+            The selections below show completed MSc and BSc work.
+          </p>
         </div>
-        <HeadingWithAnchor level="3">Bachelors</HeadingWithAnchor>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
-          <Bachelors />
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
+            <HeadingWithAnchor level="3">Masters</HeadingWithAnchor>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Masters />
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <HeadingWithAnchor level="3">Bachelors</HeadingWithAnchor>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Bachelors />
+            </div>
+          </div>
         </div>
       </section>
-      <section>
-        <HeadingWithAnchor level="2">BSc/MSc themes</HeadingWithAnchor>
-        <Markdown as="p"
-          >I have listed various BSc/MSc themes below. The idea is that you can
-          pick a specific research question within a theme as this allows
-          multiple students to research the same theme. Typically I accept 4-5
-          BSc students per semester (Spring, Summer, Fall) at Aalto University
-          (a couple of MSc students per year). Usually the works are authored in
-          English, although Finnish is an option.</Markdown
-        >
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 not-prose">
+
+      <section class="flex flex-col gap-4">
+        <div class="max-w-3xl">
+          <HeadingWithAnchor anchor="thesis-themes" level="2"
+            >BSc/MSc themes</HeadingWithAnchor
+          >
+          <p class="mt-3 text-lg text-muted">
+            These themes are starting points for choosing a specific research
+            question. Typically, I accept four to five BSc students per semester
+            and a couple of MSc students per year.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <ResearchTopics />
         </div>
       </section>
