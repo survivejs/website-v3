@@ -1,14 +1,220 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto p-4 md:p-0 w-full lg:max-w-3xl prose">
-      <Heading class="text-4xl font-extrabold" level="1">Books</Heading>
-      <Markdown as="p"
-        >I have authored several books related to JavaScript and you can find
-        them on this site. See below for more specific descriptions.
-      </Markdown>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 not-prose">
-        <Books />
-      </div>
+    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
+      <section
+        class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-start"
+      >
+        <div
+          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col justify-between min-h-65"
+        >
+          <div class="absolute right-0 top-0 hidden md:block opacity-70">
+            <div class="grid grid-cols-6 gap-2 p-6">
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-white"></span>
+              <span class="w-3 h-3 bg-primary"></span>
+              <span class="w-3 h-3 bg-warning"></span>
+            </div>
+          </div>
+          <div class="relative flex flex-col gap-6 max-w-3xl">
+            <div class="flex flex-wrap gap-2 text-xs uppercase">
+              <span class="bg-white border border-primary px-2 py-1"
+                >Webpack</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Maintenance</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >React</span
+              >
+              <span class="bg-white border border-primary px-2 py-1"
+                >Free online</span
+              >
+            </div>
+            <div class="flex flex-col gap-4">
+              <Heading
+                class="text-5xl md:text-7xl font-extrabold leading-none"
+                level="1"
+                >Books</Heading
+              >
+              <p class="text-2xl md:text-3xl leading-tight text-muted">
+                Long-form JavaScript guides written for people who need to
+                understand the tradeoffs.
+              </p>
+            </div>
+            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
+              I have authored and maintained several books around JavaScript,
+              webpack, React, and project maintenance. Most of the material is
+              available online, and purchases support the continued development
+              of the content.
+            </p>
+          </div>
+          <div class="relative flex flex-col sm:flex-row gap-3 mt-8">
+            <a
+              class="!no-underline bg-primary text-white hover:text-white px-4 py-3 font-semibold text-center"
+              href="#book-catalog"
+              >Browse books</a
+            >
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="/books/webpack/"
+              >Start with webpack</SiteLink
+            >
+            <SiteLink
+              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
+              href="/consulting/"
+              >Ask about training</SiteLink
+            >
+          </div>
+        </div>
+
+        <aside class="grid gap-4">
+          <div class="border-2 border-muted p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Reading path</div>
+            <div class="mt-5 grid gap-4">
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/books/webpack/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >01</span
+                >
+                <span>
+                  <strong class="block text-black">Webpack 5</strong>
+                  <span class="block text-muted"
+                    >Current reference for bundling and configuration
+                    composition.</span
+                  >
+                </span>
+              </SiteLink>
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/books/maintenance/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >02</span
+                >
+                <span>
+                  <strong class="block text-black">Maintenance</strong>
+                  <span class="block text-muted"
+                    >Publishing and maintaining JavaScript projects over
+                    time.</span
+                  >
+                </span>
+              </SiteLink>
+              <SiteLink
+                class="!no-underline grid grid-cols-[2rem_1fr] gap-4 items-start"
+                href="/books/react/"
+              >
+                <span
+                  class="border border-primary text-primary text-center font-bold"
+                  >03</span
+                >
+                <span>
+                  <strong class="block text-black">React</strong>
+                  <span class="block text-muted"
+                    >The historical starting point, kept online for
+                    context.</span
+                  >
+                </span>
+              </SiteLink>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid md:grid-cols-3 gap-4">
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Most current</div>
+          <p class="mt-3 text-lg">
+            <SiteLink href="/books/webpack/">SurviveJS - Webpack 5</SiteLink>
+            matches the current webpack generation and works as a reference.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Co-authored</div>
+          <p class="mt-3 text-lg">
+            <SiteLink href="/books/maintenance/"
+              >SurviveJS - Maintenance</SiteLink
+            >
+            was written with Artem Sapegin and focuses on package maintenance.
+          </p>
+        </div>
+        <div class="border p-5 bg-white">
+          <div class="text-sm uppercase text-muted">Historical</div>
+          <p class="mt-3 text-lg">
+            <SiteLink href="/books/react/">SurviveJS - React</SiteLink> is where
+            the project started and remains available for reference.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 border-y-2 border-primary py-8"
+      >
+        <div class="flex flex-col gap-4">
+          <Heading class="text-3xl font-extrabold" level="2"
+            >Availability</Heading
+          >
+          <p class="text-xl leading-relaxed text-muted">
+            You can read the material online and buy copies through Leanpub or
+            other stores where available.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Online</div>
+            <p class="mt-3">
+              Each book page links to the HTML version, including chapter-level
+              navigation.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Leanpub</div>
+            <p class="mt-3">
+              Digital versions are available through Leanpub for the current
+              books.
+            </p>
+          </div>
+          <div class="border p-5 bg-white">
+            <div class="text-sm uppercase text-muted">Print</div>
+            <p class="mt-3">
+              The webpack book also has Amazon and Kindle purchase options.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="book-catalog" class="flex flex-col gap-4 scroll-mt-16">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
+        >
+          <div class="max-w-3xl">
+            <Heading class="text-3xl font-extrabold" level="2"
+              >Book catalog</Heading
+            >
+            <p class="mt-3 text-lg text-muted">
+              The complete book list is below. Start with webpack if you want
+              the most up-to-date material.
+            </p>
+          </div>
+          <SiteLink class="!no-underline text-sm" href="/consulting/"
+            >Need a workshop?</SiteLink
+          >
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <Books />
+        </div>
+      </section>
     </div>
   </slot>
 </BaseLayout>
