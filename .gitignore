@@ -3,8 +3,10 @@
 .wrangler
 build/
 node_modules/
+reports/
 *.diff
 *.log
 books/
 .dev.vars
+.env.agent-ci
 .images.json

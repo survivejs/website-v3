@@ -5,11 +5,23 @@
   "description": "SurviveJS site",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "scripts": {
+    "build": "deno task build",
     "check:links": "linkinator ./build --recurse --verbosity error",
+    "ci:local": "agent-ci run --workflow .github/workflows/ci.yml",
+    "ci:local:quiet": "agent-ci run --quiet --workflow .github/workflows/ci.yml",
+    "ci:local:retry": "agent-ci retry",
+    "lighthouse": "node ./scripts/run-lighthouse.mjs",
+    "lighthouse:ci": "LIGHTHOUSE_URL=http://127.0.0.1:3000 LIGHTHOUSE_SERVER_COMMAND=\"node ./scripts/serve-static.mjs build --port 3000\" npm run lighthouse",
+    "lighthouse:local": "npm run build && npm run lighthouse:ci",
+    "playwright:install": "playwright install chromium",
     "start": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
+    "@playwright/test": "1.59.1",
+    "@redwoodjs/agent-ci": "0.7.0",
+    "chrome-launcher": "1.2.0",
+    "lighthouse": "13.0.3",
     "linkinator": "^6.0.4",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",

@@ -43,6 +43,26 @@ deno task build
 
 Deploy `./build`.
 
+## PageSpeed debugging
+
+Run local Lighthouse audits for mobile and desktop:
+
+```bash
+npm run lighthouse:local
+```
+
+The command builds the site, serves `./build` locally, and writes HTML/JSON
+reports to `reports/lighthouse/`.
+
+If Chromium is missing, install the pinned browser first:
+
+```bash
+npm run playwright:install
+```
+
+For local Agent CI and more Lighthouse options, see
+[`docs/development.md`](./docs/development.md).
+
 ## License
 
 The site content is available under [CC BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). So, as long as there's a proper attribution, you can reuse the content. Ideally, you would contribute your improvements back, but that's not necessary.
