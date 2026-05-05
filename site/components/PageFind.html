@@ -1,8 +1,14 @@
 <LazyLoad src="/pagefind/pagefind-ui.js">
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
   <script @src="state.src" x-attr onload="searchLoaded()"></script>
   <script>
     function searchLoaded(event) {
+      if (!document.querySelector('link[href="/pagefind/pagefind-ui.css"]')) {
+        const pagefindStyles = document.createElement("link");
+        pagefindStyles.rel = "stylesheet";
+        pagefindStyles.href = "/pagefind/pagefind-ui.css";
+        document.head.appendChild(pagefindStyles);
+      }
+
       document.getElementById("search").innerHTML = "";
       new PagefindUI({
         element: "#search",
