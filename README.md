@@ -63,6 +63,20 @@ npm run playwright:install
 For local Agent CI and more Lighthouse options, see
 [`docs/development.md`](./docs/development.md).
 
+## Disqus URL migration
+
+When book routes move, generate a Disqus URL Mapper CSV from a Disqus export:
+
+```bash
+node utils/generate-disqus-rewrites.js \
+  ../site-disqus/survivejs-2026-05-16T09_44_20.025877-all.xml \
+  /tmp/disqus-url-map.csv
+```
+
+Upload the generated CSV in Disqus under Discussions > Tools > Migrate Threads
+> Upload URL Map. Disqus documents this as the required path when a thread URL
+changes by more than the base domain.
+
 ## License
 
 The site content is available under [CC BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). So, as long as there's a proper attribution, you can reuse the content. Ideally, you would contribute your improvements back, but that's not necessary.
