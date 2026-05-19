@@ -456,7 +456,7 @@ function resolveImages(headerImage?: string) {
 */
 
 function generatePreview(content: string, amount: number) {
-  return `${removeMarkdown(content).slice(0, amount)}…`;
+  return `${removeMarkdown(content).slice(0, amount).replace(/&[#a-zA-Z0-9]*$/, "")}…`;
 }
 
 function cleanChapterName(path: string) {

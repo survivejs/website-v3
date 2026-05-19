@@ -49,10 +49,19 @@ function init() {
     return className;
   }
 
+  function escapeAttribute(value: unknown) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
   // Add your global page utilities here.
   // Alternatively they can be defined per component.
   return {
     dateToString,
+    escapeAttribute,
     getDate,
     getYear,
     getDatetime,

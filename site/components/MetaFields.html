@@ -1,18 +1,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" &content="(get context meta.description)" />
+<meta
+  name="description"
+  &content="(escapeAttribute (get context meta.description))"
+/>
 <meta
   name="keywords"
   &visibleIf="(get context meta.keywords)"
-  &content="(get context meta.keywords)"
+  &content="(escapeAttribute (get context meta.keywords))"
 />
 <meta
   name="author"
   &visibleIf="(get context document.data.author.name)"
-  &content="(get context document.data.author.name)"
+  &content="(escapeAttribute (get context document.data.author.name))"
 />
-<meta property="built" &content="(get context meta.built)" />
-<meta property="url" &content="(get context url)" />
+<meta property="built" &content="(escapeAttribute (get context meta.built))" />
+<meta property="url" &content="(escapeAttribute (get context url))" />
 <link
   rel="canonical"
   &href="(urlJoin (get context meta.url) (trim (get context url) /))"
@@ -23,16 +26,19 @@
   &content="(urlJoin (get context meta.url) (trim (get context url) /))"
 />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" &content="(get context meta.siteName)" />
-<meta property="og:title" &content="(get context meta.title)" />
-<meta property="og:description" &content="(get context meta.description)" />
+<meta property="og:site_name" &content="(escapeAttribute (get context meta.siteName))" />
+<meta property="og:title" &content="(escapeAttribute (get context meta.title))" />
+<meta
+  property="og:description"
+  &content="(escapeAttribute (get context meta.description))"
+/>
 
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:site" &content="(get context meta.siteName)" />
-<meta property="twitter:title" &content="(get context meta.title)" />
+<meta property="twitter:site" &content="(escapeAttribute (get context meta.siteName))" />
+<meta property="twitter:title" &content="(escapeAttribute (get context meta.title))" />
 <meta
   property="twitter:description"
-  &content="(get context meta.description)"
+  &content="(escapeAttribute (get context meta.description))"
 />
 <meta name="wot-verification" content="977256fc058a018ddec2" />
 

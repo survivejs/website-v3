@@ -123,6 +123,8 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           });
         },
         image(src: string, title: string, text: string) {
+          src = src.replace(/"$/, "");
+
           const textParts = text ? text.split("|") : [];
           const alt = textParts[0] || "";
           const width = textParts[1] || "";
