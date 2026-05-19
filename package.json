@@ -5,6 +5,9 @@
   "version": "3.0.0",
   "description": "SurviveJS site",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
+  "engines": {
+    "node": ">=24.11.0"
+  },
   "scripts": {
     "bootstrap": "scripts/bootstrap.sh",
     "fetch:book-repositories": "scripts/fetch-books.sh",
