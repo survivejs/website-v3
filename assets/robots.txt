@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /demos/
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 
-Sitemap: http://www.survivejs.com/sitemap.xml
+Sitemap: https://survivejs.com/sitemap.xml

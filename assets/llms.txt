@@ -1,0 +1,32 @@
+# SurviveJS
+
+> SurviveJS is a JavaScript learning resource covering webpack, React, maintenance practices, interviews, research, workshops, and related web development topics.
+
+## Main Sections
+
+- [Home](https://survivejs.com/)
+- [Books](https://survivejs.com/books/)
+- [Webpack Book](https://survivejs.com/books/webpack/)
+- [React Book](https://survivejs.com/books/react/)
+- [Maintenance Book](https://survivejs.com/books/maintenance/)
+- [Blog](https://survivejs.com/blog/)
+- [Blog Topics](https://survivejs.com/blog/topics/)
+- [Research](https://survivejs.com/research/)
+- [Workshops](https://survivejs.com/workshops/)
+- [Open Source](https://survivejs.com/open-source/)
+- [Presentations](https://survivejs.com/presentations/)
+- [Consulting](https://survivejs.com/consulting/)
+- [About Juho Vepsalainen](https://survivejs.com/about-me/)
+
+## Machine-Readable Resources
+
+- [Sitemap](https://survivejs.com/sitemap.xml)
+- [Atom Feed](https://survivejs.com/atom.xml)
+- [Agent Skills](https://survivejs.com/.well-known/agent-skills/index.json)
+
+## Notes For Agents
+
+- Prefer canonical URLs without `index.html`.
+- The books are long-form learning material; preserve surrounding chapter context when answering.
+- The blog contains many interviews and historical posts, so include dates when recency matters.
+- Site content is licensed separately from site source; check the license terms before reuse.

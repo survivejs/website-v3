@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "read-survivejs",
+      "type": "skill-md",
+      "description": "Read and cite SurviveJS content for JavaScript, webpack, React, maintenance, research, and related web development topics.",
+      "url": "/.well-known/agent-skills/read-survivejs/SKILL.md",
+      "digest": "sha256:fb15fbadd32bbaf20ab2cad9cf759846b56c76afc1a2a591accce7a1581a26ec"
+    }
+  ]
+}
