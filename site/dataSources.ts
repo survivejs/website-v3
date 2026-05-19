@@ -1,15 +1,10 @@
-import {
-  extract,
-  test,
-} from "https://deno.land/std@0.207.0/front_matter/yaml.ts";
 import path from "node:path";
-import { parse } from "https://deno.land/std@0.207.0/yaml/parse.ts";
-import removeMarkdown from "https://esm.sh/remove-markdown@0.5.0";
+import removeMarkdown from "remove-markdown";
 import getMarkdown from "./transforms/markdown.ts";
-import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
-import { getMemo } from "https://deno.land/x/gustwind@v0.66.3/utilities/getMemo.ts";
-import trimStart from "https://deno.land/x/lodash@4.17.15-es/trimStart.js";
-import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
+import { getMemo } from "./utilities/getMemo.ts";
+import trimStart from "./utilities/trimStart.ts";
+import { urlJoin } from "./utilities/urlJoin.ts";
+import type { DataSourcesApi } from "gustwind";
 
 type MarkdownWithFrontmatter = {
   data: {
@@ -284,14 +279,14 @@ The book content was developed during many years with the help of the community 
   > {
     const file = await load.textFile(path);
 
-    if (test(file)) {
-      const { frontMatter, body: content } = extract(file);
+    if (file.startsWith("---\n")) {
+      const { frontmatter, body: content } = splitFrontmatter(file);
       const slug = cleanSlug(path);
 
       return {
         // TODO: It would be better to handle this with Zod or some other runtime checker
         data: {
-          ...parse(frontMatter) as MarkdownWithFrontmatter["data"],
+          ...parseFrontmatter(frontmatter) as MarkdownWithFrontmatter["data"],
           slug,
         },
         content,
@@ -309,7 +304,7 @@ The book content was developed during many years with the help of the community 
 
   // Interestingly enough caching to fs doesn't result in a speedup
   // TODO: Investigate why not
-  // const fs = await fsCache(path.join(Deno.cwd(), ".gustwind"));
+  // const fs = await fsCache(path.join(process.cwd(), ".gustwind"));
   const memo = getMemo(new Map());
   function parseMarkdown(
     lines: string,
@@ -498,6 +493,55 @@ function parseTitle(body: string) {
   }
 
   return { body };
+}
+
+function splitFrontmatter(source: string) {
+  const end = source.indexOf("\n---", 4);
+
+  if (end === -1) {
+    return { frontmatter: "", body: source };
+  }
+
+  return {
+    frontmatter: source.slice(4, end).trim(),
+    body: source.slice(end + 4).trimStart(),
+  };
+}
+
+function parseFrontmatter(source: string) {
+  return Object.fromEntries(
+    source
+      .split("\n")
+      .map((line) => line.match(/^([^:]+):\s*(.*)$/))
+      .filter((match): match is RegExpMatchArray => Boolean(match))
+      .map((match) => [match[1], parseFrontmatterValue(match[1], match[2])]),
+  );
+}
+
+function parseFrontmatterValue(key: string, value: string) {
+  const trimmed = value.trim();
+
+  if (!trimmed) {
+    return key === "keywords" || key === "editors" ? [] : "";
+  }
+
+  if (key === "date" || key === "updateDate") {
+    return new Date(trimmed);
+  }
+
+  if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
+    return trimmed
+      .slice(1, -1)
+      .split(",")
+      .map((part) => stripQuotes(part.trim()))
+      .filter(Boolean);
+  }
+
+  return stripQuotes(trimmed);
+}
+
+function stripQuotes(value: string) {
+  return value.replace(/^["']|["']$/g, "");
 }
 
 export { init };

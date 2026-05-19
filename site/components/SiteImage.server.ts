@@ -1,15 +1,14 @@
-import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
-import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
-import type { GlobalUtilities } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
-
-// load() doesn't check env, just possible .dev.vars file
-const env = await load({ envPath: "./.dev.vars" });
+import type { GlobalUtilities } from "gustwind";
+import { getEnv } from "../utilities/getEnv.ts";
+import { urlJoin } from "../utilities/urlJoin.ts";
 
 const init: GlobalUtilities["init"] = function init() {
   return {
     getSrc(src: string) {
-      if (!src.startsWith("http") && env.IMAGES_ROOT) {
-        return urlJoin(env.IMAGES_ROOT, src);
+      const imagesRoot = getEnv("IMAGES_ROOT");
+
+      if (!src.startsWith("http") && imagesRoot) {
+        return urlJoin(imagesRoot, src);
       }
 
       return src;

@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@utility mask-text-black {
+  color: transparent;
+  text-shadow: 0 0 black;
+}
+
+@utility mask-text-gray {
+  color: transparent;
+  text-shadow: 0 0 gray;
+}
+
+@utility author {
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin-left: 1em;
+}
+
+@utility text-1 {
+  font-size: 1px;
+}
+
+@utility line-clamp-6 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+@utility min-w-48 {
+  min-width: 12rem;
+}
+
+@utility min-w-52 {
+  min-width: 13rem;
+}
+
+@utility min-w-56 {
+  min-width: 14rem;
+}
+
+@utility min-h-65 {
+  min-height: 65vh;
+}
+
+@utility max-w-ch80 {
+  max-width: 80ch;
+}

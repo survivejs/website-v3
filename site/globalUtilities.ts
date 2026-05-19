@@ -1,5 +1,4 @@
-import { tw } from "https://esm.sh/@twind/core@1.1.1";
-import { urlJoin as urlJoinFn } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
+import { urlJoin as urlJoinFn } from "./utilities/urlJoin.ts";
 
 function init() {
   function getDate(d: string) {
@@ -46,6 +45,10 @@ function init() {
     return urlJoinFn(...parts);
   }
 
+  function tw(className: string) {
+    return className;
+  }
+
   // Add your global page utilities here.
   // Alternatively they can be defined per component.
   return {
@@ -55,8 +58,8 @@ function init() {
     getDatetime,
     getFullDate,
     length,
-    urlJoin,
     tw,
+    urlJoin,
   };
 }
 
