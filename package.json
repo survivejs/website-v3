@@ -1,11 +1,22 @@
 {
   "name": "survivejs-site",
   "private": true,
+  "type": "module",
   "version": "3.0.0",
   "description": "SurviveJS site",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
+  "engines": {
+    "node": ">=24.11.0"
+  },
   "scripts": {
-    "build": "deno task build",
+    "bootstrap": "scripts/bootstrap.sh",
+    "fetch:book-repositories": "scripts/fetch-books.sh",
+    "fetch:image-references": "node ./scripts/fetch-images.mjs > .images.json",
+    "ensure:image-references": "node ./scripts/ensure-image-references.mjs",
+    "build": "npm run build:site && npm run build:markdown",
+    "build:site": "node ./scripts/build-site.mjs",
+    "build:site:validate": "node ./scripts/build-site.mjs --validate",
+    "build:markdown": "node ./scripts/generate-markdown-assets.mjs",
     "check:links": "linkinator ./build --recurse --verbosity error",
     "ci:local": "agent-ci run --workflow .github/workflows/ci.yml",
     "ci:local:quiet": "agent-ci run --quiet --workflow .github/workflows/ci.yml",
@@ -14,18 +25,24 @@
     "lighthouse:ci": "LIGHTHOUSE_URL=http://127.0.0.1:3000 LIGHTHOUSE_SERVER_COMMAND=\"node ./scripts/serve-static.mjs build --port 3000\" npm run lighthouse",
     "lighthouse:local": "npm run build && npm run lighthouse:ci",
     "playwright:install": "playwright install chromium",
-    "start": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23"
+    "start": "npm run ensure:image-references && npm run build && wrangler dev",
+    "start:static": "node ./scripts/serve-static.mjs build --port 3000",
+    "worker:dry-run": "npm run ensure:image-references && npm run build && wrangler deploy --dry-run"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240405.0",
+    "@cloudflare/workers-types": "4.20260519.1",
     "@playwright/test": "1.59.1",
     "@redwoodjs/agent-ci": "0.7.0",
     "chrome-launcher": "1.2.0",
+    "gustwind": "0.113.0",
     "lighthouse": "13.0.3",
-    "linkinator": "^6.0.4",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5",
-    "wrangler": "^3.50.0"
+    "linkinator": "6.0.4",
+    "marked-smartypants": "1.1.12",
+    "prettier": "3.2.5",
+    "remove-markdown": "0.6.4",
+    "smartypants": "0.2.2",
+    "typescript": "5.4.5",
+    "wrangler": "4.92.0"
   },
   "repository": {
     "type": "git",

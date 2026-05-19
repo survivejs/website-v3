@@ -1,6 +1,5 @@
-import { tw } from "https://esm.sh/@twind/core@1.1.1";
-import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
-import type { GlobalUtilities } from "https://deno.land/x/gustwind@v0.71.2/types.ts";
+import type { GlobalUtilities } from "gustwind";
+import { urlJoin } from "../utilities/urlJoin.ts";
 
 const init: GlobalUtilities["init"] = function init(
   { matchRoute, url: currentUrl },
@@ -24,9 +23,7 @@ const init: GlobalUtilities["init"] = function init(
 
     if (url.startsWith("http")) {
       return children +
-        `<span class="${
-          tw("inline-block -mt-1 ml-0.5 text-xs align-text-top")
-        }">↗</span>`;
+        `<span class="inline-block -mt-1 ml-0.5 text-xs align-text-top">↗</span>`;
     }
 
     return children;

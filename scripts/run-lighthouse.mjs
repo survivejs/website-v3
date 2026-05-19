@@ -33,7 +33,7 @@ Environment variables:
 
 Examples:
   LIGHTHOUSE_URL=http://127.0.0.1:3000 npm run lighthouse
-  LIGHTHOUSE_URL=http://127.0.0.1:3000 LIGHTHOUSE_SERVER_COMMAND="deno task serve" npm run lighthouse
+  LIGHTHOUSE_URL=http://127.0.0.1:3000 LIGHTHOUSE_SERVER_COMMAND="npm run start:static" npm run lighthouse
 `.trim();
 
 if (process.argv.includes("--help") || process.argv.includes("-h")) {

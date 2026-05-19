@@ -20,10 +20,10 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.59.1-noble
       options: --ipc=host
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Restore npm cache
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -31,7 +31,7 @@ jobs:
             npm-${{ runner.os }}-
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version-file: .nvmrc
 
@@ -40,11 +40,6 @@ jobs:
         run: |
           apt-get update
           apt-get install -y unzip
-
-      - name: Set up Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
 
       - name: Install dependencies
         shell: bash
@@ -57,16 +52,19 @@ jobs:
           test -f README.md
           test -f package.json
           test -f package-lock.json
-          test -f deno.json
-          git diff --check
+          test -f wrangler.toml
 
       - name: Fetch book sources
         shell: bash
-        run: deno task fetch:book-repositories
+        run: npm run fetch:book-repositories
 
       - name: Build site
         shell: bash
-        run: deno task build
+        run: npm run build
+
+      - name: Validate Worker bundle
+        shell: bash
+        run: npm run worker:dry-run
 
       - name: Run Lighthouse
         shell: bash

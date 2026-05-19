@@ -1,16 +1,11 @@
-import { install, tw } from "https://esm.sh/@twind/core@1.1.1";
-import { marked } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js";
+import { marked } from "marked";
 // import type { Token } from "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.d.ts";
-import { markedSmartypants } from "npm:marked-smartypants@1.1.6";
-import smartypants from "npm:smartypants@0.2.2";
+import { markedSmartypants } from "marked-smartypants";
+import smartypants from "smartypants";
 import { highlight } from "./utilities/highlight.ts";
-import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
-import { urlJoin } from "https://bundle.deno.dev/https://deno.land/x/url_join@1.0.0/mod.ts";
-import twindSetup from "../twindSetup.ts";
-import type { DataSourcesApi } from "https://deno.land/x/gustwind@v0.71.0/types.ts";
-
-// load() doesn't check env, just possible .dev.vars file
-const env = await load({ envPath: "./.dev.vars" });
+import { getEnv } from "../utilities/getEnv.ts";
+import { urlJoin } from "../utilities/urlJoin.ts";
+import type { DataSourcesApi } from "gustwind";
 
 // TODO: Get this from marked types instead
 type Token = {
@@ -22,10 +17,7 @@ type Token = {
 };
 
 marked.use(markedSmartypants());
-marked.setOptions({ highlight });
-
-// @ts-expect-error This is fine
-install(twindSetup);
+marked.setOptions({ highlight } as never);
 
 function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
   marked.use({
@@ -131,6 +123,8 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
           });
         },
         image(src: string, title: string, text: string) {
+          src = src.replace(/"$/, "");
+
           const textParts = text ? text.split("|") : [];
           const alt = textParts[0] || "";
           const width = textParts[1] || "";
@@ -150,8 +144,10 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
                 src = `/${src}`;
               }
 
-              if (env.IMAGES_ROOT) {
-                src = urlJoin(env.IMAGES_ROOT, src);
+              const imagesRoot = getEnv("IMAGES_ROOT");
+
+              if (imagesRoot) {
+                src = urlJoin(imagesRoot, src);
               }
             }
           }
@@ -197,7 +193,7 @@ function getTransformMarkdown({ load, renderSync }: DataSourcesApi) {
             klass = ordered
               ? "list-decimal list-inside"
               : "list-disc list-inside";
-          return "<" + type + startatt + ' class="' + tw(klass) + '">\n' +
+          return "<" + type + startatt + ' class="' + klass + '">\n' +
             body +
             "</" +
             type + ">\n";

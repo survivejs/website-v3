@@ -35,6 +35,12 @@ Build the site, start a local static server, and audit the homepage:
 npm run lighthouse:local
 ```
 
+Validate the Cloudflare Worker bundle:
+
+```bash
+npm run worker:dry-run
+```
+
 Audit an already-running URL:
 
 ```bash

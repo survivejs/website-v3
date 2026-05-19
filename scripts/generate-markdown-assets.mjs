@@ -1,12 +1,7 @@
-/// <reference lib="deno.ns" />
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { dirname } from "node:path";
 
-type BlogFrontmatter = {
-  title?: string;
-  date?: string;
-  keywords?: string;
-};
-
-const BOOKS = [
+const books = [
   {
     source: "books/webpack-book/manuscript",
     target: "build/books/webpack",
@@ -25,13 +20,13 @@ await generateBlogMarkdown();
 await generateBookMarkdown();
 
 async function generateBlogMarkdown() {
-  for await (const entry of Deno.readDir("pages/blog")) {
-    if (!entry.isFile || !entry.name.endsWith(".md")) {
+  for (const entry of await readdir("pages/blog", { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith(".md")) {
       continue;
     }
 
     const sourcePath = `pages/blog/${entry.name}`;
-    const source = await Deno.readTextFile(sourcePath);
+    const source = await readFile(sourcePath, "utf8");
     const { frontmatter, body } = splitFrontmatter(source);
     const metadata = parseBlogFrontmatter(frontmatter);
     const slug = cleanSlug(entry.name);
@@ -42,15 +37,15 @@ async function generateBlogMarkdown() {
 }
 
 async function generateBookMarkdown() {
-  for (const book of BOOKS) {
-    const chapterPaths = (await Deno.readTextFile(`${book.source}/Book.txt`))
+  for (const book of books) {
+    const chapterPaths = (await readFile(`${book.source}/Book.txt`, "utf8"))
       .split("\n")
-      .map((line: string) => line.trim())
-      .filter((line: string) => line.endsWith(".md"));
+      .map((line) => line.trim())
+      .filter((line) => line.endsWith(".md"));
 
     for (const chapterPath of chapterPaths) {
       const sourcePath = `${book.source}/${chapterPath}`;
-      const content = await Deno.readTextFile(sourcePath);
+      const content = await readFile(sourcePath, "utf8");
       const slug = cleanChapterName(chapterPath);
 
       await writeMarkdown(`${book.target}/${slug}/index.md`, content);
@@ -58,7 +53,7 @@ async function generateBookMarkdown() {
   }
 }
 
-function splitFrontmatter(source: string) {
+function splitFrontmatter(source) {
   if (!source.startsWith("---\n")) {
     return { frontmatter: "", body: source };
   }
@@ -75,17 +70,17 @@ function splitFrontmatter(source: string) {
   };
 }
 
-function parseBlogFrontmatter(frontmatter: string): BlogFrontmatter {
+function parseBlogFrontmatter(frontmatter) {
   return Object.fromEntries(
     frontmatter
       .split("\n")
       .map((line) => line.match(/^([^:]+):\s*(.*)$/))
-      .filter((match): match is RegExpMatchArray => Boolean(match))
-      .map((match) => [match[1], match[2].replace(/^"|"$/g, "")])
+      .filter(Boolean)
+      .map((match) => [match[1], match[2].replace(/^"|"$/g, "")]),
   );
 }
 
-function formatBlogMarkdown(metadata: BlogFrontmatter, body: string) {
+function formatBlogMarkdown(metadata, body) {
   const header = [
     metadata.title ? `# ${metadata.title}` : "",
     metadata.date ? `Published: ${metadata.date}` : "",
@@ -97,16 +92,12 @@ function formatBlogMarkdown(metadata: BlogFrontmatter, body: string) {
   return header ? `${header}\n\n${body}` : body;
 }
 
-async function writeMarkdown(targetPath: string, content: string) {
-  await Deno.mkdir(dirname(targetPath), { recursive: true });
-  await Deno.writeTextFile(targetPath, `${content.trim()}\n`);
+async function writeMarkdown(targetPath, content) {
+  await mkdir(dirname(targetPath), { recursive: true });
+  await writeFile(targetPath, `${content.trim()}\n`);
 }
 
-function dirname(filePath: string) {
-  return filePath.split("/").slice(0, -1).join("/");
-}
-
-function cleanSlug(resourcePath: string) {
+function cleanSlug(resourcePath) {
   const parts = resourcePath.split("/");
 
   return trimStart(parts[parts.length - 1] || "", "0123456789-_")
@@ -116,7 +107,7 @@ function cleanSlug(resourcePath: string) {
     .replaceAll("_", "-");
 }
 
-function cleanChapterName(resourcePath: string) {
+function cleanChapterName(resourcePath) {
   const parts = resourcePath.split("/");
   const beginning = parts.slice(0, -1);
   const end = trimStart(parts[parts.length - 1] || "", "0123456789-_");
@@ -132,7 +123,7 @@ function cleanChapterName(resourcePath: string) {
     .join(".");
 }
 
-function trimStart(value: string, chars: string) {
+function trimStart(value, chars) {
   let index = 0;
 
   while (index < value.length && chars.includes(value[index])) {
