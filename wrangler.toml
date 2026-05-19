@@ -1,6 +1,11 @@
 name = "survivejs-website-v3"
+main = "worker/index.ts"
 compatibility_date = "2024-02-23"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./build"
+binding = "ASSETS"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.

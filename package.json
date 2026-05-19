@@ -19,7 +19,10 @@
     "lighthouse:ci": "LIGHTHOUSE_URL=http://127.0.0.1:3000 LIGHTHOUSE_SERVER_COMMAND=\"node ./scripts/serve-static.mjs build --port 3000\" npm run lighthouse",
     "lighthouse:local": "npm run build && npm run lighthouse:ci",
     "playwright:install": "playwright install chromium",
-    "start": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23"
+    "start": "npm run build && wrangler dev",
+    "start:static": "node ./scripts/serve-static.mjs build --port 3000",
+    "start:pages": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23",
+    "worker:dry-run": "npm run build && wrangler deploy --dry-run"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",
@@ -34,7 +37,7 @@
     "remove-markdown": "0.6.4",
     "smartypants": "0.2.2",
     "typescript": "^5.4.5",
-    "wrangler": "^3.50.0"
+    "wrangler": "4.92.0"
   },
   "repository": {
     "type": "git",
