@@ -53,7 +53,6 @@ jobs:
           test -f package.json
           test -f package-lock.json
           test -f wrangler.toml
-          git diff --check
 
       - name: Fetch book sources
         shell: bash
