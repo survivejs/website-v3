@@ -1,0 +1,24 @@
+{
+  "name": "SurviveJS Content Agent",
+  "version": "1.0.0",
+  "description": "A read-only agent interface for discovering public SurviveJS JavaScript learning material.",
+  "supportedInterfaces": [
+    {
+      "url": "https://survivejs.com/mcp",
+      "transport": "streamable-http",
+      "protocol": "mcp"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "skills": [
+    {
+      "id": "read-survivejs",
+      "name": "Read SurviveJS",
+      "description": "Retrieve public SurviveJS overview and discovery resources for JavaScript, webpack, React, maintenance, research, and workshops."
+    }
+  ]
+}

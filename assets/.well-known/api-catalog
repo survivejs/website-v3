@@ -1,0 +1,28 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://survivejs.com/",
+      "service-desc": [
+        {
+          "href": "https://survivejs.com/openapi.json",
+          "type": "application/openapi+json",
+          "title": "SurviveJS public content metadata"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://survivejs.com/llms.txt",
+          "type": "text/markdown",
+          "title": "SurviveJS agent overview"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://survivejs.com/ping",
+          "type": "text/plain",
+          "title": "SurviveJS health check"
+        }
+      ]
+    }
+  ]
+}

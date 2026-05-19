@@ -1,0 +1,28 @@
+{
+  "serverInfo": {
+    "name": "survivejs-content",
+    "version": "1.0.0",
+    "description": "Read-only access to public SurviveJS content discovery resources."
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://survivejs.com/mcp"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  },
+  "resources": [
+    {
+      "uri": "https://survivejs.com/llms.txt",
+      "name": "SurviveJS agent overview",
+      "mimeType": "text/markdown"
+    },
+    {
+      "uri": "https://survivejs.com/sitemap.xml",
+      "name": "SurviveJS sitemap",
+      "mimeType": "application/xml"
+    }
+  ]
+}

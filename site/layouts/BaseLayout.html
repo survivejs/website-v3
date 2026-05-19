@@ -54,5 +54,53 @@
       <MainFooter />
     </div>
     <Scripts />
+    <script type="module">
+      const readablePaths = [
+        "/llms.txt",
+        "/sitemap.xml",
+        "/.well-known/agent-skills/index.json",
+      ];
+
+      async function readSurviveJSResource(input = {}) {
+        const path = readablePaths.includes(input.path)
+          ? input.path
+          : "/llms.txt";
+        const response = await fetch(path);
+
+        if (!response.ok) {
+          throw new Error(`Unable to read ${path}`);
+        }
+
+        return {
+          path,
+          contentType: response.headers.get("content-type"),
+          text: await response.text(),
+        };
+      }
+
+      const tool = {
+        name: "read_survivejs_resource",
+        description:
+          "Read public SurviveJS discovery resources for JavaScript learning content.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            path: {
+              type: "string",
+              enum: readablePaths,
+              description: "Public SurviveJS resource path to read.",
+            },
+          },
+        },
+        execute: readSurviveJSResource,
+        annotations: {
+          readOnlyHint: true,
+        },
+      };
+
+      if ("modelContext" in navigator && navigator.modelContext) {
+        navigator.modelContext.registerTool(tool);
+      }
+    </script>
   </body>
 </html>

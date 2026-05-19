@@ -1,0 +1,87 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SurviveJS Public Content Metadata",
+    "version": "1.0.0",
+    "description": "Public, read-only discovery endpoints for SurviveJS content."
+  },
+  "servers": [
+    {
+      "url": "https://survivejs.com"
+    }
+  ],
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Health check",
+        "operationId": "getPing",
+        "responses": {
+          "200": {
+            "description": "Plain text health response",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "summary": "Agent overview",
+        "operationId": "getLlmsTxt",
+        "responses": {
+          "200": {
+            "description": "Markdown overview of SurviveJS content and machine-readable resources",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "summary": "Sitemap",
+        "operationId": "getSitemap",
+        "responses": {
+          "200": {
+            "description": "XML sitemap",
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/agent-skills/index.json": {
+      "get": {
+        "summary": "Agent Skills index",
+        "operationId": "getAgentSkillsIndex",
+        "responses": {
+          "200": {
+            "description": "Agent Skills discovery index",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
