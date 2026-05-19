@@ -22,26 +22,30 @@ IMAGES_ROOT=TODO
 Bootstrap the project:
 
 ```bash
-deno task bootstrap
+npm run bootstrap
 ```
 
 Start the development server:
 
 ```bash
-deno task start
+npm run start
 ```
 
-Now you can go to [http://localhost:3000](http://localhost:3000).
+Now you can open the local Wrangler URL.
 
 ## Building
 
 Build using the following command:
 
 ```bash
-deno task build
+npm run build
 ```
 
-Deploy `./build`.
+Validate the Cloudflare Worker bundle:
+
+```bash
+npm run worker:dry-run
+```
 
 ## PageSpeed debugging
 

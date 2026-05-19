@@ -6,8 +6,11 @@
   "description": "SurviveJS site",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
   "scripts": {
+    "bootstrap": "scripts/bootstrap.sh",
+    "fetch:book-repositories": "scripts/fetch-books.sh",
+    "fetch:image-references": "node ./scripts/fetch-images.mjs > .images.json",
+    "ensure:image-references": "node ./scripts/ensure-image-references.mjs",
     "build": "npm run build:site && npm run build:markdown",
-    "build:deno": "deno task build",
     "build:site": "node ./scripts/build-site.mjs",
     "build:site:validate": "node ./scripts/build-site.mjs --validate",
     "build:markdown": "node ./scripts/generate-markdown-assets.mjs",
@@ -19,10 +22,9 @@
     "lighthouse:ci": "LIGHTHOUSE_URL=http://127.0.0.1:3000 LIGHTHOUSE_SERVER_COMMAND=\"node ./scripts/serve-static.mjs build --port 3000\" npm run lighthouse",
     "lighthouse:local": "npm run build && npm run lighthouse:ci",
     "playwright:install": "playwright install chromium",
-    "start": "npm run build && wrangler dev",
+    "start": "npm run ensure:image-references && npm run build && wrangler dev",
     "start:static": "node ./scripts/serve-static.mjs build --port 3000",
-    "start:pages": "wrangler pages dev . --compatibility-flags=\"nodejs_compat\" --compatibility-date=2024-02-23",
-    "worker:dry-run": "npm run build && wrangler deploy --dry-run"
+    "worker:dry-run": "npm run ensure:image-references && npm run build && wrangler deploy --dry-run"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240405.0",

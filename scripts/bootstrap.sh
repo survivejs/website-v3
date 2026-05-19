@@ -7,12 +7,12 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Fetch books repositories
 echo
 echo "Fetching books repositories..."
-deno task fetch:book-repositories
+npm run fetch:book-repositories
 
 # Fetch image references
 echo
 echo "Fetching image references..."
-deno task fetch:image-references
+npm run fetch:image-references
 
 # TODO: Not needed right now
 # Build each project (it is needed to build the site)

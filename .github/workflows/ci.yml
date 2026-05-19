@@ -41,11 +41,6 @@ jobs:
           apt-get update
           apt-get install -y unzip
 
-      - name: Set up Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-
       - name: Install dependencies
         shell: bash
         run: npm ci
@@ -57,16 +52,20 @@ jobs:
           test -f README.md
           test -f package.json
           test -f package-lock.json
-          test -f deno.json
+          test -f wrangler.toml
           git diff --check
 
       - name: Fetch book sources
         shell: bash
-        run: deno task fetch:book-repositories
+        run: npm run fetch:book-repositories
 
       - name: Build site
         shell: bash
-        run: deno task build
+        run: npm run build
+
+      - name: Validate Worker bundle
+        shell: bash
+        run: npm run worker:dry-run
 
       - name: Run Lighthouse
         shell: bash

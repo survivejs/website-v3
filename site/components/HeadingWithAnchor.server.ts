@@ -49,8 +49,7 @@ function slugify(idBase: string) {
     .replace(/[^\w]+/g, "-");
 }
 
-// deno-lint-ignore no-explicit-any
-const isObject = (a: any) =>
+const isObject = (a: unknown) =>
   a !== null && !Array.isArray(a) && typeof a === "object";
 
 export { init };
