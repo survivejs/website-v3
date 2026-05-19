@@ -509,13 +509,37 @@ function splitFrontmatter(source: string) {
 }
 
 function parseFrontmatter(source: string) {
-  return Object.fromEntries(
-    source
-      .split("\n")
-      .map((line) => line.match(/^([^:]+):\s*(.*)$/))
-      .filter((match): match is RegExpMatchArray => Boolean(match))
-      .map((match) => [match[1], parseFrontmatterValue(match[1], match[2])]),
-  );
+  const entries: [string, unknown][] = [];
+  const lines = source.split("\n");
+
+  for (let i = 0; i < lines.length; i++) {
+    const match = lines[i].match(/^([^:\s][^:]*):\s*(.*)$/);
+
+    if (!match) {
+      continue;
+    }
+
+    const [, key, value] = match;
+
+    if (!value.trim() && lines[i + 1]?.trim().startsWith("[")) {
+      const valueLines: string[] = [];
+
+      while (lines[i + 1] && !lines[i + 1].match(/^[^:\s][^:]*:/)) {
+        i++;
+        valueLines.push(lines[i].trim());
+
+        if (lines[i].trim().endsWith("]")) {
+          break;
+        }
+      }
+
+      entries.push([key, parseFrontmatterValue(key, valueLines.join(" "))]);
+    } else {
+      entries.push([key, parseFrontmatterValue(key, value)]);
+    }
+  }
+
+  return Object.fromEntries(entries);
 }
 
 function parseFrontmatterValue(key: string, value: string) {
