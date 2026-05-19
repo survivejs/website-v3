@@ -1,4 +1,4 @@
-/
+/*
   Link: </llms.txt>; rel="describedby"; type="text/markdown"
   Link: </.well-known/agent-skills/index.json>; rel="describedby"; type="application/json"
   Link: </.well-known/api-catalog>; rel="service-desc"; type="application/linkset+json"
