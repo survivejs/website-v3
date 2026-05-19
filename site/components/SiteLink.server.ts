@@ -1,5 +1,4 @@
 import type { GlobalUtilities } from "gustwind";
-import { unwrapRawHtml } from "gustwind/htmlisp";
 import { urlJoin } from "../utilities/urlJoin.ts";
 
 const init: GlobalUtilities["init"] = function init(
@@ -22,14 +21,12 @@ const init: GlobalUtilities["init"] = function init(
       return;
     }
 
-    const content = unwrapRawHtml(children);
-
     if (url.startsWith("http")) {
-      return content +
+      return children +
         `<span class="inline-block -mt-1 ml-0.5 text-xs align-text-top">↗</span>`;
     }
 
-    return content;
+    return children;
   }
 
   function validateUrl(url: string) {
