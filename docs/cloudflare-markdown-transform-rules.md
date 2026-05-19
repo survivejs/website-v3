@@ -6,6 +6,11 @@ SurviveJS builds clean markdown assets at these paths:
 - `/blog/<slug>/index.md` for blog posts
 - `/books/<book>/<chapter>/index.md` for book chapters
 
+`assets/_headers` must set `/llms.txt` to `Content-Type:
+text/markdown; charset=utf-8`. Cloudflare Pages otherwise serves `.txt` as
+`text/plain`, and the agent-readiness scanner will treat the root markdown
+rewrite as failed even when the URL rewrite itself works.
+
 Use Cloudflare URL Rewrite Transform Rules so requests with `Accept: text/markdown`
 are served from those static assets at the CDN layer. This avoids invoking Pages
 Functions for normal HTML-to-markdown content negotiation.
