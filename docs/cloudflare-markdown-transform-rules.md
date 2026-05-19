@@ -82,19 +82,25 @@ Filter expression:
 http.host eq "survivejs.com"
 and http.request.method eq "GET"
 and any(http.request.headers["accept"][*] contains "text/markdown")
-and ends_with(http.request.uri.path, "/index.html")
+and http.request.uri.path eq "/index.html"
 ```
 
 Rewrite path:
 
-- Type: `Dynamic`
-- Expression: `regex_replace(http.request.uri.path, "/index\\.html$", "/index.md")`
+- Type: `Static`
+- Path: `/llms.txt`
 
 Example:
 
-- `/blog/kaibanjs-interview/index.html` -> `/blog/kaibanjs-interview/index.md`
+- `/index.html` -> `/llms.txt`
 
 Leave the query string unchanged.
+
+Cloudflare plans without advanced URL rewrite support cannot express a generic
+`/path/index.html` -> `/path/index.md` rewrite. That is acceptable for SurviveJS
+because canonical URLs use trailing slashes. If you need compatibility for a
+specific non-canonical `index.html` URL, add an explicit static rule for that
+path.
 
 ### 4. Extensionless URLs
 
