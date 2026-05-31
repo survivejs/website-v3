@@ -1,30 +1,63 @@
 <ContentCard
+  title="Review of the usage of Rust programming language in web development (Pyry Kielosto, 2026, BSc)"
+  websiteLabel="Read about Rust"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/2f460d9d-e68e-48fa-b925-70baf52bb491/content"
+>
+  <slot name="content"
+    >Rust is a relatively new language with modern syntax and features, making
+    it a good contender for an alternative language for web development. As Rust
+    is relatively new, and its main purpose is not as a web development
+    language, not much research has been conducted on it in this context. The
+    research goal of this thesis is to examine the currently available and
+    popular web frameworks in Rust, focusing on the server-side, and demonstrate
+    the functionality they provide for the developer. The research was conducted
+    as a literature review, using official documentation of the libraries and
+    the few research articles that could be found related to the topic. During
+    the lifetime of Rust, it has amassed various web libraries and frameworks.
+    Notably, this thesis found that a majority of the popular high-level
+    server-side frameworks are based on Hyper, a lower-level HTTP framework.
+    Through this common base framework, the frameworks are able to utilize
+    common components and libraries. These frameworks provide high-level
+    capabilities for building server-side web applications for various popular
+    API definition languages, such as REST, GQL, and gRPC. Hyper provides some
+    of these features for the frameworks, such as asynchrony through integration
+    with Tokio, and request and response logic through traits. All examined
+    frameworks also implement other essential features expected of a serverside
+    web framework, such as routing, global context, and serialization. Thus, it
+    can be concluded that the ecosystem of Rust provides a wide variety of
+    features for developing server-side web applications.
+  </slot>
+</ContentCard>
+<ContentCard
   title="Transforming Web Development with NLP and Vibe Coding Techniques (Joona Heinonen, 2025, BSc)"
   websiteLabel="Read about vibe coding"
   website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/d8d8fb2d-6722-47cb-8b2c-35feda2436b6/content"
 >
   <slot name="content"
-    >With LLMs and AI getting significantly better in recent years, it has changed how web
-development is approached. This thesis aims to cover the changes that vibe coding and
-natural language programming bring to web development and what type of benefits
-and drawbacks might emerge. Vibe coding and fully delegating development to AI
-tools is a relatively new area in web development, which is the reason for this study.
-This study is conducted as a literature review going over papers and research related
-to vibe coding and no-code style programming in web development.
-Web development has shifted from manually writing code to generating code and tests
-with AI agents, which leaves resources for other parts of the process. Delegating
-development to AI has several levels depending on the amount of work left to the
-human developer, ranging from expert consultant to full delegation - in other words,
-using vibe coding. Vibe coding is defined as leaving everything to the "vibes" referring
-to fully letting the AI agent create and test the web application.
-Vibe coding can bring benefits to the user with its speed and knowledge, offering an
-easy way to try new projects and ideas with limited resources. it can also teach users
-about certain algorithms and architectural decisions.
-Applying vibe coding can also bring a series of drawbacks, such as vulnerabilities in the
-form of security issues and risks. The use of LLMs can also bring ethical issues, such
-as bias in the LLM outputs, LLM hallucinations in the form of non-factual outputs,
-and the non-transparent use of AI. Furthermore, purely using AI to program can lead
-to the decay of knowledge for the developer, leading to more risks in the future.
+    >With LLMs and AI getting significantly better in recent years, it has
+    changed how web development is approached. This thesis aims to cover the
+    changes that vibe coding and natural language programming bring to web
+    development and what type of benefits and drawbacks might emerge. Vibe
+    coding and fully delegating development to AI tools is a relatively new area
+    in web development, which is the reason for this study. This study is
+    conducted as a literature review going over papers and research related to
+    vibe coding and no-code style programming in web development. Web
+    development has shifted from manually writing code to generating code and
+    tests with AI agents, which leaves resources for other parts of the process.
+    Delegating development to AI has several levels depending on the amount of
+    work left to the human developer, ranging from expert consultant to full
+    delegation - in other words, using vibe coding. Vibe coding is defined as
+    leaving everything to the "vibes" referring to fully letting the AI agent
+    create and test the web application. Vibe coding can bring benefits to the
+    user with its speed and knowledge, offering an easy way to try new projects
+    and ideas with limited resources. it can also teach users about certain
+    algorithms and architectural decisions. Applying vibe coding can also bring
+    a series of drawbacks, such as vulnerabilities in the form of security
+    issues and risks. The use of LLMs can also bring ethical issues, such as
+    bias in the LLM outputs, LLM hallucinations in the form of non-factual
+    outputs, and the non-transparent use of AI. Furthermore, purely using AI to
+    program can lead to the decay of knowledge for the developer, leading to
+    more risks in the future.
   </slot>
 </ContentCard>
 <ContentCard
@@ -33,30 +66,32 @@ to the decay of knowledge for the developer, leading to more risks in the future
   website="https://www.researchgate.net/publication/395711530_Systematic_Literature_Review_of_Agentic_AI_and_AIOps_Across_Software_Lifecycle"
 >
   <slot name="content"
-    >Agentic Artificial Intelligence (agentic AI) and AI for IT Operations (AIOps)
-    are evolving concepts that bring autonomous decision-making agents into the
-    Software Development Life Cycle (SDLC). This thesis conducted a systematic
-    literature review of how these technologies are applied across the SDLC of
-    software development. The review covers the design and coding phase, testing
-    and Continuous Integration/Continuous Delivery (CI/CD), and operations and
-    maintenance. The review followed PRISMA 2020 reporting principles. Relevant
-    studies were identified from major digital libraries and screened against
-    explicit inclusion criteria. Data were gathered and synthesized by SDLC
-    phase to compare approaches, benefits, limitations and maturity, and to
-    examine cross-phase patterns. The evidence reveals a clear progression of maturity.
-    Operations is the most advanced: AIOps capabilities have been used in practice to
-    reduce time-to-detect/resolve. Testing and CI/CD yield promising but uneven gains,
-    constrained by trust, data availability and toolchain integration. Design and
-    coding are the least mature — generative assistants speed up routine development,
-    but still require human in the loop review. Overall, the integration of agentic
-    AI across phases is still limited. This review highlights important research gaps,
-    including the need for greater autonomous AI assistance in the early stages of
-    development and stronger feedback loops that bring operational insights into
-    testing and development through shared data models and interoperable tooling.
-    In practice, organizations may gain the most by first using AIOps, then piloting
-    AI-assisted testing and finally deploying coding assistants with strict guardrails.
-    For researchers, priorities include early-phase agents with explainable outputs,
-    cross-phase pipelines and longitudinal assessments of end-to-end impact.
+    >Agentic Artificial Intelligence (agentic AI) and AI for IT Operations
+    (AIOps) are evolving concepts that bring autonomous decision-making agents
+    into the Software Development Life Cycle (SDLC). This thesis conducted a
+    systematic literature review of how these technologies are applied across
+    the SDLC of software development. The review covers the design and coding
+    phase, testing and Continuous Integration/Continuous Delivery (CI/CD), and
+    operations and maintenance. The review followed PRISMA 2020 reporting
+    principles. Relevant studies were identified from major digital libraries
+    and screened against explicit inclusion criteria. Data were gathered and
+    synthesized by SDLC phase to compare approaches, benefits, limitations and
+    maturity, and to examine cross-phase patterns. The evidence reveals a clear
+    progression of maturity. Operations is the most advanced: AIOps capabilities
+    have been used in practice to reduce time-to-detect/resolve. Testing and
+    CI/CD yield promising but uneven gains, constrained by trust, data
+    availability and toolchain integration. Design and coding are the least
+    mature — generative assistants speed up routine development, but still
+    require human in the loop review. Overall, the integration of agentic AI
+    across phases is still limited. This review highlights important research
+    gaps, including the need for greater autonomous AI assistance in the early
+    stages of development and stronger feedback loops that bring operational
+    insights into testing and development through shared data models and
+    interoperable tooling. In practice, organizations may gain the most by first
+    using AIOps, then piloting AI-assisted testing and finally deploying coding
+    assistants with strict guardrails. For researchers, priorities include
+    early-phase agents with explainable outputs, cross-phase pipelines and
+    longitudinal assessments of end-to-end impact.
   </slot>
 </ContentCard>
 <ContentCard
