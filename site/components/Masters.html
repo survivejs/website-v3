@@ -1,4 +1,38 @@
 <ContentCard
+  title="The Limits of Generalized Sync: A Taxonomy of Architectures, Trade‑offs, and Decision Factors (Mikael Siidorow, 2026, MSc)"
+  websiteLabel="Read about generalized sync"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/d485ca46-ef01-41bc-ae4c-d468afb209a8/content"
+>
+  <slot name="content"
+    >Web applications increasingly compete on responsiveness, driving engineers
+    to move data closer to the client. Sync engines promise reusable
+    synchronization infrastructure, but whether that promise holds across
+    application types remains an open question. This thesis investigates the
+    extent to which synchronization can be generalized across web applications.
+    The study combines a literature review, analysis of 69 practitioner sources,
+    semistructured interviews with 13 practitioners, and a case study. The
+    thesis classifies 14 sync engine instances across 13 projects along eight
+    architectural dimensions and builds a decision framework on this taxonomy.
+    Sync engines form four architectural clusters rather than a smooth spectrum.
+    The online/offline boundary is the most discriminating dimension and sets
+    the limit of generalization. For always-online applications, the read path
+    generalizes well, and the write path generalizes when the engine defines how
+    writes are applied, reconciled, and rolled back. For offline-capable
+    applications, write-path reuse remains limited by authorization, conflict
+    resolution, and application-specific business logic. The thesis identifies
+    seven technical trade-offs and five fundamental limits. Application fitness
+    varies by domain: real-time B2B productivity tools are the broadest fit,
+    while transactional and data-intensive applications fit poorly. Adoption
+    depends less on synchronization than on speed, developer experience, and
+    incremental integration with existing Postgres infrastructure. A case study
+    at a B2B SaaS company illustrates the authorization limit and reveals
+    deployment friction added by existing managed Postgres infrastructure. The
+    thesis argues that sync engines function as general-purpose infrastructure
+    within clear architectural limits, but not across all web application
+    types.</slot
+  >
+</ContentCard>
+<ContentCard
   title="Artificial Intelligence for Web Development: Perspectives from Industry and Literature (Pyry Pohjalainen, 2025, MSc)"
   websiteLabel="Read about AI in web development"
   website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/526ca978-aed6-4019-8627-047f669b1e65/content"
