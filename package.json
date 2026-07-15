@@ -30,19 +30,20 @@
     "worker:dry-run": "npm run ensure:image-references && npm run build && wrangler deploy --dry-run"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20260519.1",
-    "@playwright/test": "1.59.1",
-    "@redwoodjs/agent-ci": "0.7.0",
-    "chrome-launcher": "1.2.0",
-    "gustwind": "0.113.0",
-    "lighthouse": "13.0.3",
-    "linkinator": "6.0.4",
+    "@cloudflare/workers-types": "5.20260715.1",
+    "@playwright/test": "1.61.1",
+    "@redwoodjs/agent-ci": "0.17.1",
+    "chrome-launcher": "1.2.1",
+    "gustwind": "0.180.0",
+    "lighthouse": "13.4.0",
+    "linkinator": "7.6.1",
+    "marked": "10.0.0",
     "marked-smartypants": "1.1.12",
-    "prettier": "3.2.5",
+    "prettier": "3.9.5",
     "remove-markdown": "0.6.4",
     "smartypants": "0.2.2",
-    "typescript": "5.4.5",
-    "wrangler": "4.92.0"
+    "typescript": "7.0.2",
+    "wrangler": "4.111.0"
   },
   "repository": {
     "type": "git",
