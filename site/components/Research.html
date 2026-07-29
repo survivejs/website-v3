@@ -1,4 +1,34 @@
 <ContentCard
+  title="Evaluating Front-end Web Energy Consumption: Quantifying the Role of Caching, Cookies, Scrolling Behavior, and Data Volume (2026)"
+  websiteLabel="Read about energy consumption of the front-end"
+  website="https://dl.acm.org/doi/10.1145/3836737"
+>
+  <slot name="content"
+    >Approximately half of the energy consumption related to the client-server
+    model, such as the web, has been estimated to occur on the client side. The
+    remaining half of the consumption happens at the network and back-end level,
+    and these two portions have been studied in detail earlier. In this article,
+    we survey the less understood portion, the front-end, and establish a
+    baseline for several countries, including the United States, Finland,
+    Sweden, the United Kingdom, and Germany, while evaluating the energy
+    consumption of a hundred websites across four industries (mass media,
+    retail, government and public organisations, and sports). Through this
+    examination, we found that the baseline front-end energy consumption for a
+    freshly loaded website front page is approximately 5 mWh for a modern Apple
+    M-series CPU. In our benchmarks, the cached version consumed approximately
+    3.5 mWh, a reduction of 30% compared to the uncached version. Declining
+    cookies and staying above the fold instead of scrolling down seem to have a
+    positive impact between 10% and 40% when both actions are performed within
+    the same test. These reductions are cumulative, and it can be concluded that
+    front-end energy consumption has only a moderate correlation with data
+    volumes or the number of requests. These results gave us an early idea of
+    the magnitude of front-end energy consumption, and this contribution helps
+    to guide subsequent efforts in improving development practices that
+    integrate these kinds of measurements into the process while also indicating
+    possible regulation in the space.</slot
+  >
+</ContentCard>
+<ContentCard
   title="The Case for HTML First Web Development (2026)"
   websiteLabel="Read about HTML First"
   website="https://www.researchgate.net/publication/408524506_Case_for_HTML_First_Web_Development"
