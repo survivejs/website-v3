@@ -1,7 +1,40 @@
 <ContentCard
+  title="BRHC: Backend-driven Reactive Hypermedia Controls with a Statically Typed Kotlin DSL (2026, preprint)"
+  websiteLabel="Read about reactive hypermedia controls and DSLs"
+  website="https://www.researchgate.net/publication/411138520_BRHC_Backend-driven_Reactive_Hypermedia_Controls_with_a_Statically_Typed_Kotlin_DSL"
+>
+  <slot name="content"
+    >AI-assisted coding tools (e.g., Copilot, Cursor, Claude) are increasingly
+    ubiquitous and enable rapid generation of web applications. However, this
+    raises concerns regarding complexity, longevity and the long-term
+    maintainability of generated systems. A key source of complexity is the
+    heterogeneity between backend and frontend programming models, where
+    multiple languages and paradigms are combined within a single application,
+    often leading to duplicated logic and fragmented state management. To
+    address this issue, recent approaches (e.g., HTMX, Turbo Hotwire, Datastar,
+    etc.) follow the Hypermedia-Driven Application (HDA) model, positioning HTML
+    as the primary communication medium between client and server. Unlike
+    SPA-centric architectures, HDA systems shift the application state and
+    interaction logic to the server, where backend-driven reactive signals
+    synchronize with the client user interface. However, these approaches still
+    introduce complexity through custom attributes and do not fully eliminate
+    JavaScript, particularly in computed expressions. In this work, we propose a
+    statically typed approach using a Kotlin-based HTML DSL (Domain-Specific
+    Language) for backend-driven reactive web applications. We extend the
+    HtmlFlow Kotlin DSL with typed custom HTML attributes (i.e., Datastar data-*
+    attributes) and signal-based bindings using statically typed builders. We
+    demonstrate the approach through a catalog of reactive interaction patterns
+    and a Petclinic Spring MVC case study. The results indicate that the
+    proposed approach can nearly eliminate the need for JavaScript while
+    improving type safety and preserving a homogeneous programming model across
+    frontend and backend, bridged through a backend-driven reactive,
+    signal-centric architecture.</slot
+  >
+</ContentCard>
+<ContentCard
   title="Evaluating Front-end Web Energy Consumption: Quantifying the Role of Caching, Cookies, Scrolling Behavior, and Data Volume (2026)"
   websiteLabel="Read about energy consumption of the front-end"
-  website="https://dl.acm.org/doi/10.1145/3836737"
+  website="https://www.researchgate.net/publication/410945060_Evaluating_Front-end_Web_Energy_Consumption_Quantifying_the_Role_of_Caching_Cookies_Scrolling_Behavior_and_Data_Volume?_sg%5B0%5D=uLkkQwbFUkMr5u0EMWc-TsF4FjQYzDEVYnen40O_YAHolP6rhy3ojNJiLG8Mbj1U_2aJhtHc5FqHvlDK1x7EnSoLVgH1pODETDKJm2O_.MfjQqPv2lBbylXjvjhGfIrn4lIKtDHgmfCnBlhZrhvQaeN9nU4qtBiwoUtP7tA0nXdNqwsXT3toQFUQOBIGqew&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6InByb2ZpbGUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19"
 >
   <slot name="content"
     >Approximately half of the energy consumption related to the client-server
