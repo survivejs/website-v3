@@ -30,6 +30,14 @@ test("renders headings, anchors, a table of contents, and smart punctuation", ()
   assert.match(result.content, /href="#a-heading-">#<\/a><\/h2>/);
 });
 
+test("escapes table of contents text", () => {
+  const result = createMarkdown()({
+    input: "### No `<Route />` components",
+  });
+
+  assert.equal(result.tableOfContents[0]?.raw, "No &lt;Route /&gt; components");
+});
+
 test("renders custom notices and removes pagebreak markers", () => {
   const result = createMarkdown()({
     input: "T> A tip\n\nW> A warning\n\n{pagebreak}",
@@ -66,6 +74,16 @@ test("keeps chapter references and formatted links inline", () => {
     /<SiteLink href="https:\/\/example\.com" title=""><code>code<\/code><\/SiteLink>/
   );
   assert.doesNotMatch(result.content, /<p><SiteLink[^>]*>Automation/);
+});
+
+test("merges task-list and list styling classes", () => {
+  const result = createMarkdown()({ input: "- [x] Complete" });
+
+  assert.match(
+    result.content,
+    /<ul class="contains-task-list list-disc list-inside">/
+  );
+  assert.doesNotMatch(result.content, /<ul[^>]*class="[^"]*"[^>]*class=/);
 });
 
 test("highlights fenced code", () => {

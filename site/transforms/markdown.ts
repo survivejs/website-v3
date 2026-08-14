@@ -78,7 +78,7 @@ function createSurviveJsMdastPlugin({
           slug,
           level: node.depth,
           text,
-          raw: text,
+          raw: escapeHtml(text),
         });
       }
     },
@@ -218,13 +218,21 @@ function createSurviveJsHastPlugin({
       {
         filter: ["ul"],
         visit(node, ctx) {
-          ctx.setProperty(node, "class", "list-disc list-inside");
+          ctx.setProperty(node, "className", [
+            ...(node.properties.className || []),
+            "list-disc",
+            "list-inside",
+          ]);
         },
       },
       {
         filter: ["ol"],
         visit(node, ctx) {
-          ctx.setProperty(node, "class", "list-decimal list-inside");
+          ctx.setProperty(node, "className", [
+            ...(node.properties.className || []),
+            "list-decimal",
+            "list-inside",
+          ]);
         },
       },
       {
