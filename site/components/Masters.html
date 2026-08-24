@@ -1,4 +1,111 @@
 <ContentCard
+  title="Evaluating web interfaces in the era of Large Language Models (Ruupert Koponen, 2026, MSc)"
+  websiteLabel="Read about UIs in the age of LLMs"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/217f2def-c7ca-418f-87f2-f3c8db973d3f/content"
+>
+  <slot name="content"
+    >The rise of Large Language Models (LLMs) has enabled a new wave of
+    autonomous agents capable of carrying out more complex web tasks than ever
+    before. However, websites are architected for human consumption rather than
+    machine interaction, posing difficulties for agent reliability and
+    efficiency. This thesis evaluates how different web interface design
+    principles affect the operational performance of LLMbased agents on
+    human-oriented and machine-oriented interfaces. The evaluation is performed
+    through a comparative benchmarking strategy, where a custom ecommerce
+    environment exposes the same content and functionality through six different
+    interfaces: a traditional HyperText Markup Language (HTML) site (semantic
+    and non-semantic), a Markdown equivalent of the HTML site, a
+    Representational State Transfer (REST) API, a hypermedia REST API, and a
+    Model Context Protocol (MCP) server. Agent performance is benchmarked across
+    these interfaces in terms of input token consumption, latency, and
+    interaction step count. The results show that the agent-native MCP server
+    achieves the highest efficiency and determinism. For web services, the
+    hypermedia-driven REST API outperforms the schema-driven REST API. In
+    human-facing interfaces, accessible, semantic HTML increases token
+    consumption due to verbosity, but it substantially increases agent
+    interaction reliability compared to non-semantic HTML. Furthermore, serving
+    a lightweight Markdown representation of website content provides a highly
+    token-efficient solution for content-heavy, read-only web tasks. Based on
+    the findings of this thesis, it can be concluded that agents perform more
+    efficiently on machine-oriented interfaces than human-oriented interfaces,
+    and agents greatly benefit from compact content representation and clearly
+    defined available actions.</slot
+  >
+</ContentCard>
+<ContentCard
+  title="Evaluating Accessibility Support in Flutter
+Applications (Hung Nguyen, 2026, MSc)"
+  websiteLabel="Read about accessibility in Flutter"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/ff9802f1-a271-462b-9c9f-b9a859f9dfca/content"
+>
+  <slot name="content"
+    >Over the last few decades, there has been an enormous increase in the
+    number of digital services accessed via mobile and web applications,
+    fundamentally transforming how people communicate, work, and access
+    information. Alongside this growth, digital accessibility has become a
+    critical attribute for guaranteeing that people with disabilities can
+    access, use, and benefit from these services equally. With the new EU
+    Accessibility Act (EAA) that became applicable in June 2025, accessibility
+    is not only a legal requirement that any digitalized products have to comply
+    with, but also a key quality attribute that directly affects user experience
+    on those services. To simplify application development, cross-platform
+    frameworks have emerged as a solution for building applications from a
+    single codebase. Flutter, developed by Google, is one of the most well-known
+    frameworks in this category. However, so far, there is limited evidence
+    available on how well Flutter supports accessibility in realworld
+    applications. The same goes for practical guidelines supporting development.
+    Therefore, the objective of this thesis is to investigate how the Flutter
+    framework supports digital accessibility, with a focus on Web Content
+    Accessibility Guidelines (WCAG) compliance, and opportunities to mitigate or
+    improve the identified issues. The study consists of two practical analyses:
+    framework-level and application-level, using a case study research approach.
+    From these analyses, the study found that although Flutter provides useful
+    accessibility support, WCAG compliance is not achieved automatically.
+    Accessibility issues were identified at both framework and application
+    levels, with a requirement that developers need to apply accessibility
+    knowledge, platform-specific testing, and practical workarounds to achieve a
+    fully accessible Flutter application. Based on these findings, the thesis
+    presents best practices for developers and improvement proposals for the
+    Flutter ecosystem.</slot
+  >
+</ContentCard>
+<ContentCard
+  title="Migrating Legacy Applications from On-premises Infrastructure to the Cloud (Aino Pere, 2026, MSc)"
+  websiteLabel="Read about cloud migration"
+  website="https://aaltodoc.aalto.fi/server/api/core/bitstreams/b7a2b3bf-5fb3-40a7-81c3-facb106ae646/content"
+>
+  <slot name="content"
+    >Cloud computing provides a scalable and flexible alternative to traditional
+    on-premises infrastructure, but migrating legacy applications remains
+    challenging due to outdated technologies, tightly coupled architectures, and
+    infrastructure-specific configurations. Therefore, successfully migration of
+    a legacy application to the cloud requires careful consideration of
+    technical, organizational, and economic factors. This thesis explores how
+    cloud migration can be planned and implemented in the context of a legacy
+    application. The study combines a literature review with an applied case
+    study of a project management application developed with ASP.NET Framework
+    and Microsoft SQL Server. The literature review examines the strategic,
+    technical, and economic aspects of cloud migration, including the main
+    migration approaches, enabling technologies, provider considerations, and
+    common challenges. The case study evaluates several migration alternatives,
+    including direct deployment to an Azure virtual machine, deployment to Azure
+    Container Instances, and hybrid alternative. The alternatives are compared
+    based on technical feasibility, provisioning effort, resource usage,
+    maintainability, portability, and estimated costs. The results show that
+    replatforming can provide a practical way to modernize the deployment
+    environment without redesigning the internal application architecture. The
+    application layer was containerized with Docker, while the database was
+    migrated to Azure SQL Database. This improved deployment consistency and
+    repeatability. However, this thesis demonstrates that cloud migration does
+    not automatically guarantee lower costs or eliminate infrastructure
+    complexity. Its benefits depend on workload requirements, resource sizing,
+    service requirements, existing infrastructure costs, and the extent of
+    application modernization. A more comprehensive migration of the legacy
+    application may require further modernization of its codebase, dependencies,
+    and architecture.</slot
+  >
+</ContentCard>
+<ContentCard
   title="The Limits of Generalized Sync: A Taxonomy of Architectures, Trade‑offs, and Decision Factors (Mikael Siidorow, 2026, MSc)"
   websiteLabel="Read about generalized sync"
   website="https://aaltodoc.aalto.fi/items/e71b388a-a015-4f01-b7f9-530eac6dfcf6"
