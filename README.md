@@ -47,6 +47,18 @@ Validate the Cloudflare Worker bundle:
 npm run worker:dry-run
 ```
 
+## Book source dates
+
+Book overviews show the latest commit affecting the book repository’s
+`manuscript` directory. Chapters show the latest commit affecting their own
+source file, following renames. Dates use the Git committer date and link to
+the exact commit; they do not indicate a technical review of the material.
+
+These dates come from the checked-out repositories under `books/`. Run
+`npm run fetch:book-repositories` before building to refresh those checkouts.
+Keep their full Git history: builds from source archives or shallow clones
+show “Git history unavailable” instead of a guessed date.
+
 ## PageSpeed debugging
 
 Run local Lighthouse audits for mobile and desktop:
@@ -86,3 +98,21 @@ changes by more than the base domain.
 The site content is available under [CC BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). So, as long as there's a proper attribution, you can reuse the content. Ideally, you would contribute your improvements back, but that's not necessary.
 
 The site source is available under [MIT license](./LICENSE).
+
+### Content metadata
+
+Page metadata is rendered centrally by `site/utilities/metadata.ts`. Every content
+page must have a title and description; a missing value fails the build. Book
+chapters derive these from the manuscript, and topic archives get a description
+from their topic name. Canonical and Open Graph URLs use the production site URL
+and match sitemap paths. The error page is `noindex`; the feed and verification
+file are excluded from the sitemap.
+
+JSON-LD describes pages, blog posts, the site, and the author profile. Blog dates
+come from frontmatter; book modification dates come from Git, with no build-date
+fallback. Atom entries use the same canonical URLs, authors, and source dates.
+The shared 1200×630 social preview is bundled at `/images/social.png`; regenerate
+it with `npm run generate:social-image` (requires Playwright Chromium).
+
+Run `npm test`, `npm run build:site:validate`, then `npm run check:metadata` to
+check the rendered metadata and sitemap together.

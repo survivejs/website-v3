@@ -5,114 +5,41 @@
     >
       <PageIntro
         title="Books"
-        summary="Learn webpack, React, and JavaScript project maintenance through my books."
+        summary="Earlier work on webpack, React, and JavaScript project maintenance."
       >
         <slot name="description"
-          >Read the material online or buy a copy to support its continued
-          development. The React book remains available as a historical
-          reference.</slot
+          >The books remain available to read online. In recent years, I have
+          focused primarily on research, and parts of the material are outdated.
+          Use the notes below to understand each book’s scope before following
+          examples or buying a copy.</slot
         >
         <slot name="links">
+          <SiteLink class="inline-flex items-center min-h-11" href="/research/"
+            >My recent research</SiteLink
+          >
           <a
             class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
             href="#book-catalog"
-            >Browse books</a
-          >
-          <SiteLink
-            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
-            href="/books/webpack/"
-            >Start with webpack</SiteLink
-          >
-          <SiteLink
-            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
-            href="/consulting/"
-            >Ask about training</SiteLink
+            >Browse the books</a
           >
         </slot>
       </PageIntro>
-
-      <section class="grid md:grid-cols-3 gap-4">
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Most current</div>
-          <p class="mt-3 text-lg">
-            <SiteLink href="/books/webpack/">SurviveJS - Webpack 5</SiteLink>
-            matches the current webpack generation and works as a reference.
-          </p>
-        </div>
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Co-authored</div>
-          <p class="mt-3 text-lg">
-            <SiteLink href="/books/maintenance/"
-              >SurviveJS - Maintenance</SiteLink
-            >
-            was written with Artem Sapegin and focuses on package maintenance.
-          </p>
-        </div>
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Historical</div>
-          <p class="mt-3 text-lg">
-            <SiteLink href="/books/react/">SurviveJS - React</SiteLink> is where
-            the project started and remains available for reference.
-          </p>
-        </div>
-      </section>
-
-      <section
-        class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 border-y-2 border-primary py-8"
-      >
-        <div class="flex flex-col gap-4">
-          <Heading class="text-3xl font-extrabold" level="2"
-            >Availability</Heading
-          >
-          <p class="text-xl leading-relaxed text-muted">
-            You can read the material online and buy copies through Leanpub or
-            other stores where available.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-4">
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Online</div>
-            <p class="mt-3">
-              Each book page links to the HTML version, including chapter-level
-              navigation.
-            </p>
-          </div>
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Leanpub</div>
-            <p class="mt-3">
-              Digital versions are available through Leanpub for the current
-              books.
-            </p>
-          </div>
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Print</div>
-            <p class="mt-3">
-              The webpack book also has Amazon and Kindle purchase options.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="book-catalog" class="flex flex-col gap-4 scroll-mt-16">
-        <div
-          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
+        <Heading class="text-2xl font-bold" level="2">Book catalog</Heading>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6"><Books /></div>
+      </section>
+      <section
+        class="border-t border-primary pt-6 flex flex-col gap-3 max-w-3xl"
+      >
+        <Heading class="text-2xl font-bold" level="2"
+          >Reading and buying</Heading
         >
-          <div class="max-w-3xl">
-            <Heading class="text-3xl font-extrabold" level="2"
-              >Book catalog</Heading
-            >
-            <p class="mt-3 text-lg text-muted">
-              The complete book list is below. Start with webpack if you want
-              the most up-to-date material.
-            </p>
-          </div>
-          <SiteLink class="!no-underline text-sm" href="/consulting/"
-            >Need a workshop?</SiteLink
-          >
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <Books />
-        </div>
+        <p class="leading-relaxed">
+          The online chapters are free. Book pages also link to digital or print
+          editions where available. Check the edition and sample before
+          purchasing, as digital and print editions may differ from the online
+          text.
+        </p>
       </section>
     </div>
   </slot>

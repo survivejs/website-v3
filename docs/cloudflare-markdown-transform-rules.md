@@ -22,14 +22,15 @@ Keep `assets/_routes.json` deployed with the site:
 ```json
 {
   "version": 1,
-  "include": ["/mcp", "/mcp/*", "/ping", "/ping/*"],
+  "include": ["/mcp", "/mcp/*", "/ping", "/ping/*", "/assets/img/*"],
   "exclude": []
 }
 ```
 
 This limits Pages Function invocations to the real dynamic endpoints. Static
-HTML, markdown, JSON, XML, images, and other assets should stay on the Pages
-static asset path.
+HTML, markdown, JSON, XML, and local images stay on the Pages static asset
+path. The legacy `/assets/img/*` URLs must invoke the image Function: these
+images are stored in Cloudflare Images, not in the static build directory.
 
 ## URL Rewrite Rules
 

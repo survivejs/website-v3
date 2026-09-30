@@ -1,0 +1,17 @@
+<div
+  class="not-prose text-sm text-muted flex flex-wrap items-baseline gap-x-2 gap-y-1"
+>
+  <span &children="(get props label 'Last committed change:')" />
+  <a
+    &visibleIf="(get props update.date)"
+    &href="(get props update.url)"
+    class="underline underline-offset-2"
+    title="View the source commit. This date does not indicate a review of technical accuracy."
+    ><time
+      &datetime="(get props update.date)"
+      &children="(get props update.label)"
+  /></a>
+  <span &visibleIf="(not (get props update.date))"
+    >Git history unavailable</span
+  >
+</div>

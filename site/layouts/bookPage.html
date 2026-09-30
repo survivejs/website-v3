@@ -6,16 +6,30 @@
         level="1"
         &children="(get context meta.title)"
       />
+      <SourceUpdate
+        label="Manuscript last committed change:"
+        &update="(get context sourceUpdate)"
+      />
+      <aside
+        class="not-prose border-l-4 border-primary bg-gray-50 p-4 my-6"
+        aria-label="About this edition"
+      >
+        <p class="font-semibold">About this edition</p>
+        <p
+          class="mt-2 leading-relaxed"
+          &children="(get context currencyNote)"
+        />
+      </aside>
       <section class="flex flex-col md:flex-row gap-8">
         <Markdown as="div" &children="(get context fullDescription)" />
-        <div class="max-h-64 flex flex-row md:flex-col gap-4 not-prose">
+        <div class="flex flex-col items-start gap-4 not-prose md:w-56 shrink-0">
           <SiteImage
-            class="min-w-56"
+            class="w-48 max-w-full"
             width="200px"
             &src="(get context coverUrl)"
             &alt="(get context meta.title)"
           />
-          <div class="flex flex-col gap-2 mx-auto">
+          <div class="flex flex-col gap-2">
             <Rounded>
               <SiteLink
                 class="m-2"
@@ -53,14 +67,13 @@
         <Heading level="2">Availability</Heading>
         <Markdown
           >Although you can [read the book online for free](./introduction/),
-          you can also purchase it in a copy to support the development of the
-          content. [See also consulting](/consulting/) for other available
-          options.
+          you can also buy a digital or print edition where available. Please
+          review the scope and currency note above before choosing an edition.
         </Markdown>
         <ul>
           <li &visibleIf="(get context bookUrls.leanpub)">
             <SiteLink &href="(get context bookUrls.leanpub)"
-              >Leanpub (digital, always up to date with the site)</SiteLink
+              >Leanpub (digital edition)</SiteLink
             >
           </li>
           <li &visibleIf="(get context bookUrls.amazon)">

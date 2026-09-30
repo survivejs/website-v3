@@ -11,7 +11,7 @@ What if there was an alternative way to achieve the same while having more power
 
 ## Can you tell a bit about yourself?
 
-![Artem Zakharchenko|100|100|author](https://pbs.twimg.com/profile_images/1105592812396007426/_LRKW9Gp_400x400.jpg)
+![Artem Zakharchenko|100|100|author](/images/interviews/artem-zakharchenko.jpg)
 
 Hi! My name is Artem, and I am a Full-stack JavaScript developer from Ukraine. I have graduated a medical university and decided to switch my occupation to programming because it's something I enjoy doing since I was a kid.
 

@@ -11,7 +11,7 @@ In this interview we'll discuss a solution known as [isomorphic-webpack](https:/
 
 ## Can you tell a bit about yourself?
 
-![Gajus Kuizinas|100|100|author](https://pbs.twimg.com/profile_images/796004738273865728/qRcdB4kf.jpg)
+![Gajus Kuizinas|100|100|author](/images/interviews/gajus-kuizinas.jpg)
 
 My name is Gajus Kuizinas. I am a consultant software engineer, living in London. I advise companies on the subject of the software architecture, database design and DevOps. When not at work, I am spending a considerable amount of time contributing to the open-source.
 

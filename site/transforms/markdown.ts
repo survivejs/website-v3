@@ -1,3 +1,4 @@
+import { imageSource } from "../utilities/imageSource.ts";
 import { defineHastPlugin, defineMdastPlugin, markdownToHtml } from "satteri";
 import { toHtml } from "hast-util-to-html";
 import type { Element, Root } from "hast";
@@ -297,11 +298,7 @@ function renderImage({
         src = `/${src}`;
       }
 
-      const imagesRoot = getEnv("IMAGES_ROOT");
-
-      if (imagesRoot) {
-        src = urlJoin(imagesRoot, src);
-      }
+      src = imageSource(src, getEnv("IMAGES_ROOT"));
     }
   }
 

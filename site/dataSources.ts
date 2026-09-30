@@ -1,4 +1,5 @@
 import path from "node:path";
+import { createGitHistoryReader } from "./utilities/gitHistory.ts";
 import removeMarkdown from "remove-markdown";
 import getMarkdown from "./transforms/markdown.ts";
 import { getMemo } from "./utilities/getMemo.ts";
@@ -32,13 +33,28 @@ type Topic = {
 
 function init({ load, render, renderSync }: DataSourcesApi) {
   const markdownToHtml = getMarkdown({ load, render, renderSync });
+  const readGitUpdate = createGitHistoryReader();
+
+  async function getBookSourceUpdate(book: string, chapter?: string) {
+    const repository = path.resolve("books", `${book}-book`);
+    const update = await readGitUpdate(
+      repository,
+      chapter ? path.relative(repository, path.resolve(chapter)) : "manuscript",
+      Boolean(chapter),
+    );
+    return update ? {
+      ...update,
+      url: `https://github.com/survivejs/${book}-book/commit/${update.commit}`,
+    } : null;
+  }
+
 
   function getBookDescription(book: "maintenance" | "react" | "webpack") {
     switch (book) {
       case "maintenance":
-        return "The maintenance book captures good practices related to developing and maintaining JavaScript applications or packages at scale. I co-authored the book with [Artem Sapegin](https://sapegin.me/) and the book is not yet fully complete although completion and a bigger update is planned.";
+        return "The maintenance book captures good practices related to developing and maintaining JavaScript applications or packages at scale. I co-authored the book with [Artem Sapegin](https://sapegin.me/) and the material reflects earlier tooling and practices. Check examples against the documentation for the tools you use.";
       case "react":
-        return "[React](https://react.dev/) is a popular library for developing JavaScript applications and websites. In this book, you will implement a simple Kanban application step-wise. Note that the book is still using old class-based syntax and needs an update to the latest. You can follow the book with the help of the official documentation for now, however.";
+        return "[React](https://react.dev/) is a popular library for developing JavaScript applications and websites. In this book, you will implement a simple Kanban application step-wise. The example uses class-based React APIs. The book is retained as a historical reference, rather than a guide to contemporary React development.";
       case "webpack":
         return `[Webpack](https://webpack.js.org/) is a module bundler meant for building JavaScript applications and sites. In this book, I will go through main features of webpack while teaching you to compose configuration using [webpack-merge](https://www.npmjs.com/package/webpack-merge).
 
@@ -120,7 +136,7 @@ The book content was developed during many years with the help of the community 
 
     return keywordsArray.map((topic) => ({
       title: resolveKeywordToTitle(topic),
-      description: topic, // TODO: This could be more accurate
+      description: `Interviews and articles about ${resolveKeywordToTitle(topic)} from the SurviveJS blog archive.`,
       posts: keywords[topic].toSorted((a, b) =>
         b.data.date.getTime() - a.data.date.getTime()
       ),
@@ -214,7 +230,7 @@ The book content was developed during many years with the help of the community 
     };
   }
 
-  function processChapter(
+  async function processChapter(
     { path, previous, next }: {
       path: string;
       previous: MarkdownWithFrontmatter;
@@ -240,9 +256,18 @@ The book content was developed during many years with the help of the community 
       );
     }
 
-    return processMarkdown({ path, previous, next }, {
+    const { title, body } = parseTitle(await load.textFile(path));
+    const document = await processMarkdown({ path, previous, next }, {
       parseHeadmatter: false,
+      skipFirstLine: Boolean(title),
     }, { book, chapters });
+    return {
+      ...document,
+      data: { title, description: generatePreview(body, 180) },
+      book,
+      sourceUpdate: await getBookSourceUpdate(book, path),
+      isBookChapter: true,
+    };
   }
 
   async function processMarkdown(
@@ -319,6 +344,7 @@ The book content was developed during many years with the help of the community 
   }
 
   return {
+    getBookSourceUpdate,
     getBookDescription,
     indexBlog,
     indexBook,
@@ -456,7 +482,9 @@ function resolveImages(headerImage?: string) {
 */
 
 function generatePreview(content: string, amount: number) {
-  return `${removeMarkdown(content).slice(0, amount).replace(/&[#a-zA-Z0-9]*$/, "")}…`;
+  const text = removeMarkdown(content).replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  if (text.length <= amount) return text;
+  return `${text.slice(0, amount).replace(/\s+\S*$/, "").replace(/&[#a-zA-Z0-9]*$/, "")}…`;
 }
 
 function cleanChapterName(path: string) {

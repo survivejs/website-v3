@@ -14,7 +14,7 @@ function init() {
   function getDatetime(d: string) {
     const date = new Date(d);
 
-    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    return date.toISOString().slice(0, 10);
   }
 
   function getFullDate(d: string) {

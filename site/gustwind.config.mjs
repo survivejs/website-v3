@@ -70,7 +70,13 @@ function asNodePluginDefinitions() {
       },
     },
     { module: pagefindPlugin, options: {} },
-    { module: sitemapPlugin, options: {} },
+    {
+      module: sitemapPlugin,
+      options: {
+        excludeNoindex: true,
+        exclude: ["/atom.xml", "/google6292307d9ca2fc8d.html"],
+      },
+    },
     { module: statsPlugin, options: {} },
   ];
 }

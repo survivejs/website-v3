@@ -5,99 +5,113 @@
     >
       <PageIntro
         title="SurviveJS"
-        summary="Books, interviews, and practical guides to JavaScript and web development."
+        summary="Research and practice in web development."
       >
         <slot name="description"
-          >I am Juho Vepsäläinen, a web developer, author, and researcher. I
-          share what I learn through open source work, research, and
-          teaching.</slot
+          >I’m Juho Vepsäläinen, a web developer and researcher. In recent
+          years, my focus has been on web rendering, performance, and the role
+          of AI in development and education. My research builds on years of
+          writing books, contributing to open source, and teaching
+          developers.</slot
         >
         <slot name="links">
-          <SiteLink class="inline-flex items-center min-h-11" href="/books/"
-            >Start with books</SiteLink
+          <SiteLink class="inline-flex items-center min-h-11" href="/research/"
+            >Explore my research</SiteLink
           >
-          <SiteLink class="inline-flex items-center min-h-11" href="/blog/"
-            >Read the blog</SiteLink
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="/presentations/"
+            >Talks and lectures</SiteLink
           >
+          <SiteLink class="inline-flex items-center min-h-11" href="/about-me/"
+            >About me</SiteLink
+          >
+        </slot>
+      </PageIntro>
+
+      <section class="flex flex-col gap-4">
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <Heading class="text-3xl font-extrabold" level="2"
+            >Recent research</Heading
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11 text-sm"
+            href="/research/#selected-papers"
+            >All selected papers</SiteLink
+          >
+        </div>
+        <div class="divide-y border-y"><FeaturedResearch /></div>
+      </section>
+
+      <section class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-8">
+        <p class="text-sm text-muted">Doctoral dissertation · 2025</p>
+        <div class="flex flex-col gap-4 max-w-3xl">
+          <Heading class="text-2xl font-bold leading-snug" level="2"
+            >How static and dynamic web development meet</Heading
+          >
+          <p class="text-lg leading-relaxed">
+            My dissertation examines hybrid rendering models and edge computing,
+            and their implications for web performance and developer experience.
+            I also advise MSc and BSc theses at Aalto University.
+          </p>
+          <div class="flex flex-wrap gap-x-6 gap-y-2">
+            <SiteLink
+              class="inline-flex items-center min-h-11"
+              href="/research/#dissertation"
+              >Read about the dissertation</SiteLink
+            >
+            <SiteLink
+              class="inline-flex items-center min-h-11"
+              href="/research/#advisory-work"
+              >Student research</SiteLink
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-primary py-8 flex flex-col gap-5">
+        <Heading class="text-3xl font-extrabold" level="2"
+          >From research to practice</Heading
+        >
+        <p class="text-lg leading-relaxed max-w-3xl">
+          I bring research and development experience to architecture reviews,
+          performance questions, and technical investigations. I also share
+          ideas through open source projects, talks, and hands-on teaching.
+        </p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
           <SiteLink
             class="inline-flex items-center min-h-11"
             href="/consulting/"
             >Work with me</SiteLink
           >
-        </slot>
-      </PageIntro>
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="/open-source/"
+            >Open source projects</SiteLink
+          >
+          <SiteLink class="inline-flex items-center min-h-11" href="/workshops/"
+            >Workshop material</SiteLink
+          >
+        </div>
+      </section>
 
-      <section class="grid md:grid-cols-3 gap-4">
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Current focus</div>
-          <p class="mt-3 text-lg">
-            TypeScript, tooling, web performance, rendering techniques, and edge
-            computing.
-          </p>
-        </div>
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Use the source</div>
-          <p class="mt-3 text-lg">
-            The site is built with
-            <SiteLink href="https://gustwind.js.org/">Gustwind</SiteLink> and
-            Tailwind syntax, so the source doubles as a learning resource.
-          </p>
-        </div>
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Support the work</div>
-          <p class="mt-3 text-lg">
-            Most material is free. Buying
-            <SiteLink href="/books/">books</SiteLink> or booking
-            <SiteLink href="/consulting/">consulting</SiteLink> keeps it going.
-          </p>
-        </div>
-      </section>
-    </div>
-
-    <div
-      class="md:mx-auto px-4 md:px-6 pt-12 w-full max-w-6xl flex flex-col gap-12"
-    >
-      <section class="flex flex-col gap-4">
-        <div
-          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
+      <section class="flex flex-col gap-4 max-w-3xl">
+        <Heading class="text-2xl font-bold" level="2"
+          >Books and the writing archive</Heading
         >
-          <Heading class="text-3xl font-extrabold" level="2">Books</Heading>
-          <SiteLink class="!no-underline text-sm" href="/books/"
-            >Browse all books</SiteLink
+        <p class="leading-relaxed">
+          SurviveJS began with books and interviews about JavaScript. That
+          material remains available, but parts of the books are outdated as my
+          focus has shifted toward research. Each book’s overview explains its
+          scope and limitations.
+        </p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <SiteLink class="inline-flex items-center min-h-11" href="/books/"
+            >Browse the books</SiteLink
           >
-        </div>
-        <div class="grid xl:grid-cols-3 gap-6">
-          <Books />
-        </div>
-      </section>
-      <section class="flex flex-col gap-4">
-        <div
-          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
-        >
-          <Heading class="text-3xl font-extrabold" level="2"
-            >Latest blog posts</Heading
+          <SiteLink class="inline-flex items-center min-h-11" href="/blog/"
+            >Interviews and articles</SiteLink
           >
-          <SiteLink class="!no-underline text-sm" href="/blog/"
-            >Browse the archive</SiteLink
-          >
-        </div>
-        <BlogPosts
-          class="grid xl:grid-cols-3 gap-6"
-          &blogPosts="(get context blogPosts)"
-          linkPrefix="/blog/"
-        />
-      </section>
-      <section class="flex flex-col gap-4">
-        <div
-          class="flex flex-col md:flex-row md:items-end md:justify-between gap-2"
-        >
-          <Heading class="text-3xl font-extrabold" level="2">Workshops</Heading>
-          <SiteLink class="!no-underline text-sm" href="/workshops/"
-            >See workshop material</SiteLink
-          >
-        </div>
-        <div class="grid xl:grid-cols-3 gap-6">
-          <Workshops />
         </div>
       </section>
     </div>

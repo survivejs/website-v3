@@ -5,12 +5,13 @@
     >
       <PageIntro
         title="Consulting"
-        summary="I help teams with frontend architecture, JavaScript tooling, and web development training."
+        summary="Research-informed advice on web architecture, performance, and technical decisions."
       >
         <slot name="description"
-          >Engagements range from code reviews and migrations to custom
-          development and workshops. My work draws on experience with open
-          source projects, publishing, and research.</slot
+          >I combine research on web rendering, performance, and AI with
+          practical experience in development and open source. I can help
+          investigate a technical question, compare approaches, and work with
+          your team on the next steps.</slot
         >
         <slot name="links">
           <SiteLink
@@ -59,84 +60,61 @@
         <div class="max-w-3xl">
           <Heading class="text-3xl font-extrabold" level="2">Services</Heading>
           <p class="mt-3 text-lg text-muted">
-            I shape each engagement around the client. These are the recurring
-            service types I can provide.
+            Start with the question you need to answer or the problem you need
+            to solve. We can scope a review, investigation, or practical session
+            around it.
           </p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card>
-            <slot name="header">
-              <Heading level="3" class="font-medium"
-                >Custom development</Heading
-              >
-            </slot>
+            <slot name="header"
+              ><Heading level="3" class="text-xl font-semibold"
+                >Architecture and performance reviews</Heading
+              ></slot
+            >
             <slot name="content"
-              >I can help with complex frontend work, design-system-adjacent
-              implementation, table-heavy interfaces, and the backend-facing
-              side of frontend architecture.</slot
+              >Examine rendering choices, frontend complexity, and delivery
+              models. Identify the tradeoffs in your current approach and
+              prioritize changes worth testing.</slot
             >
           </Card>
           <Card>
-            <slot name="header">
-              <Heading level="3" class="font-medium">Workshops</Heading>
-            </slot>
-            <slot name="content">
-              <Markdown as="p"
-                >I run hands-on workshops on topics such as webpack, React,
-                Deno, and Qwik. I prefer [predesigned katas](/workshops/) so
-                attendees can work at different levels and still make concrete
-                progress.</Markdown
-              >
-            </slot>
-          </Card>
-          <Card>
-            <slot name="header">
-              <Heading level="3" class="font-medium"
-                >Conference organizing</Heading
-              >
-            </slot>
-            <slot name="content">
-              <Markdown as="p"
-                >I have run conferences since 2017, including [React
-                Finland](https://react-finland.fi/), [GraphQL
-                Finland](https://graphql-finland.fi/), and [Future
-                Frontend](https://futurefrontend.com/). I can help with concept,
-                speaker work, marketing, and event direction.</Markdown
-              >
-            </slot>
-          </Card>
-          <Card>
-            <slot name="header">
-              <Heading level="3" class="font-medium">Research</Heading>
-            </slot>
-            <slot name="content">
-              <Markdown as="p"
-                >My doctoral work has given me practical experience with
-                scientific publishing, surveys, empirical research, and
-                qualitative and quantitative methods. [See my research
-                outputs](/research/) for the academic side.</Markdown
-              >
-            </slot>
-          </Card>
-          <Card>
-            <slot name="header">
-              <Heading level="3" class="font-medium">Cleanup</Heading>
-            </slot>
+            <slot name="header"
+              ><Heading level="3" class="text-xl font-semibold"
+                >Technical research</Heading
+              ></slot
+            >
             <slot name="content"
-              >I can review technical debt, produce prioritized improvement
-              points, or dig into implementation details such as modernizing a
-              webpack setup or moving a project toward a simpler
-              toolchain.</slot
+              >Investigate an emerging approach or an unresolved technical
+              question through literature, interviews, surveys, or empirical
+              work. My experience includes both qualitative and quantitative
+              research.</slot
             >
           </Card>
           <Card>
-            <slot name="header">
-              <Heading level="3" class="font-medium">Coaching</Heading>
-            </slot>
+            <slot name="header"
+              ><Heading level="3" class="text-xl font-semibold"
+                >Implementation and tooling</Heading
+              ></slot
+            >
             <slot name="content"
-              >For individuals, I can provide focused weekly or occasional
-              coaching around JavaScript, web development, technical writing,
-              and professional growth topics.</slot
+              >Turn findings into working changes, from frontend implementation
+              and refactoring to a simpler toolchain. I can help with migrations
+              and with the backend-facing side of frontend architecture.</slot
+            >
+          </Card>
+          <Card>
+            <slot name="header"
+              ><Heading level="3" class="text-xl font-semibold"
+                >Teaching and technical communication</Heading
+              ></slot
+            >
+            <slot name="content"
+              ><Markdown as="p"
+                >Bring a topic to your team through a focused session, [hands-on
+                exercises](/workshops/), or coaching. I also support technical
+                writing and scientific publishing.</Markdown
+              ></slot
             >
           </Card>
         </div>

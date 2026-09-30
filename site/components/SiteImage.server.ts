@@ -1,17 +1,11 @@
 import type { GlobalUtilities } from "gustwind";
 import { getEnv } from "../utilities/getEnv.ts";
-import { urlJoin } from "../utilities/urlJoin.ts";
+import { imageSource } from "../utilities/imageSource.ts";
 
 const init: GlobalUtilities["init"] = function init() {
   return {
     getSrc(src: string) {
-      const imagesRoot = getEnv("IMAGES_ROOT");
-
-      if (!src.startsWith("http") && imagesRoot) {
-        return urlJoin(imagesRoot, src);
-      }
-
-      return src;
+      return imageSource(src, getEnv("IMAGES_ROOT"));
     },
   };
 };
