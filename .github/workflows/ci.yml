@@ -54,6 +54,10 @@ jobs:
           test -f package-lock.json
           test -f wrangler.toml
 
+      - name: Run unit tests
+        shell: bash
+        run: npm test
+
       - name: Fetch book sources
         shell: bash
         run: npm run fetch:book-repositories
@@ -61,6 +65,14 @@ jobs:
       - name: Build site
         shell: bash
         run: npm run build
+
+      - name: Check content metadata
+        shell: bash
+        run: npm run check:metadata
+
+      - name: Check keyboard and mobile navigation
+        shell: bash
+        run: npm run test:browser
 
       - name: Validate Worker bundle
         shell: bash
