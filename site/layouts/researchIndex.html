@@ -3,25 +3,16 @@
     <div
       class="research-page mx-auto px-4 pt-6 md:px-6 md:pt-0 w-full max-w-6xl flex flex-col gap-10 md:gap-12"
     >
-      <section
-        class="border-l-4 border-primary pl-5 md:pl-8 flex flex-col gap-5"
+      <PageIntro
+        title="Research"
+        summary="I study how we build web applications, with a focus on rendering models, web performance, and the role of AI in development and education."
       >
-        <Heading
-          class="text-4xl md:text-6xl font-extrabold leading-none"
-          level="1"
-          >Research</Heading
-        >
-        <p class="text-xl md:text-2xl leading-relaxed max-w-3xl">
-          I study how we build web applications, with a focus on rendering
-          models, web performance, and the role of AI in development and
-          education.
-        </p>
-        <p class="text-lg leading-relaxed max-w-3xl text-muted">
+        <slot name="description">
           My research draws on my experience as a web developer and open source
           author. I completed my doctorate in 2025 and advise BSc and MSc theses
           at Aalto University.
-        </p>
-        <div class="flex flex-wrap gap-x-6 gap-y-2">
+        </slot>
+        <slot name="links">
           <SiteLink
             class="inline-flex items-center min-h-11"
             href="https://orcid.org/0000-0003-0025-5540"
@@ -37,8 +28,8 @@
             href="https://scholar.google.com/citations?user=vf9Y1xQAAAAJ"
             >Google Scholar</SiteLink
           >
-        </div>
-      </section>
+        </slot>
+      </PageIntro>
 
       <nav
         aria-label="Research sections"

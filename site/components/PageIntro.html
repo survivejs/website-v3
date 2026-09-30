@@ -1,0 +1,23 @@
+<header
+  class="not-prose border-l-4 border-primary pl-5 md:pl-8 flex flex-col gap-5 min-w-0"
+>
+  <Heading
+    class="text-4xl md:text-6xl font-extrabold leading-none"
+    level="1"
+    &children="(get props title)"
+  />
+  <p
+    class="text-xl md:text-2xl leading-relaxed max-w-3xl"
+    &children="(get props summary)"
+  />
+  <p
+    class="text-lg leading-relaxed max-w-3xl text-muted"
+    &visibleIf="(get props description)"
+    &children="(get props description)"
+  />
+  <div
+    class="flex flex-wrap gap-x-6 gap-y-2"
+    &visibleIf="(get props links)"
+    &children="(get props links)"
+  />
+</header>

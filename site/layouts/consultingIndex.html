@@ -1,144 +1,35 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
-      <section
-        class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-stretch"
+    <div
+      class="mx-auto px-4 pt-6 md:px-6 md:pt-0 w-full max-w-6xl flex flex-col gap-10 md:gap-12"
+    >
+      <PageIntro
+        title="Consulting"
+        summary="I help teams with frontend architecture, JavaScript tooling, and web development training."
       >
-        <div
-          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col justify-between min-h-65"
+        <slot name="description"
+          >Engagements range from code reviews and migrations to custom
+          development and workshops. My work draws on experience with open
+          source projects, publishing, and research.</slot
         >
-          <div class="absolute right-0 top-0 hidden md:block opacity-70">
-            <div class="grid grid-cols-6 gap-2 p-6">
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-            </div>
-          </div>
-          <div class="relative flex flex-col gap-6 max-w-3xl">
-            <div class="flex flex-wrap gap-2 text-xs uppercase">
-              <span class="bg-white border border-primary px-2 py-1"
-                >Frontend</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Tooling</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Workshops</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Research</span
-              >
-            </div>
-            <div class="flex flex-col gap-4">
-              <Heading
-                class="text-5xl md:text-7xl font-extrabold leading-none"
-                level="1"
-                >Consulting</Heading
-              >
-              <p class="text-2xl md:text-3xl leading-tight text-muted">
-                Focused support for web teams that need senior JavaScript,
-                tooling, or training expertise.
-              </p>
-            </div>
-            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
-              I have done occasional consulting through my personal limited
-              company since 2016. The work keeps me grounded in real projects
-              while my research at
-              <SiteLink href="https://www.aalto.fi/fi"
-                >Aalto University</SiteLink
-              >
-              keeps the longer technical arc in view.
-            </p>
-          </div>
-          <div class="relative flex flex-col sm:flex-row gap-3 mt-8">
-            <SiteLink
-              class="!no-underline bg-muted text-white hover:text-white px-4 py-3 font-semibold text-center"
-              href="https://goo.gl/forms/OWdGIOdHm9"
-              >Start a conversation</SiteLink
-            >
-            <a
-              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
-              href="#services"
-              >See services</a
-            >
-            <SiteLink
-              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
-              href="/research/"
-              >Review research</SiteLink
-            >
-          </div>
-        </div>
-
-        <aside class="grid gap-4">
-          <div class="grid grid-cols-3 border-2 border-primary bg-primary">
-            <div class="bg-white p-4">
-              <div class="text-3xl font-extrabold">2016</div>
-              <div class="text-xs uppercase text-muted">Company</div>
-            </div>
-            <div class="bg-white p-4 border-l-2 border-primary">
-              <div class="text-3xl font-extrabold">6</div>
-              <div class="text-xs uppercase text-muted">Services</div>
-            </div>
-            <div class="bg-white p-4 border-l-2 border-primary">
-              <div class="text-3xl font-extrabold">EU</div>
-              <div class="text-xs uppercase text-muted">Based</div>
-            </div>
-          </div>
-          <div class="border-2 border-muted p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Best fit</div>
-            <div class="mt-5 grid gap-4">
-              <div class="grid grid-cols-[2rem_1fr] gap-4 items-start">
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >01</span
-                >
-                <span>
-                  <strong class="block">Complex frontend work</strong>
-                  <span class="block text-muted"
-                    >Especially where frontend architecture meets backend
-                    constraints.</span
-                  >
-                </span>
-              </div>
-              <div class="grid grid-cols-[2rem_1fr] gap-4 items-start">
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >02</span
-                >
-                <span>
-                  <strong class="block">Practical training</strong>
-                  <span class="block text-muted"
-                    >Hands-on workshops with katas rather than passive slide
-                    sessions.</span
-                  >
-                </span>
-              </div>
-              <div class="grid grid-cols-[2rem_1fr] gap-4 items-start">
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >03</span
-                >
-                <span>
-                  <strong class="block">Technical debt</strong>
-                  <span class="block text-muted"
-                    >Reviews, migrations, and cleanup plans for projects that
-                    need traction.</span
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
+        <slot name="links">
+          <SiteLink
+            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
+            href="https://goo.gl/forms/OWdGIOdHm9"
+            >Start a conversation</SiteLink
+          >
+          <a
+            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
+            href="#services"
+            >See services</a
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
+            href="/research/"
+            >Review research</SiteLink
+          >
+        </slot>
+      </PageIntro>
 
       <section class="grid md:grid-cols-3 gap-4">
         <div class="border p-5 bg-white">

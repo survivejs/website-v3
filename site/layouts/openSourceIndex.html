@@ -1,151 +1,35 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
-      <section
-        class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-stretch"
+    <div
+      class="mx-auto px-4 pt-6 md:px-6 md:pt-0 w-full max-w-6xl flex flex-col gap-10 md:gap-12"
+    >
+      <PageIntro
+        title="Open source"
+        summary="Frameworks, libraries, and tools I have built or contributed to."
       >
-        <div
-          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col justify-between min-h-65"
+        <slot name="description"
+          >I contributed to Blender and helped establish the webpack core team.
+          My own projects explore static sites, configuration, and simpler ways
+          to build for the web.</slot
         >
-          <div class="absolute right-0 top-0 hidden md:block opacity-70">
-            <div class="grid grid-cols-6 gap-2 p-6">
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-            </div>
-          </div>
-          <div class="relative flex flex-col gap-6 max-w-3xl">
-            <div class="flex flex-wrap gap-2 text-xs uppercase">
-              <span class="bg-white border border-primary px-2 py-1"
-                >Frameworks</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Libraries</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Tools</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Since 2004</span
-              >
-            </div>
-            <div class="flex flex-col gap-4">
-              <Heading
-                class="text-5xl md:text-7xl font-extrabold leading-none"
-                level="1"
-                >Open source</Heading
-              >
-              <p class="text-2xl md:text-3xl leading-tight text-muted">
-                Projects shaped by static sites, JavaScript tooling, and
-                web-native authoring.
-              </p>
-            </div>
-            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
-              I started contributing to
-              <SiteLink href="https://www.blender.org/">Blender</SiteLink> in
-              2004 and later helped establish the core team of
-              <SiteLink href="https://webpack.js.org/">webpack</SiteLink>.
-              Alongside better-known efforts, I keep building small projects to
-              test ideas about web development.
-            </p>
-          </div>
-          <div class="relative flex flex-col sm:flex-row gap-3 mt-8">
-            <a
-              class="!no-underline bg-muted text-white hover:text-white px-4 py-3 font-semibold text-center"
-              href="#featured-projects"
-              >Browse projects</a
-            >
-            <SiteLink
-              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
-              href="https://github.com/bebraw"
-              >GitHub profile</SiteLink
-            >
-            <SiteLink
-              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
-              href="/books/webpack/"
-              >Read webpack book</SiteLink
-            >
-          </div>
-        </div>
-
-        <aside class="grid gap-4">
-          <div class="grid grid-cols-3 border-2 border-primary bg-primary">
-            <div class="bg-white p-4">
-              <div class="text-3xl font-extrabold">2004</div>
-              <div class="text-xs uppercase text-muted">Started</div>
-            </div>
-            <div class="bg-white p-4 border-l-2 border-primary">
-              <div class="text-3xl font-extrabold">3</div>
-              <div class="text-xs uppercase text-muted">Groups</div>
-            </div>
-            <div class="bg-white p-4 border-l-2 border-primary">
-              <div class="text-3xl font-extrabold">JS</div>
-              <div class="text-xs uppercase text-muted">Focus</div>
-            </div>
-          </div>
-          <div class="border-2 border-muted p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Project map</div>
-            <div class="mt-5 grid gap-4">
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#frameworks"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >01</span
-                >
-                <span>
-                  <strong class="block text-black">Frameworks</strong>
-                  <span class="block"
-                    >Static generation, islands thinking, and React-era UI
-                    work.</span
-                  >
-                </span>
-              </a>
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#libraries"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >02</span
-                >
-                <span>
-                  <strong class="block text-black">Libraries</strong>
-                  <span class="block"
-                    >Configuration composition, state experiments, and UI
-                    primitives.</span
-                  >
-                </span>
-              </a>
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#tools"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >03</span
-                >
-                <span>
-                  <strong class="block text-black">Tools</strong>
-                  <span class="block"
-                    >Focused web-native utilities such as SlideOtter.</span
-                  >
-                </span>
-              </a>
-            </div>
-          </div>
-        </aside>
-      </section>
+        <slot name="links">
+          <a
+            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
+            href="#featured-projects"
+            >Browse projects</a
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
+            href="https://github.com/bebraw"
+            >GitHub profile</SiteLink
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11 underline text-muted hover:text-primary"
+            href="/books/webpack/"
+            >Read webpack book</SiteLink
+          >
+        </slot>
+      </PageIntro>
 
       <section class="grid md:grid-cols-3 gap-4">
         <div class="border p-5 bg-white">
