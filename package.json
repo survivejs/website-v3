@@ -30,7 +30,8 @@
     "test": "node --test site/transforms/markdown.test.ts site/utilities/gitHistory.test.ts site/utilities/imageSource.test.ts site/utilities/metadata.test.ts",
     "worker:dry-run": "npm run ensure:image-references && npm run build && wrangler deploy --dry-run",
     "generate:social-image": "node scripts/generate-social-image.mjs",
-    "check:metadata": "node scripts/check-metadata.mjs"
+    "check:metadata": "node scripts/check-metadata.mjs",
+    "test:browser": "playwright test"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "5.20260715.1",

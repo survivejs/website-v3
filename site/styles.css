@@ -72,3 +72,23 @@
 .research-page .rounded-full {
   max-width: 100%;
 }
+
+/* Closed disclosures are removed from both the layout and keyboard order. */
+#site-search[hidden],
+#site-navigation[hidden] {
+  display: none;
+}
+@media (min-width: 1280px) {
+  #site-navigation[hidden] {
+    display: flex;
+  }
+}
+#site-navigation {
+  max-height: calc(100dvh - 3rem);
+  overflow-y: auto;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #346065;
+  outline-offset: 4px;
+}

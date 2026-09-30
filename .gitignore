@@ -10,3 +10,5 @@ books/
 .dev.vars
 .env.agent-ci
 .images.json
+test-results/
+playwright-report/
