@@ -1,0 +1,94 @@
+<script type="module">
+  for (const form of document.querySelectorAll("[data-research-filter]")) {
+    const results = document.getElementById(form.dataset.researchFilter);
+    const entries = [...results.querySelectorAll(".research-entry")].map(
+      (element) => ({
+        element,
+        degree: element.dataset.degree,
+        topics: [...element.querySelectorAll(".research-topic")].map((tag) =>
+          tag.textContent.trim()
+        ),
+        text: element
+          .querySelector("summary")
+          .textContent.replace(/\s+/g, " ")
+          .toLocaleLowerCase(),
+      })
+    );
+    let selectedTopic = "";
+    let selectedDegree = "";
+    const query = form.elements.namedItem("query");
+    const status = form.querySelector("[role=status]");
+    const reset = form.querySelector('[type="reset"]');
+    const chips = [];
+
+    function addChip(group, label, value, kind) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = label;
+      button.className =
+        "border border-gray-300 px-3 min-h-11 text-sm text-muted cursor-pointer hover:border-muted aria-pressed:bg-muted aria-pressed:text-white aria-pressed:border-muted focus-visible:outline-2 focus-visible:outline-primary";
+      button.setAttribute("aria-pressed", "false");
+      button.setAttribute("aria-controls", results.id);
+      button.addEventListener("click", () => {
+        if (kind === "topic")
+          selectedTopic = selectedTopic === value ? "" : value;
+        else selectedDegree = selectedDegree === value ? "" : value;
+        filter();
+      });
+      group.append(button);
+      chips.push({ button, value, kind });
+    }
+    const topics = [
+      ...new Set(entries.flatMap((entry) => entry.topics)),
+    ].sort();
+    for (const topic of topics) {
+      addChip(form.querySelector("[data-topic-chips]"), topic, topic, "topic");
+    }
+    const degrees = form.querySelector("[data-degree-chips]");
+    if (degrees) {
+      addChip(degrees, "MSc", "MSc", "degree");
+      addChip(degrees, "BSc", "BSc", "degree");
+    }
+
+    function filter() {
+      const words = query.value
+        .trim()
+        .toLocaleLowerCase()
+        .split(/\s+/)
+        .filter(Boolean);
+      let count = 0;
+      for (const entry of entries) {
+        const matches =
+          (!selectedTopic || entry.topics.includes(selectedTopic)) &&
+          (!selectedDegree || entry.degree === selectedDegree) &&
+          words.every((word) => entry.text.includes(word));
+        entry.element.hidden = !matches;
+        if (matches) count++;
+      }
+      for (const chip of chips) {
+        chip.button.setAttribute(
+          "aria-pressed",
+          String(
+            chip.value ===
+              (chip.kind === "topic" ? selectedTopic : selectedDegree)
+          )
+        );
+      }
+      reset.hidden = !selectedTopic && !selectedDegree && !query.value;
+      status.textContent = count
+        ? `Showing ${count} of ${entries.length} ${form.dataset.noun}`
+        : `No ${form.dataset.noun} match. Try another topic or clear the filters.`;
+    }
+    form.addEventListener("input", filter);
+    form.addEventListener("change", filter);
+    form.addEventListener("submit", (event) => event.preventDefault());
+    form.addEventListener("reset", () => {
+      selectedTopic = "";
+      selectedDegree = "";
+      query.value = "";
+      filter();
+    });
+    filter();
+    form.hidden = false;
+  }
+</script>

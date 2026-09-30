@@ -1,0 +1,47 @@
+<details class="paper-entry research-entry" &data-year="(get props year)">
+  <summary
+    class="cursor-pointer py-4 px-2 hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-primary"
+  >
+    <a
+      class="font-medium underline decoration-gray-300 underline-offset-4 hover:text-primary focus-visible:outline-2 focus-visible:outline-primary"
+      &href="(get props website)"
+      &children="(get props title)"
+    />
+    <span
+      class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted"
+    >
+      <span>
+        <span &children="(get props year)" />
+        <span
+          &visibleIf="(get props status)"
+          &children="(concat ' · ' (get props status))"
+        />
+      </span>
+      <span
+        class="research-topic bg-secondary px-2 py-1 text-xs"
+        &children="(get props topic)"
+      />
+      <span
+        class="research-topic bg-secondary px-2 py-1 text-xs"
+        &visibleIf="(get props secondaryTopic)"
+        &children="(get props secondaryTopic)"
+      />
+    </span>
+  </summary>
+  <div class="px-2 pb-5 flex flex-col gap-4 max-w-3xl">
+    <Markdown &children="(get props content)" />
+    <div class="flex flex-wrap gap-x-6 gap-y-2">
+      <SiteLink
+        class="inline-flex items-center min-h-11"
+        &href="(get props website)"
+        &children="(get props websiteLabel 'Read paper')"
+      />
+      <SiteLink
+        &visibleIf="(get props seeAlso)"
+        class="inline-flex items-center min-h-11"
+        &href="(get props seeAlso)"
+        &children="(get props seeAlsoLabel 'See also')"
+      />
+    </div>
+  </div>
+</details>

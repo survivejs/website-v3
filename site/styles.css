@@ -48,3 +48,27 @@
 @utility max-w-ch80 {
   max-width: 80ch;
 }
+
+/* Long publication titles and links must fit narrow research cards. */
+.research-page {
+  overflow-wrap: anywhere;
+}
+
+.research-page :where(.grid > *, .flex > *) {
+  min-width: 0;
+}
+
+.research-page h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.research-page h3 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.research-page .rounded-full {
+  max-width: 100%;
+}

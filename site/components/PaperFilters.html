@@ -1,0 +1,35 @@
+<form
+  id="paper-filters"
+  data-research-filter="paper-results"
+  data-noun="papers"
+  hidden
+  class="flex flex-col gap-3"
+>
+  <div
+    role="group"
+    aria-label="Filter papers by topic"
+    data-topic-chips
+    class="flex flex-wrap gap-2"
+  ></div>
+  <div
+    class="flex flex-wrap items-center justify-between gap-x-4 text-sm text-muted"
+  >
+    <p role="status" aria-live="polite" aria-atomic="true"></p>
+    <button type="reset" hidden class="underline min-h-11 cursor-pointer">
+      Clear filters
+    </button>
+  </div>
+  <details>
+    <summary class="cursor-pointer text-sm text-muted underline w-fit py-2">
+      Search papers
+    </summary>
+    <input
+      type="search"
+      name="query"
+      aria-label="Search papers"
+      placeholder="Title, topic, or year"
+      aria-controls="paper-results"
+      class="mt-2 bg-white border p-2 min-h-11 w-full sm:max-w-sm"
+    />
+  </details>
+</form>

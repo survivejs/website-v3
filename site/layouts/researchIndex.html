@@ -1,221 +1,91 @@
 <BaseLayout>
   <slot name="content">
-    <div class="md:mx-auto px-4 md:px-6 w-full max-w-6xl flex flex-col gap-12">
+    <div
+      class="research-page mx-auto px-4 pt-6 md:px-6 md:pt-0 w-full max-w-6xl flex flex-col gap-10 md:gap-12"
+    >
       <section
-        class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-stretch"
+        class="border-l-4 border-primary pl-5 md:pl-8 flex flex-col gap-5"
       >
-        <div
-          class="relative overflow-hidden border-2 border-primary bg-secondary p-6 md:p-10 flex flex-col gap-8"
+        <Heading
+          class="text-4xl md:text-6xl font-extrabold leading-none"
+          level="1"
+          >Research</Heading
         >
-          <div class="absolute right-0 top-0 hidden md:block opacity-70">
-            <div class="grid grid-cols-5 gap-2 p-6">
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-primary"></span>
-              <span class="w-3 h-3 bg-white"></span>
-              <span class="w-3 h-3 bg-warning"></span>
-            </div>
-          </div>
-          <div class="relative flex flex-col gap-5 max-w-3xl">
-            <div class="flex flex-wrap gap-2 text-xs uppercase">
-              <span class="bg-white border border-primary px-2 py-1"
-                >Web engineering</span
-              >
-              <span class="bg-white border border-primary px-2 py-1"
-                >Performance</span
-              >
-              <span class="bg-white border border-primary px-2 py-1">AI</span>
-              <span class="bg-white border border-primary px-2 py-1"
-                >Education</span
-              >
-            </div>
-            <Heading
-              class="text-5xl md:text-7xl font-extrabold leading-none"
-              level="1"
-              >Research</Heading
-            >
-            <p class="text-2xl md:text-3xl leading-tight text-muted">
-              Academic work on how the web platform changes, scales, and becomes
-              teachable.
-            </p>
-            <p class="text-lg md:text-xl leading-relaxed max-w-2xl">
-              For my doctorate and advisory work, I have studied hybrid
-              rendering, edge computing, web performance, artificial
-              intelligence, and the long arc of JavaScript and web development.
-            </p>
-          </div>
-          <div class="relative flex flex-col sm:flex-row gap-3">
-            <SiteLink
-              class="!no-underline bg-muted text-white hover:text-white px-4 py-3 font-semibold text-center"
-              href="https://orcid.org/0000-0003-0025-5540"
-              >View ORCID</SiteLink
-            >
-            <SiteLink
-              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
-              href="https://www.researchgate.net/profile/Juho-Vepsaelaeinen"
-              >ResearchGate</SiteLink
-            >
-            <SiteLink
-              class="!no-underline bg-white border border-primary px-4 py-3 font-semibold text-center"
-              href="https://scholar.google.com/citations?user=vf9Y1xQAAAAJ"
-              >Google Scholar</SiteLink
-            >
-          </div>
+        <p class="text-xl md:text-2xl leading-relaxed max-w-3xl">
+          I study how we build web applications, with a focus on rendering
+          models, web performance, and the role of AI in development and
+          education.
+        </p>
+        <p class="text-lg leading-relaxed max-w-3xl text-muted">
+          My research draws on my experience as a web developer and open source
+          author. I completed my doctorate in 2025 and advise BSc and MSc theses
+          at Aalto University.
+        </p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="https://orcid.org/0000-0003-0025-5540"
+            >ORCID</SiteLink
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="https://www.researchgate.net/profile/Juho-Vepsaelaeinen"
+            >ResearchGate</SiteLink
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="https://scholar.google.com/citations?user=vf9Y1xQAAAAJ"
+            >Google Scholar</SiteLink
+          >
         </div>
-
-        <aside class="grid gap-4">
-          <div class="grid grid-cols-3 border-2 border-primary bg-primary">
-            <div class="bg-white p-4">
-              <div class="text-3xl font-extrabold">2025</div>
-              <div class="text-xs uppercase text-muted">Doctorate</div>
-            </div>
-            <div class="bg-white p-4 border-l-2 border-primary">
-              <div class="text-3xl font-extrabold">4</div>
-              <div class="text-xs uppercase text-muted">Themes</div>
-            </div>
-            <div class="bg-white p-4 border-l-2 border-primary">
-              <div class="text-3xl font-extrabold">BSc/MSc</div>
-              <div class="text-xs uppercase text-muted">Topics</div>
-            </div>
-          </div>
-          <div class="border-2 border-muted p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Page map</div>
-            <div class="mt-5 grid gap-4">
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#dissertation"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >01</span
-                >
-                <span>
-                  <strong class="block text-black">Dissertation</strong>
-                  <span class="block"
-                    >Hybrid rendering models in web application
-                    development.</span
-                  >
-                </span>
-              </a>
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#selected-papers"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >02</span
-                >
-                <span>
-                  <strong class="block text-black">Selected papers</strong>
-                  <span class="block"
-                    >Web performance, AI, hypermedia, resumability, and
-                    standards.</span
-                  >
-                </span>
-              </a>
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#advisory-work"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >03</span
-                >
-                <span>
-                  <strong class="block text-black">Advisory work</strong>
-                  <span class="block"
-                    >BSc and MSc theses completed with students.</span
-                  >
-                </span>
-              </a>
-              <a
-                class="grid grid-cols-[2rem_1fr] gap-4 items-start !no-underline text-muted hover:text-primary"
-                href="#thesis-themes"
-              >
-                <span
-                  class="border border-muted text-muted text-center font-bold"
-                  >04</span
-                >
-                <span>
-                  <strong class="block text-black">Thesis themes</strong>
-                  <span class="block"
-                    >Open directions for BSc and MSc students.</span
-                  >
-                </span>
-              </a>
-            </div>
-          </div>
-        </aside>
       </section>
 
-      <section
-        class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 border-y-2 border-primary py-8"
+      <nav
+        aria-label="Research sections"
+        class="border-y border-primary py-3 flex flex-wrap gap-x-6 gap-y-1 text-sm"
       >
-        <div class="flex flex-col gap-4">
-          <HeadingWithAnchor anchor="dissertation" level="2"
-            >Dissertation – Emergence of hybrid rendering models in web
-            application development (2025)
-          </HeadingWithAnchor>
-          <p class="text-xl leading-relaxed text-muted">
-            The dissertation examines the space between static and dynamic web
-            development, then shows how niche rendering techniques and edge
-            computing can improve both user experience and developer experience.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <Rounded>
-              <SiteLink
-                class="text-sm text-muted px-2"
-                href="https://www.researchgate.net/publication/391900001_Emergence_of_hybrid_rendering_models_in_web_application_development"
-                >Read at ResearchGate</SiteLink
-              >
-            </Rounded>
-            <Rounded>
-              <SiteLink
-                class="text-sm text-muted px-2"
-                href="https://www.youtube.com/watch?v=6OXV_TxDjLs"
-                >View the defense</SiteLink
-              >
-            </Rounded>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Problem</div>
-            <p class="mt-3">
-              Web applications keep growing while mobile bandwidth and device
-              capacity remain constrained.
-            </p>
-          </div>
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Approach</div>
-            <p class="mt-3">
-              Study hybrid rendering, edge computing, and emerging frontend
-              techniques beyond mainstream defaults.
-            </p>
-          </div>
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Outcome</div>
-            <p class="mt-3">
-              Practical directions for faster web applications without
-              sacrificing developer experience.
-            </p>
-          </div>
-          <div class="border p-5 bg-white">
-            <div class="text-sm uppercase text-muted">Scope</div>
-            <p class="mt-3">
-              Static, dynamic, serverless, and edge-assisted application
-              delivery models.
-            </p>
-          </div>
+        <a class="inline-flex items-center min-h-11" href="#dissertation"
+          >Dissertation</a
+        >
+        <a class="inline-flex items-center min-h-11" href="#selected-papers"
+          >Selected papers</a
+        >
+        <a class="inline-flex items-center min-h-11" href="#advisory-work"
+          >Advisory work</a
+        >
+        <a class="inline-flex items-center min-h-11" href="#thesis-themes"
+          >Thesis themes</a
+        >
+      </nav>
+
+      <section class="flex flex-col gap-4 max-w-3xl">
+        <HeadingWithAnchor anchor="dissertation" level="2"
+          >Dissertation</HeadingWithAnchor
+        >
+        <p class="text-xl md:text-2xl leading-snug font-medium">
+          Emergence of hybrid rendering models in web application development
+          <span class="text-muted">(2025)</span>
+        </p>
+        <p class="text-lg leading-relaxed">
+          My dissertation examines how hybrid rendering and edge computing
+          combine static and dynamic web development, and what these approaches
+          mean for web performance and developer experience.
+        </p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="https://www.researchgate.net/publication/391900001_Emergence_of_hybrid_rendering_models_in_web_application_development"
+            >Read the dissertation</SiteLink
+          >
+          <SiteLink
+            class="inline-flex items-center min-h-11"
+            href="https://www.youtube.com/watch?v=6OXV_TxDjLs"
+            >Watch the defense</SiteLink
+          >
         </div>
       </section>
 
-      <section class="grid md:grid-cols-3 gap-4">
+      <section class="grid md:grid-cols-2 gap-4">
         <div class="border p-5 bg-white">
           <div class="text-sm uppercase text-muted">Booklets</div>
           <p class="mt-3">
@@ -245,13 +115,6 @@
             >.
           </p>
         </div>
-        <div class="border p-5 bg-white">
-          <div class="text-sm uppercase text-muted">Student work</div>
-          <p class="mt-3">
-            I advise BSc and MSc theses at Aalto University, usually in English,
-            around current web platform and software engineering themes.
-          </p>
-        </div>
       </section>
 
       <section class="flex flex-col gap-4">
@@ -261,13 +124,14 @@
           <div class="max-w-3xl">
             <HeadingWithAnchor level="2">Selected papers</HeadingWithAnchor>
             <p class="mt-3 text-lg text-muted">
-              My research focuses on the intersection of web engineering, web
-              performance, and artificial intelligence. The publication profiles
-              above provide the fullest bibliography.
+              Papers on web architecture, performance, energy consumption, and
+              AI. Expand a paper to read its abstract and find the full text.
+              See my publication profiles above for the full bibliography.
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <PaperFilters />
+        <div class="divide-y border-y" id="paper-results">
           <Research />
         </div>
       </section>
@@ -276,23 +140,14 @@
         <div class="max-w-3xl">
           <HeadingWithAnchor level="2">Advisory work</HeadingWithAnchor>
           <p class="mt-3 text-lg text-muted">
-            During my studies, I have worked as an advisor for several theses.
-            The selections below show completed MSc and BSc work.
+            I advise BSc and MSc theses at Aalto University, usually in English.
+            Below is a selection of completed student work. Expand a thesis to
+            read its abstract and find the full text.
           </p>
         </div>
-        <div class="flex flex-col gap-6">
-          <div class="flex flex-col gap-4">
-            <HeadingWithAnchor level="3">Masters</HeadingWithAnchor>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Masters />
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <HeadingWithAnchor level="3">Bachelors</HeadingWithAnchor>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Bachelors />
-            </div>
-          </div>
+        <ThesisFilters />
+        <div class="divide-y border-y" id="thesis-results">
+          <Theses />
         </div>
       </section>
 
@@ -312,5 +167,6 @@
         </div>
       </section>
     </div>
+    <ResearchFiltersScript />
   </slot>
 </BaseLayout>
